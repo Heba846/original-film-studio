@@ -32,7 +32,8 @@
 |---|---|
 | Job building, consent/reference gating, segment update, sidecar writing, assembly of the produced WAVs | **Tested** with a mock runner (plumbing only; mock output is a tone, **not** a voice-quality test) |
 | Worker's "chatterbox not installed" and probe paths; main app imports no torch | **Tested for real** (this env has no torch) |
-| Installing Chatterbox via `setup_tts.bat`, model download, CPU/CUDA inference, quality of Heba/Lion clones, speed | **UNTESTED** - no torch, no GPU, no consented recordings were available |
+| `pip install chatterbox-tts` on Python 3.11 (Linux, CPU torch 2.6) and `import chatterbox` | **Tested for real** (cloud sandbox). Found+fixed: `ofs/packaging.py` shadowed stdlib `packaging` when the worker ran as a script |
+| Model download, CPU/CUDA inference, quality of Heba/Lion clones, speed | **STILL UNTESTED**: the sandbox blocked huggingface.co (403), so no weights could be fetched. See `docs/VOICE_PIPELINE.md` |
 | Whether Turbo/Nano/original gives acceptable narration for your voices, and the right `exaggeration`/`cfg_weight` | **UNKNOWN** - evaluate with your real reference clips; keep the imported-WAV path as fallback |
 
 ## Recording references (for the owner)

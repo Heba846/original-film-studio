@@ -3700,7 +3700,7 @@
     "mode": "none"
   },
   "render": {
-    "fps": 30,
+    "fps": 24,
     "crf": 20,
     "preset": "medium"
   }

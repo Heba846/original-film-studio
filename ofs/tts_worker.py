@@ -14,6 +14,11 @@ import os
 import re
 import sys
 
+# Running `python ofs/tts_worker.py` puts ofs/ first on sys.path, where ofs/packaging.py would shadow the
+# real `packaging` package that transformers/torch import. Drop the script directory before any import.
+_HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path[:] = [p for p in sys.path if os.path.abspath(p or os.getcwd()) != _HERE]
+
 
 def out(obj, code=0):
     print(json.dumps(obj))
@@ -66,36 +71,72 @@ def chunks(text, limit=280):
     return res
 
 
+def _espeak(it, job):
+    """STAND-IN engine for pipeline dry runs ONLY (robotic, not a clone). Needs espeak-ng on PATH."""
+    import shutil
+    import subprocess
+    exe = shutil.which("espeak-ng") or shutil.which("espeak")
+    if not exe:
+        raise RuntimeError("espeak-ng not installed")
+    subprocess.run([exe, "-v", it.get("voice", "en-us"), "-s", str(job.get("espeak_wpm", 165)),
+                    "-w", it["out"], it["text"]], check=True, capture_output=True)
+
+
 def generate(job):
-    if not probe()["chatterbox_installed"]:
-        out({"ok": False, "error": "chatterbox-tts is not installed in this interpreter (run setup_tts.bat)"}, 2)
-    os.environ.setdefault("HF_HUB_OFFLINE", "1")  # never download implicitly
-    import torch
-    import torchaudio as ta
-    device = pick_device(job.get("device", "auto"))
-    kind = job.get("model", "turbo")
-    try:
-        model = load_model(kind, device)
-    except Exception as e:  # noqa: BLE001
-        out({"ok": False, "error": f"could not load model '{kind}' offline ({e}). If the weights were never "
-             "downloaded, run:  python -m ofs tts download --yes"}, 3)
-    results = []
-    for it in job["items"]:
+    import time
+    engine = job.get("engine", "chatterbox")
+    skip = bool(job.get("skip_existing"))
+    results, model, device, kind = [], None, "cpu", job.get("model", "turbo")
+    if engine == "chatterbox":
+        if not probe()["chatterbox_installed"]:
+            out({"ok": False, "error": "chatterbox-tts is not installed in this interpreter (run setup_tts.bat)"}, 2)
+        os.environ.setdefault("HF_HUB_OFFLINE", "1")  # never download implicitly
+        device = pick_device(job.get("device", "auto"))
         try:
-            parts = []
-            for c in chunks(it["text"]):
-                kw = {"audio_prompt_path": it["reference"]}
-                if kind == "original":
-                    kw.update(exaggeration=job.get("exaggeration", 0.5), cfg_weight=job.get("cfg_weight", 0.5))
-                w = model.generate(c, **kw)
-                parts.append(w)
-                parts.append(torch.zeros(w.shape[0], int(0.15 * model.sr)))
-            wav = torch.cat(parts[:-1], dim=1)
-            ta.save(it["out"], wav, model.sr)
-            results.append({"id": it["id"], "ok": True, "out": it["out"], "sr": model.sr})
+            model = load_model(kind, device)
+        except Exception as e:  # noqa: BLE001
+            out({"ok": False, "error": f"could not load model '{kind}' offline ({e}). If the weights were never "
+                 "downloaded, run:  python -m ofs tts download --yes"}, 3)
+        import torch
+        import torchaudio as ta
+    last_ref = None
+    for n, it in enumerate(job["items"], 1):
+        if skip and os.path.isfile(it["out"]) and os.path.getsize(it["out"]) > 1000:
+            results.append({"id": it["id"], "ok": True, "out": it["out"], "skipped": True})
+            continue
+        t0 = time.time()
+        try:
+            os.makedirs(os.path.dirname(it["out"]), exist_ok=True)
+            if engine == "espeak":
+                _espeak(it, job)
+                wall = time.time() - t0
+                results.append({"id": it["id"], "ok": True, "out": it["out"], "wall": round(wall, 3)})
+            else:
+                ref = it.get("reference") or None
+                if ref and ref != last_ref and hasattr(model, "prepare_conditionals") and kind == "original":
+                    model.prepare_conditionals(ref, exaggeration=job.get("exaggeration", 0.5))
+                    last_ref = ref
+                parts = []
+                for c in chunks(it["text"]):
+                    kw = {}
+                    if ref:
+                        kw["audio_prompt_path"] = ref
+                    if kind == "original":
+                        kw.update(exaggeration=job.get("exaggeration", 0.5), cfg_weight=job.get("cfg_weight", 0.5))
+                    w = model.generate(c, **kw)
+                    parts.append(w)
+                    parts.append(torch.zeros(w.shape[0], int(0.15 * model.sr)))
+                wav = torch.cat(parts[:-1], dim=1)
+                ta.save(it["out"], wav, model.sr)
+                wall = time.time() - t0
+                results.append({"id": it["id"], "ok": True, "out": it["out"], "sr": model.sr,
+                                "audio_seconds": round(wav.shape[1] / model.sr, 3), "wall": round(wall, 3)})
         except Exception as e:  # noqa: BLE001
             results.append({"id": it["id"], "ok": False, "error": str(e)})
-    out({"ok": all(r["ok"] for r in results), "device": device, "model": kind, "results": results})
+        print(f"[tts {n}/{len(job['items'])}] {it['id']} {'ok' if results[-1]['ok'] else 'FAILED'} "
+              f"{time.time() - t0:.1f}s", file=sys.stderr, flush=True)
+    out({"ok": all(r["ok"] for r in results), "device": device, "model": kind if engine == "chatterbox" else "espeak-ng",
+         "engine": engine, "results": results})
 
 
 def download():

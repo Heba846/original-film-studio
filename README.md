@@ -129,3 +129,7 @@ narration CLI is not used.
 
 ## Known limitations
 See `docs/LIMITATIONS.md`.
+
+
+## Voice cloning at scale + clip-filled film
+See `docs/VOICE_PIPELINE.md` (cloud TTS batch, clip planner `python -m ofs clips`, one-command `python -m ofs build`).

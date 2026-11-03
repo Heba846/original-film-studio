@@ -5,7 +5,7 @@ import re
 from dataclasses import dataclass, field
 from pathlib import Path
 
-from . import media, project as proj, srt as srtlib
+from . import clips as clips_mod, media, project as proj, srt as srtlib
 
 MAX_SHOT = 600.0
 PRESETS = {"ultrafast", "superfast", "veryfast", "faster", "fast", "medium", "slow", "slower", "veryslow"}
@@ -202,7 +202,29 @@ def validate(project: dict, base, probe_fn=media.probe, check_tools: bool = True
             r.add("error", "bad_transition", f"Shot {sid}: transition must be one of {proj.TRANSITIONS}.", sid)
 
         asset = s["asset"]
-        if not asset:
+        shot_clips = clips_mod.discover(s, base) if kind == "video" else []
+        if shot_clips:
+            for cp in shot_clips:
+                if not cp.is_file():
+                    r.add("error", "missing_file", f"Shot {sid}: clip not found: {cp}", sid)
+                    continue
+                cinfo = probe(cp, "unreadable_media", f"Shot {sid} clip {cp.name}", sid)
+                if cinfo and not cinfo["has_video"]:
+                    r.add("error", "no_video_stream", f"Shot {sid}: {cp.name} has no picture.", sid)
+            pl_ = None
+            if d:
+                durs_ = []
+                for cp in shot_clips:
+                    try:
+                        durs_.append(float(media.probe(cp)["duration"] or 0))
+                    except Exception:  # noqa: BLE001
+                        pass
+                pl_ = clips_mod.plan_shot(d, durs_)
+            if pl_ and pl_["reused_seconds"] > 0.5:
+                r.add("warning", "clips_reused",
+                      f"Shot {sid}: {pl_['reused_seconds']:.0f}s of {d:g}s repeats footage "
+                      f"({len(shot_clips)} clip(s); speed {pl_['speed']:.2f}x). Supply more clips to avoid repeats.", sid)
+        elif not asset:
             r.add("error", "no_asset", f"Shot {sid}: no image/video file assigned.", sid)
         else:
             p = proj.resolve(base, asset)
