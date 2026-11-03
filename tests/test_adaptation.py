@@ -74,8 +74,9 @@ def test_ring_is_on_the_chain_not_a_generic_pendant(parsed):
     t = all_text(parsed)
     assert "threaded his grandmother's emerald onto a thin gold chain" in t
     assert "pendant" not in t.lower()
-    shot = next(s for s in parsed["shots"] if s["id"] == "s28")
+    shot = next(s for s in parsed["shots"] if s["id"] == "s30")           # first chain appearance: Tuesday at work
     assert "chain" in shot["continuity"] and "emerald" in shot["continuity"]
+    assert "chain" not in next(s for s in parsed["shots"] if s["id"] == "s28")["continuity"].replace("no chain yet", "")
 
 
 def test_ending_is_a_complete_hea_with_optional_cta_last(parsed):
@@ -140,7 +141,7 @@ def test_project_matches_script_and_prompts_carry_continuity():
     ivy = [i for i in items if "ivy" in tagged[i["shot_id"]]]
     assert len(ivy) > 25 and all("bun" in i["image_prompt"] and "pen" in i["image_prompt"] for i in ivy)
     assert not [w for w in val.validate(p, PROJECT).warnings if w.code == "untagged_character"]
-    assert any("thin gold chain" in " ".join(i["continuity_notes"]) for i in ivy)
+    assert any("thin gold chain" in " ".join(i["continuity_notes"]).lower() for i in ivy)
 
 
 def test_source_novel_is_not_in_the_repo_or_zip_inputs():
@@ -176,3 +177,33 @@ def test_full_film_narration_assembles_at_scale_from_synthetic_tones(tmp_path):
     expected = len(p["narration_segments"]) * 0.2 + sum(g["pause_after"] for g in p["narration_segments"])
     assert pl["all_measured"] and abs(pl["total"] - expected) < 1.0
     assert abs(media.probe(out)["duration"] - expected) < 1.0
+
+
+def test_jewelry_chronology_and_reference_faces_in_every_applicable_prompt():
+    p = proj.load(PROJECT)
+    items = {i["shot_id"]: i for i in pr.build_prompts(p)}
+    ivy = [s for s in p["shots"] if "ivy" in s["characters"]]
+    assert len(ivy) > 40
+    for s in ivy:
+        n, ip, neg = int(s["id"][1:]), items[s["id"]]["image_prompt"], items[s["id"]]["negative_prompt"]
+        assert "Continuity locks:" in ip and "reference art" in ip
+        if n <= 26:                                         # pre-wedding, incl. the first ER meeting (s05-s08)
+            assert "NO ring, NO chain, NO necklace" in ip and "wedding ring" in neg and "pendant" in neg
+        elif n == 27:
+            assert "being slid onto" in ip
+        elif n in (28, 29):
+            assert "NO chain or necklace yet" in ip
+        elif n >= 48:
+            assert "plain thin gold band" in ip
+        elif s["location"] in ("er", "hospital_pharmacy"):
+            assert "threaded on a thin gold chain" in ip and "NOT a generic pendant" in ip and "generic pendant" in neg
+        else:
+            assert "on her left finger (not on the chain)" in ip
+    for sid in ("s06", "s07", "s08"):                         # first ER meeting: nothing on her neck or hands
+        assert "NO ring, NO chain, NO necklace" in items[sid]["image_prompt"]
+    for sh in p["shots"]:
+        if "nico" in sh["characters"]:
+            assert "dark wavy hair, stubble, thin white scar through the LEFT eyebrow" in items[sh["id"]]["image_prompt"]
+    iv = next(c for c in p["characters"] if c["id"] == "ivy")
+    assert "THREADED ON A THIN GOLD CHAIN" in iv["continuity_notes"] and "NO ring, NO chain, NO necklace" in iv["continuity_notes"]
+    assert "novel.txt" in iv["continuity_notes"]

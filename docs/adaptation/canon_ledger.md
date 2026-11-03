@@ -75,6 +75,16 @@ Anchors the text states: Fri Oct 3 shooting; Mon Oct 6 wedding [p.87]; Thu Oct 9
 - **Ivy:** will not lie under oath; will not hand over a 21-year-old; chooses to waive privilege herself [p.326-328].
 
 ## 5. Visual continuity (adds the author's reference art and ring note)
+- **Ivy's jewelry chronology (author-confirmed: the object on the chain is her WEDDING RING, not a generic pendant):**
+
+| When | Rule | Source |
+|---|---|---|
+| Fri Oct 3 - Sun Oct 5 (first ER meeting, garage, FBI, terms) | **No ring, no chain, no necklace**; bare hands and neck | none appears before the wedding; ER description [p.5-9] |
+| Mon Oct 6, wedding | Rosa's square emerald goes onto her **left finger**, far too loose, keeps turning | [p.48-49], novel.txt ~line 1205 |
+| From Tue Oct 7, on shift | Ring **threaded on a thin gold chain under her scrub top**, stone tapping her breastbone; first seen at the fishbowl | [p.61], novel.txt ~line 1528 |
+| Off duty, court, club, garden | Ring on her left finger, not on the chain | novel.txt ~2138, 2191, 4286 |
+| From Wed Nov 5 | Plain thin gold band beneath the emerald so it stops turning | [p.261-262], novel.txt ~7116-7156 |
+Adaptation choice (not stated in the novel): after Nov 5 she wears the ring on her finger in the one later ER shot (s56) as well.
 - **Ivy:** 28, freckles, red messy bun **with a pen**, navy scrubs at work, her late mother's gray cardigan elsewhere [p.5, 46, 231]. **Ring:** Nonna Rosa's square emerald (too big) goes on at the wedding [p.49]; at work it hangs on a **thin gold chain under her scrubs** (not a pendant) [p.61]; on her finger at court and home [p.82, 162]; from Nov 5 a plain gold band under it stops it turning [p.261-262].
 - **Nico:** 34, black/dark **wavy** hair and stubble (reference art), gray eyes, thin white scar through the **left** eyebrow [p.6]. Right-forearm splint: **white plaster Oct 3-10, black thermoplastic with 3 velcro straps from Oct 10** [p.106], Teresa's small white cross on the wrist strap [p.236], removed Thu Nov 13 [p.329]. Drives, writes, holds the gun and kisses her wrist with his **left** hand.
 - **Enzo:** gold curls, gray jacket, 21. **Sal:** silver hair, camel coat, anise candies in white twists, Monteleone's cannoli. **Lucia:** black dress, gold cross, hand to the cross when afraid. **Reyes:** rain jacket in any weather. **Holloway:** navy suit, straightens his cuffs. **Brancato:** brown cardigan, buttons wrong.

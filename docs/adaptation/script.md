@@ -145,8 +145,8 @@ H: Eleven pages, typed overnight. At the bottom of Nico's section, someone had a
 H: The ring was his grandmother's, a square emerald, far too big. It slid around my finger. "Rosa had big hands," he said. "She made bread." {p=0.4}
 H: On the courthouse steps, eight reporters and three cameras. Holloway had been tipped. Nico kissed me, slow and warm, the plaster along my spine. It was for the cameras. For three seconds I forgot to count anything, and I was angry about that all day. {p=0.3}
 L: Starting tonight, Dottoressa, we're in love. {p=0.8}
-@s28 | none | ivy,nico | bedroom | wide, a connecting door | A third-floor bedroom in an old Brooklyn brownstone; a brass bolt on Ivy's side of a connecting door with two crooked screws; Ivy tests it with her hand, the door half open to a dark room | brass bolt crooked left-handed screws; the emerald ring now hangs on a thin gold chain at Ivy's neck, under her cardigan
-H: He had put a bolt on my side of the connecting door himself, at six that morning, left-handed. The screws were crooked. I tested it four times. At work I couldn't wear a ring under gloves, so I threaded his grandmother's emerald onto a thin gold chain and tucked it under my scrubs. A wedding ring that lived against my breastbone. I kept touching it. {p=0.5}
+@s28 | none | ivy,nico | bedroom | wide, a connecting door | A third-floor bedroom in an old Brooklyn brownstone; a brass bolt on Ivy's side of a connecting door with two crooked screws; Ivy tests it with her hand, the door half open to a dark room | brass bolt crooked left-handed screws; the emerald ring is on her left finger, loose, stone turned toward her palm; no chain yet
+H: He had put a bolt on my side of the connecting door himself, at six that morning, left-handed. The screws were crooked. I tested it four times. The ring was so loose it kept turning to my palm. {p=0.5}
 @s29 | zoom_in | ivy,nico | kitchen | close, kitchen island | Midnight at a marble kitchen island: Ivy re-stitching Nico's torn forearm sutures under a lamp, her pen in her teeth; he watches her face, not the needle | Nico splint RIGHT arm removed for the stitching; scar LEFT eyebrow; Ivy red bun, navy cardigan over scrubs
 H: At midnight two of his stitches had torn. "Something heavy," he said. I numbed him and redid them at his mother's kitchen island, and I said it before I could stop. "You held the gun in your left hand." {p=0.5}
 L: Don't. {p=0.6}
@@ -154,7 +154,7 @@ H: Not a denial. A door closing. I tied the knot. {p=1.0}
 
 ## CH08 | Leak
 @s30 | zoom_in | ivy,priya | er | close, a gurney | Tuesday in the ER: Ivy cutting a black leather jacket off a young man, a hand-drawn calendar page slipped from its pocket; Priya at her shoulder | Ivy navy scrubs, chain with emerald ring under scrubs; red bun with pen
-H: Tuesday, the ER. Joey, one of Nico's soldiers, rolled in stabbed, lung collapsing. I decompressed him and put in the tube myself while mobsters watched me do it. "Am I dead?" he asked. "Not on my shift." {p=0.4}
+H: Tuesday, the ER. At work I couldn't wear a ring under gloves, so I'd threaded his grandmother's emerald onto a thin gold chain and tucked it under my scrubs. A wedding ring that lived against my breastbone. Joey, one of Nico's soldiers, rolled in stabbed, lung collapsing. I decompressed him and put in the tube myself while mobsters watched me do it. "Am I dead?" he asked. "Not on my shift." {p=0.4}
 H: In his jacket I found my whole October. Every shift in blue ballpoint, small neat slanted handwriting I didn't know. And at the bottom, underlined twice: Level 2. Space 2-14. {p=0.5}
 H: Joey said the man who sent him drove a car that smelled like anise. Only the hospital had my schedule. Dr. Bell had asked about my shifts that morning, almost casually. I told myself Bell asks everybody everything. {p=0.5}
 @s31 | pan_left | ivy,priya,bell | er | medium, resident lounge | Dr. Bell, gray untrimmed beard with reading glasses on a cord, holds a coffee out to Ivy; Ivy's eyes on the cup | Bell gray beard, glasses on cord
@@ -199,7 +199,7 @@ H: "Yes. I love him. And I'd like the record to show he's hearing it for the fir
 H: The judge denied the motion from the bench. She'd seen a great many sham marriages, and none of them sounded like that. In the car, Nico's left hand lay open on the seat, palm up. I put mine in it. At my door he said, "One day, when you're ready, and not before, I'd like to hear it once without them." {p=0.3}
 H: "Not tonight." {p=0.2}
 L: I've waited longer for less. {p=0.7}
-@s42 | zoom_in | ivy | study | close, a desk drawer | At midnight, Ivy in her mother's gray cardigan barefoot at an open desk drawer, holding up a small twist of white candy paper; the paper glows in lamplight | cardigan; emerald ring on chain; red hair loose
+@s42 | zoom_in | ivy | study | close, a desk drawer | At midnight, Ivy in her mother's gray cardigan barefoot at an open desk drawer, holding up a small twist of white candy paper; the paper glows in lamplight | cardigan; emerald ring on her left finger (home, off duty); red hair loose
 H: At midnight I couldn't sleep. Holloway had asked me that morning, "Eleven pages?" Only I, Nico, Mr. Feld and one copy in Nico's top drawer knew how many pages the contract had. Someone inside the house was talking to the government's side. I opened the drawer. Under the paper, a white twist of candy wrapper. It smelled of anise. {p=1.0}
 
 ## CH12 | The Glove Box (Nico)
@@ -235,7 +235,7 @@ H: Paulie confessed. Theo walked out at 12:52. In the car he said, "You never on
 H: Paulie also told Reyes who had stood at the top of the ramp that morning in October, and saw who fired. She wouldn't tell me. {p=0.8}
 
 ## CH15 | The Kitchen Island
-@s49 | zoom_in | ivy,nico,priya | kitchen | tight overhead, marble island | 2 a.m.: Nico on the marble kitchen island with a bleeding wound under his left armpit, a chest tube kit open, Ivy and Priya in cardigan and scrubs bent over him, Priya's phone light | wound LEFT side below armpit; Nico splint RIGHT arm black; Ivy red bun with pen; ring on a chain tucked in scrubs
+@s49 | zoom_in | ivy,nico,priya | kitchen | tight overhead, marble island | 2 a.m.: Nico on the marble kitchen island with a bleeding wound under his left armpit, a chest tube kit open, Ivy and Priya in cardigan and scrubs bent over him, Priya's phone light | wound LEFT side below armpit; Nico splint RIGHT arm black; Ivy red bun with pen; emerald ring plus plain gold band on her left finger (home, off duty)
 > Fast. Clinical. Let Priya's line break the tension with a laugh.
 H: Saturday night someone lured Nico to the port with a hurt watchman. Four men with covered faces. He came home at 1:40 Sunday morning carried by Tommy, shot under the left arm. His lung was collapsing. I couldn't move him. I called Priya, and she arrived in nineteen minutes. We decompressed his chest on the marble island and put in a tube. Priya looked at my sterile field. "Who did your sterile field? A raccoon?" {p=0.5}
 H: He said no hospital. Wrote 2:41 on my hand so I'd have the time. I called the police myself. A Vescari doesn't report a shooting. I did. He didn't object. He said one word. "Stay." {p=0.8}

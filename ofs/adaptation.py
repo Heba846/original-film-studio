@@ -26,10 +26,13 @@ NEGATIVE = ("blood, gore, visible wound, graphic injury, corpse close-up, photor
 CHARACTERS = [
     ("ivy", "Ivy (Dr. Ivy Claire Marlowe)", "28-year-old emergency-medicine resident, freckled, red hair in a messy bun held with a pen, determined expression",
      "navy scrubs at work; her late mother's oversized gray cardigan elsewhere",
-     "Red messy bun WITH A PEN, freckles, navy scrubs. After Oct 6 she wears Nonna Rosa's too-large square emerald wedding ring threaded on a thin gold chain at her neck, tucked under scrubs (not a generic pendant); at home/court the ring is on her left finger and from Nov 5 a plain gold band sits under it so it stops turning."),
+     "Reference art: red messy bun WITH A PEN, freckles, navy scrubs. JEWELRY BY CHRONOLOGY (novel.txt): Fri Oct 3-Sun Oct 5 (first ER meeting, garage, FBI, terms): NO ring, NO chain, NO necklace, bare hands and neck. "
+     "Mon Oct 6: Nonna Rosa's square old-cut emerald (deep cloudy green, thin worn yellow gold, far too big) is put on her left finger at the wedding [p.48-49; line ~1205] and keeps turning to her palm. "
+     "From Tue Oct 7 at WORK (ER/pharmacy) she wears it as a WEDDING RING THREADED ON A THIN GOLD CHAIN under her scrubs, the stone tapping her breastbone [p.61; line ~1528] - never a generic pendant, locket or cross. "
+     "At home, court, club and garden it is on her left finger [lines 2138, 2191, 4286]. From Wed Nov 5 a plain thin gold band sits under the emerald so it stops turning [p.261-262]."),
     ("nico", "Nico Vescari", "34-year-old man, dark wavy hair, stubble, gray eyes, thin white scar through his LEFT eyebrow, tall, calm unreadable expression",
      "ruined charcoal suit (Oct 3), then dark sweaters and white shirts, tuxedo at the gala",
-     "Scar LEFT eyebrow; gray eyes. Cut on RIGHT forearm: white plaster splint fingertips-to-elbow Oct 3-10, black thermoplastic shell with 3 velcro straps (Teresa's small white cross on the wrist strap) Oct 10-Nov 13, removed Nov 13. Uses/holds the gun with his LEFT hand; signs left-handed until Nov 13. Wears Tommy's plain gold band on his LEFT hand."),
+     "Reference art: dark wavy hair, stubble, scar LEFT eyebrow, gray eyes. Cut on RIGHT forearm: white plaster splint fingertips-to-elbow Oct 3-10, black thermoplastic shell with 3 velcro straps (Teresa's small white cross on the wrist strap) Oct 10-Nov 13, removed Nov 13. Uses/holds the gun with his LEFT hand; signs left-handed until Nov 13. Wears Tommy's plain gold band on his LEFT hand."),
     ("enzo", "Enzo Vescari", "21-year-old man, thin, gold curls, brown eyes, crooked smile like Nico's", "gray hoodie / gray jacket", "Gold curls; gray jacket (the 'light jacket' on the stairs)."),
     ("sal", "Uncle Sal (Salvatore Vescari)", "61-year-old man, silver hair, warm brown eyes, big soft build, warm smile", "camel coat, cardigan and slippers at home, hat",
      "Always a tin or twist of white-paper anise candies; Monteleone's cannoli box."),
@@ -148,6 +151,39 @@ def segments_csv(parsed: dict) -> str:
     return buf.getvalue()
 
 
+FACE_LOCK = ("Match the author's supplied reference art for faces and hair and do not redesign: "
+             "Ivy = red messy bun with a pen, freckles; Nico = dark wavy hair, stubble, thin white scar through the LEFT eyebrow, gray eyes")
+IVY_PRE = "Ivy wears NO ring, NO chain, NO necklace and NO jewelry at all (she is not married yet): bare hands, bare neck"
+IVY_RING = "the old square emerald wedding ring is being slid onto Ivy's left ring finger, far too loose; NO chain or necklace yet"
+IVY_LOOSE = "Ivy wears the emerald wedding ring on her left finger, loose, stone turning to her palm; NO chain or necklace yet"
+IVY_CHAIN = ("Ivy at work: the emerald WEDDING RING is threaded on a thin gold chain at her neck, ring (green square stone in worn "
+             "yellow gold) visible on the chain at the scrub collar, NOT a generic pendant or locket; left hand bare")
+IVY_FINGER = "Ivy wears the emerald wedding ring on her left finger (not on the chain); chain not worn off duty"
+IVY_BAND = "Ivy wears the emerald wedding ring on her left finger with a plain thin gold band beneath it so the stone sits upright"
+JEWEL_NEG = {
+    IVY_PRE: "necklace, pendant, ring, wedding ring, jewelry, chain, locket",
+    IVY_RING: "necklace, pendant, chain",
+    IVY_LOOSE: "necklace, pendant, chain",
+    IVY_CHAIN: "generic pendant, locket, heart pendant, cross, necklace without a ring on it, ring on the finger",
+    IVY_FINGER: "necklace, pendant, ring hanging on a chain",
+    IVY_BAND: "necklace, pendant, ring hanging on a chain",
+}
+
+
+def ivy_jewelry(shot: dict) -> str:
+    """Chronology-driven jewelry rule for Ivy in this shot (shot ids are in story order)."""
+    n = int(shot["id"][1:])
+    if n <= 26:
+        return IVY_PRE
+    if n == 27:
+        return IVY_RING
+    if n in (28, 29):
+        return IVY_LOOSE
+    if n >= 48:
+        return IVY_BAND
+    return IVY_CHAIN if shot["location"] in ("er", "hospital_pharmacy") else IVY_FINGER
+
+
 def build_project(parsed: dict) -> dict:
     chars = [{"id": i, "name": n, "description": d, "wardrobe": w, "voice_notes": "",
               "continuity_notes": c, "reference": ""} for i, n, d, w, c in CHARACTERS]
@@ -159,10 +195,17 @@ def build_project(parsed: dict) -> dict:
         segs.append(g)
     shots = []
     for sh in parsed["shots"]:
+        locks, neg = [], NEGATIVE
+        if "ivy" in sh["characters"]:
+            j = ivy_jewelry(sh)
+            locks.append(j)
+            neg += ", " + JEWEL_NEG[j]
+        if "ivy" in sh["characters"] or "nico" in sh["characters"]:
+            locks.append(FACE_LOCK)
         shots.append({"id": sh["id"], "title": sh["chapter"], "kind": "image", "asset": f"media/film/{sh['id']}.png",
                       "duration": 5.0, "motion": sh["motion"], "transition": "cut", "characters": sh["characters"],
                       "location": sh["location"], "action": sh["action"], "camera": sh["camera"],
-                      "continuity_notes": sh["continuity"], "negative_extra": NEGATIVE,
+                      "continuity_notes": sh["continuity"], "negative_extra": neg, "locks": "; ".join(locks),
                       "segments": [x["id"] for x in parsed["segments"] if x["shot"] == sh["id"]]})
     p = proj.normalize({
         "title": "Married to the Don to Keep Me Silent - narrated film (full adaptation)",

@@ -11,7 +11,7 @@
       "description": "28-year-old woman, freckles across nose and cheeks, red hair in a messy bun held in place with a pen",
       "wardrobe": "navy hospital scrubs",
       "voice_notes": "Narrated by Heba (first person)",
-      "continuity_notes": "Red messy bun WITH A PEN; freckles; navy scrubs in every work shot. No ring on Oct 3; after the Oct 6 wedding Nonna Rosa's emerald wedding ring hangs on a thin gold chain at her neck at work (not a generic pendant).",
+      "continuity_notes": "Reference art: red messy bun WITH A PEN, freckles, navy scrubs. Oct 3 (this whole pilot, first ER meeting and garage): NO ring, NO chain, NO necklace. Chronology: ring given at the Oct 6 wedding (finger); from Oct 7 at work it hangs as a wedding ring on a thin gold chain under scrubs - never a generic pendant (see docs/adaptation/canon_ledger.md).",
       "reference": ""
     },
     {
@@ -53,7 +53,8 @@
       "segments": [
         "n01"
       ],
-      "negative_extra": "blood, gore, visible wound, graphic injury, corpse close-up, text, subtitles, watermark, logo"
+      "negative_extra": "blood, gore, visible wound, graphic injury, corpse close-up, text, subtitles, watermark, logo",
+      "locks": ""
     },
     {
       "id": "s02",
@@ -75,7 +76,8 @@
       "segments": [
         "n02"
       ],
-      "negative_extra": "blood, gore, visible wound, graphic injury, corpse close-up, text, subtitles, watermark, logo"
+      "negative_extra": "blood, gore, visible wound, graphic injury, corpse close-up, text, subtitles, watermark, logo",
+      "locks": "Nico: match the reference art: dark wavy hair, stubble, scar LEFT eyebrow, gray eyes"
     },
     {
       "id": "s03",
@@ -97,7 +99,8 @@
       "segments": [
         "n03"
       ],
-      "negative_extra": "blood, gore, visible wound, graphic injury, corpse close-up, text, subtitles, watermark, logo"
+      "negative_extra": "blood, gore, visible wound, graphic injury, corpse close-up, text, subtitles, watermark, logo",
+      "locks": "Nico: match the reference art: dark wavy hair, stubble, scar LEFT eyebrow, gray eyes"
     },
     {
       "id": "s04",
@@ -119,7 +122,8 @@
       "segments": [
         "n04"
       ],
-      "negative_extra": "blood, gore, visible wound, graphic injury, corpse close-up, text, subtitles, watermark, logo"
+      "negative_extra": "blood, gore, visible wound, graphic injury, corpse close-up, text, subtitles, watermark, logo",
+      "locks": "Nico: match the reference art: dark wavy hair, stubble, scar LEFT eyebrow, gray eyes"
     },
     {
       "id": "s05",
@@ -141,7 +145,8 @@
       "segments": [
         "n05"
       ],
-      "negative_extra": "blood, gore, visible wound, graphic injury, corpse close-up, text, subtitles, watermark, logo"
+      "negative_extra": "blood, gore, visible wound, graphic injury, corpse close-up, text, subtitles, watermark, logo, necklace, pendant, ring, wedding ring, jewelry, chain",
+      "locks": "Ivy wears NO ring, NO chain, NO necklace (pre-wedding, Oct 3); match the author's reference art: red messy bun with a pen, freckles, navy scrubs"
     },
     {
       "id": "s06",
@@ -164,7 +169,8 @@
       "segments": [
         "n06"
       ],
-      "negative_extra": "blood, gore, visible wound, graphic injury, corpse close-up, text, subtitles, watermark, logo"
+      "negative_extra": "blood, gore, visible wound, graphic injury, corpse close-up, text, subtitles, watermark, logo, necklace, pendant, ring, wedding ring, jewelry, chain",
+      "locks": "Ivy wears NO ring, NO chain, NO necklace (pre-wedding, Oct 3); match the author's reference art: red messy bun with a pen, freckles, navy scrubs; Nico: match the reference art: dark wavy hair, stubble, scar LEFT eyebrow, gray eyes"
     }
   ],
   "notes": "CANON CORRECTIONS (checked against the novel, see docs/adaptation/canon_ledger.md): ER arrival 3:05 [p.5], stitches 3:20 [p.8], splint ~3:40 [p.8], two shots 4:10 [p.10]. So the splint was built THIRTY minutes before the shots (not 'forty') and the patient was first treated FIFTY minutes before. Nico's line is 'Go back inside, Dr. Marlowe' [p.11] ('Dottoressa' comes later). The garage is St. Brigid's level 2 at 4:10 a.m. (not 3 a.m.). Ivy is a fourth-year ER resident. Nico does not threaten her: Brancato's people are the danger, so 'the witness he couldn't afford to leave behind' was replaced. Original pilot wording is kept in each segment's original_text. Ivy hears the shots and sees the gun in Nico's LEFT hand afterward; she never sees who fires (Enzo does, p.146-147, 314).\nPRODUCT DECISION: the FIRST published video must be a COMPLETE short film with a satisfying ending, optimised for views and viewer satisfaction. Book sales are optional (a light, honest mention at most) - NOT a cliffhanger paywall. This 6-shot pilot is only the opening scene used to test the two-speaker workflow; the finished film still needs its middle and a resolved ending.\nEDITORIAL PROPOSAL (not the author's approved text): replaces a closing line that said 'I had just married into a family' - premature, because the wedding happens later in the book.\nOriginal closing wording preserved here as far as it was given to this session: it contained the phrase \"I had just married into a family\". The full original sentence(s) were NOT supplied - paste them below.\nShot durations are ESTIMATES from word counts until real narration audio exists; run `python -m ofs narration sync` after importing audio.\nVoices: Heba = Ivy first-person narrator (female). Lion = Nico dialogue + Nico POV (male). No recordings exist in this repo.",

@@ -95,7 +95,7 @@ def build_pilot() -> dict:
         "characters": [
             {"id": "ivy", "name": "Ivy", "description": "28-year-old woman, freckles across nose and cheeks, red hair in a messy bun held in place with a pen",
              "wardrobe": "navy hospital scrubs", "voice_notes": "Narrated by Heba (first person)",
-             "continuity_notes": "Red messy bun WITH A PEN; freckles; navy scrubs in every work shot. No ring on Oct 3; after the Oct 6 wedding Nonna Rosa's emerald wedding ring hangs on a thin gold chain at her neck at work (not a generic pendant).", "reference": ""},
+             "continuity_notes": "Reference art: red messy bun WITH A PEN, freckles, navy scrubs. Oct 3 (this whole pilot, first ER meeting and garage): NO ring, NO chain, NO necklace. Chronology: ring given at the Oct 6 wedding (finger); from Oct 7 at work it hangs as a wedding ring on a thin gold chain under scrubs - never a generic pendant (see docs/adaptation/canon_ledger.md).", "reference": ""},
             {"id": "nico", "name": "Nico", "description": "34-year-old man, black wavy hair, stubble, gray eyes, thin white scar through his LEFT eyebrow",
              "wardrobe": "ruined charcoal suit that night, then dark sweaters/white shirts", "voice_notes": "Voiced by Lion (dialogue and Nico POV)",
              "continuity_notes": "Scar on LEFT eyebrow. Plaster splint on RIGHT forearm. Gun ONLY in LEFT hand. Splint white plaster Oct 3-10, then black thermoplastic.",
@@ -114,7 +114,8 @@ def build_pilot() -> dict:
         "narration_segments": segs,
         "shots": [{"id": i, "title": t, "kind": "image", "asset": f"media/pilot/{i}.png", "duration": 5.0,
                    "motion": m, "transition": "fade" if i in ("s01", "s06") else "cut", "segments": sg, "characters": ch,
-                   "location": loc, "action": act, "camera": cam, "continuity_notes": cn, "negative_extra": NEG}
+                   "location": loc, "action": act, "camera": cam, "continuity_notes": cn, "negative_extra": NEG + (", necklace, pendant, ring, wedding ring, jewelry, chain" if "ivy" in ch else ""),
+                   "locks": ("Ivy wears NO ring, NO chain, NO necklace (pre-wedding, Oct 3); match the author's reference art: red messy bun with a pen, freckles, navy scrubs" if "ivy" in ch else "") + ("; " if "ivy" in ch and "nico" in ch else "") + ("Nico: match the reference art: dark wavy hair, stubble, scar LEFT eyebrow, gray eyes" if "nico" in ch else "")}
                   for i, t, m, sg, ch, loc, act, cam, cn in SHOTS],
         "audio": {"narration_mode": "segments", "narration": "", "music": "", "music_volume": 0.2},
         "captions": {"srt": "", "mode": "none"},

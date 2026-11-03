@@ -46,6 +46,7 @@ def build_prompts(project: dict) -> list:
             _j(project["style"]),
             loc_txt, char_txt,
             _j(f"Action: {s['action']}" if s["action"] else ""),
+            _j(f"Continuity locks: {s['locks']}" if s["locks"] else ""),
             _j(f"Camera: {s['camera']}" if s["camera"] else ""),
             "16:9 widescreen composition.",
         ] if x)

@@ -1,5 +1,5 @@
 {
-  "total_words": 4885,
+  "total_words": 4892,
   "optional_cta_words": 54,
   "words_by_chapter": {
     "CH00": 151,
@@ -9,8 +9,8 @@
     "CH04": 352,
     "CH05": 233,
     "CH06": 281,
-    "CH07": 289,
-    "CH08": 407,
+    "CH07": 262,
+    "CH08": 441,
     "CH09": 295,
     "CH10": 129,
     "CH11": 210,
@@ -24,14 +24,14 @@
     "CH19": 247
   },
   "words_by_speaker": {
-    "heba": 3878,
+    "heba": 3885,
     "lion": 1007
   },
   "pause_seconds": 83.9,
   "estimated_seconds_at_wpm": {
-    "140": 2177.5,
-    "150": 2037.9,
-    "160": 1915.8
+    "140": 2180.5,
+    "150": 2040.7,
+    "160": 1918.4
   },
   "estimate_note": "ESTIMATE from word count + scripted pauses. NOT measured: no narration has been recorded.",
   "chapter_timestamps_estimated": [
@@ -69,51 +69,51 @@
     },
     {
       "chapter": "CH08",
-      "start_est_s": 867.7
+      "start_est_s": 856.9
     },
     {
       "chapter": "CH09",
-      "start_est_s": 1035.4
+      "start_est_s": 1038.2
     },
     {
       "chapter": "CH10",
-      "start_est_s": 1157.9
+      "start_est_s": 1160.7
     },
     {
       "chapter": "CH11",
-      "start_est_s": 1211.1
+      "start_est_s": 1213.9
     },
     {
       "chapter": "CH12",
-      "start_est_s": 1299.7
+      "start_est_s": 1302.5
     },
     {
       "chapter": "CH13",
-      "start_est_s": 1404.1
+      "start_est_s": 1406.9
     },
     {
       "chapter": "CH14",
-      "start_est_s": 1484.0
+      "start_est_s": 1486.8
     },
     {
       "chapter": "CH15",
-      "start_est_s": 1569.6
+      "start_est_s": 1572.4
     },
     {
       "chapter": "CH16",
-      "start_est_s": 1641.1
+      "start_est_s": 1643.9
     },
     {
       "chapter": "CH17",
-      "start_est_s": 1734.7
+      "start_est_s": 1737.5
     },
     {
       "chapter": "CH18",
-      "start_est_s": 1842.4
+      "start_est_s": 1845.2
     },
     {
       "chapter": "CH19",
-      "start_est_s": 1935.7
+      "start_est_s": 1938.5
     }
   ]
 }
