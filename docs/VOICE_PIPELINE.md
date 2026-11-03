@@ -10,7 +10,8 @@ Branch: `claude/original-film-studio-qtq97a` (+ the PR into it). Nothing here to
 | Batch renderer (resume, silence trim, 2-pass loudness -19 LUFS, per-speaker reference routing, RTF report) | **Ran for all 162 segments** with a robotic `espeak-ng` *stand-in engine* (`--engine espeak --stand-in`) to prove plumbing only. It is not a voice clone and sounds nothing like Heba/Lion. |
 | Narration assemble + `narration sync` + measured timing | **Ran** on the 162 stand-in segments (28.7 min at espeak pace; real cloned timing will differ, expect ~31-35 min) |
 | Captions (SRT), YouTube chapters | **Ran** on that timing (20 chapters, first at 0:00) |
-| Clip-fill renderer + 1080p MP4 with burned captions | **Ran** on the full 62-shot timeline using ~98 *synthetic test-pattern clips* (not story footage) |
+| Clip-fill renderer + 1080p MP4 with burned captions | **Ran** on the full 62-shot timeline using 98 *synthetic test-pattern clips* (not story footage) and the stand-in narration: 1920x1080, 24 fps, 1725.5 s (matches narration), captions visible in a checked frame, 12 min wall on 4 CPU cores at `ultrafast`/crf 28 (file 1.1 GB: that is the draft preset, use `medium`/crf 20 for the final). Clips plan: 900 s unique, 826 s repeated (slow-down + reframed second passes), 0 s frozen/uncovered |
+| 93 -> 97 unit/integration tests | **Pass** |
 | Real story footage (Veo clips), real voices | **Not available here** |
 
 ## Reference voices (git-ignored, never committed)
