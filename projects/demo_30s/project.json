@@ -1,0 +1,158 @@
+{
+  "version": 1,
+  "title": "The Last Lantern (synthetic demo)",
+  "logline": "A keeper's daughter relights a dead lighthouse. ORIGINAL fictional story; demo uses placeholder art.",
+  "style": "Hand-painted storybook look, muted teal and amber palette, soft film grain",
+  "script": "FADE IN.\nEXT. CLIFF - DUSK. A lighthouse, dark for nine years.\nMIRA (12) climbs the stairs.\nINT. LANTERN ROOM. She cleans the lens. It catches the last sun.\nEXT. SEA. A boat turns toward the light.\nNARRATOR: Some lights wait to be asked.",
+  "characters": [
+    {
+      "id": "mira",
+      "name": "Mira",
+      "description": "12-year-old girl, short black hair, determined expression, freckles",
+      "wardrobe": "oversized faded yellow raincoat, red scarf",
+      "voice_notes": "Narrator is an adult storyteller, warm and unhurried",
+      "continuity_notes": "Scarf is always RED; raincoat sleeves always too long; no hat",
+      "reference": "see media/ref_mira.png (supply your own)"
+    }
+  ],
+  "locations": [
+    {
+      "id": "lighthouse",
+      "name": "Lighthouse on the cliff",
+      "description": "weathered white tower with a rusted iron gallery",
+      "lighting": "low amber dusk light",
+      "continuity_notes": "Tower is on the LEFT of frame when viewed from the sea",
+      "reference": ""
+    },
+    {
+      "id": "sea",
+      "name": "Open sea",
+      "description": "dark teal water, small fishing boat",
+      "lighting": "last red glow on the horizon",
+      "continuity_notes": "Boat has a green hull",
+      "reference": ""
+    }
+  ],
+  "shots": [
+    {
+      "id": "s01",
+      "title": "Dark tower",
+      "kind": "image",
+      "asset": "media/s01.png",
+      "duration": 5.0,
+      "trim_start": 0.0,
+      "motion": "zoom_in",
+      "transition": "fade",
+      "characters": [],
+      "location": "lighthouse",
+      "action": "Wide shot of the dark lighthouse at dusk",
+      "camera": "slow push-in",
+      "dialogue": "",
+      "continuity_notes": ""
+    },
+    {
+      "id": "s02",
+      "title": "Stairs",
+      "kind": "video",
+      "asset": "media/s02.mp4",
+      "duration": 5.0,
+      "trim_start": 0.0,
+      "motion": "none",
+      "transition": "cut",
+      "characters": [
+        "mira"
+      ],
+      "location": "lighthouse",
+      "action": "Mira climbs the spiral stairs",
+      "camera": "handheld follow",
+      "dialogue": "",
+      "continuity_notes": "Keep Mira's scarf red"
+    },
+    {
+      "id": "s03",
+      "title": "The lens",
+      "kind": "image",
+      "asset": "media/s03.png",
+      "duration": 5.0,
+      "trim_start": 0.0,
+      "motion": "pan_right",
+      "transition": "cut",
+      "characters": [
+        "mira"
+      ],
+      "location": "lighthouse",
+      "action": "Close on the old lens",
+      "camera": "slow pan across glass",
+      "dialogue": "",
+      "continuity_notes": "Keep Mira's scarf red"
+    },
+    {
+      "id": "s04",
+      "title": "Wiping glass",
+      "kind": "image",
+      "asset": "media/s04.png",
+      "duration": 5.0,
+      "trim_start": 0.0,
+      "motion": "zoom_out",
+      "transition": "cut",
+      "characters": [
+        "mira"
+      ],
+      "location": "lighthouse",
+      "action": "Mira wipes the lens with a coat",
+      "camera": "pull back to reveal room",
+      "dialogue": "",
+      "continuity_notes": "Keep Mira's scarf red"
+    },
+    {
+      "id": "s05",
+      "title": "The boat",
+      "kind": "video",
+      "asset": "media/s05.mp4",
+      "duration": 5.0,
+      "trim_start": 0.0,
+      "motion": "none",
+      "transition": "cut",
+      "characters": [],
+      "location": "sea",
+      "action": "A boat turns toward the shore",
+      "camera": "static wide",
+      "dialogue": "",
+      "continuity_notes": ""
+    },
+    {
+      "id": "s06",
+      "title": "Lit",
+      "kind": "image",
+      "asset": "media/s06.png",
+      "duration": 5.0,
+      "trim_start": 0.0,
+      "motion": "zoom_in",
+      "transition": "fade",
+      "characters": [
+        "mira"
+      ],
+      "location": "lighthouse",
+      "action": "The light finally turns on",
+      "camera": "slow push-in on beam",
+      "dialogue": "",
+      "continuity_notes": "Keep Mira's scarf red"
+    }
+  ],
+  "audio": {
+    "narration": "media/narration_placeholder.wav",
+    "music": "media/music_pad.wav",
+    "narration_volume": 1.0,
+    "music_volume": 0.3,
+    "duck_music": true
+  },
+  "captions": {
+    "srt": "media/captions.srt",
+    "mode": "burn"
+  },
+  "render": {
+    "fps": 30,
+    "crf": 21,
+    "preset": "veryfast"
+  }
+}

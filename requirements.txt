@@ -1,0 +1,3 @@
+# Runtime: only needed for `python -m ofs demo` (synthetic placeholder images).
+# The UI, validation, prompt export and rendering use the standard library + FFmpeg.
+Pillow>=10.0

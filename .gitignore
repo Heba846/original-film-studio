@@ -1,0 +1,16 @@
+# Media and build output stay OUT of source control
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+dist/
+projects/*/media/
+projects/*/output/
+*.mp4
+*.mov
+*.mkv
+*.wav
+*.mp3
+*.zip
+.env
+*.key

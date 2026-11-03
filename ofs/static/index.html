@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Original Film Studio</title>
+<style>
+:root{--bg:#14161a;--panel:#1d2026;--line:#2e333c;--fg:#e8eaed;--mut:#9aa3af;--acc:#e9a23b;--err:#ef5350;--warn:#f0b429;--ok:#4caf7a}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:14px/1.45 system-ui,Segoe UI,Tahoma,sans-serif}
+header{display:flex;gap:12px;align-items:center;padding:10px 16px;background:var(--panel);border-bottom:1px solid var(--line);flex-wrap:wrap}
+header h1{font-size:16px;margin:0;color:var(--acc)}
+nav{display:flex;gap:4px;padding:8px 16px 0;flex-wrap:wrap}
+nav button{background:none;border:1px solid var(--line);border-bottom:none;color:var(--mut);padding:7px 14px;border-radius:6px 6px 0 0;cursor:pointer}
+nav button.on{background:var(--panel);color:var(--fg)}
+main{padding:16px;background:var(--panel);margin:0 16px 16px;border:1px solid var(--line);border-radius:0 6px 6px 6px;min-height:60vh}
+input,select,textarea{background:#101216;color:var(--fg);border:1px solid var(--line);border-radius:4px;padding:6px 8px;font:inherit;width:100%}
+textarea{min-height:70px;resize:vertical}
+label{display:block;color:var(--mut);font-size:12px;margin:8px 0 2px}
+button.b{background:var(--acc);color:#111;border:0;padding:7px 14px;border-radius:5px;cursor:pointer;font-weight:600}
+button.g{background:#2a2f38;color:var(--fg);border:1px solid var(--line);padding:5px 10px;border-radius:5px;cursor:pointer}
+.row{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.card{border:1px solid var(--line);border-radius:6px;padding:12px;margin-bottom:12px;background:#181b20}
+.card h3{margin:0 0 6px;font-size:14px}
+.banner{background:#2a2112;border:1px solid #5b4516;color:#f3d28a;padding:8px 12px;border-radius:6px;margin-bottom:12px;font-size:13px}
+.err{color:var(--err)}.warn{color:var(--warn)}.info{color:var(--mut)}.ok{color:var(--ok)}
+.bar{display:flex;height:26px;border-radius:4px;overflow:hidden;border:1px solid var(--line);margin:8px 0}
+.seg{background:#3a4a63;border-right:1px solid #111;font-size:11px;display:flex;align-items:center;justify-content:center;overflow:hidden;white-space:nowrap}
+.seg.video{background:#35634a}
+.thumb{width:128px;height:72px;object-fit:cover;background:#000;border-radius:4px}
+.shot{display:grid;grid-template-columns:140px 1fr;gap:12px}
+.acts{display:flex;gap:4px;flex-wrap:wrap;margin-top:6px}
+pre{white-space:pre-wrap;background:#101216;padding:8px;border-radius:4px;border:1px solid var(--line)}
+progress{width:100%;height:18px}
+.small{font-size:12px;color:var(--mut)}
+[dir=auto]{unicode-bidi:plaintext}
+</style>
+</head>
+<body>
+<header>
+  <h1>🎬 Original Film Studio</h1>
+  <select id="projSel" style="width:200px"></select>
+  <button class="g" id="newProj">New project</button>
+  <button class="b" id="saveBtn">Save</button>
+  <span id="dirty" class="small"></span>
+  <span class="small" id="tools"></span>
+</header>
+<nav id="tabs"></nav>
+<main id="main"></main>
+<script>
+const TABS=[["story","Story & Script"],["bible","Character / Location Bible"],["shots","Shot List"],["audio","Audio & Captions"],["prompts","Prompts"],["render","Validate & Render"]];
+let S=null,P=null,tab="story",dirty=false,files=[];
+const $=(s,r=document)=>r.querySelector(s);
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+async function api(path,body,raw){
+  const o=body===undefined?{}:{method:"POST",headers:{"X-OFS":"1","Content-Type":"application/json"},body:JSON.stringify(body)};
+  const r=await fetch(path,o);const j=await r.json();if(!r.ok)throw new Error(j.error||r.statusText);return j;
+}
+function mark(){dirty=true;$("#dirty").textContent="● unsaved changes"}
+async function load(){
+  S=await api("/api/state");P=S.project;files=S.files;dirty=false;$("#dirty").textContent="";
+  $("#projSel").innerHTML=S.projects.map(n=>`<option ${n==S.name?"selected":""}>${esc(n)}</option>`).join("");
+  $("#tools").textContent=S.tools.ffmpeg&&S.tools.ffprobe?"FFmpeg ✓":"⚠ FFmpeg/ffprobe not found - install FFmpeg";
+  draw();
+}
+async function save(){await api("/api/save",{project:P});dirty=false;$("#dirty").textContent="saved ✓"}
+function bind(el,obj,key,num){el.oninput=()=>{obj[key]=num?(el.value===""?"":Number(el.value)):el.value;mark()}}
+function field(label,obj,key,{type="text",area=false,num=false}={}){
+  const d=document.createElement("div");
+  d.innerHTML=`<label>${label}</label>`+(area?`<textarea dir="auto"></textarea>`:`<input dir="auto" type="${type}" ${num?'step="0.1"':""}>`);
+  const el=d.lastChild;el.value=obj[key]??"";bind(el,obj,key,num);return d;
+}
+function tabs(){
+  $("#tabs").innerHTML=TABS.map(([k,t])=>`<button class="${k==tab?"on":""}" data-k="${k}">${t}</button>`).join("");
+  $("#tabs").querySelectorAll("button").forEach(b=>b.onclick=()=>{tab=b.dataset.k;draw()});
+}
+function draw(){tabs();const m=$("#main");m.innerHTML="";({story,bible,shots,audio,prompts,render})[tab](m)}
+
+function story(m){
+  m.innerHTML=`<div class="banner">This studio organises and assembles YOUR assets. It does not generate video, images or voices.</div>`;
+  const r=document.createElement("div");r.className="row";
+  r.append(field("Title",P,"title"),field("Logline",P,"logline"));m.append(r);
+  m.append(field("Visual style (added to every prompt)",P,"style",{area:true}),field("Script (any language; Arabic supported)",P,"script",{area:true}));
+  m.lastChild.lastChild.style.minHeight="320px";
+}
+function listEditor(m,title,arr,fields,mk){
+  const h=document.createElement("div");h.innerHTML=`<h3>${title}</h3>`;m.append(h);
+  arr.forEach((o,i)=>{const c=document.createElement("div");c.className="card";
+    const r=document.createElement("div");r.className="row";
+    fields.forEach(([k,l,area])=>r.append(field(l,o,k,{area})));c.append(r);
+    const b=document.createElement("button");b.className="g";b.textContent="Remove";b.onclick=()=>{arr.splice(i,1);mark();draw()};c.append(b);m.append(c)});
+  const a=document.createElement("button");a.className="b";a.textContent="+ Add";a.onclick=()=>{arr.push(mk());mark();draw()};m.append(a);
+}
+function bible(m){
+  listEditor(m,"Characters",P.characters,[["id","Id (short, unique, e.g. mira)"],["name","Name"],["description","Appearance",1],["wardrobe","Wardrobe"],["voice_notes","Voice notes (for your own narrator)"],["continuity_notes","Continuity notes (must never change)",1],["reference","Reference image / note"]],
+    ()=>({id:"char"+(P.characters.length+1),name:"",description:"",wardrobe:"",voice_notes:"",continuity_notes:"",reference:""}));
+  m.append(document.createElement("hr"));
+  listEditor(m,"Locations",P.locations,[["id","Id (e.g. lighthouse)"],["name","Name"],["description","Description",1],["lighting","Lighting"],["continuity_notes","Continuity notes",1],["reference","Reference image / note"]],
+    ()=>({id:"loc"+(P.locations.length+1),name:"",description:"",lighting:"",continuity_notes:"",reference:""}));
+}
+function total(){return P.shots.reduce((a,s)=>a+(Number(s.duration)>0?Number(s.duration):0),0)}
+function shots(m){
+  const T=total();
+  const bar=P.shots.map(s=>`<div class="seg ${s.kind}" style="flex:${Math.max(Number(s.duration)||0,0.1)}" title="${esc(s.id)} ${s.duration}s">${esc(s.id)}</div>`).join("");
+  m.innerHTML=`<div><b>Timeline: ${T.toFixed(1)}s</b> <span class="small">blue = still image (animatic), green = supplied video clip</span></div><div class="bar">${bar}</div><datalist id="fl">${files.map(f=>`<option value="${esc(f)}">`).join("")}</datalist>`;
+  P.shots.forEach((s,i)=>{
+    const c=document.createElement("div");c.className="card shot";
+    const isImg=s.kind=="image"&&/\.(png|jpe?g|webp|bmp)$/i.test(s.asset)&&!/^([a-z]:|\/)/i.test(s.asset);
+    const th=isImg?`<img class="thumb" src="/media/${encodeURI(s.asset)}">`:`<div class="thumb small" style="display:flex;align-items:center;justify-content:center">${s.kind=="video"?"🎞 video":"no preview"}</div>`;
+    c.innerHTML=`<div>${th}<div class="small">#${i+1}</div><div class="acts"></div></div><div class="rowx"></div>`;
+    const acts=$(".acts",c),mkb=(t,fn)=>{const b=document.createElement("button");b.className="g";b.textContent=t;b.onclick=fn;acts.append(b)};
+    mkb("↑",()=>{if(i>0){[P.shots[i-1],P.shots[i]]=[P.shots[i],P.shots[i-1]];mark();draw()}});
+    mkb("↓",()=>{if(i<P.shots.length-1){[P.shots[i+1],P.shots[i]]=[P.shots[i],P.shots[i+1]];mark();draw()}});
+    mkb("Dup",()=>{P.shots.splice(i+1,0,{...JSON.parse(JSON.stringify(s)),id:s.id+"_copy"});mark();draw()});
+    mkb("✕",()=>{P.shots.splice(i,1);mark();draw()});
+    const r=document.createElement("div");r.className="row";
+    r.append(field("Id",s,"id"),field("Title",s,"title"));
+    const sel=(l,k,opts)=>{const d=document.createElement("div");d.innerHTML=`<label>${l}</label><select>${opts.map(o=>`<option ${o==s[k]?"selected":""}>${o}</option>`).join("")}</select>`;d.lastChild.onchange=e=>{s[k]=e.target.value;mark();if(k=="kind")draw()};return d};
+    r.append(sel("Type","kind",["image","video"]),field("Duration (s)",s,"duration",{type:"number",num:true}));
+    if(s.kind=="video")r.append(field("Trim start (s)",s,"trim_start",{type:"number",num:true}));
+    else r.append(sel("Motion (animatic pan/zoom)","motion",S.motions));
+    r.append(sel("Transition","transition",S.transitions));
+    const ad=document.createElement("div");ad.innerHTML=`<label>Asset file (in project folder, or full path)</label><input list="fl" dir="ltr"><input type="file" style="margin-top:4px">`;
+    const ai=ad.firstElementChild.nextElementSibling;ai.value=s.asset;ai.oninput=()=>{s.asset=ai.value;mark()};
+    ad.lastChild.onchange=async e=>{const f=e.target.files[0];if(!f)return;const j=await fetch("/api/upload?name="+encodeURIComponent(f.name),{method:"POST",headers:{"X-OFS":"1"},body:f}).then(r=>r.json());
+      if(j.path){s.asset=j.path;if(!files.includes(j.path))files.push(j.path);mark();draw()}else alert(j.error)};
+    r.append(ad);
+    const cd=document.createElement("div");cd.innerHTML=`<label>Characters in shot</label>`+(P.characters.map(ch=>`<label style="display:inline-block;margin-right:10px;color:var(--fg)"><input type="checkbox" style="width:auto" ${s.characters.includes(ch.id)?"checked":""} data-id="${esc(ch.id)}"> ${esc(ch.name||ch.id)}</label>`).join("")||`<span class="small">add characters in the Bible tab</span>`);
+    cd.querySelectorAll("input").forEach(x=>x.onchange=()=>{s.characters=[...cd.querySelectorAll("input:checked")].map(y=>y.dataset.id);mark()});r.append(cd);
+    const ld=document.createElement("div");ld.innerHTML=`<label>Location</label><select><option value="">-</option>${P.locations.map(l=>`<option value="${esc(l.id)}" ${l.id==s.location?"selected":""}>${esc(l.name||l.id)}</option>`).join("")}</select>`;
+    ld.lastChild.onchange=e=>{s.location=e.target.value;mark()};r.append(ld);
+    r.append(field("Action",s,"action",{area:true}),field("Camera",s,"camera"),field("Narration/dialogue line (reference)",s,"dialogue",{area:true}),field("Shot continuity notes",s,"continuity_notes",{area:true}));
+    $(".rowx",c).append(r);m.append(c);
+  });
+  const a=document.createElement("button");a.className="b";a.textContent="+ Add shot";
+  a.onclick=()=>{let n=P.shots.length+1,id;do{id="s"+String(n++).padStart(2,"0")}while(P.shots.some(x=>x.id==id));
+    P.shots.push({id,title:"",kind:"image",asset:"",duration:5,trim_start:0,motion:"none",transition:"cut",characters:[],location:"",action:"",camera:"",dialogue:"",continuity_notes:""});mark();draw()};
+  m.append(a);
+}
+function audio(m){
+  const A=P.audio,C=P.captions;
+  m.innerHTML=`<div class="banner">Import narration you recorded or cloned yourself elsewhere. Nothing is uploaded to any online service; files are only copied into your project folder.</div><datalist id="fl">${files.map(f=>`<option value="${esc(f)}">`).join("")}</datalist>`;
+  const up=(label,obj,key)=>{const d=document.createElement("div");d.innerHTML=`<label>${label}</label><input list="fl" dir="ltr"><input type="file" style="margin-top:4px">`;
+    const i=d.firstElementChild.nextElementSibling;i.value=obj[key];i.oninput=()=>{obj[key]=i.value;mark()};
+    d.lastChild.onchange=async e=>{const f=e.target.files[0];if(!f)return;const j=await fetch("/api/upload?name="+encodeURIComponent(f.name),{method:"POST",headers:{"X-OFS":"1"},body:f}).then(r=>r.json());
+      if(j.path){obj[key]=j.path;if(!files.includes(j.path))files.push(j.path);mark();draw()}else alert(j.error)};return d};
+  const r=document.createElement("div");r.className="row";
+  r.append(up("Narration (WAV/MP3)",A,"narration"),field("Narration volume (0-4, 1 = unchanged)",A,"narration_volume",{type:"number",num:true}),
+    up("Background music (optional)",A,"music"),field("Music volume (0-4, e.g. 0.25)",A,"music_volume",{type:"number",num:true}));
+  const dk=document.createElement("div");dk.innerHTML=`<label><input type="checkbox" style="width:auto" ${A.duck_music?"checked":""}> Duck music under narration</label>`;dk.firstChild.firstChild.onchange=e=>{A.duck_music=e.target.checked;mark()};r.append(dk);
+  m.append(r,document.createElement("hr"));
+  const r2=document.createElement("div");r2.className="row";
+  r2.append(up("Captions (imported .srt, UTF-8)",C,"srt"));
+  const md=document.createElement("div");md.innerHTML=`<label>Caption mode</label><select>${["none","burn","soft"].map(o=>`<option ${o==C.mode?"selected":""} value="${o}">${{none:"none",burn:"burn into video",soft:"soft subtitle track"}[o]}</option>`).join("")}</select>`;
+  md.lastChild.onchange=e=>{C.mode=e.target.value;mark()};r2.append(md);m.append(r2);
+}
+async function prompts(m){
+  m.innerHTML=`<div class="banner">These prompts are for EXTERNAL tools you choose. Generate images/clips there, then import the files in the Shot List.</div><button class="b" id="gp">Generate prompts from current project</button> <button class="g" id="dl1">Download .md</button> <button class="g" id="dl2">Download .csv</button><div id="out"></div>`;
+  let last=null;const dl=(n,t)=>{const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([t],{type:"text/plain;charset=utf-8"}));a.download=n;a.click()};
+  $("#dl1").onclick=()=>last&&dl("prompts.md",last.markdown);$("#dl2").onclick=()=>last&&dl("prompts.csv","﻿"+last.csv);
+  $("#gp").onclick=async()=>{last=await api("/api/prompts",{project:P});
+    $("#out").innerHTML=last.prompts.map(p=>`<div class="card"><h3>${p.order}. ${esc(p.shot_id)} - ${esc(p.title)} (${p.duration}s)</h3><b>Image prompt</b><pre dir="auto">${esc(p.image_prompt)}</pre><b>Video prompt</b><pre dir="auto">${esc(p.video_prompt)}</pre><b>Negative</b><pre>${esc(p.negative_prompt)}</pre>${p.continuity_notes.length?"<b>Continuity checklist</b><ul>"+p.continuity_notes.map(n=>`<li>${esc(n)}</li>`).join("")+"</ul>":""}</div>`).join("")};
+}
+function issues(r){return `<p><b>${r.total_duration.toFixed(1)}s</b> timeline - <span class="${r.errors?"err":"ok"}">${r.errors} error(s)</span>, <span class="warn">${r.warnings} warning(s)</span></p>`+
+  r.issues.map(i=>`<div class="${i.level}">${{error:"✖",warning:"▲",info:"ℹ"}[i.level]} ${esc(i.message)}</div>`).join("")}
+function render(m){
+  m.innerHTML=`<button class="b" id="vb">Validate</button> <button class="b" id="rb">Render 1080p MP4</button><div id="vr" style="margin-top:12px"></div><div id="rp"></div>`;
+  $("#vb").onclick=async()=>{$("#vr").innerHTML=issues(await api("/api/validate",{project:P}))};
+  $("#rb").onclick=async()=>{try{await api("/api/render",{project:P});dirty=false;$("#dirty").textContent="saved ✓";poll()}catch(e){alert(e.message)}};
+  poll(true);
+}
+let timer=null;
+async function poll(once){
+  const j=await api("/api/render/status");const rp=$("#rp");if(!rp)return;
+  if(j.state=="idle"){return}
+  if(j.state=="running"){rp.innerHTML=`<p>Rendering: ${esc(j.stage)}</p><progress max="1" value="${j.progress}"></progress>`;clearTimeout(timer);timer=setTimeout(()=>poll(),700);return}
+  if(j.state=="error"){rp.innerHTML=`<p class="err">✖ ${esc(j.message)}</p>`+(j.errors||[]).map(e=>`<div class="err">• ${esc(e)}</div>`).join("");return}
+  rp.innerHTML=`<p class="ok">✔ Render complete</p><div class="banner">${esc(j.message)}</div>`+(j.warnings||[]).map(w=>`<div class="warn">▲ ${esc(w)}</div>`).join("")+
+    `<video controls style="width:100%;max-width:960px;margin-top:10px" src="/media/${j.output}?t=${Date.now()}"></video><p><a style="color:var(--acc)" href="/media/${j.output}" download="film.mp4">Download MP4</a> <span class="small">(also saved in projects/${esc(S.name)}/output/)</span></p>`;
+}
+$("#saveBtn").onclick=()=>save().catch(e=>alert(e.message));
+$("#projSel").onchange=async e=>{if(dirty&&!confirm("Discard unsaved changes?")){e.target.value=S.name;return}await api("/api/open",{name:e.target.value});load()};
+$("#newProj").onclick=async()=>{const n=prompt("New project name (letters/digits/space/-/_)");if(!n)return;try{await api("/api/new",{name:n});load()}catch(e){alert(e.message)}};
+window.onbeforeunload=()=>dirty?"unsaved":undefined;
+load();
+</script>
+</body>
+</html>
