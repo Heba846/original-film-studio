@@ -1,6 +1,7 @@
 """Pre-render validation of files and timing. Errors block rendering."""
 from __future__ import annotations
 
+import re
 from dataclasses import dataclass, field
 from pathlib import Path
 
@@ -244,7 +245,9 @@ def validate(project: dict, base, probe_fn=media.probe, check_tools: bool = True
         text = f"{s['action']} {s['dialogue']}".lower()
         for c in project["characters"]:
             nm = (c["name"] or "").strip().lower()
-            if len(nm) >= 3 and nm in text and c["id"] not in s["characters"]:
+            cid = (c["id"] or "").strip().lower()
+            hit = (len(nm) >= 3 and nm in text) or (len(cid) >= 3 and re.search(r"\b" + re.escape(cid) + r"\b", text))
+            if hit and c["id"] not in s["characters"]:
                 r.add("warning", "untagged_character",
                       f"Shot {sid}: mentions '{c['name']}' but the character is not tagged on the shot "
                       "(continuity notes won't be added to its prompts).", sid)

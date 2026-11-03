@@ -36,6 +36,15 @@ Workflow: import/record WAVs per segment (Narration tab) -> `narration sync` fit
 illustrations to `media/pilot/s01.png...` -> Validate -> Render. Without external image/video tools the result is an
 **animatic/slideshow**, and the render manifest says so.
 
+
+## Full film: "Married to the Don to Keep Me Silent" (v0.3)
+A complete narrated-film adaptation lives in `docs/adaptation/` (read its README first): canon ledger with page references, full script (2 speakers), segments CSV/JSON, 62-shot plan with prompts, and a loadable project `projects/married_to_the_don_full_film`. **No recordings or illustrations exist yet**, so it validates but cannot render; runtime numbers are word-count estimates. Source novel text is never stored in this repo.
+```bash
+python -m ofs adapt build        # regenerate segments, word count, prompts, project from docs/adaptation/script.md
+python -m ofs narration plan married_to_the_don_full_film
+```
+**بالعربي:** حزمة الفيلم الكامل موجودة في `docs/adaptation/` (ابدأ بملف README هناك): سيناريو كامل بصوتين (Heba للراوية آيفي وكل الشخصيات الأخرى، وLion لنيكو وسرده)، وجدول مرجعي بأرقام صفحات الرواية، و62 لقطة مع برومبتات. لا توجد تسجيلات صوتية ولا رسومات بعد، لذلك المشروع يُفتح ويُفحص لكنه لا يُصدَّر فيديو حتى تُضاف الملفات. المدة المذكورة **تقدير** من عدد الكلمات وليست مقاسة. الرواية الأصلية لا تُرفع إلى git ولا إلى ملف ZIP.
+
 ## Quickstart (English)
 Requirements: Python 3.10+, FFmpeg (with `ffprobe`) on PATH.
 

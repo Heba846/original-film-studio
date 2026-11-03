@@ -12,9 +12,9 @@ from pathlib import Path
 
 from . import narration as nar, project as proj
 
-TITLE = "Married to the Don to Keep Me Silent - Pilot (workflow test: opening scene)"
-STYLE = ("Illustrated cinematic still, graphic-novel noir, high contrast, wet reflective concrete, saturated orange "
-         "sodium light against cold blue shadow, shallow depth of field, subtle film grain. Non-graphic suspense: "
+TITLE = "Married to the Don to Keep Me Silent - Pilot (workflow test: opening scene, canon-corrected)"
+STYLE = ("Painterly illustrated realism, gouache and oil texture, cinematic noir composition, wet reflective concrete, "
+         "saturated orange sodium light against cold blue shadow, soft film grain. Non-graphic suspense: "
          "no blood, no gore, no visible wounds")
 NEG = "blood, gore, visible wound, graphic injury, corpse close-up, text, subtitles, watermark, logo"
 
@@ -22,6 +22,12 @@ PRODUCT_NOTE = ("PRODUCT DECISION: the FIRST published video must be a COMPLETE 
                 "optimised for views and viewer satisfaction. Book sales are optional (a light, honest mention at most) - "
                 "NOT a cliffhanger paywall. This 6-shot pilot is only the opening scene used to test the two-speaker workflow; "
                 "the finished film still needs its middle and a resolved ending.")
+CANON_FIX = ("CANON CORRECTIONS (checked against the novel, see docs/adaptation/canon_ledger.md): ER arrival 3:05 [p.5], stitches 3:20 [p.8], "
+             "splint ~3:40 [p.8], two shots 4:10 [p.10]. So the splint was built THIRTY minutes before the shots (not 'forty') and the patient "
+             "was first treated FIFTY minutes before. Nico's line is 'Go back inside, Dr. Marlowe' [p.11] ('Dottoressa' comes later). The garage is "
+             "St. Brigid's level 2 at 4:10 a.m. (not 3 a.m.). Ivy is a fourth-year ER resident. Nico does not threaten her: Brancato's people are the danger, "
+             "so 'the witness he couldn't afford to leave behind' was replaced. Original pilot wording is kept in each segment's original_text. "
+             "Ivy hears the shots and sees the gun in Nico's LEFT hand afterward; she never sees who fires (Enzo does, p.146-147, 314).")
 EDIT_NOTE = ("EDITORIAL PROPOSAL (not the author's approved text): replaces a closing line that said 'I had just "
              "married into a family' - premature, because the wedding happens later in the book.")
 ORIGINAL_NOTE = ("Original closing wording preserved here as far as it was given to this session: it contained the phrase "
@@ -31,11 +37,11 @@ SEGMENTS = [
     ("n01", "heba", "Two shots. That's all it took.", 0.6),
     ("n02", "heba", "I watched a man slide down the side of a silver sedan with a gun lying near his open hand, and the man "
      "standing over him wasn't holding that gun. He was holding a different one. In his left hand.", 0.3),
-    ("n03", "heba", "His right arm was in the plaster splint I had built for him forty minutes earlier, in an exam room, "
+    ("n03", "heba", "His right arm was in the plaster splint I had built for him thirty minutes earlier, in bay fourteen, "
      "with my own two hands.", 2.0),  # the author's "[2 second pause]"
-    ("n04", "lion", "Go back inside, Dottoressa. You were never here.", 0.8),
+    ("n04", "lion", "Go back inside, Dr. Marlowe. You were never here.", 0.8),
     ("n05", "heba", "I was an ER doctor.", 0.25),
-    ("n06", "heba", "Forty minutes earlier, he had been my patient. Now I was the witness he couldn't afford to leave behind.", 0.0),
+    ("n06", "heba", "Fifty minutes earlier, he had been my patient. Now I was the only witness, and someone on those stairs was listening.", 0.0),
 ]
 
 SHOTS = [
@@ -60,13 +66,22 @@ SHOTS = [
 ]
 
 
+ORIGINAL_PILOT_TEXT = {
+    "n03": "His right arm was in the plaster splint I had built for him forty minutes earlier, in an exam room, with my own two hands.",
+    "n04": "Go back inside, Dottoressa. You were never here.",
+    "n06": "Pilot wording before canon check: \"Forty minutes earlier, he had been my patient. Now I was the witness he couldn't afford to leave behind.\"",
+}
+
+
 def build_pilot() -> dict:
     segs = []
     for sid, spk, text, pause in SEGMENTS:
         g = {"id": sid, "speaker": spk, "text": text, "pause_after": pause}
+        if sid in ORIGINAL_PILOT_TEXT:
+            g.update(original_text=ORIGINAL_PILOT_TEXT[sid], editorial_note="Corrected from novel canon (see project notes).")
         if sid == "n06":
-            g.update(editorial=True, editorial_note=EDIT_NOTE,
-                     original_text="[Owner: paste the full original wording here. Known fragment: \"I had just married into a family\".]")
+            g.update(editorial=True, editorial_note=EDIT_NOTE + " Further corrected from canon.",
+                     original_text=ORIGINAL_PILOT_TEXT["n06"] + " Owner's original closing line contained the phrase \"I had just married into a family\"; full original not supplied - paste it here.")
         segs.append(g)
     p = {
         "title": TITLE,
@@ -74,21 +89,21 @@ def build_pilot() -> dict:
         "style": STYLE,
         "script": "\n\n".join(f"{'Heba' if s == 'heba' else 'Lion'}: {t}" + (" [2 second pause]" if sid == "n03" else "")
                               for sid, s, t, _ in SEGMENTS),
-        "notes": PRODUCT_NOTE + "\n" + EDIT_NOTE + "\n" + ORIGINAL_NOTE + "\n"
+        "notes": CANON_FIX + "\n" + PRODUCT_NOTE + "\n" + EDIT_NOTE + "\n" + ORIGINAL_NOTE + "\n"
                  "Shot durations are ESTIMATES from word counts until real narration audio exists; run `python -m ofs narration sync` after importing audio.\n"
                  "Voices: Heba = Ivy first-person narrator (female). Lion = Nico dialogue + Nico POV (male). No recordings exist in this repo.",
         "characters": [
-            {"id": "ivy", "name": "Ivy", "description": "late twenties woman, freckles across nose and cheeks, dark red hair in a messy knot held in place with a pen",
+            {"id": "ivy", "name": "Ivy", "description": "28-year-old woman, freckles across nose and cheeks, red hair in a messy bun held in place with a pen",
              "wardrobe": "navy hospital scrubs", "voice_notes": "Narrated by Heba (first person)",
-             "continuity_notes": "Hair always in a knot WITH A PEN; freckles; navy scrubs in every shot", "reference": ""},
-            {"id": "nico", "name": "Nico", "description": "early thirties man, black hair, gray eyes, thin white scar through his LEFT eyebrow",
-             "wardrobe": "", "voice_notes": "Voiced by Lion (dialogue and Nico POV)",
-             "continuity_notes": "Scar on LEFT eyebrow. Plaster splint on RIGHT forearm. Gun ONLY in LEFT hand. Wardrobe not yet decided: pick one outfit and keep it for the whole story.",
+             "continuity_notes": "Red messy bun WITH A PEN; freckles; navy scrubs in every work shot. No ring on Oct 3; after the Oct 6 wedding Nonna Rosa's emerald wedding ring hangs on a thin gold chain at her neck at work (not a generic pendant).", "reference": ""},
+            {"id": "nico", "name": "Nico", "description": "34-year-old man, black wavy hair, stubble, gray eyes, thin white scar through his LEFT eyebrow",
+             "wardrobe": "ruined charcoal suit that night, then dark sweaters/white shirts", "voice_notes": "Voiced by Lion (dialogue and Nico POV)",
+             "continuity_notes": "Scar on LEFT eyebrow. Plaster splint on RIGHT forearm. Gun ONLY in LEFT hand. Splint white plaster Oct 3-10, then black thermoplastic.",
              "reference": ""}],
-        "locations": [{"id": "garage", "name": "Brooklyn hospital parking garage, 3 a.m.",
+        "locations": [{"id": "garage", "name": "St. Brigid's hospital garage, level 2, Red Hook, Brooklyn, 4:10 a.m.",
                        "description": "concrete multi-level hospital garage, wet concrete floor, silver sedan, painted lane markings, stairwell door",
                        "lighting": "orange sodium lights, cold shadows, reflections on wet concrete",
-                       "continuity_notes": "Silver sedan present in every garage shot; floor always wet; time is 3 a.m.", "reference": ""}],
+                       "continuity_notes": "Silver sedan present in every garage shot; floor wet; time is 4:10 a.m.; camera dome dead.", "reference": ""}],
         "speakers": [
             {"id": "heba", "display_name": "Heba", "role": "Ivy - female first-person narrator", "consent_confirmed": True,
              "consent_statement": "Project owner states Heba consents to voice cloning and commercial use on the channel (statement only; nothing verified by this software).",

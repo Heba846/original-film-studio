@@ -1,36 +1,36 @@
 {
   "version": 2,
-  "title": "Married to the Don to Keep Me Silent - Pilot (workflow test: opening scene)",
+  "title": "Married to the Don to Keep Me Silent - Pilot (workflow test: opening scene, canon-corrected)",
   "logline": "An ER doctor watches the man whose arm she just splinted shoot in a parking garage - and becomes the witness he can't leave behind.",
-  "style": "Illustrated cinematic still, graphic-novel noir, high contrast, wet reflective concrete, saturated orange sodium light against cold blue shadow, shallow depth of field, subtle film grain. Non-graphic suspense: no blood, no gore, no visible wounds",
-  "script": "Heba: Two shots. That's all it took.\n\nHeba: I watched a man slide down the side of a silver sedan with a gun lying near his open hand, and the man standing over him wasn't holding that gun. He was holding a different one. In his left hand.\n\nHeba: His right arm was in the plaster splint I had built for him forty minutes earlier, in an exam room, with my own two hands. [2 second pause]\n\nLion: Go back inside, Dottoressa. You were never here.\n\nHeba: I was an ER doctor.\n\nHeba: Forty minutes earlier, he had been my patient. Now I was the witness he couldn't afford to leave behind.",
+  "style": "Painterly illustrated realism, gouache and oil texture, cinematic noir composition, wet reflective concrete, saturated orange sodium light against cold blue shadow, soft film grain. Non-graphic suspense: no blood, no gore, no visible wounds",
+  "script": "Heba: Two shots. That's all it took.\n\nHeba: I watched a man slide down the side of a silver sedan with a gun lying near his open hand, and the man standing over him wasn't holding that gun. He was holding a different one. In his left hand.\n\nHeba: His right arm was in the plaster splint I had built for him thirty minutes earlier, in bay fourteen, with my own two hands. [2 second pause]\n\nLion: Go back inside, Dr. Marlowe. You were never here.\n\nHeba: I was an ER doctor.\n\nHeba: Fifty minutes earlier, he had been my patient. Now I was the only witness, and someone on those stairs was listening.",
   "characters": [
     {
       "id": "ivy",
       "name": "Ivy",
-      "description": "late twenties woman, freckles across nose and cheeks, dark red hair in a messy knot held in place with a pen",
+      "description": "28-year-old woman, freckles across nose and cheeks, red hair in a messy bun held in place with a pen",
       "wardrobe": "navy hospital scrubs",
       "voice_notes": "Narrated by Heba (first person)",
-      "continuity_notes": "Hair always in a knot WITH A PEN; freckles; navy scrubs in every shot",
+      "continuity_notes": "Red messy bun WITH A PEN; freckles; navy scrubs in every work shot. No ring on Oct 3; after the Oct 6 wedding Nonna Rosa's emerald wedding ring hangs on a thin gold chain at her neck at work (not a generic pendant).",
       "reference": ""
     },
     {
       "id": "nico",
       "name": "Nico",
-      "description": "early thirties man, black hair, gray eyes, thin white scar through his LEFT eyebrow",
-      "wardrobe": "",
+      "description": "34-year-old man, black wavy hair, stubble, gray eyes, thin white scar through his LEFT eyebrow",
+      "wardrobe": "ruined charcoal suit that night, then dark sweaters/white shirts",
       "voice_notes": "Voiced by Lion (dialogue and Nico POV)",
-      "continuity_notes": "Scar on LEFT eyebrow. Plaster splint on RIGHT forearm. Gun ONLY in LEFT hand. Wardrobe not yet decided: pick one outfit and keep it for the whole story.",
+      "continuity_notes": "Scar on LEFT eyebrow. Plaster splint on RIGHT forearm. Gun ONLY in LEFT hand. Splint white plaster Oct 3-10, then black thermoplastic.",
       "reference": ""
     }
   ],
   "locations": [
     {
       "id": "garage",
-      "name": "Brooklyn hospital parking garage, 3 a.m.",
+      "name": "St. Brigid's hospital garage, level 2, Red Hook, Brooklyn, 4:10 a.m.",
       "description": "concrete multi-level hospital garage, wet concrete floor, silver sedan, painted lane markings, stairwell door",
       "lighting": "orange sodium lights, cold shadows, reflections on wet concrete",
-      "continuity_notes": "Silver sedan present in every garage shot; floor always wet; time is 3 a.m.",
+      "continuity_notes": "Silver sedan present in every garage shot; floor wet; time is 4:10 a.m.; camera dome dead.",
       "reference": ""
     }
   ],
@@ -82,7 +82,7 @@
       "title": "Splint and gun",
       "kind": "image",
       "asset": "media/pilot/s03.png",
-      "duration": 11.62,
+      "duration": 11.23,
       "trim_start": 0.0,
       "motion": "zoom_out",
       "transition": "cut",
@@ -104,7 +104,7 @@
       "title": "Go back inside",
       "kind": "image",
       "asset": "media/pilot/s04.png",
-      "duration": 3.88,
+      "duration": 4.26,
       "trim_start": 0.0,
       "motion": "zoom_in",
       "transition": "cut",
@@ -148,7 +148,7 @@
       "title": "The witness",
       "kind": "image",
       "asset": "media/pilot/s06.png",
-      "duration": 7.81,
+      "duration": 8.58,
       "trim_start": 0.0,
       "motion": "pan_left",
       "transition": "fade",
@@ -167,7 +167,7 @@
       "negative_extra": "blood, gore, visible wound, graphic injury, corpse close-up, text, subtitles, watermark, logo"
     }
   ],
-  "notes": "PRODUCT DECISION: the FIRST published video must be a COMPLETE short film with a satisfying ending, optimised for views and viewer satisfaction. Book sales are optional (a light, honest mention at most) - NOT a cliffhanger paywall. This 6-shot pilot is only the opening scene used to test the two-speaker workflow; the finished film still needs its middle and a resolved ending.\nEDITORIAL PROPOSAL (not the author's approved text): replaces a closing line that said 'I had just married into a family' - premature, because the wedding happens later in the book.\nOriginal closing wording preserved here as far as it was given to this session: it contained the phrase \"I had just married into a family\". The full original sentence(s) were NOT supplied - paste them below.\nShot durations are ESTIMATES from word counts until real narration audio exists; run `python -m ofs narration sync` after importing audio.\nVoices: Heba = Ivy first-person narrator (female). Lion = Nico dialogue + Nico POV (male). No recordings exist in this repo.",
+  "notes": "CANON CORRECTIONS (checked against the novel, see docs/adaptation/canon_ledger.md): ER arrival 3:05 [p.5], stitches 3:20 [p.8], splint ~3:40 [p.8], two shots 4:10 [p.10]. So the splint was built THIRTY minutes before the shots (not 'forty') and the patient was first treated FIFTY minutes before. Nico's line is 'Go back inside, Dr. Marlowe' [p.11] ('Dottoressa' comes later). The garage is St. Brigid's level 2 at 4:10 a.m. (not 3 a.m.). Ivy is a fourth-year ER resident. Nico does not threaten her: Brancato's people are the danger, so 'the witness he couldn't afford to leave behind' was replaced. Original pilot wording is kept in each segment's original_text. Ivy hears the shots and sees the gun in Nico's LEFT hand afterward; she never sees who fires (Enzo does, p.146-147, 314).\nPRODUCT DECISION: the FIRST published video must be a COMPLETE short film with a satisfying ending, optimised for views and viewer satisfaction. Book sales are optional (a light, honest mention at most) - NOT a cliffhanger paywall. This 6-shot pilot is only the opening scene used to test the two-speaker workflow; the finished film still needs its middle and a resolved ending.\nEDITORIAL PROPOSAL (not the author's approved text): replaces a closing line that said 'I had just married into a family' - premature, because the wedding happens later in the book.\nOriginal closing wording preserved here as far as it was given to this session: it contained the phrase \"I had just married into a family\". The full original sentence(s) were NOT supplied - paste them below.\nShot durations are ESTIMATES from word counts until real narration audio exists; run `python -m ofs narration sync` after importing audio.\nVoices: Heba = Ivy first-person narrator (female). Lion = Nico dialogue + Nico POV (male). No recordings exist in this repo.",
   "speakers": [
     {
       "id": "heba",
@@ -214,24 +214,24 @@
     {
       "id": "n03",
       "speaker": "heba",
-      "text": "His right arm was in the plaster splint I had built for him forty minutes earlier, in an exam room, with my own two hands.",
+      "text": "His right arm was in the plaster splint I had built for him thirty minutes earlier, in bay fourteen, with my own two hands.",
       "pause_after": 2.0,
       "audio": "",
       "source": "imported",
       "editorial": false,
-      "editorial_note": "",
-      "original_text": ""
+      "editorial_note": "Corrected from novel canon (see project notes).",
+      "original_text": "His right arm was in the plaster splint I had built for him forty minutes earlier, in an exam room, with my own two hands."
     },
     {
       "id": "n04",
       "speaker": "lion",
-      "text": "Go back inside, Dottoressa. You were never here.",
+      "text": "Go back inside, Dr. Marlowe. You were never here.",
       "pause_after": 0.8,
       "audio": "",
       "source": "imported",
       "editorial": false,
-      "editorial_note": "",
-      "original_text": ""
+      "editorial_note": "Corrected from novel canon (see project notes).",
+      "original_text": "Go back inside, Dottoressa. You were never here."
     },
     {
       "id": "n05",
@@ -247,13 +247,13 @@
     {
       "id": "n06",
       "speaker": "heba",
-      "text": "Forty minutes earlier, he had been my patient. Now I was the witness he couldn't afford to leave behind.",
+      "text": "Fifty minutes earlier, he had been my patient. Now I was the only witness, and someone on those stairs was listening.",
       "pause_after": 0.0,
       "audio": "",
       "source": "imported",
       "editorial": true,
-      "editorial_note": "EDITORIAL PROPOSAL (not the author's approved text): replaces a closing line that said 'I had just married into a family' - premature, because the wedding happens later in the book.",
-      "original_text": "[Owner: paste the full original wording here. Known fragment: \"I had just married into a family\".]"
+      "editorial_note": "EDITORIAL PROPOSAL (not the author's approved text): replaces a closing line that said 'I had just married into a family' - premature, because the wedding happens later in the book. Further corrected from canon.",
+      "original_text": "Pilot wording before canon check: \"Forty minutes earlier, he had been my patient. Now I was the witness he couldn't afford to leave behind.\" Owner's original closing line contained the phrase \"I had just married into a family\"; full original not supplied - paste it here."
     }
   ],
   "tts": {

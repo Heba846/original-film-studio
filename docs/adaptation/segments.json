@@ -1,0 +1,1622 @@
+[
+  {
+    "id": "n001",
+    "chapter": "CH00",
+    "shot": "s01",
+    "speaker": "heba",
+    "text": "Two shots. That's all it took.",
+    "pause_after": 0.6,
+    "direction": "Cold open. Close, low, almost a whisper. No music. One room-tone hum.",
+    "optional_cta": false
+  },
+  {
+    "id": "n002",
+    "chapter": "CH00",
+    "shot": "s01",
+    "speaker": "heba",
+    "text": "Ten past four that Friday morning, crouched behind my own bumper in a hospital garage, I learned what a life ending sounds like in concrete.",
+    "pause_after": 0.4,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n003",
+    "chapter": "CH00",
+    "shot": "s02",
+    "speaker": "heba",
+    "text": "I looked over the hood. A man was sliding down the side of a silver sedan, a gun a foot from his open hand. The man standing over him held a different gun, in his left hand. His right arm was in the plaster splint I had built thirty minutes earlier, in bay fourteen, with my own two hands.",
+    "pause_after": 0.8,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n004",
+    "chapter": "CH00",
+    "shot": "s03",
+    "speaker": "lion",
+    "text": "Go back inside, Dr. Marlowe. You were never here.",
+    "pause_after": 1.8,
+    "direction": "Silence for two full seconds before the line. Low, quiet, no threat in it.",
+    "optional_cta": false
+  },
+  {
+    "id": "n005",
+    "chapter": "CH00",
+    "shot": "s04",
+    "speaker": "heba",
+    "text": "I went back inside. Three days later I married him. This is how a Brooklyn don became my husband to keep me silent, and who was really on those stairs. Stay to the end and you'll hear one sentence I swore to under oath, the one I had never said to him.",
+    "pause_after": 1.0,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n006",
+    "chapter": "CH01",
+    "shot": "s05",
+    "speaker": "heba",
+    "text": "It started at 3:05 that morning, with a man walking into my ER holding his own arm closed. Half the waiting room went quiet for him. Denise at triage half stood up. The security guard found something interesting on his shoes. Everybody knew a rule about this man. Nobody had told me.",
+    "pause_after": 0.4,
+    "direction": "Light, quick, funny. Let the first beat smile.",
+    "optional_cta": false
+  },
+  {
+    "id": "n007",
+    "chapter": "CH01",
+    "shot": "s05",
+    "speaker": "heba",
+    "text": "Bay nine had sung its fourth \"Livin' on a Prayer.\" My friend Priya set down her energy drink. Priya never sets down the can.",
+    "pause_after": 0.4,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n008",
+    "chapter": "CH01",
+    "shot": "s06",
+    "speaker": "heba",
+    "text": "He came past triage without hurrying. Tall, black hair, a suit that cost more than my car, now mostly ruined. One drop of blood a second. Not an artery. Still too much. I pulled the pen out of my hair and walked toward him. Nobody else did.",
+    "pause_after": 0.5,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n009",
+    "chapter": "CH01",
+    "shot": "s07",
+    "speaker": "heba",
+    "text": "Bay fourteen. A clean cut across the inside of his right forearm. Gray eyes. A thin white scar through his left eyebrow.",
+    "pause_after": 0.3,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n010",
+    "chapter": "CH01",
+    "shot": "s07",
+    "speaker": "heba",
+    "text": "\"Knife?\" I asked.",
+    "pause_after": 0.2,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n011",
+    "chapter": "CH01",
+    "shot": "s07",
+    "speaker": "lion",
+    "text": "I'd rather not say what cut it.",
+    "pause_after": 0.3,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n012",
+    "chapter": "CH01",
+    "shot": "s07",
+    "speaker": "heba",
+    "text": "That's a yes. Under the wound, the tendon to his ring finger was cut more than halfway through. At 3:20 I put one stitch into the tendon itself and eleven in the skin. Twice his eyes went to the clock.",
+    "pause_after": 0.3,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n013",
+    "chapter": "CH01",
+    "shot": "s07",
+    "speaker": "heba",
+    "text": "\"Somewhere you need to be?\"",
+    "pause_after": 0.3,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n014",
+    "chapter": "CH01",
+    "shot": "s07",
+    "speaker": "lion",
+    "text": "You've done this before.",
+    "pause_after": 0.3,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n015",
+    "chapter": "CH01",
+    "shot": "s07",
+    "speaker": "heba",
+    "text": "\"A couple hundred times. Usually on people who tell me their name.\"",
+    "pause_after": 0.4,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n016",
+    "chapter": "CH01",
+    "shot": "s07",
+    "speaker": "lion",
+    "text": "Nico.",
+    "pause_after": 0.5,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n017",
+    "chapter": "CH01",
+    "shot": "s07",
+    "speaker": "lion",
+    "text": "Vescari.",
+    "pause_after": 0.5,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n018",
+    "chapter": "CH01",
+    "shot": "s08",
+    "speaker": "heba",
+    "text": "By 3:40 I had built him a splint of plaster, fingertips to elbow. Six weeks, no gripping. If he grabbed anything hard, that tendon would snap like a rubber band. He set a fold of hundreds on my tray.",
+    "pause_after": 0.3,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n019",
+    "chapter": "CH01",
+    "shot": "s08",
+    "speaker": "lion",
+    "text": "For the chart. There doesn't need to be one.",
+    "pause_after": 0.4,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n020",
+    "chapter": "CH01",
+    "shot": "s08",
+    "speaker": "heba",
+    "text": "\"There's always a chart.\" I tucked the money back into his pocket and typed his name while he watched. I said it too hard. He couldn't know why.",
+    "pause_after": 0.5,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n021",
+    "chapter": "CH01",
+    "shot": "s08",
+    "speaker": "lion",
+    "text": "Dottoressa.",
+    "pause_after": 0.3,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n022",
+    "chapter": "CH01",
+    "shot": "s08",
+    "speaker": "heba",
+    "text": "\"Is that a compliment?\"",
+    "pause_after": 0.3,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n023",
+    "chapter": "CH01",
+    "shot": "s08",
+    "speaker": "lion",
+    "text": "It's a title. Thank you, Dr. Marlowe.",
+    "pause_after": 0.8,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n024",
+    "chapter": "CH02",
+    "shot": "s09",
+    "speaker": "heba",
+    "text": "Level two, spot 2-14. At 4:08 I found the charger in the cup holder. At 4:10, two shots went off, so close together they sounded like one word. I counted. One, two, three, four. Footsteps. Something heavy hitting a car door. At nine, I looked.",
+    "pause_after": 0.6,
+    "direction": "Pace quickens. Footsteps and one heavy thump in the sound design, nothing else.",
+    "optional_cta": false
+  },
+  {
+    "id": "n025",
+    "chapter": "CH02",
+    "shot": "s10",
+    "speaker": "heba",
+    "text": "The man on the ground made a wet, bubbling sound. I knew that sound. Air and blood in the chest, a lung filling. He was alive. Did I think about the gun? I'd like to say I did. I stood up and went toward him with my hands out, my brain a full step behind, screaming.",
+    "pause_after": 0.3,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n026",
+    "chapter": "CH02",
+    "shot": "s10",
+    "speaker": "heba",
+    "text": "\"Let me get to him,\" I said. \"I can—\"",
+    "pause_after": 0.3,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n027",
+    "chapter": "CH02",
+    "shot": "s10",
+    "speaker": "lion",
+    "text": "He's gone, Dottoressa. Go.",
+    "pause_after": 0.6,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n028",
+    "chapter": "CH02",
+    "shot": "s11",
+    "speaker": "heba",
+    "text": "Behind him, in the stairwell, feet were going down fast. Then they stopped. Someone was standing on those stairs, listening, and those stairs were my only way out. I counted his breaths. Seven. Eight. Nine. Ten. The next one didn't come. The last time I stood that close to someone dying while other people decided I should stay out of the way, I was fourteen.",
+    "pause_after": 0.8,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n029",
+    "chapter": "CH02",
+    "shot": "s12",
+    "speaker": "heba",
+    "text": "At 4:16 I called 911 and my voice came out steady. By 4:31 the silver sedan was gone, and so was the man. The floor smelled like bleach and fake pine. The camera had been down since Tuesday. A young officer told me a car backfiring sounds like a cannon in concrete.",
+    "pause_after": 0.4,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n030",
+    "chapter": "CH02",
+    "shot": "s12",
+    "speaker": "heba",
+    "text": "I had a name on my tongue. I didn't say it. I'm not proud of that.",
+    "pause_after": 0.9,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n031",
+    "chapter": "CH03",
+    "shot": "s13",
+    "speaker": "heba",
+    "text": "Saturday at eight, a woman in a rain jacket and a man in a navy suit sat on my couch. Special Agent Reyes. Prosecutor Holloway. A city crew had pulled a man out of the Gowanus Canal. Frankie Lombardi. Two gunshot wounds to the chest. Frankie worked for the Vescari family, and also, quietly, for the FBI. That made his murder a federal case, and me its witness.",
+    "pause_after": 0.4,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n032",
+    "chapter": "CH03",
+    "shot": "s13",
+    "speaker": "heba",
+    "text": "I told them in order, like presenting a patient. Two shots at 4:10. Nico standing over a man by a silver car, a gun in his left hand, my splint on his right. Notice what I didn't say: that I saw anyone fire. I heard two shots. I saw what came after.",
+    "pause_after": 0.5,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n033",
+    "chapter": "CH03",
+    "shot": "s13",
+    "speaker": "heba",
+    "text": "\"The gun was in his left hand,\" I said. Reyes looked up from her notebook. Holloway didn't.",
+    "pause_after": 0.4,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n034",
+    "chapter": "CH03",
+    "shot": "s14",
+    "speaker": "heba",
+    "text": "Holloway left a subpoena. Thursday, ten a.m. He offered a new name, a new city, witness protection. I laughed. I had nine months of residency left. I wasn't becoming a dental hygienist in Tucson because a man in a nice suit told me to go back inside.",
+    "pause_after": 0.3,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n035",
+    "chapter": "CH03",
+    "shot": "s14",
+    "speaker": "heba",
+    "text": "\"I'll tell them,\" I said. \"But I'm doing it as myself.\"",
+    "pause_after": 0.8,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n036",
+    "chapter": "CH04",
+    "shot": "s15",
+    "speaker": "heba",
+    "text": "At seven that night I carried groceries up three flights and found my door unlocked and my lamp off. Nico Vescari sat in my mother's armchair in the dark, my splint resting on the arm. My little brother sat beside him, white as paper. \"Ivy,\" Theo said. \"I'm so sorry.\"",
+    "pause_after": 0.5,
+    "direction": "Quiet menace without raising the voice. Let Lion be unhurried.",
+    "optional_cta": false
+  },
+  {
+    "id": "n037",
+    "chapter": "CH04",
+    "shot": "s15",
+    "speaker": "heba",
+    "text": "Forty thousand dollars, a betting app, then interest. Theo was crying the way he did at fifteen, when he thought I couldn't hear through the wall.",
+    "pause_after": 0.4,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n038",
+    "chapter": "CH04",
+    "shot": "s15",
+    "speaker": "lion",
+    "text": "His bookie works for Carmine Brancato, who wants my port. If you die before Thursday, with my name in your statement, nobody needs a trial.",
+    "pause_after": 0.5,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n039",
+    "chapter": "CH04",
+    "shot": "s15",
+    "speaker": "heba",
+    "text": "\"So someone wants me dead, and it isn't you.\"",
+    "pause_after": 0.3,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n040",
+    "chapter": "CH04",
+    "shot": "s15",
+    "speaker": "lion",
+    "text": "It isn't me.",
+    "pause_after": 0.3,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n041",
+    "chapter": "CH04",
+    "shot": "s15",
+    "speaker": "heba",
+    "text": "\"Did you kill that man?\"",
+    "pause_after": 0.3,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n042",
+    "chapter": "CH04",
+    "shot": "s15",
+    "speaker": "lion",
+    "text": "I'm not going to answer that.",
+    "pause_after": 0.3,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n043",
+    "chapter": "CH04",
+    "shot": "s15",
+    "speaker": "heba",
+    "text": "\"You say that a lot.\"",
+    "pause_after": 0.3,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n044",
+    "chapter": "CH04",
+    "shot": "s15",
+    "speaker": "lion",
+    "text": "I don't lie. So yes. I say it a lot.",
+    "pause_after": 0.4,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n045",
+    "chapter": "CH04",
+    "shot": "s16",
+    "speaker": "lion",
+    "text": "Marry me. A wife can't be forced to testify against her husband. The privilege belongs to the wife. Not to me. Not to Holloway.",
+    "pause_after": 0.4,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n046",
+    "chapter": "CH04",
+    "shot": "s16",
+    "speaker": "heba",
+    "text": "I laughed. \"I met you on Friday. You bled on my shoes. Here's my answer.\" I held up the subpoena. \"I'd rather testify.\"",
+    "pause_after": 0.5,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n047",
+    "chapter": "CH04",
+    "shot": "s16",
+    "speaker": "heba",
+    "text": "He set a black card on the arm of my mother's chair. No name. Just a number.",
+    "pause_after": 0.3,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n048",
+    "chapter": "CH04",
+    "shot": "s16",
+    "speaker": "lion",
+    "text": "When you change your mind.",
+    "pause_after": 0.3,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n049",
+    "chapter": "CH04",
+    "shot": "s16",
+    "speaker": "heba",
+    "text": "\"If.\"",
+    "pause_after": 0.2,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n050",
+    "chapter": "CH04",
+    "shot": "s16",
+    "speaker": "lion",
+    "text": "When, Dottoressa.",
+    "pause_after": 0.6,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n051",
+    "chapter": "CH04",
+    "shot": "s17",
+    "speaker": "heba",
+    "text": "Sunday, a man in bay seventeen asked for the redheaded doctor. In the supply room the door clicked shut and IV tubing dropped over my head. You get about ten seconds before you pass out. I teach that to students. At five I drove my trauma shears into the back of his hand, and he ran.",
+    "pause_after": 0.4,
+    "direction": "Fast and tight. This is the one frightening beat. Then silence.",
+    "optional_cta": false
+  },
+  {
+    "id": "n052",
+    "chapter": "CH04",
+    "shot": "s17",
+    "speaker": "heba",
+    "text": "A huge man filled the doorway, the quiet one with the crossword. Rocco. \"Go after him,\" I croaked.",
+    "pause_after": 0.3,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n053",
+    "chapter": "CH04",
+    "shot": "s17",
+    "speaker": "heba",
+    "text": "\"No, ma'am. My job's you.\"",
+    "pause_after": 0.5,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n054",
+    "chapter": "CH04",
+    "shot": "s17",
+    "speaker": "heba",
+    "text": "That evening I stood by my car with a red line round my throat. I could become someone else in a city I'd never seen, or keep my work and my brother and trust a man I didn't. I was scared of him. I was more scared of a plastic tube. He answered on the first ring.",
+    "pause_after": 0.4,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n055",
+    "chapter": "CH04",
+    "shot": "s17",
+    "speaker": "heba",
+    "text": "\"I have conditions,\" I said.",
+    "pause_after": 1.0,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n056",
+    "chapter": "CH05",
+    "shot": "s18",
+    "speaker": "heba",
+    "text": "His lawyer wrote it down in blue ink. One. I keep my residency, every shift. Two. My own bedroom, with a lock on my side. Three. Theo's debt, gone tonight. Four. No one in his family touches me, including his men. Five. When the case is dead, we divorce. Six. Not one cent of his money.",
+    "pause_after": 0.3,
+    "direction": "Quick business rhythm. Let the humor land, keep moving.",
+    "optional_cta": false
+  },
+  {
+    "id": "n057",
+    "chapter": "CH05",
+    "shot": "s18",
+    "speaker": "heba",
+    "text": "\"Most people ask for the opposite,\" the lawyer said.",
+    "pause_after": 0.2,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n058",
+    "chapter": "CH05",
+    "shot": "s18",
+    "speaker": "heba",
+    "text": "\"Most people didn't watch him try to pay for a chart.\"",
+    "pause_after": 0.4,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n059",
+    "chapter": "CH05",
+    "shot": "s18",
+    "speaker": "heba",
+    "text": "\"And seven. You never lie to me.\"",
+    "pause_after": 0.4,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n060",
+    "chapter": "CH05",
+    "shot": "s19",
+    "speaker": "lion",
+    "text": "I'll never lie to you. I won't always answer.",
+    "pause_after": 0.4,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n061",
+    "chapter": "CH05",
+    "shot": "s19",
+    "speaker": "heba",
+    "text": "\"That's a loophole.\"",
+    "pause_after": 0.2,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n062",
+    "chapter": "CH05",
+    "shot": "s19",
+    "speaker": "lion",
+    "text": "That's the truth. You asked for the truth.",
+    "pause_after": 0.4,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n063",
+    "chapter": "CH05",
+    "shot": "s19",
+    "speaker": "heba",
+    "text": "\"Is it the only reason you want this? If I can't testify, you're safe?\"",
+    "pause_after": 0.3,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n064",
+    "chapter": "CH05",
+    "shot": "s19",
+    "speaker": "lion",
+    "text": "No.",
+    "pause_after": 0.4,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n065",
+    "chapter": "CH05",
+    "shot": "s19",
+    "speaker": "heba",
+    "text": "\"What's the other one?\"",
+    "pause_after": 0.3,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n066",
+    "chapter": "CH05",
+    "shot": "s19",
+    "speaker": "heba",
+    "text": "He held my eyes and said nothing at all. Beside him, Tommy looked at the table. Whatever it was, Tommy knew.",
+    "pause_after": 0.8,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n067",
+    "chapter": "CH05",
+    "shot": "s20",
+    "speaker": "heba",
+    "text": "The door opened. A small woman in black, a gold cross at her collarbone. Every man stood, even Tommy. \"So,\" she said, in a thick Sicilian accent. \"This is the rat you're bringing into my kitchen.\"",
+    "pause_after": 0.4,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n068",
+    "chapter": "CH05",
+    "shot": "s20",
+    "speaker": "heba",
+    "text": "\"I'm a doctor, Mrs. Vescari. Rats don't do sutures.\"",
+    "pause_after": 0.5,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n069",
+    "chapter": "CH05",
+    "shot": "s20",
+    "speaker": "heba",
+    "text": "Her eyes went to her son's arm, my splint, and back to me. She said something short and sharp in Italian and left.",
+    "pause_after": 0.3,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n070",
+    "chapter": "CH05",
+    "shot": "s20",
+    "speaker": "heba",
+    "text": "Outside, I asked Nico what she'd said.",
+    "pause_after": 0.3,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n071",
+    "chapter": "CH05",
+    "shot": "s20",
+    "speaker": "lion",
+    "text": "She said you have a mouth.",
+    "pause_after": 0.3,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n072",
+    "chapter": "CH05",
+    "shot": "s20",
+    "speaker": "heba",
+    "text": "\"And what did you say?\"",
+    "pause_after": 0.2,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n073",
+    "chapter": "CH05",
+    "shot": "s20",
+    "speaker": "lion",
+    "text": "I said, I know.",
+    "pause_after": 0.8,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n074",
+    "chapter": "CH06",
+    "shot": "s21",
+    "speaker": "lion",
+    "text": "I lasted three days before I tried to make a fist. My thumb came in. My first finger came in. The other two stopped halfway, and pain ran up to my elbow. Even in the garage she had come around that car with her hands already out. I'd had to step in front of a dying man to stop her.",
+    "pause_after": 0.5,
+    "direction": "Switch to Lion as the narrator. Lower, drier, more guarded than Heba. Quiet room tone.",
+    "optional_cta": false
+  },
+  {
+    "id": "n075",
+    "chapter": "CH06",
+    "shot": "s22",
+    "speaker": "lion",
+    "text": "Enzo came in barefoot, twenty-one, with our mother's gold curls. He hadn't laughed since Friday. \"Nico. If she ever—\"",
+    "pause_after": 0.3,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n076",
+    "chapter": "CH06",
+    "shot": "s22",
+    "speaker": "lion",
+    "text": "Go to bed, Enzo. You were never there.",
+    "pause_after": 0.5,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n077",
+    "chapter": "CH06",
+    "shot": "s22",
+    "speaker": "lion",
+    "text": "He nodded like a boy sent to his room. Under the desk, my left hand closed on my knee hard enough to hurt.",
+    "pause_after": 0.5,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n078",
+    "chapter": "CH06",
+    "shot": "s23",
+    "speaker": "lion",
+    "text": "My uncle Sal came at one-thirty with a box of cannoli and sugar on his tie. My father's brother, his consigliere for twenty-five years, and now mine.",
+    "pause_after": 0.3,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n079",
+    "chapter": "CH06",
+    "shot": "s23",
+    "speaker": "lion",
+    "text": "\"You're a better man than your father was,\" Sal said. \"But a better man makes trouble for himself. A girl in the house with a federal subpoena. It would be cleaner, Nico, the other way.\"",
+    "pause_after": 0.4,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n080",
+    "chapter": "CH06",
+    "shot": "s23",
+    "speaker": "lion",
+    "text": "We don't touch civilians. That's the only thing that makes us different from Brancato. Take that away and we're just men with guns who like the port.",
+    "pause_after": 0.5,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n081",
+    "chapter": "CH06",
+    "shot": "s23",
+    "speaker": "lion",
+    "text": "He held up both hands, cannoli in one. \"I had to say it so you could say no. That's my job.\" Then he went out to the garden for air and left the door open behind him.",
+    "pause_after": 0.5,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n082",
+    "chapter": "CH06",
+    "shot": "s24",
+    "speaker": "lion",
+    "text": "No drugs. No women. No kids. Keep your word. Never talk to the government. And you don't put a doctor in the water because she wrote your name down. I had known her for forty minutes, and she had said my name to a computer.",
+    "pause_after": 1.0,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n083",
+    "chapter": "CH07",
+    "shot": "s25",
+    "speaker": "heba",
+    "text": "Monday, 8:52 a.m., eight minutes before I married a man I'd seen standing over a body, I was unwrapping my third butterscotch from the judge's candy bowl because my hands needed a job. Priya whispered, \"Blink twice if this is a hostage situation.\" Theo wore a tie borrowed from Rocco that hung past his belt. I fixed his knot.",
+    "pause_after": 0.4,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n084",
+    "chapter": "CH07",
+    "shot": "s26",
+    "speaker": "heba",
+    "text": "Eleven pages, typed overnight. At the bottom of Nico's section, someone had added a line by hand in big, shaky, left-handed capitals. She will look like she loves me. I initialed it. I read every page twice.",
+    "pause_after": 0.5,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n085",
+    "chapter": "CH07",
+    "shot": "s27",
+    "speaker": "heba",
+    "text": "The ring was his grandmother's, a square emerald, far too big. It slid around my finger. \"Rosa had big hands,\" he said. \"She made bread.\"",
+    "pause_after": 0.4,
+    "direction": "Soften slightly. Nico's line is almost shy.",
+    "optional_cta": false
+  },
+  {
+    "id": "n086",
+    "chapter": "CH07",
+    "shot": "s27",
+    "speaker": "heba",
+    "text": "On the courthouse steps, eight reporters and three cameras. Holloway had been tipped. Nico kissed me, slow and warm, the plaster along my spine. It was for the cameras. For three seconds I forgot to count anything, and I was angry about that all day.",
+    "pause_after": 0.3,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n087",
+    "chapter": "CH07",
+    "shot": "s27",
+    "speaker": "lion",
+    "text": "Starting tonight, Dottoressa, we're in love.",
+    "pause_after": 0.8,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n088",
+    "chapter": "CH07",
+    "shot": "s28",
+    "speaker": "heba",
+    "text": "He had put a bolt on my side of the connecting door himself, at six that morning, left-handed. The screws were crooked. I tested it four times. At work I couldn't wear a ring under gloves, so I threaded his grandmother's emerald onto a thin gold chain and tucked it under my scrubs. A wedding ring that lived against my breastbone. I kept touching it.",
+    "pause_after": 0.5,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n089",
+    "chapter": "CH07",
+    "shot": "s29",
+    "speaker": "heba",
+    "text": "At midnight two of his stitches had torn. \"Something heavy,\" he said. I numbed him and redid them at his mother's kitchen island, and I said it before I could stop. \"You held the gun in your left hand.\"",
+    "pause_after": 0.5,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n090",
+    "chapter": "CH07",
+    "shot": "s29",
+    "speaker": "lion",
+    "text": "Don't.",
+    "pause_after": 0.6,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n091",
+    "chapter": "CH07",
+    "shot": "s29",
+    "speaker": "heba",
+    "text": "Not a denial. A door closing. I tied the knot.",
+    "pause_after": 1.0,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n092",
+    "chapter": "CH08",
+    "shot": "s30",
+    "speaker": "heba",
+    "text": "Tuesday, the ER. Joey, one of Nico's soldiers, rolled in stabbed, lung collapsing. I decompressed him and put in the tube myself while mobsters watched me do it. \"Am I dead?\" he asked. \"Not on my shift.\"",
+    "pause_after": 0.4,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n093",
+    "chapter": "CH08",
+    "shot": "s30",
+    "speaker": "heba",
+    "text": "In his jacket I found my whole October. Every shift in blue ballpoint, small neat slanted handwriting I didn't know. And at the bottom, underlined twice: Level 2. Space 2-14.",
+    "pause_after": 0.5,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n094",
+    "chapter": "CH08",
+    "shot": "s30",
+    "speaker": "heba",
+    "text": "Joey said the man who sent him drove a car that smelled like anise. Only the hospital had my schedule. Dr. Bell had asked about my shifts that morning, almost casually. I told myself Bell asks everybody everything.",
+    "pause_after": 0.5,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n095",
+    "chapter": "CH08",
+    "shot": "s31",
+    "speaker": "heba",
+    "text": "A week later I set a trap: I told Bell I had a secret night shift Wednesday and would leave through level two. At 10:55 a man with a bandaged right hand waited at the exit, a hole in it from my shears. Tommy and Rocco boxed him in. I wouldn't let Nico kill him. I pinned a note to his shirt, FROM DR. MARLOWE, and had him left alive on the FBI's steps.",
+    "pause_after": 0.5,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n096",
+    "chapter": "CH08",
+    "shot": "s32",
+    "speaker": "heba",
+    "text": "I confronted Bell Thursday evening. He cried. His son Danny was seventeen and sick, and the treatment cost four hundred seventy thousand dollars. A man had asked about my schedule. Bell gave it. I gave him until noon to call the FBI. He asked for one more night. I said yes. I have thought about that yes every day since.",
+    "pause_after": 0.4,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n097",
+    "chapter": "CH08",
+    "shot": "s33",
+    "speaker": "heba",
+    "text": "That night I was shaking, and he held me, and he pulled the pen out of my hair with his left hand. I kissed him. He kissed me back. I stopped. No cameras. \"That one wasn't for anyone,\" I said. \"Sleep,\" he said. \"I'll wake you at eleven.\"",
+    "pause_after": 0.8,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n098",
+    "chapter": "CH08",
+    "shot": "s34",
+    "speaker": "heba",
+    "text": "At 6:41 Friday morning, Priya called. Dr. Bell was dead in his Volvo, three spaces from my spot. A note on his phone. Suicide. \"Ivy, I'm sorry. I couldn't live with it. Tell Danny I tried.\"",
+    "pause_after": 0.4,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n099",
+    "chapter": "CH08",
+    "shot": "s34",
+    "speaker": "heba",
+    "text": "In three years Bell called me Ivy maybe four times, always when someone had just died. In writing, always Marlowe, even in his last text. The note was a lie, and whoever wrote it didn't know him.",
+    "pause_after": 0.4,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n100",
+    "chapter": "CH08",
+    "shot": "s34",
+    "speaker": "heba",
+    "text": "Only four people had known he'd talk to the FBI at noon. Nico. Tommy. Rocco. And Nico's uncle Sal. When I said that name aloud, Nico's eyes dropped to the top drawer of his desk, for as long as it takes to read a clock.",
+    "pause_after": 1.0,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n101",
+    "chapter": "CH09",
+    "shot": "s35",
+    "speaker": "heba",
+    "text": "Sunday lunch under the fig. Enzo excused himself and didn't come back. I found him on his bathroom floor, blue, a foil card beside him. Oxycodone, thirty milligrams. I breathed for him. Two sprays of naloxone, three minutes apart. He gasped. I put the card in my cardigan pocket before the paramedics came. I only knew it mattered.",
+    "pause_after": 0.5,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n102",
+    "chapter": "CH09",
+    "shot": "s36",
+    "speaker": "heba",
+    "text": "In the ER, Enzo grabbed my sleeve and told me, because he thought he was dying. \"I shot him. I shot Frankie.\"",
+    "pause_after": 0.5,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n103",
+    "chapter": "CH09",
+    "shot": "s36",
+    "speaker": "heba",
+    "text": "He had followed Frankie into the garage and stood half a flight up the stairs, holding his breath. A shoe scraped. Frankie turned, and his gun came up. Enzo fired twice and didn't even decide to. Nico took the gun out of his hand and told him to go.",
+    "pause_after": 0.4,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n104",
+    "chapter": "CH09",
+    "shot": "s36",
+    "speaker": "heba",
+    "text": "Enzo was the light jacket on the stairs. He had stopped when he heard me ask for a tube. Then he kept going. I told him what he said in that bay stays with me. I didn't know yet what it would cost.",
+    "pause_after": 0.6,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n105",
+    "chapter": "CH09",
+    "shot": "s37",
+    "speaker": "lion",
+    "text": "Frankie called me at two minutes past four. By the stairs, where the lights are out. He was crouched behind a silver sedan, crying, a gun in his hand that he did not raise.",
+    "pause_after": 0.4,
+    "direction": "Nico POV. Slow, flat, almost a confession. Let the end of it hang for a full beat.",
+    "optional_cta": false
+  },
+  {
+    "id": "n106",
+    "chapter": "CH09",
+    "shot": "s37",
+    "speaker": "lion",
+    "text": "\"Somebody in your house paid me, Nico. I'm sorry. They had my...\"",
+    "pause_after": 0.4,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n107",
+    "chapter": "CH09",
+    "shot": "s37",
+    "speaker": "lion",
+    "text": "Something scraped in the stairwell above us. Frankie turned toward it, and the gun came up with him. Two shots.",
+    "pause_after": 0.5,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n108",
+    "chapter": "CH09",
+    "shot": "s37",
+    "speaker": "lion",
+    "text": "My brother stood at the foot of the stairwell with the gun still in his hand. I took it from him with the wrong hand. I said, Go, Enzo. Go. And a woman in navy scrubs came around a car with her hands out, ready to work, and I had to tell her she was never here.",
+    "pause_after": 1.2,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n109",
+    "chapter": "CH10",
+    "shot": "s38",
+    "speaker": "heba",
+    "text": "Then Theo was arrested. Four hundred tablets, taped under the driver's seat of his Civic. Holloway offered a trade: my testimony against Nico, and Theo walks. Nico, in the car, never raised his voice. \"Do what you have to do. I won't hate you.\"",
+    "pause_after": 0.4,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n110",
+    "chapter": "CH10",
+    "shot": "s39",
+    "speaker": "heba",
+    "text": "I had my own evidence. The sticker on Enzo's card said Lot 4471-B. So did the pills in Theo's car. I cornered the hospital pharmacy director with an old committee letter. Forty-two cards of that lot had been \"destroyed\" on a form dated September twenty-ninth, co-signed by Dr. Marcus Bell. The tech said nobody counted. The signing doctor carried the bag out himself, past the garage.",
+    "pause_after": 0.4,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n111",
+    "chapter": "CH10",
+    "shot": "s39",
+    "speaker": "heba",
+    "text": "Nico's people found the dealer. His supplier was an old man in a gray Lincoln that smelled of licorice.",
+    "pause_after": 0.8,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n112",
+    "chapter": "CH11",
+    "shot": "s40",
+    "speaker": "heba",
+    "text": "Monday, Courtroom 6B. Holloway wanted the judge to call it a sham marriage. He called me to the stand and asked about the first week. About the courthouse kiss. And I invited him to ask the real question.",
+    "pause_after": 0.4,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n113",
+    "chapter": "CH11",
+    "shot": "s40",
+    "speaker": "heba",
+    "text": "\"Do you love your husband?\"",
+    "pause_after": 0.5,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n114",
+    "chapter": "CH11",
+    "shot": "s40",
+    "speaker": "heba",
+    "text": "I decided in that second I'd rather be in danger in my own life than safe in somebody else's.",
+    "pause_after": 0.3,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n115",
+    "chapter": "CH11",
+    "shot": "s40",
+    "speaker": "heba",
+    "text": "\"Yes. I love him. And I'd like the record to show he's hearing it for the first time with everyone else.\"",
+    "pause_after": 1.2,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n116",
+    "chapter": "CH11",
+    "shot": "s41",
+    "speaker": "heba",
+    "text": "The judge denied the motion from the bench. She'd seen a great many sham marriages, and none of them sounded like that. In the car, Nico's left hand lay open on the seat, palm up. I put mine in it. At my door he said, \"One day, when you're ready, and not before, I'd like to hear it once without them.\"",
+    "pause_after": 0.3,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n117",
+    "chapter": "CH11",
+    "shot": "s41",
+    "speaker": "heba",
+    "text": "\"Not tonight.\"",
+    "pause_after": 0.2,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n118",
+    "chapter": "CH11",
+    "shot": "s41",
+    "speaker": "lion",
+    "text": "I've waited longer for less.",
+    "pause_after": 0.7,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n119",
+    "chapter": "CH11",
+    "shot": "s42",
+    "speaker": "heba",
+    "text": "At midnight I couldn't sleep. Holloway had asked me that morning, \"Eleven pages?\" Only I, Nico, Mr. Feld and one copy in Nico's top drawer knew how many pages the contract had. Someone inside the house was talking to the government's side. I opened the drawer. Under the paper, a white twist of candy wrapper. It smelled of anise.",
+    "pause_after": 1.0,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n120",
+    "chapter": "CH12",
+    "shot": "s43",
+    "speaker": "lion",
+    "text": "One-ten in the morning, in my uncle's garage. I had found this car once before and told myself Brancato might be framing him. Half of Brooklyn sucks anise candy. This time I opened the glove box. A black ledger, its band off with my teeth because I only had one hand. C.B., every month for four years, starting the week of my father's funeral. And on the first of October: F.L. Twenty. Paid.",
+    "pause_after": 0.5,
+    "direction": "Lion. Controlled, then not. Let the last line break the control.",
+    "optional_cta": false
+  },
+  {
+    "id": "n121",
+    "chapter": "CH12",
+    "shot": "s43",
+    "speaker": "lion",
+    "text": "In the trunk, a deli receipt for a prepaid phone, and a boy's tan jacket from a discount rack. When I was eleven, my father broke my nose, and Sal carried me out of that house.",
+    "pause_after": 0.5,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n122",
+    "chapter": "CH12",
+    "shot": "s43",
+    "speaker": "lion",
+    "text": "I did not call Tommy. I would rather lose everything my father built than lose the way she looked at me when I didn't lie.",
+    "pause_after": 0.4,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n123",
+    "chapter": "CH12",
+    "shot": "s43",
+    "speaker": "lion",
+    "text": "She was sitting in my study with the candy twist in her hand. I said it before she could. It's my uncle.",
+    "pause_after": 1.0,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n124",
+    "chapter": "CH12",
+    "shot": "s44",
+    "speaker": "heba",
+    "text": "At dawn, Danny Bell let me read his father's last letter. Marcus had signed the destruction form and carried the pills to a gray car for cash. Years ago he'd misdiagnosed a patient who turned out to be Brancato's cousin, and Brancato had held it over him ever since. The man in the gray car was old, soft-spoken, nice coat. The letter ended: Ivy, say it. Say all of it. Danny said I could give it to the FBI. I gave Reyes everything except one name. \"Somebody else gets to tell you first,\" I said.",
+    "pause_after": 0.8,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n125",
+    "chapter": "CH13",
+    "shot": "s45",
+    "speaker": "heba",
+    "text": "Tuesday, seven p.m. Sal arrived exactly on time with a box of pastry. Nico laid out the notebook, the receipt, the jacket. Sal didn't blink. \"Carmine wanted the port,\" he said, \"and the port was you. Frankie lost his nerve. I didn't know about the stairs. I didn't know Carmine's boy would send Enzo down them.\"",
+    "pause_after": 0.5,
+    "direction": "Slow. Let Sal be warm and reasonable; the horror is in how reasonable. Lion plays Nico very still.",
+    "optional_cta": false
+  },
+  {
+    "id": "n126",
+    "chapter": "CH13",
+    "shot": "s45",
+    "speaker": "heba",
+    "text": "\"Kids buy pills,\" he said. \"Better ours, from a hospital, clean, than poison pressed in a bathtub in Jersey.\"",
+    "pause_after": 0.4,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n127",
+    "chapter": "CH13",
+    "shot": "s45",
+    "speaker": "heba",
+    "text": "I broke my own rule and spoke. \"I breathed for your nephew for four minutes, Mr. Vescari. On your pills.\"",
+    "pause_after": 0.5,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n128",
+    "chapter": "CH13",
+    "shot": "s46",
+    "speaker": "lion",
+    "text": "My father would have put you in the water, Zio. That's the answer I'm not giving anymore. You'll go to Cefalù. Everything you own goes to Frankie's kids, Michael and Gina.",
+    "pause_after": 0.4,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n129",
+    "chapter": "CH13",
+    "shot": "s46",
+    "speaker": "heba",
+    "text": "Sal looked at his hands, then at his nephew. \"Somebody in this family had to be his father. You were busy being a saint.\"",
+    "pause_after": 0.5,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n130",
+    "chapter": "CH13",
+    "shot": "s46",
+    "speaker": "heba",
+    "text": "I put my phone on the tablecloth and called Agent Reyes on speaker. Sal almost smiled. \"Of course you called her, sweetheart. You always do.\"",
+    "pause_after": 0.4,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n131",
+    "chapter": "CH13",
+    "shot": "s46",
+    "speaker": "heba",
+    "text": "He left for the airport that night, on an Italian passport he bought in September.",
+    "pause_after": 0.8,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n132",
+    "chapter": "CH14",
+    "shot": "s47",
+    "speaker": "heba",
+    "text": "At one that morning Bianca Moretti texted me her dinner video, three question marks, and Don't tell my father. Her phone had filmed the whole table. A boy named Paulie, with a bad haircut, put chopped shrimp into Aldo's plate. Lucia had only said \"extra sauce for Mr. Moretti\" and carried that guilt for weeks. I showed her. Her cross hand shook.",
+    "pause_after": 0.4,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n133",
+    "chapter": "CH14",
+    "shot": "s48",
+    "speaker": "heba",
+    "text": "\"You are rude,\" Lucia said. \"You talk too much, and you will never learn to make a proper sauce. But you are not a rat.\" She took a thin gold band from a blue velvet box and slid it under the emerald so it wouldn't turn.",
+    "pause_after": 0.5,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n134",
+    "chapter": "CH14",
+    "shot": "s48",
+    "speaker": "heba",
+    "text": "A day later I chained a deli receipt and a pack of gum to Paulie Ferraro. I called Reyes first, on purpose. Then Nico.",
+    "pause_after": 0.3,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n135",
+    "chapter": "CH14",
+    "shot": "s48",
+    "speaker": "lion",
+    "text": "Three weeks ago, I'd have sent Tommy. I trust what you'd do.",
+    "pause_after": 0.4,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n136",
+    "chapter": "CH14",
+    "shot": "s48",
+    "speaker": "heba",
+    "text": "Paulie confessed. Theo walked out at 12:52. In the car he said, \"You never once asked me if I wanted to be your kid.\" I'd been so busy keeping him safe that I'd never asked. I asked.",
+    "pause_after": 0.4,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n137",
+    "chapter": "CH14",
+    "shot": "s48",
+    "speaker": "heba",
+    "text": "Paulie also told Reyes who had stood at the top of the ramp that morning in October, and saw who fired. She wouldn't tell me.",
+    "pause_after": 0.8,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n138",
+    "chapter": "CH15",
+    "shot": "s49",
+    "speaker": "heba",
+    "text": "Saturday night someone lured Nico to the port with a hurt watchman. Four men with covered faces. He came home at 1:40 Sunday morning carried by Tommy, shot under the left arm. His lung was collapsing. I couldn't move him. I called Priya, and she arrived in nineteen minutes. We decompressed his chest on the marble island and put in a tube. Priya looked at my sterile field. \"Who did your sterile field? A raccoon?\"",
+    "pause_after": 0.5,
+    "direction": "Fast. Clinical. Let Priya's line break the tension with a laugh.",
+    "optional_cta": false
+  },
+  {
+    "id": "n139",
+    "chapter": "CH15",
+    "shot": "s49",
+    "speaker": "heba",
+    "text": "He said no hospital. Wrote 2:41 on my hand so I'd have the time. I called the police myself. A Vescari doesn't report a shooting. I did. He didn't object. He said one word. \"Stay.\"",
+    "pause_after": 0.8,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n140",
+    "chapter": "CH15",
+    "shot": "s50",
+    "speaker": "lion",
+    "text": "At 11:52 on Sunday I heard the bolt slide back. She said, \"I love you. I wanted you to hear it once without anyone else in the room.\" I couldn't say it. I took her wrist and kissed the inside of it where her pulse was. I was ashamed. She slept in the chair with her hand on my splint.",
+    "pause_after": 1.0,
+    "direction": "Lion. The hardest line he has to say is the one he can't.",
+    "optional_cta": false
+  },
+  {
+    "id": "n141",
+    "chapter": "CH16",
+    "shot": "s51",
+    "speaker": "heba",
+    "text": "Monday night Lucia found Enzo's room empty. At 11:31 my phone rang. Carmine Brancato. His own son had overdosed on the floor of his club, and Enzo, who'd walked in to offer himself for a boy he'd hit on a bicycle four years ago, had asked for the doctor. I didn't ask permission. I told everyone before, not after. I texted Reyes. I went.",
+    "pause_after": 0.5,
+    "direction": "Fast, short sentences. Heba almost breathless; let the breaths show.",
+    "optional_cta": false
+  },
+  {
+    "id": "n142",
+    "chapter": "CH16",
+    "shot": "s52",
+    "speaker": "heba",
+    "text": "Enzo was already breathing for him. I gave naloxone and bagged him. Four minutes twenty seconds. The boy coughed. Brancato took a typed statement out of his cardigan. I, Enzo Vescari, state that my brother ordered me to. Enzo wouldn't sign it. \"I'll sign what's true. I won't sign that.\"",
+    "pause_after": 0.5,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n143",
+    "chapter": "CH16",
+    "shot": "s53",
+    "speaker": "lion",
+    "text": "I'm not armed, Carmine. My wife doesn't like it.",
+    "pause_after": 0.4,
+    "direction": "Lion for Nico's line: dry, flat, almost a joke. Then Ivy low and steady.",
+    "optional_cta": false
+  },
+  {
+    "id": "n144",
+    "chapter": "CH16",
+    "shot": "s53",
+    "speaker": "heba",
+    "text": "Six guns turned. I stepped in front of him. \"Be quiet. It's my turn.\" I told Brancato what I'd tell a jury. His son was breathing because of me. If anyone fired, I would stand in a courtroom and say who. He said, \"In my house, we don't point guns at the doctor.\" He told them to put them down.",
+    "pause_after": 0.5,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n145",
+    "chapter": "CH16",
+    "shot": "s53",
+    "speaker": "heba",
+    "text": "Reyes came through the front door two minutes later with a warrant signed at six. She arrested Carmine Brancato. In the car, Nico was gray, pulse 110.",
+    "pause_after": 0.3,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n146",
+    "chapter": "CH16",
+    "shot": "s53",
+    "speaker": "lion",
+    "text": "I came in with nothing because you were in that room. That's the truth, Ivy.",
+    "pause_after": 1.0,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n147",
+    "chapter": "CH17",
+    "shot": "s54",
+    "speaker": "lion",
+    "text": "Enzo turned himself in at two-fourteen Tuesday morning. In the visiting room I said, I'm sorry I made you carry it, and I cried in front of a guard. Then I went to Holloway about the gun, buried in the planter on Van Brunt Street under the geraniums. I told Feld to draw an uncontested divorce and leave it on the hall table. She gets to choose once with nothing on the table. That means I don't ask.",
+    "pause_after": 1.0,
+    "direction": "Lion. Very quiet. Do not perform the tears; let them be in the pauses.",
+    "optional_cta": false
+  },
+  {
+    "id": "n148",
+    "chapter": "CH17",
+    "shot": "s55",
+    "speaker": "heba",
+    "text": "Thursday, third grand jury. I waived my privilege myself, that morning at six, for October third and nothing else. Reyes's first text on my wedding night was true: it was mine. I told them what I saw. Two shots at 4:10. A man sliding down a silver car. A second gun near his open hand. Nico standing over him with a gun in his left hand, pointed at the floor, held wrong, and his right hand in my splint.",
+    "pause_after": 0.4,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n149",
+    "chapter": "CH17",
+    "shot": "s55",
+    "speaker": "heba",
+    "text": "\"Did you see who fired?\"",
+    "pause_after": 0.3,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n150",
+    "chapter": "CH17",
+    "shot": "s55",
+    "speaker": "heba",
+    "text": "\"No. I heard two shots. I saw what was in his hands afterward.\"",
+    "pause_after": 0.6,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n151",
+    "chapter": "CH17",
+    "shot": "s56",
+    "speaker": "heba",
+    "text": "Holloway told us in the hallway there'd be no indictment for Frankie Lombardi: Enzo's statement, my testimony, Frankie's gun, the chart. Nico would plead to tampering with a gun. At two o'clock I took off the splint, six weeks less one day. His fist closed. All of it, even the ring finger I sewed. He looked at his own hand a long time.",
+    "pause_after": 0.4,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n152",
+    "chapter": "CH17",
+    "shot": "s56",
+    "speaker": "lion",
+    "text": "Thank you, Dr. Marlowe.",
+    "pause_after": 0.6,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n153",
+    "chapter": "CH17",
+    "shot": "s56",
+    "speaker": "heba",
+    "text": "He hadn't called me that since the first night. I did not like it at all.",
+    "pause_after": 0.8,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n154",
+    "chapter": "CH18",
+    "shot": "s57",
+    "speaker": "heba",
+    "text": "That evening there was a cream envelope on the hall table. Term Five. Three stapled pages. He'd signed it with his right hand, slowly, like a man writing in a foreign language. Tommy knocked twenty minutes later and apologized for blaming me. I put the papers down and went upstairs.",
+    "pause_after": 0.5,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n155",
+    "chapter": "CH18",
+    "shot": "s58",
+    "speaker": "heba",
+    "text": "I didn't knock. \"Here's the thing about the divorce,\" I said. \"I haven't asked.\" I emptied my cardigan pockets onto his bed: Enzo's foil card, the pharmacy form, his note, Bell's envelope, a candy twist. Everything I'd carried through five weeks. I took the pen out of my hair. On page eleven, under his left-handed line, I wrote, She does. And under that: Term six. Nobody in this house is quiet anymore.",
+    "pause_after": 0.5,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n156",
+    "chapter": "CH18",
+    "shot": "s59",
+    "speaker": "lion",
+    "text": "Last March a woman buried her son from my house on Carroll Street. Rosaria Amato. She told me about a red-haired doctor at St. Brigid's who sat with her and told her the truth. She said your name twice. I read Marlowe on your badge, and I chose that emergency room. That was the other reason.",
+    "pause_after": 0.5,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n157",
+    "chapter": "CH18",
+    "shot": "s59",
+    "speaker": "lion",
+    "text": "I love you, Ivy. I've loved you since you put my money back in my pocket and typed my name anyway.",
+    "pause_after": 0.8,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n158",
+    "chapter": "CH18",
+    "shot": "s59",
+    "speaker": "heba",
+    "text": "The door stayed open that night, and I'm not going to tell you the rest. The next morning Teresa put the divorce papers in the oven.",
+    "pause_after": 1.0,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n159",
+    "chapter": "CH19",
+    "shot": "s60",
+    "speaker": "heba",
+    "text": "April. The lemon trees came out of their burlap. \"It's a lemon tree,\" Lucia said. \"It's Sicilian. It lives out of spite. Like me.\" Theo has an apartment over a laundromat and comes for Saturday lunch and calls me Iv. Enzo is in a program upstate, a hundred forty-one days clean, writing to his mother on Sundays and to a boy named Anthony who hasn't answered yet. Sal's letters from Cefalù, Lucia burns unread. Danny Bell is back at school; an anonymous donor paid his treatment. When I asked, Nico said, \"I'm not going to answer that,\" and smiled. I finish residency in June.",
+    "pause_after": 0.5,
+    "direction": "Warm, unhurried. The one place the music can open.",
+    "optional_cta": false
+  },
+  {
+    "id": "n160",
+    "chapter": "CH19",
+    "shot": "s61",
+    "speaker": "heba",
+    "text": "Reyes came to the gate on the first warm Saturday. A motion from Brancato's lawyers had surfaced old files. Nico's father had been an FBI informant for years. Nico would read it in the Post by Friday.",
+    "pause_after": 0.4,
+    "direction": "",
+    "optional_cta": false
+  },
+  {
+    "id": "n161",
+    "chapter": "CH19",
+    "shot": "s62",
+    "speaker": "heba",
+    "text": "I did not wait. We don't do silence in this house anymore. It's in the contract. I climbed fourteen stairs, counting every one, to tell my husband the truth about his father. Two shots. That's all it took to start all of this. One yes, said out loud, is how it ended.",
+    "pause_after": 1.5,
+    "direction": "Last line: slow, low, the loop closes. Let it breathe, then silence.",
+    "optional_cta": false
+  },
+  {
+    "id": "n162",
+    "chapter": "CH19",
+    "shot": "s62",
+    "speaker": "heba",
+    "text": "If you want the scenes this film had no room for, the gala, the poisoned dinner, the night on the kitchen island, the whole novel, Married to the Don to Keep Me Silent by Erena Jabrial, is linked below. And if you only came for the story, thank you for staying to the end.",
+    "pause_after": 1.0,
+    "direction": "",
+    "optional_cta": true
+  }
+]

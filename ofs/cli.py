@@ -137,6 +137,20 @@ def cmd_pilot(a):
     return 0
 
 
+def cmd_adapt(a):
+    from . import adaptation as ad
+    if a.action == "build":
+        res = ad.write_outputs(Path.cwd())
+        st = res["stats"]
+        print(f"Built {res['segments']} segments, {res['shots']} shots. Spoken words: {st['total_words']} "
+              f"(optional CTA {st['optional_cta_words']}). Estimated runtime (NOT measured): "
+              + ", ".join(f"{k} wpm -> {v/60:.1f} min" for k, v in st["estimated_seconds_at_wpm"].items()))
+        return 0
+    st = ad.word_stats(ad.parse_script(Path("docs/adaptation/script.md")))
+    print(json.dumps(st, indent=2))
+    return 0
+
+
 def cmd_ui(a):
     from .server import serve
     serve(Path(a.root), a.project, a.port, open_browser=not a.no_browser)
@@ -169,6 +183,7 @@ def main(argv=None):
     s.add_argument("--overwrite", action="store_true"); s.add_argument("--yes", action="store_true"); s.set_defaults(fn=cmd_tts)
     s = sub.add_parser("pilot"); s.add_argument("--force", action="store_true")
     s.add_argument("--dryrun", action="store_true", help="synthetic tones+art check of assembly; not voices"); s.set_defaults(fn=cmd_pilot)
+    s = sub.add_parser("adapt"); s.add_argument("action", choices=["build", "stats"]); s.set_defaults(fn=cmd_adapt)
     s = sub.add_parser("package"); s.add_argument("--out", default="dist/original-film-studio.zip"); s.set_defaults(fn=cmd_package)
     a = ap.parse_args(argv)
     return a.fn(a)

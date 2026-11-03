@@ -123,7 +123,7 @@ def test_no_credentials_or_secrets_in_source():
 # ---------------- pilot ----------------
 AUTHOR_TEXT = {
     "n01": "Two shots. That's all it took.",
-    "n04": "Go back inside, Dottoressa. You were never here.",
+    "n04": "Go back inside, Dr. Marlowe. You were never here.",   # canon [p.11]; the pilot said Dottoressa
 }
 
 
@@ -134,8 +134,10 @@ def test_pilot_structure_text_and_editorial_marking():
     for k, v in AUTHOR_TEXT.items():
         assert segs[k]["text"] == v
     joined = " ".join(g["text"] for g in p["narration_segments"])
-    assert "plaster splint I had built for him forty minutes earlier, in an exam room, with my own two hands." in joined
-    assert "I was an ER doctor." in joined and "Now I was the witness he couldn't afford to leave behind." in joined
+    assert "plaster splint I had built for him thirty minutes earlier, in bay fourteen, with my own two hands." in joined
+    assert "forty minutes" not in joined and "Dottoressa" not in joined and "witness he couldn't afford" not in joined
+    assert "I was an ER doctor." in joined and "Fifty minutes earlier, he had been my patient." in joined
+    assert segs["n03"]["original_text"].count("forty minutes") == 1 and "Dottoressa" in segs["n04"]["original_text"]
     assert "married into a family" not in joined          # the premature line is NOT in the narration text...
     assert "married into a family" in p["notes"] and "married into a family" in segs["n06"]["original_text"]   # ...but kept in notes
     assert segs["n06"]["editorial"] and not any(segs[k]["editorial"] for k in ("n01", "n02", "n03", "n04", "n05"))
@@ -158,14 +160,14 @@ def test_pilot_prompts_carry_visual_continuity_and_stay_non_graphic():
     assert nico_shots
     for i in nico_shots:
         ip = i["image_prompt"]
-        assert "gray eyes" in ip and "black hair" in ip and "LEFT eyebrow" in ip
+        assert "gray eyes" in ip and "black wavy hair" in ip and "stubble" in ip and "LEFT eyebrow" in ip
         assert any("RIGHT forearm" in n and "LEFT hand" in n for n in i["continuity_notes"])
     for i in items:
-        assert "Brooklyn hospital parking garage" in i["image_prompt"] and "wet concrete" in i["image_prompt"]
+        assert "St. Brigid's hospital garage" in i["image_prompt"] and "wet concrete" in i["image_prompt"]
         assert "orange" in i["image_prompt"] and "no blood" in i["image_prompt"] and "gore" in i["negative_prompt"]
         assert "OPTIONAL motion" in i["optional_motion_prompt"] and i["animatic_motion"]
     ivy = allp["s05"]["image_prompt"]
-    assert "freckles" in ivy and "knot" in ivy and "pen" in ivy and "navy" in ivy and "late twenties" in ivy
+    assert "freckles" in ivy and "bun" in ivy and "pen" in ivy and "navy" in ivy and "28-year-old" in ivy
     assert "LEFT hand" in allp["s03"]["image_prompt"] and "RIGHT forearm" in allp["s03"]["image_prompt"]
     assert allp["s06"]["narration"][0]["editorial_proposal"] is True
     md = pr.to_markdown(pilot.build_pilot(), items)
