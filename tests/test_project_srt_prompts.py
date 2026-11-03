@@ -42,5 +42,5 @@ def test_prompts_include_bible_and_continuity():
     for frag in ("Watercolor", "black hair", "yellow coat", "white tower", "dusk", "Mira climbs", "low angle", "16:9"):
         assert frag in ip
     assert "scarf is red" in " ".join(items[0]["continuity_notes"]) and "on the left" in " ".join(items[0]["continuity_notes"])
-    assert items[0]["negative_prompt"] and "reference image" in items[0]["video_prompt"]
+    assert items[0]["negative_prompt"] and "OPTIONAL motion" in items[0]["video_prompt"] and items[0]["still_prompt"] == ip
     assert "Image prompt" in pr.to_markdown(p, items) and pr.to_csv(items).count("\n") >= 3

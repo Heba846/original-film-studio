@@ -31,6 +31,8 @@ def build_prompts(project: dict) -> list:
     chars = {c["id"]: c for c in project["characters"]}
     locs = {l["id"]: l for l in project["locations"]}
     tl = {sid: (a, b) for sid, a, b in proj.timeline(project)}
+    segs = {g["id"]: g for g in project["narration_segments"]}
+    spk = {x["id"]: x for x in project["speakers"]}
     out = []
     for n, s in enumerate(project["shots"], 1):
         cs = [chars[c] for c in s["characters"] if c in chars]
@@ -51,8 +53,8 @@ def build_prompts(project: dict) -> list:
         motion = MOTION_TEXT.get(s["motion"], "")
         video = " ".join(x for x in [
             image,
-            f"Duration about {dur} seconds. Smooth, natural motion; keep faces, outfits and set identical to the "
-            "reference image.",
+            f"OPTIONAL motion version (only if you animate this still in an external tool): about {dur} seconds, "
+            "subtle natural motion; keep faces, outfits, injuries and set identical to the still.",
             _j(f"Suggested camera movement: {s['camera']}" if s["camera"] else (f"Suggested camera movement: {motion}" if s["motion"] != "none" else "")),
         ] if x)
         notes = []
@@ -69,7 +71,12 @@ def build_prompts(project: dict) -> list:
             "order": n, "shot_id": s["id"], "title": s["title"],
             "start": tl[s["id"]][0] if s["id"] in tl else None,
             "duration": dur, "asset_kind_planned": s["kind"],
-            "image_prompt": image, "video_prompt": video, "negative_prompt": NEGATIVE,
+            "image_prompt": image, "still_prompt": image, "video_prompt": video,
+            "optional_motion_prompt": video, "animatic_motion": s["motion"],
+            "negative_prompt": NEGATIVE + (", " + s["negative_extra"] if s["negative_extra"] else ""),
+            "narration": [{"segment": x, "speaker": (spk.get(segs[x]["speaker"]) or {}).get("display_name") or segs[x]["speaker"],
+                           "text": segs[x]["text"], "editorial_proposal": segs[x]["editorial"]}
+                          for x in s["segments"] if x in segs],
             "continuity_notes": notes, "dialogue": s["dialogue"],
         })
     return out
@@ -81,12 +88,15 @@ def to_markdown(project: dict, prompts: list) -> str:
     for p in prompts:
         lines += [f"## {p['order']}. {p['shot_id']} - {p['title']}  ({p['duration']}s)", "",
                   f"**Image prompt:** {p['image_prompt']}", "",
-                  f"**Video prompt:** {p['video_prompt']}", "",
+                  f"**Optional motion prompt:** {p['video_prompt']}", "",
+                  f"_Without an external animation tool this shot renders as an animatic (motion: {p['animatic_motion']})._", "",
                   f"**Negative prompt:** {p['negative_prompt']}", ""]
         if p["continuity_notes"]:
             lines.append("**Continuity checklist:**")
             lines += [f"- {n}" for n in p["continuity_notes"]]
             lines.append("")
+        for n in p["narration"]:
+            lines += [f"**{n['speaker']}:** {n['text']}" + ("  _(editorial proposal)_" if n["editorial_proposal"] else ""), ""]
         if p["dialogue"]:
             lines += [f"**Narration/dialogue line:** {p['dialogue']}", ""]
     return "\n".join(lines)

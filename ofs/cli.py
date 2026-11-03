@@ -5,7 +5,7 @@ import json
 import sys
 from pathlib import Path
 
-from . import project as proj, validate as val, prompts as pr, render as rn
+from . import narration as nar, project as proj, validate as val, prompts as pr, render as rn
 
 ROOT = Path.cwd() / "projects"
 
@@ -70,6 +70,73 @@ def cmd_new(a):
     return 0
 
 
+def cmd_narration(a):
+    d = _pdir(a)
+    p = proj.load(d)
+    pl = nar.plan(p, d)
+    if a.action == "plan":
+        for r in pl["segments"]:
+            print(f"{r['id']:6} {r['speaker']:8} {r['start']:7.2f} -> {r['end']:7.2f}  "
+                  f"({'measured' if r['measured'] else 'ESTIMATED'}){'  [editorial proposal]' if r['editorial'] else ''}")
+        print(f"Total narration: {pl['total']:.2f}s  {pl['note']}")
+        return 0
+    if a.action == "assemble":
+        out = d / "output" / "narration_assembled.wav"
+        try:
+            res = nar.assemble(p, d, out)
+        except ValueError as e:
+            print("ERROR:", e)
+            return 1
+        print(f"Assembled {out} ({res['total']:.2f}s)")
+        return 0
+    res = nar.sync_shot_durations(p, pl)
+    proj.save(d, res["project"])
+    print("Updated shots:", ", ".join(res["changed"]) or "none")
+    if res["estimated"]:
+        print("WARNING: these shots use ESTIMATED timing (no audio yet):", ", ".join(res["estimated"]))
+    return 0
+
+
+def cmd_tts(a):
+    from . import tts
+    if a.action == "status":
+        print(json.dumps(tts.status(), indent=2))
+        return 0
+    if a.action == "download":
+        if not a.yes:
+            print("This downloads model weights from the network (Hugging Face). Re-run with --yes to proceed.")
+            return 1
+        print(tts.download())
+        return 0
+    d = _pdir(a)
+    p = proj.load(d)
+    try:
+        res = tts.generate(p, d, a.segments.split(",") if a.segments else None, overwrite=a.overwrite)
+    except tts.TTSError as e:
+        print("TTS not run:", e)
+        return 1
+    proj.save(d, p)
+    print(res)
+    return 0 if res["ok"] else 1
+
+
+def cmd_pilot(a):
+    from . import pilot
+    if a.dryrun:
+        d = ROOT / "pilot_synthetic_dryrun"
+        res = pilot.dryrun(d, progress=lambda s, f: print(f"  [{f:4.0%}] {s}"))
+        print("SYNTHETIC dry run (tones + placeholder art, NOT voices). Rendered", res["output"])
+        return 0
+    d = ROOT / "pilot_married_to_the_don"
+    if (d / "project.json").exists() and not a.force:
+        print("Pilot already exists:", d, "(use --force to overwrite)")
+        return 1
+    proj.save(d, pilot.build_pilot())
+    (d / "media" / "pilot").mkdir(parents=True, exist_ok=True)
+    print("Created", d, "- import your images + narration WAVs, then validate/render.")
+    return 0
+
+
 def cmd_ui(a):
     from .server import serve
     serve(Path(a.root), a.project, a.port, open_browser=not a.no_browser)
@@ -95,6 +162,13 @@ def main(argv=None):
     s = sub.add_parser("ui"); s.add_argument("--root", default=str(ROOT)); s.add_argument("--project", default=None)
     s.add_argument("--port", type=int, default=8765); s.add_argument("--no-browser", action="store_true")
     s.set_defaults(fn=cmd_ui)
+    s = sub.add_parser("narration"); s.add_argument("action", choices=["plan", "assemble", "sync"])
+    s.add_argument("project"); s.set_defaults(fn=cmd_narration)
+    s = sub.add_parser("tts"); s.add_argument("action", choices=["status", "generate", "download"])
+    s.add_argument("project", nargs="?", default="pilot_married_to_the_don"); s.add_argument("--segments")
+    s.add_argument("--overwrite", action="store_true"); s.add_argument("--yes", action="store_true"); s.set_defaults(fn=cmd_tts)
+    s = sub.add_parser("pilot"); s.add_argument("--force", action="store_true")
+    s.add_argument("--dryrun", action="store_true", help="synthetic tones+art check of assembly; not voices"); s.set_defaults(fn=cmd_pilot)
     s = sub.add_parser("package"); s.add_argument("--out", default="dist/original-film-studio.zip"); s.set_defaults(fn=cmd_package)
     a = ap.parse_args(argv)
     return a.fn(a)

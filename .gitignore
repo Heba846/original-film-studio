@@ -14,3 +14,20 @@ projects/*/output/
 *.zip
 .env
 *.key
+
+# Voice data stays local: never commit recordings, embeddings or checkpoints
+.venv-tts/
+voices/
+references/
+projects/*/voices/
+projects/*/media/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.npy
+*.npz
+*.flac
+*.m4a
+*.ogg
+projects/pilot_synthetic_dryrun/

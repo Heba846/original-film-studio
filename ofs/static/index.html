@@ -47,7 +47,7 @@ progress{width:100%;height:18px}
 <nav id="tabs"></nav>
 <main id="main"></main>
 <script>
-const TABS=[["story","Story & Script"],["bible","Character / Location Bible"],["shots","Shot List"],["audio","Audio & Captions"],["prompts","Prompts"],["render","Validate & Render"]];
+const TABS=[["story","Story & Script"],["bible","Character / Location Bible"],["shots","Shot List"],["narr","Narration (2 speakers)"],["audio","Audio & Captions"],["prompts","Prompts"],["render","Validate & Render"]];
 let S=null,P=null,tab="story",dirty=false,files=[];
 const $=(s,r=document)=>r.querySelector(s);
 const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
@@ -73,7 +73,7 @@ function tabs(){
   $("#tabs").innerHTML=TABS.map(([k,t])=>`<button class="${k==tab?"on":""}" data-k="${k}">${t}</button>`).join("");
   $("#tabs").querySelectorAll("button").forEach(b=>b.onclick=()=>{tab=b.dataset.k;draw()});
 }
-function draw(){tabs();const m=$("#main");m.innerHTML="";({story,bible,shots,audio,prompts,render})[tab](m)}
+function draw(){tabs();const m=$("#main");m.innerHTML="";({story,bible,shots,narr,audio,prompts,render})[tab](m)}
 
 function story(m){
   m.innerHTML=`<div class="banner">This studio organises and assembles YOUR assets. It does not generate video, images or voices.</div>`;
@@ -128,6 +128,8 @@ function shots(m){
     cd.querySelectorAll("input").forEach(x=>x.onchange=()=>{s.characters=[...cd.querySelectorAll("input:checked")].map(y=>y.dataset.id);mark()});r.append(cd);
     const ld=document.createElement("div");ld.innerHTML=`<label>Location</label><select><option value="">-</option>${P.locations.map(l=>`<option value="${esc(l.id)}" ${l.id==s.location?"selected":""}>${esc(l.name||l.id)}</option>`).join("")}</select>`;
     ld.lastChild.onchange=e=>{s.location=e.target.value;mark()};r.append(ld);
+    const sg=document.createElement("div");sg.innerHTML=`<label>Narration segment ids for this shot (comma-separated)</label><input dir="ltr">`;
+    sg.lastChild.value=(s.segments||[]).join(", ");sg.lastChild.oninput=e=>{s.segments=e.target.value.split(",").map(x=>x.trim()).filter(Boolean);mark()};r.append(sg);
     r.append(field("Action",s,"action",{area:true}),field("Camera",s,"camera"),field("Narration/dialogue line (reference)",s,"dialogue",{area:true}),field("Shot continuity notes",s,"continuity_notes",{area:true}));
     $(".rowx",c).append(r);m.append(c);
   });
@@ -136,6 +138,43 @@ function shots(m){
     P.shots.push({id,title:"",kind:"image",asset:"",duration:5,trim_start:0,motion:"none",transition:"cut",characters:[],location:"",action:"",camera:"",dialogue:"",continuity_notes:""});mark();draw()};
   m.append(a);
 }
+async function narr(m){
+  const A=P.audio;P.speakers=P.speakers||[];P.narration_segments=P.narration_segments||[];
+  m.innerHTML=`<div class="banner">Imported WAV/MP3 recordings are the DEFAULT. Local Chatterbox generation is optional, needs consented reference clips on your own disk, and is <b>untested by this project</b> - it was never run with a real model here. Nothing is uploaded.</div>`;
+  const md=document.createElement("div");md.innerHTML=`<label>Narration source for rendering</label><select><option value="file" ${A.narration_mode!="segments"?"selected":""}>single imported file (Audio tab)</option><option value="segments" ${A.narration_mode=="segments"?"selected":""}>assemble from segments below</option></select>`;
+  md.lastChild.onchange=e=>{A.narration_mode=e.target.value;mark()};m.append(md);
+  const h=document.createElement("h3");h.textContent="Speakers";m.append(h);
+  P.speakers.forEach((sp,i)=>{const c=document.createElement("div");c.className="card";const r=document.createElement("div");r.className="row";
+    r.append(field("Id",sp,"id"),field("Display name",sp,"display_name"),field("Role",sp,"role"),field("Local reference clip path (never uploaded or committed)",sp,"reference_audio"),field("Reference transcript (optional)",sp,"reference_transcript"),field("Consent statement",sp,"consent_statement",{area:true}));
+    const ck=document.createElement("div");ck.innerHTML=`<label><input type="checkbox" style="width:auto" ${sp.consent_confirmed?"checked":""}> Consent to cloning + commercial channel use confirmed</label>`;ck.firstChild.firstChild.onchange=e=>{sp.consent_confirmed=e.target.checked;mark()};r.append(ck);c.append(r);m.append(c)});
+  const as=document.createElement("button");as.className="g";as.textContent="+ Speaker";as.onclick=()=>{P.speakers.push({id:"sp"+(P.speakers.length+1),display_name:"",role:"",consent_confirmed:false,consent_statement:"",reference_audio:"",reference_transcript:""});mark();draw()};m.append(as);
+  const pl=await api("/api/narration/plan",{project:P});const by=Object.fromEntries(pl.segments.map(x=>[x.id,x]));
+  const h2=document.createElement("h3");h2.textContent="Segments";m.append(h2);
+  m.insertAdjacentHTML("beforeend",`<datalist id="fl">${files.map(f=>`<option value="${esc(f)}">`).join("")}</datalist>`);
+  P.narration_segments.forEach((g,i)=>{const c=document.createElement("div");c.className="card";const t=by[g.id];
+    c.innerHTML=`<div class="small">#${i+1} ${t?`${t.start.toFixed(2)}s → ${t.end.toFixed(2)}s (${t.measured?"measured":"<b class=warn>ESTIMATED</b>"})`:""} ${g.editorial?'<b class="warn">EDITORIAL PROPOSAL</b>':""} ${g.source=="generated"?'<b class="warn">synthetic voice</b>':""}</div><div class="row"></div><div class="acts"></div>`;
+    const r=$(".row",c);r.append(field("Id",g,"id"));
+    const sd=document.createElement("div");sd.innerHTML=`<label>Speaker</label><select>${P.speakers.map(x=>`<option value="${esc(x.id)}" ${x.id==g.speaker?"selected":""}>${esc(x.display_name||x.id)}</option>`).join("")}</select>`;sd.lastChild.onchange=e=>{g.speaker=e.target.value;mark()};r.append(sd);
+    r.append(field("Pause after (s)",g,"pause_after",{type:"number",num:true}),field("Text",g,"text",{area:true}));
+    const ad=document.createElement("div");ad.innerHTML=`<label>Audio (${g.source})</label><input list="fl" dir="ltr"><input type="file" style="margin-top:4px">`;
+    const ai=ad.firstElementChild.nextElementSibling;ai.value=g.audio;ai.oninput=()=>{g.audio=ai.value;g.source="imported";mark()};
+    ad.lastChild.onchange=async e=>{const f=e.target.files[0];if(!f)return;const j=await fetch("/api/upload?name="+encodeURIComponent(f.name),{method:"POST",headers:{"X-OFS":"1"},body:f}).then(r=>r.json());if(j.path){g.audio=j.path;g.source="imported";if(!files.includes(j.path))files.push(j.path);mark();draw()}else alert(j.error)};r.append(ad);
+    if(g.editorial)r.append(field("Editorial note",g,"editorial_note",{area:true}),field("Original wording (kept for the record)",g,"original_text",{area:true}));
+    const acts=$(".acts",c),mk=(tx,fn)=>{const b=document.createElement("button");b.className="g";b.textContent=tx;b.onclick=fn;acts.append(b)};
+    mk("↑",()=>{if(i>0){[P.narration_segments[i-1],P.narration_segments[i]]=[P.narration_segments[i],P.narration_segments[i-1]];mark();draw()}});
+    mk("↓",()=>{if(i<P.narration_segments.length-1){[P.narration_segments[i+1],P.narration_segments[i]]=[P.narration_segments[i],P.narration_segments[i+1]];mark();draw()}});
+    mk("✕",()=>{P.narration_segments.splice(i,1);mark();draw()});
+    if(g.audio&&!/^([a-z]:|\/)/i.test(g.audio)){const au=document.createElement("audio");au.controls=true;au.src="/media/"+encodeURI(g.audio)+"?t="+Date.now();au.style.height="30px";acts.append(au)}
+    mk("Generate this segment (local Chatterbox, optional)",()=>gen([g.id],true));
+    m.append(c)});
+  const ag=document.createElement("button");ag.className="b";ag.textContent="+ Segment";ag.onclick=()=>{P.narration_segments.push({id:"n"+String(P.narration_segments.length+1).padStart(2,"0"),speaker:(P.speakers[0]||{}).id||"",text:"",pause_after:0,audio:"",source:"imported",editorial:false,editorial_note:"",original_text:""});mark();draw()};m.append(ag);
+  m.insertAdjacentHTML("beforeend",`<hr><b>Timeline from narration:</b> ${pl.total.toFixed(2)}s ${pl.note?`<div class="warn">${esc(pl.note)}</div>`:'<span class="ok">all measured from real audio</span>'}<div class="acts"><button class="b" id="asm">Assemble & preview narration</button><button class="g" id="syn">Sync shot durations to narration</button><button class="g" id="tts">Check local Chatterbox status</button><button class="g" id="genall">Generate all missing segments (optional)</button></div><div id="nout" style="margin-top:8px"></div>`);
+  $("#asm").onclick=async()=>{try{const r=await api("/api/narration/assemble",{project:P});$("#nout").innerHTML=`<p class="ok">Assembled ${r.total.toFixed(2)}s</p><audio controls src="/media/${r.url}?t=${Date.now()}"></audio>`}catch(e){$("#nout").innerHTML=`<p class="err">${esc(e.message)}</p>`}};
+  $("#syn").onclick=async()=>{const r=await api("/api/narration/sync",{project:P});Object.assign(P,r.project);mark();$("#nout").innerHTML=`<p>Updated shots: ${r.changed.join(", ")||"none"}</p>`+(r.estimated.length?`<p class="warn">ESTIMATED timing (no audio yet): ${r.estimated.join(", ")}</p>`:"")};
+  $("#tts").onclick=async()=>{const r=await api("/api/tts/status",{});$("#nout").innerHTML=`<pre>${esc(JSON.stringify(r,null,2))}</pre>`};
+  $("#genall").onclick=()=>gen(null,false);
+}
+async function gen(ids,over){try{$("#nout")&&($("#nout").innerHTML="<p>Generating locally... (can take minutes on CPU)</p>");const r=await api("/api/tts/generate",{project:P,segments:ids,overwrite:over});Object.assign(P,r.project);mark();draw()}catch(e){alert("TTS not run: "+e.message)}}
 function audio(m){
   const A=P.audio,C=P.captions;
   m.innerHTML=`<div class="banner">Import narration you recorded or cloned yourself elsewhere. Nothing is uploaded to any online service; files are only copied into your project folder.</div><datalist id="fl">${files.map(f=>`<option value="${esc(f)}">`).join("")}</datalist>`;

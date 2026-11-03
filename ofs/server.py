@@ -10,7 +10,7 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import parse_qs, unquote, urlparse
 
-from . import media, project as proj, prompts as pr, render as rn, validate as val
+from . import media, narration as nar, project as proj, prompts as pr, render as rn, tts, validate as val
 
 STATIC = Path(__file__).parent / "static"
 MAX_UPLOAD = 8 * 1024 ** 3
@@ -118,7 +118,7 @@ def make_handler(app: App):
                     return self._json({"name": app.current, "projects": app.projects(),
                                        "project": proj.load(app.dir), "tools": media.tool_versions(),
                                        "motions": proj.MOTIONS, "transitions": proj.TRANSITIONS,
-                                       "files": self._files()})
+                                       "files": self._files(), "tts": {"model": None}})
                 if u.path == "/api/render/status":
                     return self._json(app.job)
                 if u.path.startswith("/media/"):
@@ -188,6 +188,29 @@ def make_handler(app: App):
                     proj.save(app.dir, data["project"])
                     app.start_render(data["project"])
                     return self._json({"started": True})
+                if u.path == "/api/narration/plan":
+                    return self._json(nar.plan(data["project"], app.dir))
+                if u.path == "/api/narration/assemble":
+                    try:
+                        res = nar.assemble(data["project"], app.dir, app.dir / "output" / "narration_assembled.wav")
+                    except ValueError as e:
+                        return self._json({"error": str(e)}, 400)
+                    res["url"] = "output/narration_assembled.wav"
+                    return self._json(res)
+                if u.path == "/api/narration/sync":
+                    pl = nar.plan(data["project"], app.dir)
+                    res = nar.sync_shot_durations(data["project"], pl)
+                    return self._json({"project": res["project"], "changed": res["changed"], "estimated": res["estimated"]})
+                if u.path == "/api/tts/status":
+                    return self._json(tts.status())
+                if u.path == "/api/tts/generate":
+                    p = proj.normalize(data["project"])
+                    try:
+                        res = tts.generate(p, app.dir, data.get("segments") or None, overwrite=bool(data.get("overwrite")))
+                    except tts.TTSError as e:
+                        return self._json({"error": str(e)}, 400)
+                    res["project"] = p
+                    return self._json(res)
                 if u.path == "/api/open":
                     if data["name"] not in app.projects():
                         raise ValueError("unknown project")

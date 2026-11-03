@@ -12,7 +12,7 @@ import subprocess
 import tempfile
 from pathlib import Path
 
-from . import __version__, media, project as proj, validate as val
+from . import __version__, media, narration as nar, project as proj, validate as val
 
 W, H = 1920, 1080
 FADE = 0.3
@@ -115,8 +115,9 @@ def render(project: dict, base, out_path, progress=None) -> dict:
 
         cmd = [ffmpeg, "-y", "-hide_banner", "-loglevel", "error", "-i", "video.mp4"]
         idx, ni, mi, si, burn = 1, None, None, None, False
-        if a["narration"]:
-            cmd += ["-i", str(proj.resolve(base, a["narration"]))]
+        narr_file = nar.resolve_narration_file(project, base, tmp)
+        if narr_file:
+            cmd += ["-i", str(narr_file)]
             ni, idx = idx, idx + 1
         if a["music"]:
             cmd += ["-stream_loop", "-1", "-i", str(proj.resolve(base, a["music"]))]
@@ -172,6 +173,8 @@ def render(project: dict, base, out_path, progress=None) -> dict:
         cb("mixing audio / final encode", (len(shots) + 0.5) / (len(shots) + 1))
         _run(cmd, cwd=tmp)
 
+    segs = project["narration_segments"] if nar.uses_segments(project) else []
+    generated = [x["id"] for x in segs if x["source"] == "generated"]
     manifest = {
         "tool": f"Original Film Studio {__version__}",
         "title": project["title"],
@@ -180,7 +183,12 @@ def render(project: dict, base, out_path, progress=None) -> dict:
         "disclosure": DISCLOSURE[ptype],
         "ai_video_generated_by_this_tool": False,
         "resolution": f"{W}x{H}", "fps": fps, "total_duration": total,
-        "narration": a["narration"] or None, "music": a["music"] or None,
+        "narration": ("segments" if segs else (a["narration"] or None)), "music": a["music"] or None,
+        "narration_segments": [{"id": x["id"], "speaker": x["speaker"], "source": x["source"],
+                                "editorial_proposal": x["editorial"]} for x in segs],
+        "synthetic_voice_segments": generated,
+        "voice_disclosure": ("Contains locally generated synthetic voice for segments: " + ", ".join(generated)
+                             + ". Consider YouTube's altered/synthetic content disclosure.") if generated else None,
         "captions": c["mode"] if c["srt"] else "none",
         "shots": [{"id": s["id"], "kind": s["kind"], "asset": s["asset"], "start": t0, "end": t1,
                    "motion": s["motion"] if s["kind"] == "image" else None}

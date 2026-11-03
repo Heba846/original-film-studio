@@ -59,6 +59,85 @@ def _num(v):
         return None
 
 
+def _segments(project, base, r, probe, timing, total):
+    segs = project["narration_segments"]
+    speakers = {x["id"]: x for x in project["speakers"]}
+    sp_ids = [x["id"] for x in project["speakers"]]
+    if len(set(sp_ids)) != len(sp_ids) or "" in sp_ids:
+        r.add("error", "bad_speaker_ids", "Speaker ids must be non-empty and unique.")
+    if not segs:
+        r.add("error", "no_segments", "Narration mode is 'segments' but there are no segments.")
+        return
+    seen, measured_total, all_ok = set(), 0.0, True
+    for i, g in enumerate(segs, 1):
+        gid = g["id"] or f"#{i}"
+        if not g["id"]:
+            r.add("error", "segment_no_id", f"Segment #{i} has no id.", gid)
+        elif g["id"] in seen:
+            r.add("error", "segment_dup_id", f"Duplicate segment id '{g['id']}'.", gid)
+        seen.add(g["id"])
+        if g["speaker"] not in speakers:
+            r.add("error", "unknown_speaker", f"Segment {gid}: speaker '{g['speaker']}' is not defined.", gid)
+        if not (g["text"] or "").strip():
+            r.add("error", "segment_no_text", f"Segment {gid}: text is empty.", gid)
+        pa = _num(g["pause_after"])
+        if pa is None or pa < 0 or pa > 30:
+            r.add("error", "bad_pause", f"Segment {gid}: pause_after must be 0-30 seconds.", gid)
+            pa = 0.0
+        if g["source"] not in ("imported", "generated"):
+            r.add("error", "bad_source", f"Segment {gid}: source must be 'imported' or 'generated'.", gid)
+        if g["editorial"]:
+            r.add("info", "editorial_proposal", f"Segment {gid} is an EDITORIAL PROPOSAL awaiting the author's approval.", gid)
+        if not g["audio"]:
+            r.add("error", "segment_no_audio", f"Segment {gid}: no audio yet (import a WAV/MP3 or generate it).", gid)
+            all_ok = False
+            continue
+        p = proj.resolve(base, g["audio"])
+        if not p.is_file():
+            r.add("error", "segment_missing_audio", f"Segment {gid}: audio file not found: {g['audio']}", gid)
+            all_ok = False
+        elif p.suffix.lower() not in media.AUDIO_EXT:
+            r.add("error", "bad_segment_audio_type", f"Segment {gid}: not an audio file.", gid)
+            all_ok = False
+        else:
+            info = probe(p, "unreadable_segment_audio", f"Segment {gid} audio", gid)
+            if not info or not info["has_audio"] or not info["duration"]:
+                if info:
+                    r.add("error", "segment_no_audio_stream", f"Segment {gid}: file has no audio.", gid)
+                all_ok = False
+            else:
+                measured_total += info["duration"] + pa
+    # segment -> shot references
+    sids = set(seen)
+    owner = {}
+    for s in project["shots"]:
+        for x in s["segments"]:
+            if x not in sids:
+                r.add("error", "unknown_segment", f"Shot {s['id']}: segment '{x}' does not exist.", s["id"])
+            elif x in owner:
+                r.add("error", "segment_in_two_shots", f"Segment '{x}' is assigned to shots {owner[x]} and {s['id']}.", s["id"])
+            owner[x] = s["id"]
+    order = [g["id"] for g in segs]
+    flat = [x for s in project["shots"] for x in s["segments"] if x in sids]
+    if flat != sorted(flat, key=order.index):
+        r.add("warning", "segment_order", "Shots reference narration segments out of order.")
+    if all_ok:
+        timing(measured_total)
+        for s in project["shots"]:
+            span = 0.0
+            for x in s["segments"]:
+                g = next((g for g in segs if g["id"] == x), None)
+                if g:
+                    try:
+                        span += probe(proj.resolve(base, g["audio"]), "unreadable_segment_audio", x)["duration"] + (_num(g["pause_after"]) or 0)
+                    except Exception:  # noqa: BLE001
+                        pass
+            d = _num(s["duration"])
+            if span and d and d < span - 0.3:
+                r.add("warning", "shot_shorter_than_narration",
+                      f"Shot {s['id']} lasts {d:g}s but its narration needs {span:.1f}s; run 'sync' to fit shots to the audio.", s["id"])
+
+
 def validate(project: dict, base, probe_fn=media.probe, check_tools: bool = True) -> Report:
     project = proj.normalize(project)
     base = Path(base)
@@ -177,7 +256,19 @@ def validate(project: dict, base, probe_fn=media.probe, check_tools: bool = True
         if v is None or not 0 <= v <= 4:
             r.add("error", "bad_volume", f"audio.{key} must be a number between 0 and 4.")
 
-    if a["narration"]:
+    def timing(nd):
+        if nd > total + 0.5:
+            r.add("error", "narration_longer", f"Narration is {nd:.1f}s but the timeline is only "
+                  f"{total:.1f}s; it would be cut off. Lengthen shots or trim the audio.")
+        elif total > nd + 3:
+            r.add("warning", "narration_shorter", f"Narration ends {total - nd:.1f}s before the picture "
+                  f"({nd:.1f}s vs {total:.1f}s).")
+
+    if a["narration_mode"] not in ("file", "segments"):
+        r.add("error", "bad_narration_mode", "audio.narration_mode must be 'file' or 'segments'.")
+    elif a["narration_mode"] == "segments":
+        _segments(project, base, r, probe, timing, total)
+    elif a["narration"]:
         p = proj.resolve(base, a["narration"])
         if not p.is_file():
             r.add("error", "missing_narration", f"Narration file not found: {a['narration']}")
@@ -189,15 +280,11 @@ def validate(project: dict, base, probe_fn=media.probe, check_tools: bool = True
                 if not info["has_audio"] or info["duration"] is None:
                     r.add("error", "narration_no_audio", "Narration file has no audio stream.")
                 else:
-                    nd = info["duration"]
-                    if nd > total + 0.5:
-                        r.add("error", "narration_longer", f"Narration is {nd:.1f}s but the timeline is only "
-                              f"{total:.1f}s; it would be cut off. Lengthen shots or trim the audio.")
-                    elif total > nd + 3:
-                        r.add("warning", "narration_shorter", f"Narration ends {total - nd:.1f}s before the picture "
-                              f"({nd:.1f}s vs {total:.1f}s).")
+                    timing(info["duration"])
     else:
         r.add("info", "no_narration", "No narration imported; the render will have no voice track.")
+    if project["narration_segments"] and a["narration_mode"] == "file":
+        r.add("info", "segments_unused", "Narration segments exist but audio.narration_mode is 'file'; they are not used.")
 
     if a["music"]:
         p = proj.resolve(base, a["music"])

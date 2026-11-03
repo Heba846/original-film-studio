@@ -6,7 +6,7 @@ import json
 import re
 from pathlib import Path
 
-SCHEMA_VERSION = 1
+SCHEMA_VERSION = 2  # v1 projects (no speakers/segments) still load unchanged
 MOTIONS = ["none", "zoom_in", "zoom_out", "pan_left", "pan_right"]
 TRANSITIONS = ["cut", "fade"]
 
@@ -19,7 +19,11 @@ DEFAULT_PROJECT = {
     "characters": [],
     "locations": [],
     "shots": [],
-    "audio": {"narration": "", "music": "", "narration_volume": 1.0,
+    "notes": "",
+    "speakers": [],
+    "narration_segments": [],
+    "tts": {"engine": "chatterbox", "model": "turbo", "device": "auto", "exaggeration": 0.5, "cfg_weight": 0.5},
+    "audio": {"narration": "", "narration_mode": "file", "music": "", "narration_volume": 1.0,
               "music_volume": 0.25, "duck_music": True},
     "captions": {"srt": "", "mode": "none"},
     "render": {"fps": 30, "crf": 20, "preset": "medium"},
@@ -28,7 +32,12 @@ SHOT_DEFAULTS = {
     "id": "", "title": "", "kind": "image", "asset": "", "duration": 5.0,
     "trim_start": 0.0, "motion": "none", "transition": "cut", "characters": [],
     "location": "", "action": "", "camera": "", "dialogue": "", "continuity_notes": "",
+    "segments": [], "negative_extra": "",
 }
+SPEAKER_DEFAULTS = {"id": "", "display_name": "", "role": "", "consent_confirmed": False,
+                    "consent_statement": "", "reference_audio": "", "reference_transcript": ""}
+SEGMENT_DEFAULTS = {"id": "", "speaker": "", "text": "", "pause_after": 0.0, "audio": "",
+                    "source": "imported", "editorial": False, "editorial_note": "", "original_text": ""}
 CHARACTER_DEFAULTS = {"id": "", "name": "", "description": "", "wardrobe": "",
                       "voice_notes": "", "continuity_notes": "", "reference": ""}
 LOCATION_DEFAULTS = {"id": "", "name": "", "description": "", "lighting": "",
@@ -45,13 +54,15 @@ def normalize(data: dict) -> dict:
     """Fill missing keys with defaults (never drops unknown keys)."""
     p = copy.deepcopy(DEFAULT_PROJECT)
     for k, v in (data or {}).items():
-        if k in ("audio", "captions", "render") and isinstance(v, dict):
+        if k in ("audio", "captions", "render", "tts") and isinstance(v, dict):
             p[k].update(v)
         else:
             p[k] = v
     p["characters"] = [{**CHARACTER_DEFAULTS, **c} for c in p.get("characters") or []]
     p["locations"] = [{**LOCATION_DEFAULTS, **c} for c in p.get("locations") or []]
     p["shots"] = [{**SHOT_DEFAULTS, **s} for s in p.get("shots") or []]
+    p["speakers"] = [{**SPEAKER_DEFAULTS, **s} for s in p.get("speakers") or []]
+    p["narration_segments"] = [{**SEGMENT_DEFAULTS, **s} for s in p.get("narration_segments") or []]
     return p
 
 
@@ -70,7 +81,7 @@ def save(path, data: dict) -> Path:
     path.parent.mkdir(parents=True, exist_ok=True)
     tmp = path.with_suffix(".json.tmp")
     with open(tmp, "w", encoding="utf-8") as f:
-        json.dump(normalize(data), f, ensure_ascii=False, indent=2)
+        json.dump({**normalize(data), "version": SCHEMA_VERSION}, f, ensure_ascii=False, indent=2)
         f.write("\n")
     tmp.replace(path)
     return path
