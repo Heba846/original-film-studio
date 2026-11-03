@@ -73,3 +73,4 @@ laptop struggles (`preset: medium` in `project.json`; use `veryfast` for drafts)
 2. Your reference recordings (Heba, Lion).
 3. The ~100 Veo clips named by shot.
 4. Optional music bed. Your call on `exaggeration` after listening.
+- Colab notebook: `notebooks/colab_voice_cloning.ipynb` (open in Colab, click through the cells).
