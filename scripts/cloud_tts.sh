@@ -11,7 +11,7 @@ PY="$(command -v python3.11 || command -v python3.10 || command -v python3)"
 . .venv-tts/bin/activate
 if ! python -c "import chatterbox" 2>/dev/null; then
   pip install -q --upgrade pip
-  pip install -q chatterbox-tts            # pulls torch (CUDA wheels on Linux; CPU fallback is automatic)
+  pip install -q chatterbox-tts "setuptools<81"   # setuptools<81: resemble-perth needs pkg_resources; pulls torch (CUDA wheels on Linux; CPU fallback is automatic)
 fi
 python ofs/tts_worker.py probe
 python -m ofs tts download --yes           # explicit weight download (Hugging Face)
