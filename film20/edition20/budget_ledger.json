@@ -1,0 +1,666 @@
+{
+ "about": "Flow credit ledger for Film20 (plan v2: 70 jobs incl. respecified opening; U01 handled as a non-photoreal code scene, no 71st job). Validated by tools/validate_budget.py. Claude coding usage is separate and provides no Flow credits. No paid call has been made from the cloud session.",
+ "cap_credits": 1000,
+ "pools": {
+  "primary": 700,
+  "retakes": 200,
+  "reserve_unspent": 100
+ },
+ "pricing": {
+  "model_name_in_flow": "Veo 3.1 Lite",
+  "credits_per_output": 10,
+  "outputs_per_prompt": 1,
+  "confirmed_in_flow_ui": true,
+  "confirmed_on": "2026-11-04",
+  "basis": "Browser-verified by the author: Veo 3.1 Lite, 10 credits per 8-second 16:9 output, one output.",
+  "rules": [
+   "Record the exact model name and the per-output price shown in Flow BEFORE Batch 1; set confirmed_in_flow_ui=true.",
+   "Set outputs per prompt to 1 in Flow settings. If Flow defaults to 2 outputs, each prompt costs double.",
+   "No automatic upgrade to a more expensive model or quality tier. A model change needs a new pricing record.",
+   "Reference/ingredient images generated inside Flow are charged to the primary pool (pool 'supporting_image'). Uploading existing stills is free.",
+   "The 100-credit reserve stays unspent unless the owner explicitly releases it (reserve_released_by_owner)."
+  ],
+  "still_images": {
+   "model": "Nano Banana 2.1",
+   "credits_per_image": 0,
+   "confirmed_in_flow_ui": true,
+   "note": "author: image generation is FREE on this account"
+  }
+ },
+ "reserve_released_by_owner": false,
+ "batches": [
+  {
+   "batch": 1,
+   "scope": "CH00-CH01: geography, who speaks to whom, Bay 14 (first coherent section)",
+   "jobs": 13,
+   "planned_credits": 130,
+   "status": "ready_awaiting_owner_and_price_confirmation"
+  },
+  {
+   "batch": 2,
+   "scope": "CH02-CH05",
+   "jobs": 15,
+   "planned_credits": 150,
+   "status": "blocked_until_batch_1_reviewed"
+  },
+  {
+   "batch": 3,
+   "scope": "CH06-CH11",
+   "jobs": 22,
+   "planned_credits": 220,
+   "status": "blocked_until_batch_2_reviewed"
+  },
+  {
+   "batch": 4,
+   "scope": "CH12-CH19",
+   "jobs": 20,
+   "planned_credits": 200,
+   "status": "blocked_until_batch_3_reviewed"
+  }
+ ],
+ "entries": [
+  {
+   "date": "2026-11-04",
+   "job_id": "F01",
+   "pool": "primary",
+   "model": "Veo 3.1 Lite",
+   "outputs": 1,
+   "credits_charged": 10,
+   "result_files": [
+    "public/flow/F01.mp4"
+   ],
+   "verdict": "approved after frame audit"
+  },
+  {
+   "date": "2026-11-04",
+   "job_id": "F02",
+   "pool": "primary",
+   "model": "Veo 3.1 Lite",
+   "outputs": 1,
+   "credits_charged": 10,
+   "result_files": [
+    "public/flow/rejected/F02_take1.mp4"
+   ],
+   "verdict": "take 1 rejected after frame audit (see edition20/review/REVIEW.md); file kept at public/flow/rejected/F02_take1.mp4"
+  },
+  {
+   "date": "2026-11-04",
+   "job_id": "F06",
+   "pool": "primary",
+   "model": "Veo 3.1 Lite",
+   "outputs": 1,
+   "credits_charged": 10,
+   "result_files": [
+    "public/flow/rejected/F06_take1.mp4"
+   ],
+   "verdict": "take 1 rejected after frame audit (see edition20/review/REVIEW.md); file kept at public/flow/rejected/F06_take1.mp4"
+  },
+  {
+   "date": "2026-11-04",
+   "job_id": "F03",
+   "pool": "primary",
+   "model": "Veo 3.1 Lite",
+   "outputs": 1,
+   "credits_charged": 0,
+   "result_files": [],
+   "verdict": "generation failed in Flow; refunded (author)"
+  },
+  {
+   "date": "2026-11-04",
+   "job_id": "F04",
+   "pool": "primary",
+   "model": "Veo 3.1 Lite",
+   "outputs": 1,
+   "credits_charged": 10,
+   "result_files": [
+    "public/flow/F04.mp4"
+   ],
+   "verdict": "delivered; under frame audit"
+  },
+  {
+   "date": "2026-11-04",
+   "job_id": "F05",
+   "pool": "primary",
+   "model": "Veo 3.1 Lite",
+   "outputs": 1,
+   "credits_charged": 10,
+   "result_files": [],
+   "verdict": "generated (author); not delivered; author inspection: right (splinted) hand holds pistol, gray suit - pending review, likely retake"
+  },
+  {
+   "date": "2026-11-04",
+   "job_id": "F07",
+   "pool": "primary",
+   "model": "Veo 3.1 Lite",
+   "outputs": 1,
+   "credits_charged": 10,
+   "result_files": [
+    "public/flow/F07.mp4"
+   ],
+   "verdict": "delivered; under frame audit"
+  },
+  {
+   "date": "2026-11-04",
+   "job_id": "F08",
+   "pool": "primary",
+   "model": "Veo 3.1 Lite",
+   "outputs": 1,
+   "credits_charged": 0,
+   "result_files": [],
+   "verdict": "generation failed in Flow; refunded (author)"
+  },
+  {
+   "date": "2026-11-04",
+   "job_id": "F09",
+   "pool": "primary",
+   "model": "Veo 3.1 Lite",
+   "outputs": 1,
+   "credits_charged": 10,
+   "result_files": [
+    "public/flow/F09.mp4"
+   ],
+   "verdict": "delivered; under frame audit"
+  },
+  {
+   "date": "2026-11-04",
+   "job_id": "F10",
+   "pool": "primary",
+   "model": "Veo 3.1 Lite",
+   "outputs": 1,
+   "credits_charged": 10,
+   "result_files": [
+    "public/flow/F10.mp4"
+   ],
+   "verdict": "delivered; under frame audit"
+  },
+  {
+   "date": "2026-11-04",
+   "job_id": "F11",
+   "pool": "primary",
+   "model": "Veo 3.1 Lite",
+   "outputs": 1,
+   "credits_charged": 10,
+   "result_files": [
+    "public/flow/F11.mp4"
+   ],
+   "verdict": "delivered; under frame audit"
+  },
+  {
+   "date": "2026-11-04",
+   "job_id": "F12",
+   "pool": "primary",
+   "model": "Veo 3.1 Lite",
+   "outputs": 1,
+   "credits_charged": 10,
+   "result_files": [
+    "public/flow/F12.mp4"
+   ],
+   "verdict": "delivered; under frame audit"
+  },
+  {
+   "date": "2026-11-04",
+   "job_id": "F13",
+   "pool": "primary",
+   "model": "Veo 3.1 Lite",
+   "outputs": 1,
+   "credits_charged": 10,
+   "result_files": [
+    "public/flow/F13.mp4"
+   ],
+   "verdict": "delivered; under frame audit"
+  },
+  {
+   "date": "2026-11-04",
+   "job_id": "F18",
+   "pool": "primary",
+   "model": "Veo 3.1 Lite",
+   "outputs": 1,
+   "credits_charged": 10,
+   "result_files": [],
+   "verdict": "submitted (author), generating"
+  },
+  {
+   "date": "2026-11-04",
+   "job_id": "F19",
+   "pool": "primary",
+   "model": "Veo 3.1 Lite",
+   "outputs": 1,
+   "credits_charged": 0,
+   "result_files": [],
+   "verdict": "second batch: generation failed; refunded (author)"
+  },
+  {
+   "date": "2026-11-04",
+   "job_id": "F20",
+   "pool": "primary",
+   "model": "Veo 3.1 Lite",
+   "outputs": 1,
+   "credits_charged": 10,
+   "result_files": [],
+   "verdict": "submitted (author), generating"
+  },
+  {
+   "date": "2026-11-04",
+   "job_id": "F21",
+   "pool": "primary",
+   "model": "Veo 3.1 Lite",
+   "outputs": 1,
+   "credits_charged": 10,
+   "result_files": [],
+   "verdict": "take 1 REJECTED by author (identity + role swap, wrong location); never ingested; https://flow.google.com/u/2/project/0be44c4d-eaa1-494d-975a-29aba24d78c5/edit/ae64473f-5c42-4ce6-8963-1a868cc6a45b"
+  },
+  {
+   "date": "2026-11-04",
+   "job_id": "F22",
+   "pool": "primary",
+   "model": "Veo 3.1 Lite",
+   "outputs": 1,
+   "credits_charged": 10,
+   "result_files": [],
+   "verdict": "submitted (author), generating"
+  },
+  {
+   "date": "2026-11-04",
+   "job_id": "F23",
+   "pool": "primary",
+   "model": "Veo 3.1 Lite",
+   "outputs": 1,
+   "credits_charged": 10,
+   "result_files": [],
+   "verdict": "submitted (author), generating"
+  },
+  {
+   "date": "2026-11-04",
+   "job_id": "F24",
+   "pool": "primary",
+   "model": "Veo 3.1 Lite",
+   "outputs": 1,
+   "credits_charged": 10,
+   "result_files": [],
+   "verdict": "submitted (author), generating"
+  },
+  {
+   "date": "2026-11-04",
+   "job_id": "F25",
+   "pool": "primary",
+   "model": "Veo 3.1 Lite",
+   "outputs": 1,
+   "credits_charged": 10,
+   "result_files": [],
+   "verdict": "submitted (author), generating"
+  },
+  {
+   "date": "2026-11-04",
+   "job_id": "F26",
+   "pool": "primary",
+   "model": "Veo 3.1 Lite",
+   "outputs": 1,
+   "credits_charged": 10,
+   "result_files": [],
+   "verdict": "take 1 REJECTED (author thumbnail): hospital gurney / IV pole / surgical lamp instead of the closed restaurant; never ingested"
+  },
+  {
+   "date": "2026-11-04",
+   "job_id": "F27",
+   "pool": "primary",
+   "model": "Veo 3.1 Lite",
+   "outputs": 1,
+   "credits_charged": 10,
+   "result_files": [],
+   "verdict": "submitted (author), generating"
+  },
+  {
+   "date": "2026-11-04",
+   "job_id": "F28",
+   "pool": "primary",
+   "model": "Veo 3.1 Lite",
+   "outputs": 1,
+   "credits_charged": 10,
+   "result_files": [],
+   "verdict": "submitted (author), generating"
+  },
+  {
+   "date": "2026-11-04",
+   "job_id": "F06",
+   "pool": "retake",
+   "model": "Veo 3.1 Lite",
+   "outputs": 1,
+   "credits_charged": 10,
+   "result_files": [
+    "public/flow/F06.mp4"
+   ],
+   "verdict": "F06_R1: animated from a FREE new scene still (STILL_F06) as literal first frame; approved after frame audit (usable 0.2-2.4 s and 5.6-7.7 s)"
+  },
+  {
+   "date": "2026-11-04",
+   "job_id": "F44",
+   "pool": "primary",
+   "model": "Veo 3.1 Lite",
+   "outputs": 1,
+   "credits_charged": 0,
+   "result_files": [],
+   "verdict": "author: generating at 0 credits (free); not delivered"
+  },
+  {
+   "date": "2026-11-04",
+   "job_id": "F45",
+   "pool": "primary",
+   "model": "Veo 3.1 Lite",
+   "outputs": 1,
+   "credits_charged": 0,
+   "result_files": [],
+   "verdict": "author: generating at 0 credits (free); not delivered"
+  },
+  {
+   "date": "2026-11-04",
+   "job_id": "F46",
+   "pool": "primary",
+   "model": "Veo 3.1 Lite",
+   "outputs": 1,
+   "credits_charged": 0,
+   "result_files": [],
+   "verdict": "author: generating at 0 credits (free); not delivered"
+  },
+  {
+   "date": "2026-11-04",
+   "job_id": "F47",
+   "pool": "primary",
+   "model": "Veo 3.1 Lite",
+   "outputs": 1,
+   "credits_charged": 0,
+   "result_files": [],
+   "verdict": "author: generating at 0 credits (free); not delivered"
+  },
+  {
+   "date": "2026-11-04",
+   "job_id": "F48",
+   "pool": "primary",
+   "model": "Veo 3.1 Lite",
+   "outputs": 1,
+   "credits_charged": 0,
+   "result_files": [],
+   "verdict": "author: generating at 0 credits (free); not delivered"
+  },
+  {
+   "date": "2026-11-04",
+   "job_id": "F49",
+   "pool": "primary",
+   "model": "Veo 3.1 Lite",
+   "outputs": 1,
+   "credits_charged": 0,
+   "result_files": [],
+   "verdict": "author: generating at 0 credits (free); not delivered"
+  },
+  {
+   "date": "2026-11-04",
+   "job_id": "F50",
+   "pool": "primary",
+   "model": "Veo 3.1 Lite",
+   "outputs": 1,
+   "credits_charged": 0,
+   "result_files": [],
+   "verdict": "author: generating at 0 credits (free); not delivered"
+  },
+  {
+   "date": "2026-11-04",
+   "job_id": "F51",
+   "pool": "primary",
+   "model": "Veo 3.1 Lite",
+   "outputs": 1,
+   "credits_charged": 0,
+   "result_files": [],
+   "verdict": "author: generating at 0 credits (free); not delivered"
+  },
+  {
+   "date": "2026-11-04",
+   "job_id": "F52",
+   "pool": "primary",
+   "model": "Veo 3.1 Lite",
+   "outputs": 1,
+   "credits_charged": 0,
+   "result_files": [],
+   "verdict": "author: generating at 0 credits (free); not delivered"
+  },
+  {
+   "date": "2026-11-04",
+   "job_id": "F53",
+   "pool": "primary",
+   "model": "Veo 3.1 Lite",
+   "outputs": 1,
+   "credits_charged": 0,
+   "result_files": [],
+   "verdict": "author: generating at 0 credits (free); not delivered"
+  },
+  {
+   "date": "2026-11-04",
+   "job_id": "F54",
+   "pool": "primary",
+   "model": "Veo 3.1 Lite",
+   "outputs": 1,
+   "credits_charged": 0,
+   "result_files": [],
+   "verdict": "author: generating at 0 credits (free); not delivered"
+  },
+  {
+   "date": "2026-11-04",
+   "job_id": "F55",
+   "pool": "primary",
+   "model": "Veo 3.1 Lite",
+   "outputs": 1,
+   "credits_charged": 0,
+   "result_files": [],
+   "verdict": "author: generating at 0 credits (free); not delivered"
+  },
+  {
+   "date": "2026-11-04",
+   "job_id": "F56",
+   "pool": "primary",
+   "model": "Veo 3.1 Lite",
+   "outputs": 1,
+   "credits_charged": 0,
+   "result_files": [],
+   "verdict": "author: generating at 0 credits (free); not delivered"
+  },
+  {
+   "date": "2026-11-04",
+   "job_id": "F57",
+   "pool": "primary",
+   "model": "Veo 3.1 Lite",
+   "outputs": 1,
+   "credits_charged": 0,
+   "result_files": [],
+   "verdict": "author: generating at 0 credits (free); not delivered"
+  },
+  {
+   "date": "2026-11-04",
+   "job_id": "F58",
+   "pool": "primary",
+   "model": "Veo 3.1 Lite",
+   "outputs": 1,
+   "credits_charged": 0,
+   "result_files": [],
+   "verdict": "author: generating at 0 credits (free); not delivered"
+  },
+  {
+   "date": "2026-11-04",
+   "job_id": "F59",
+   "pool": "primary",
+   "model": "Veo 3.1 Lite",
+   "outputs": 1,
+   "credits_charged": 10,
+   "result_files": [],
+   "verdict": "F59_TEST delivered 2026-11-04 (sha256 f703ae33..., 7.93 s, 1280x720). NOT approved: the mask is not sealed over the nose and mouth, Ivy is in scrubs instead of the gray cardigan, and Brancato is absent. 10 cr spent, no refund claimed."
+  }
+ ],
+ "plan_version": 2,
+ "batch1_report": {
+  "committed_credits": 130,
+  "refunded_credits": 20,
+  "net_credits": 110,
+  "succeeded": [
+   "F01",
+   "F02",
+   "F04",
+   "F05",
+   "F06",
+   "F07",
+   "F09",
+   "F10",
+   "F11",
+   "F12",
+   "F13"
+  ],
+  "failed_refunded": [
+   "F03",
+   "F08"
+  ],
+  "note": "Author clarification: 11 succeeded (F01, F02, F06 + 8 of the next 10); F03/F08 failed and were refunded."
+ },
+ "account": {
+  "original_balance_credits": 1010,
+  "film_cap_credits": 1000,
+  "minimum_untouched_account_credits": 10
+ },
+ "planned_retakes": [
+  {
+   "job_id": "F02",
+   "pool": "retake",
+   "credits": 10,
+   "reason": "ER background copied from hospital.png; grille instead of her car"
+  },
+  {
+   "job_id": "F21",
+   "pool": "retake",
+   "credits": 10,
+   "reason": "take 1 identity/role swap + wrong location"
+  },
+  {
+   "job_id": "F26",
+   "pool": "retake",
+   "credits": 10,
+   "reason": "take 1 wrong location (hospital instead of restaurant)"
+  }
+ ],
+ "batch2_report": {
+  "submitted": [
+   "F18",
+   "F19",
+   "F20",
+   "F21",
+   "F22",
+   "F23",
+   "F24",
+   "F25",
+   "F26",
+   "F27",
+   "F28"
+  ],
+  "committed_credits": 110
+ },
+ "net_committed_credits": 220,
+ "free_items": {
+  "scene_stills_generated": [
+   "F02",
+   "F06",
+   "F26",
+   "F03",
+   "F08",
+   "F14",
+   "F15",
+   "F16",
+   "F17",
+   "F18",
+   "F19",
+   "F20",
+   "F21",
+   "F22",
+   "F23",
+   "F24",
+   "F25",
+   "F27",
+   "F28"
+  ],
+  "scene_stills_in_progress": [
+   "F29",
+   "F30",
+   "F31",
+   "F32",
+   "F33",
+   "F34",
+   "F35",
+   "F36",
+   "F37",
+   "F38",
+   "F39",
+   "F40",
+   "F41",
+   "F42",
+   "F43"
+  ],
+  "earlier_free_stills": 34,
+  "credits": 0
+ },
+ "account_observations": [
+  {
+   "date": "2026-11-04",
+   "source": "author, Flow account panel",
+   "balance_credits": 1010,
+   "note": "initial verified balance"
+  },
+  {
+   "date": "2026-11-04",
+   "source": "author, Flow account panel",
+   "balance_credits": 840,
+   "note": "latest observed balance (net reduction 170)"
+  }
+ ],
+ "reconciliation": {
+  "ledger_per_job_net_credits": 220,
+  "ui_net_reduction_credits": 170,
+  "status": "UNRECONCILED - per-job ledger and the account panel differ; both kept as observed, no refunds invented. Hard limits: film cap 1000 credits; at least 10 account credits always left untouched.",
+  "author_expected_net": 220
+ },
+ "flow_status": {
+  "date": "2026-11-04",
+  "image_generation": {
+   "state": "WORKING",
+   "evidence": "Nano Banana 2.1 free stills generated (0 credits)"
+  },
+  "video_generation": {
+   "state": "WORKING",
+   "evidence": "F06_R1 animated from STILL_F06 (10 credits)"
+  },
+  "state": "STILL_REVIEW_GATE",
+  "detail": "Video works, but no new animation is authorized until the author approves the corresponding still; only F06_R1 was authorized."
+ },
+ "workflow": {
+  "rule": "STILL FIRST: every remaining shot = free correct-composition still -> author visual review -> ONE 10-credit Veo 3.1 Lite animation using the approved still as the literal first frame. Never use the full hospital.png as a video start frame (it clones the ER background).",
+  "authorized_videos_now": [
+   "F06_R1 (done)",
+   "F59_TEST (submitted)"
+  ],
+  "note": "No other video generation authorized until the author approves stills."
+ },
+ "replan": {
+  "date": "2026-11-04",
+  "hard_cap_credits": 1000,
+  "account_floor_credits": 10,
+  "net_spent_per_ledger": 220,
+  "approved_jobs": [
+   "F01",
+   "F04",
+   "F06",
+   "F07",
+   "F09",
+   "F10",
+   "F11",
+   "F12",
+   "F13"
+  ],
+  "jobs_still_needing_an_accepted_take": 61,
+  "worst_case_if_every_remaining_job_needs_one_new_animation": 610,
+  "projected_total_worst_case": 830,
+  "headroom_after_worst_case": 170,
+  "note": "Takes already generated (F18-F28, F44-F58) may be accepted without new spend; the worst case assumes all 61 remaining jobs need a new 10-credit animation. Headroom covers retakes. The account panel (840 observed) remains the authority; reconcile before each batch."
+ }
+}

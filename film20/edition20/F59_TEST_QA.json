@@ -1,0 +1,33 @@
+{
+ "file": "F59_TEST.mp4",
+ "sha256": "f703ae33f04ba769d9e4af428f58e83038f48055ba41a2831aa49c4e9c30a005",
+ "dur_s": 7.93,
+ "job": "F59 club_wide",
+ "verdict": "NOT_APPROVED_REPAIR_STILL",
+ "credits_spent": 10,
+ "new_spend_recommended": 0,
+ "pass": [
+  "club location (wood panels, lamps, tables)",
+  "Ivy: red bun with pen, face stable",
+  "Enzo: gold curls, about 21, dark-gray jacket, stays in his role",
+  "patient: young man on floor, distinct from Enzo",
+  "no identity swap or morphing across 0-8 s"
+ ],
+ "fail": [
+  {
+   "item": "mask blocking",
+   "detail": "The bag-valve mask sits on the chin and lower lip at an angle; it is not sealed over both nose and mouth. There is no C-E grip and no head-tilt/jaw-thrust. This holds the whole clip, so cropping cannot fix it."
+  },
+  {
+   "item": "outfit",
+   "detail": "Ivy wears navy scrubs and a stethoscope. On Nov 10 (P3, off duty, 11:31 p.m. call) she should be in the gray cardigan with emerald + plain gold band on her LEFT ring finger, with gloves allowed."
+  },
+  {
+   "item": "roles",
+   "detail": "Brancato (60s, heavyset, brown cardigan buttoned wrong) is absent; the background onlookers are generic. Enzo's two hands press the chest. That reads as CPR, which the script does not show: for an overdose with a pulse it should be rescue breathing/bagging, so Enzo should sit at the head or hold the boy's shoulder."
+  }
+ ],
+ "usable_range": "none for n141-n144 (22 s needed). At most a 1-2 s wide establishing shot under the code overlay, as a memory beat, only if the author accepts the scrubs.",
+ "repair_still_prompt": "Same club composition. The red-haired doctor wears a gray cardigan over a dark top, sleeves pushed up, nitrile gloves, emerald + plain gold band visible on her LEFT ring finger before gloving or omitted under the glove. She kneels at the boy's HEAD, head tilted back, and holds the clear bag-valve mask sealed over BOTH nose and mouth with a C-E grip of her left hand while her right hand squeezes the bag. The curly-haired young man (gold curls, gray jacket) kneels at the boy's side, hand on his shoulder, not pressing the chest. Heavyset 60s man in a brown cardigan buttoned wrong stands behind them, watching. An open naloxone nasal spray box lies on the rug. Mouths closed.",
+ "next": "Free still repair, then QA. Animate (10 cr) only after the author authorizes it; there has been no new video spend since this test."
+}
