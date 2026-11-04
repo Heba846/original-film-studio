@@ -16,7 +16,7 @@ npx remotion studio src/index.tsx  # Film20-Workbench = full film with placehold
 |---|---|
 | Narration WAVs (original, per segment) | `public/audio/n###.wav`, plus `public/n001.wav`, `public/n002.wav`, `public/n004.wav` |
 | 4 edited lines / their originals | `public/pickups/*_20min.wav` / `edition20/originals/` |
-| Narration master (whole film, timeline-placed) | `output/full/Film20_NARRATION_MASTER_20m46s.wav` |
+| Narration master (whole film, timeline-placed) | `output/full/Film20_NARRATION_MASTER_20m46s.flac` (sha256 of the 48 kHz WAV it was encoded from: 975c44f0…; segments placed exactly at their timeline frames, peak −2.7 dBFS |
 | Captions (word-aligned) / chapters | `edition20/out/Film20_captions_DRAFT.srt` (renamed `Film20_captions.srt` once the gate opens), `Film20_chapters.txt` |
 | Approved clips (10) | `public/flow/F01,F04,F06,F07,F09–F13.mp4` + `public/hospital.mp4` |
 | Approved stills (first frames, 19) | `public/stills/STILL_F##.jpg` (= `edition20/stills_approved/`) |
