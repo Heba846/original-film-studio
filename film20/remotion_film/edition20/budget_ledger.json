@@ -119,7 +119,7 @@
    "outputs": 1,
    "credits_charged": 10,
    "result_files": [],
-   "verdict": "generated (author); download failed - file not yet in cloud"
+   "verdict": "generated (author); not delivered; author inspection: right (splinted) hand holds pistol, gray suit - pending review, likely retake"
   },
   {
    "date": "2026-11-04",
@@ -241,7 +241,7 @@
    "outputs": 1,
    "credits_charged": 10,
    "result_files": [],
-   "verdict": "submitted (author), generating"
+   "verdict": "take 1 REJECTED by author (identity + role swap, wrong location); never ingested; https://flow.google.com/u/2/project/0be44c4d-eaa1-494d-975a-29aba24d78c5/edit/ae64473f-5c42-4ce6-8963-1a868cc6a45b"
   },
   {
    "date": "2026-11-04",
@@ -511,6 +511,12 @@
    "pool": "retake",
    "credits": 10,
    "reason": "ER background copied from hospital.png; grille instead of her car"
+  },
+  {
+   "job_id": "F21",
+   "pool": "retake",
+   "credits": 10,
+   "reason": "take 1 identity/role swap + wrong location"
   }
  ],
  "batch2_report": {
@@ -555,7 +561,15 @@
  },
  "flow_status": {
   "date": "2026-11-04",
-  "state": "BLOCKED",
-  "detail": "Flow stopped the F59-F70 free-still request: 'We noticed some unusual activity' + reCAPTCHA service connection error. No further generations until the author restores normal access; nothing is bypassed."
+  "image_generation": {
+   "state": "RESTORED",
+   "evidence": "author: Nano Banana 2.1 free still STILL_F59_CHECK generated and its output prompt confirmed"
+  },
+  "video_generation": {
+   "state": "NOT RETESTED",
+   "detail": "after the 'unusual activity' / reCAPTCHA block; no new video credits spent"
+  },
+  "state": "VIDEO_UNVERIFIED",
+  "detail": "Image generation restored; video generation not yet retested. No video spend until the author confirms it works."
  }
 }

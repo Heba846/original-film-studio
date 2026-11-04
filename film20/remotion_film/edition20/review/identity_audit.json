@@ -1,0 +1,35 @@
+{
+ "date": "2026-11-04",
+ "reported_issue": "Author screenshot: a two-person hospital treatment shot with BOTH identities and roles swapped - LEFT: dark wavy hair, charcoal suit, feminised/different face, surgical gloves, treating; RIGHT: navy scrubs, stethoscope, red bun with several pens, male stubbled face, right forearm being splinted.",
+ "searched": {
+  "sources_4fps_visual_and_8fps_scan": [
+   "public/hospital.mp4 (approved reference)",
+   "public/garage.mp4 (rejected)",
+   "public/nico.mp4 (rejected)",
+   "public/flow/F01,F04,F06,F07,F09,F10,F11,F12,F13 (approved)",
+   "public/flow/rejected/F02_take1,F06_take1 (rejected)"
+  ],
+  "renders_every_frame_scan": [
+   "output/Scene_ApprovedOnly_Opening_720p.mp4",
+   "output/Film20_Test_CH01_v2_720p.mp4"
+  ]
+ },
+ "result": "Source IDENTIFIED by the author: F21 take 1 (nico_armchair, Flow title 'Scarred man watching doctor', https://flow.google.com/u/2/project/0be44c4d-eaa1-494d-975a-29aba24d78c5/edit/ae64473f-5c42-4ce6-8963-1a868cc6a45b). It was never delivered to the cloud, which is why the cloud scan found no match. Rejected and excluded (edition20/review/exclusions.json).",
+ "revoked": [],
+ "quarantined": [
+  "F21 take 1 (author-side; never ingested)"
+ ],
+ "removed_from_timeline": [],
+ "why_nothing_revoked": "Every approved source passed a 4 fps identity check (faces/gender/roles vs REF_IVY_FACE_ONLY / REF_NICO_FACE_ONLY) and a swap-signature scan with 0 hits.",
+ "safeguards_added": [
+  "approval now requires a recorded identity check (tools/flow_intake.py approve --identity ...); film_build blocks any approved footage without one",
+  "intake builds edition20/review/<ID>_identity_4fps.png and runs a swap-signature scan; hits are reported as A5 POSSIBLE IDENTITY/ROLE SWAP",
+  "tools/flow_intake.py quarantine <ID> moves a file to public/flow/quarantine/ (never deleted) and removes it from the timeline"
+ ],
+ "canonical_references": [
+  "edition20/flow_refs/REF_IVY_FACE_ONLY.png (hospital.mp4 @2.5 s)",
+  "edition20/flow_refs/REF_NICO_FACE_ONLY.png (hospital.mp4 @5.5 s)"
+ ],
+ "request": "Send the screenshot or the clip itself (any filename) and it will be matched, quarantined and its placements re-planned.",
+ "also_found_in_cloud_renders": "Scene_ApprovedOnly_Opening_v2_720p.mp4 frames ~700-705: 6-frame dissolve HOSP(memory)->F06 produced a double-exposure blending Ivy/Nico silhouettes. Not released. Fixed by a rule: no footage-to-footage dissolves (test T5b)."
+}

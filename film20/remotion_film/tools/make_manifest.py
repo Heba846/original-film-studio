@@ -468,12 +468,12 @@ if __name__ == "__main__":
     cats = {}
     for j in J: cats[j["category"]] = cats.get(j["category"], 0) + 1
     # carry review verdicts over a regeneration: never silently reset an approval or a rejection
-    KEEP = ("status", "review_log", "approved_range", "default_crop")
+    KEEP = ("status", "review_log", "approved_range", "default_crop", "identity_check")
     if MAN.exists():
         old = {x["shot_id"]: x for x in json.loads(MAN.read_text())["shots"]}
         for sh in shots:
             o = old.get(sh["shot_id"])
-            if o and sh["kind"] == "flow_job":
+            if o and sh["kind"] in ("flow_job", "footage"):
                 for k in KEEP:
                     if k in o: sh[k] = o[k]
     MAN.write_text(json.dumps({

@@ -56,6 +56,9 @@ for c in T["cuts"]:
     if c.get("is_reuse") and c["shot"] in decisive and not c.get("memory") and not c.get("same_moment"): bad.append(f"{c['seg']} decisive {c['shot']} not memory")
     if c.get("is_reuse") and c["shot"] == "HOSP" and c["src_out"] > 5.0 + 1e-6: bad.append(f"{c['seg']} reuses Bay 14 speaking frames")
 check("T5 reuse rules (reason, >3 flagged, decisive as memory, no speaking-face reuse)", not bad, "; ".join(bad[:5]))
+ff = [f"{a['seg']}:{a['shot']}->{b['shot']}" for a, b in zip(T["cuts"], T["cuts"][1:])
+      if a["overlap"] > 0 and a.get("kind") != "code" and b.get("kind") != "code"]
+check("T5b no footage-to-footage dissolves (no double-exposure identity blending)", not ff, ", ".join(ff[:5]))
 vb = subprocess.run([PY, str(ROOT / "tools/validate_budget.py")], cwd=ROOT, capture_output=True, text=True)
 jobs = {j["job_id"] for j in json.loads((ROOT / "edition20/flow_jobs.json").read_text())["jobs"]}
 placed = {c["shot"] for c in T["cuts"] if c.get("kind") == "flow_job"}
@@ -90,7 +93,8 @@ try:
     def with_status(fn):
         m = json.loads(json.dumps(base))
         for s in m["shots"]:
-            if s["kind"] == "flow_job": s["status"] = "approved"
+            if s["kind"] == "flow_job":
+                s["status"] = "approved"; s["identity_check"] = {"result": "PASS (simulation)"}
         fn(m); man_p.write_text(json.dumps(m))
     with_status(lambda m: None)
     S, _ = build(tmp)
@@ -126,6 +130,22 @@ if "--render" in sys.argv:
     r = subprocess.run(["npx", "remotion", "render", "src/index.tsx", "Film20-Final", "/tmp/claude-0/should_not_exist.mp4", "--frames=0-0", "--log=error"],
                        cwd=ROOT, capture_output=True, text=True)
     check("T13 rendering Film20-Final fails with the export-gate error", r.returncode != 0 and "export BLOCKED" in (r.stdout + r.stderr))
+
+# identity gate: an approved take without a recorded identity check must block (fake media, scratch copy)
+tmp2 = Path(tempfile.mkdtemp(prefix="film20_id_"))
+try:
+    for d in ("tools", "edition20"): shutil.copytree(ROOT / d, tmp2 / d)
+    (tmp2 / "src/film/data").mkdir(parents=True); (tmp2 / "public").mkdir()
+    os.symlink(ROOT / "public/audio", tmp2 / "public/audio"); os.symlink(ROOT / "public/hospital.mp4", tmp2 / "public/hospital.mp4")
+    shutil.copytree(ROOT / "public/pickups", tmp2 / "public/pickups"); shutil.copytree(ROOT / "public/flow", tmp2 / "public/flow")
+    mp = tmp2 / "edition20/media_manifest.json"; m = json.loads(mp.read_text())
+    next(x for x in m["shots"] if x["shot_id"] == "F10").pop("identity_check", None); mp.write_text(json.dumps(m))
+    S2, _ = build(tmp2)
+    check("T14 approved take without an identity check -> build problem (blocks Final and approved-only scenes)",
+          any("F10: approved without a recorded identity check" in p for p in S2["gate"]["problems"]))
+finally:
+    shutil.rmtree(tmp2, ignore_errors=True)
+    build(ROOT)
 
 failed = [n for n, ok, _ in results if not ok]
 print(f"\n{len(results) - len(failed)}/{len(results)} passed")

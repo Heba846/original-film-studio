@@ -1,0 +1,21 @@
+{
+ "about": "Takes that must never be ingested or approved. Matching is by job ID + take + Flow source URL.",
+ "excluded": [
+  {
+   "job_id": "F21",
+   "slug": "nico_armchair",
+   "take": 1,
+   "flow_title": "Scarred man watching doctor",
+   "flow_source_url": "https://flow.google.com/u/2/project/0be44c4d-eaa1-494d-975a-29aba24d78c5/edit/ae64473f-5c42-4ce6-8963-1a868cc6a45b",
+   "found_by": "author, Flow video editor (never delivered to the cloud)",
+   "date": "2026-11-04",
+   "reasons": [
+    "IDENTITY SWAP: LEFT figure has dark wavy hair + charcoal suit but a feminised/different face",
+    "ROLE SWAP: the LEFT figure wears surgical gloves and treats; the RIGHT figure (navy scrubs, stethoscope, red bun with several pens) has a male stubbled face and its RIGHT forearm is being splinted",
+    "WRONG LOCATION: hospital treatment scene; F21 must be Nico in her mother's armchair in the dark apartment (Sat Oct 4, 7 p.m.)"
+   ],
+   "action": "rejected; retake required once video generation is retested (retake pool)"
+  }
+ ],
+ "not_affected": "F10, F11, F12, F13 and hospital.mp4 each passed their own 4 fps identity check; they are NOT revoked because of this unseen take."
+}

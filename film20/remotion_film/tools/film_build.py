@@ -124,6 +124,8 @@ def main() -> int:
             sh["on_disk"] = f.exists()
             if sh["kind"] == "flow_job" and sh["status"] == "missing" and f.exists():
                 sh["status"] = "delivered_unreviewed"
+            if f.exists() and sh["kind"] == "flow_job" and sh["status"] == "approved" and not sh.get("identity_check"):
+                problems.append(f"{sh['shot_id']}: approved without a recorded identity check (faces/gender/roles at 4 fps)")
             if f.exists():
                 sh["measured_len_s"] = video_len(f)
                 w = sh.get("approved_range") or sh.get("window") or [0.0, sh["measured_len_s"]]
@@ -253,9 +255,10 @@ def main() -> int:
     for i, c in enumerate(flat):
         nxt = flat[i + 1] if i + 1 < len(flat) else None
         # dissolve only into/out of code scenes and memories; continuous scenes cut hard; chapters open from black
+        # never blend two live-action shots: a footage-to-footage dissolve is a double exposure that ghosts one
+        # character's face/body over another's (identity/role morphing). Dissolve only when one side is a code graphic.
         soft = nxt and not nxt["chapter_open"] and (
-            shots.get(c["shot"], {}).get("kind") == "code" or shots.get(nxt["shot"], {}).get("kind") == "code"
-            or c.get("memory") or nxt.get("memory"))
+            shots.get(c["shot"], {}).get("kind") == "code" or shots.get(nxt["shot"], {}).get("kind") == "code")
         c["overlap"] = XFADE if soft else 0
         sh = shots.get(c["shot"])
         if not sh:

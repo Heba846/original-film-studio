@@ -66,10 +66,39 @@ def checks(f: Path, jid: str) -> dict:
     for a, b in blacks:
         for c in pl:
             if float(a) < c["src_out"] and c["src_in"] < float(b): out["issues"].append(f"A3 black {a}-{b}s inside planned range ({c['seg']})")
+    out["identity_sheet"] = f"edition20/review/{jid}_identity_4fps.png"
     if p["audio"]:
         r = sh("ffmpeg", "-v", "info", "-i", str(f), "-af", "volumedetect", "-vn", "-f", "null", "-")
         m = re.search(r"mean_volume: ([-\d.]+)", r.stderr); out["embedded_audio_mean_db"] = float(m.group(1)) if m else None
     return out
+
+def swap_scan(f: Path) -> list:
+    """Frames (s) where copper-red hair AND navy scrubs both sit right of centre: the role-swap signature."""
+    raw = subprocess.run(["ffmpeg", "-v", "error", "-i", str(f), "-vf", "fps=8,scale=320:180", "-f", "rawvideo", "-pix_fmt", "rgb24", "-"],
+                         capture_output=True).stdout
+    try:
+        import numpy as np
+    except ImportError:
+        return ["numpy unavailable: run the scan manually"]
+    a = np.frombuffer(raw, np.uint8).reshape(-1, 180, 320, 3).astype(int)
+    hits = []
+    for i, im in enumerate(a):
+        r, g, b = im[..., 0], im[..., 1], im[..., 2]
+        mx, mn = im.max(-1), im.min(-1)
+        sat = (mx - mn) / np.maximum(mx, 1)
+        red = (r > 120) & (r > g * 1.6) & (r > b * 1.8) & (sat > 0.45)
+        navy = (b > r * 1.3) & (b > g * 1.05) & (mx < 125) & (mx > 25) & (sat > 0.3)
+        rx, nx = np.nonzero(red)[1], np.nonzero(navy)[1]
+        if len(rx) > 300 and len(nx) > 1500 and rx.mean() > 190 and nx.mean() > 190:
+            hits.append(round(i / 8, 2))
+    return hits
+
+def identity_sheet(f: Path, jid: str):
+    tmp = Path(tempfile.mkdtemp())
+    sh("ffmpeg", "-v", "error", "-y", "-i", str(f), "-vf", "fps=4,scale=320:-2,drawtext=text='%{pts\\:hms}':x=3:y=3:fontsize=14:fontcolor=yellow:box=1:boxcolor=black",
+       "-frames:v", "32", str(tmp / "%02d.png"))
+    sh("ffmpeg", "-v", "error", "-y", "-i", str(tmp / "%02d.png"), "-vf", "tile=8x4", "-frames:v", "1", str(REV / f"{jid}_identity_4fps.png"))
+    shutil.rmtree(tmp, ignore_errors=True)
 
 def sheet(f: Path, jid: str, info: dict):
     REV.mkdir(parents=True, exist_ok=True)
@@ -86,11 +115,14 @@ def sheet(f: Path, jid: str, info: dict):
        "':x=10:y=h-34:fontsize=20:fontcolor=white:box=1:boxcolor=black@0.7", str(REV / f"{jid}_review.png"))
     shutil.rmtree(tmp, ignore_errors=True)
 
-def set_status(jid, status, note, rng=None, crop=None):
+def set_status(jid, status, note, rng=None, crop=None, identity=None):
     m = json.loads(MAN.read_text())
     s = next(x for x in m["shots"] if x["shot_id"] == jid)
     if status == "approved" and not (FLOW / f"{jid}.mp4").exists(): sys.exit(f"{jid}: no file in public/flow; cannot approve")
     s["status"] = status
+    if status == "approved" and not identity and not s.get("identity_check"):
+        sys.exit(f"{jid}: approval needs --identity 'what was checked' (4 fps sheet vs REF_IVY/REF_NICO_FACE_ONLY: faces, gender, roles)")
+    if identity: s["identity_check"] = {"date": str(date.today()), "method": "4 fps visual + swap-signature scan", "result": identity}
     if rng: s["approved_range"] = rng
     if crop: s["default_crop"] = crop
     if status != "approved": s.pop("approved_range", None); s.pop("default_crop", None)
@@ -116,10 +148,18 @@ def ingest(paths):
         m = re.search(r"(F\d{2})", f.name.upper())
         if not m or m.group(1) not in JOBS: print(f"SKIP {f.name}: name must contain a job id F01-F70"); continue
         jid = m.group(1)
+        exf = R / "edition20/review/exclusions.json"
+        excl = {e["job_id"] for e in json.loads(exf.read_text())["excluded"]} if exf.exists() else set()
+        if jid in excl and not re.search(rf"{jid}_R\d", f.name.upper()):
+            print(f"REFUSED {f.name}: {jid} take 1 is excluded (edition20/review/exclusions.json); only a file named {jid}_R<n> (retake) is accepted")
+            continue
         dst = FLOW / f"{jid}.mp4"
         if dst.exists(): shutil.move(str(dst), str(FLOW / f"{jid}.prev_{int(dst.stat().st_mtime)}.mp4"))
         shutil.copy(f, dst)
-        info = checks(dst, jid); sheet(dst, jid, info); results[jid] = info
+        info = checks(dst, jid); sheet(dst, jid, info); identity_sheet(dst, jid)
+        sw = swap_scan(dst)
+        if sw: info["issues"].append(f"A5 POSSIBLE IDENTITY/ROLE SWAP at {sw[:8]} s - quarantine unless a human check clears it")
+        results[jid] = info
         print(f"{jid} {JOBS[jid]['slug']}: {info['probe'].get('duration', 0):.2f}s  issues: {info['issues'] or 'none'}  -> edition20/review/{jid}_review.png")
     log = REV / "intake_log.json"
     old = json.loads(log.read_text()) if log.exists() else {}
@@ -151,8 +191,15 @@ if __name__ == "__main__":
     elif cmd in ("approve", "reject"):
         rng = [float(args[args.index("--range") + 1]), float(args[args.index("--range") + 2])] if "--range" in args else None
         crop = args[args.index("--crop") + 1] if "--crop" in args else None
+        ident = args[args.index("--identity") + 1] if "--identity" in args else None
         set_status(args[0], "approved" if cmd == "approve" else "rejected",
-                   note + (f" | usable range {rng[0]}-{rng[1]} s" if rng else "") + (f" | crop {crop}" if crop else ""), rng, crop)
+                   note + (f" | usable range {rng[0]}-{rng[1]} s" if rng else "") + (f" | crop {crop}" if crop else ""), rng, crop, ident)
+    elif cmd == "quarantine":
+        jid = args[0]; src = FLOW / f"{jid}.mp4"
+        if src.exists():
+            (FLOW / "quarantine").mkdir(exist_ok=True)
+            shutil.move(str(src), str(FLOW / "quarantine" / f"{jid}_{int(src.stat().st_mtime)}.mp4"))
+        set_status(jid, "missing", "QUARANTINED: " + note)
     elif cmd == "retake":
         jid = args[0]; src = FLOW / f"{jid}.mp4"
         if src.exists():

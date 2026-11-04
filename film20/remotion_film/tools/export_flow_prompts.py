@@ -112,6 +112,23 @@ RETAKE = {
    "speak, lean, sit or walk; one slow nod toward the stairwell door near the end. No workshop, no tool chests, no shelving, no other "
    "person in frame."),
 }
+IDENTITY_LOCK = ("IDENTITY LOCK: the red-haired freckled WOMAN in navy scrubs is always the doctor and the one who treats; the dark-haired "
+                 "stubbled MAN is always the injured man/patient. Never swap their faces, genders, hair, clothes or roles, and never blend one "
+                 "face into the other.")
+RETAKE["nico_armchair"] = (
+   "Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or "
+   "public figure. Medium close shot at night in a small dark APARTMENT living room (NOT a hospital: no gurney, no medical equipment, no "
+   "gloves, no treatment): the scarred man (an original fictional MAN, 34, dark wavy hair, short stubble, gray eyes, face as in "
+   "REF_NICO_FACE_ONLY.png; thin healed white scar through his anatomical LEFT eyebrow, the eyebrow on the RIGHT side of the image) sits "
+   "in an old worn armchair, lamp off, lit only by streetlight through a window; ruined charcoal suit over a black shirt; his anatomical "
+   "RIGHT forearm in a white plaster splint (LEFT side of the image) rests on the armchair's arm. He leans forward slightly, watching "
+   "someone off-screen at the doorway; mouth CLOSED, he does not speak; nobody else in frame.")
+RETAKE["nico_hands"] = (
+   "Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or "
+   "public figure. Close insert at waist height in the parking garage of REF_GARAGE_F01.png: a man's anatomical RIGHT forearm in a white "
+   "plaster splint from fingertips to elbow, held still against a CHARCOAL (not gray) suit jacket and black shirt - the splinted hand "
+   "holds NOTHING; his LEFT hand (the unsplinted hand) loosely holds a black pistol pointed at the wet floor. As seen from the front the "
+   "splint is on the LEFT side of the image and the gun on the RIGHT side. No face. Slight breathing movement only.")
 placements = {}
 for c in T["cuts"]:
     if c.get("kind") == "flow_job":
@@ -156,8 +173,14 @@ for j in J:
         prompt = f"{FICTION} {body} {geo} Continuity: {cont} {STYLE}"
     else:
         prompt = f"{FICTION} {body} Continuity: {cont} {STYLE}"
-    if j["job_id"] in AS_SENT:
+    if j["job_id"] in AS_SENT and j["slug"] not in RETAKE:
         prompt = AS_SENT[j["job_id"]]
+    if {"IVY", "NICO"} <= set(present) and IDENTITY_LOCK not in prompt and j["job_id"] not in AS_SENT:
+        prompt = prompt.replace(" Continuity:", f" {IDENTITY_LOCK} Continuity:", 1)
+    still = None
+    if not (j["job_id"] in AS_SENT or APPROVED.get(j["job_id"])):
+        still = ("FREE STILL FIRST (identity check before any video spend): a single 16:9 still frame, no motion, of exactly this moment. "
+                 + prompt.replace(", 8 seconds.", ".").replace("natural restrained motion, ", ""))
     ER = {"er_entrance", "ivy_walks", "bay_hands", "nico_bay_cu", "ivy_bay_cu", "money_tray"}
     faces = [f"REF_{k}_FACE_ONLY.png" for k in ("IVY", "NICO") if k in present]
     ref = " + ".join(faces) + " (faces only)" if faces else "no character reference"
@@ -165,7 +188,8 @@ for j in J:
     if j["slug"] in GARAGE_SLUGS: ref += " + REF_GARAGE_F01.png (location)"
     jobs.append({
         "id": j["job_id"], "slug": j["slug"], "batch": j["batch"], "chapter": j["chapter"], "category": j["category"],
-        "status_note": ("RETAKE (retake pool, 10 cr): take 1 rejected after frame audit - new prompt" if j["job_id"] in retakes
+        "status_note": ("RETAKE (retake pool, 10 cr): take 1 rejected (see edition20/review) - new prompt" if j["job_id"] in retakes
+                        else "PENDING REVIEW (author-side take not delivered): if it fails, use this corrected prompt" if j["job_id"] == "F05"
                         else "SUBMITTED / GENERATING - prompt kept exactly as sent" if j["job_id"] in generating
                         else "APPROVED (restricted where noted in review) - do not regenerate" if APPROVED.get(j["job_id"])
                         else "REGENERATE (primary job): earlier attempts failed and were refunded" if j["job_id"] in refused
@@ -173,6 +197,7 @@ for j in J:
                         else "not yet generated"),
         "prompt": prompt,
         "required_reference": ref,
+        "still_prompt": still,
         "continuity_phase": j["continuity_phase"], "continuity": cont,
         "expected_duration_s": 8, "usable_window_s": [0.2, 7.7], "outputs_per_prompt": 1,
         "output_filename": f"{j['job_id']}.mp4",
@@ -185,6 +210,11 @@ out = {"about": "Paste-ready Flow prompts, Film20 plan v2. 70 jobs x 1 output. S
                   "net_spent_so_far": sum(e["credits_charged"] for e in L.get("entries", [])),
                   "note": "F03 and F08 were refused and refunded; their resubmission is still a primary job (no extra charge to the plan)."},
        "fiction_notice": FICTION, "style_suffix": STYLE, "jobs": jobs}
+stills = [{"id": x["id"], "slug": x["slug"], "still_filename": f"STILL_{x['id']}.png", "required_reference": x["required_reference"],
+           "still_prompt": x["still_prompt"], "then_video_prompt_id": x["id"]} for x in jobs if x["still_prompt"]]
+(R / "edition20/FREE_STILL_PROMPTS.json").write_text(json.dumps({"about": "Free still-first workflow: generate the still (free), review identity/"
+    "roles/location/continuity, then use the approved still as the video start frame for the same job. Send stills back as STILL_<ID>.png.",
+    "count": len(stills), "stills": stills}, indent=1, ensure_ascii=False), encoding="utf-8")
 (R / "edition20/FULL70_FLOW_PROMPTS.json").write_text(json.dumps(out, indent=1, ensure_ascii=False), encoding="utf-8")
 banned = [n for n in ["Ivy", "Nico", "Vescari", "Marlowe", "Theo", "Sal ", "Enzo", "Reyes", "Holloway", "Bell", "Tommy", "Rocco", "Lucia",
                       "Brancato", "Danny", "Feld", "Frankie", "Joey", "Lincoln", "REF_ivy", "REF_nico"] if any(n in x["prompt"] for x in jobs)]

@@ -193,10 +193,7 @@ F02, F03, F05, F08, F14, F15, F16, F17, F18, F19, F20, F21, F22, F23, F24, F25, 
 - none
 
 ## Dissolves shortened because the source ends inside them (cut stays fully covered)
-- n032 F18 fbi_couch: 6 -> 5 frames
-- n034 F06 nico_ots: 6 -> 5 frames
-- n080 F30 nico_desk: 6 -> 2 frames
-- n112 F47 courtroom: 6 -> 5 frames
+- none
 
 ## Caption timing
 - 111 of 111 lines timed on forced-aligned word boundaries; partial end (last words share one aligned span, listen to confirm): n011, n101

@@ -25,7 +25,12 @@
    "mouth": "Ivy's lips part at 5.0-7.9 s",
    "narrative_event": "Bay 14, 3:40 a.m.: Ivy builds the white plaster splint on Nico's RIGHT forearm; eye contact at the end",
    "permitted_reuse": "n018-n019 (event). Recall only as memory and only the 0-5.0 s range.",
-   "audit": "Correct: right forearm, no ring/chain, navy scrubs, black shirt (jacket off), ER bay. Minor: splint leaves fingers bare; Nico's left-eyebrow scar not visible; hair clip instead of pen."
+   "audit": "Correct: right forearm, no ring/chain, navy scrubs, black shirt (jacket off), ER bay. Minor: splint leaves fingers bare; Nico's left-eyebrow scar not visible; hair clip instead of pen.",
+   "identity_check": {
+    "date": "2026-11-04",
+    "method": "4 fps visual contact sheet (32 frames) + 8 fps swap-signature scan (red hair + navy right of centre): 0 hits",
+    "result": "PASS: canonical reference source: female red-haired doctor (navy scrubs) LEFT treats male dark-haired patient (black shirt) RIGHT in all 32 frames; no morph"
+   }
   },
   {
    "shot_id": "REJ_GARAGE",
@@ -265,7 +270,12 @@
      "status": "approved",
      "note": "Frame audit: empty L2 garage, pooled water, no rain, slow push; silver sedan nose-out in front of stairwell door + stairs; dark glossy foreground hood = Ivy's car. Tiny sedan badge/plate unreadable at 720p. (Re-applied: an earlier manifest regeneration had reset this verdict.)"
     }
-   ]
+   ],
+   "identity_check": {
+    "date": "2026-11-04",
+    "method": "4 fps visual contact sheet (32 frames) + 8 fps swap-signature scan (red hair + navy right of centre): 0 hits",
+    "result": "PASS: no people in frame (environment only)"
+   }
   },
   {
    "shot_id": "F02",
@@ -315,7 +325,12 @@
    "approved_range": [
     0.2,
     5.5
-   ]
+   ],
+   "identity_check": {
+    "date": "2026-11-04",
+    "method": "4 fps visual contact sheet (32 frames) + 8 fps swap-signature scan (red hair + navy right of centre): 0 hits",
+    "result": "PASS: single male hand + dark sleeve only; no face; consistent all 32 frames"
+   }
   },
   {
    "shot_id": "F05",
@@ -328,7 +343,14 @@
    "chapter": "CH00",
    "decisive": true,
    "mouth": "n/a",
-   "flow_job": "F05"
+   "flow_job": "F05",
+   "review_log": [
+    {
+     "date": "2026-11-04",
+     "status": "unapproved (author-side, not delivered)",
+     "note": "author inspection in Flow: no faces; the splinted RIGHT hand appears to hold the pistol (must be LEFT hand) and the suit is gray (must be charcoal). Pending arm/action review; likely retake."
+    }
+   ]
   },
   {
    "shot_id": "F06",
@@ -342,17 +364,22 @@
    "decisive": false,
    "mouth": "closed",
    "flow_job": "F06",
-   "approved_range": [
-    0.2,
-    7.7
-   ],
    "review_log": [
     {
      "date": "2026-11-04",
      "status": "approved",
      "note": "F06_R1 (retake 1): garage, over Ivy's shoulder (red bun, one pen, navy shoulder), Nico STANDING by a silver sedan at the steel stairwell door, clean face (no bandage), charcoal suit over black shirt, white plaster on anatomical RIGHT forearm, eye contact 0.3-2.4 s; 3.2-5.2 s reaches for the stairwell door with his left hand (fits 'Go back inside'). Notes: left hand holds no gun (check against F03/F05 when delivered); sedan side-on not nose-out; scar not legible at this size. | usable range 0.2-7.7 s"
     }
-   ]
+   ],
+   "approved_range": [
+    0.2,
+    7.7
+   ],
+   "identity_check": {
+    "date": "2026-11-04",
+    "method": "4 fps visual contact sheet (32 frames) + 8 fps swap-signature scan (red hair + navy right of centre): 0 hits",
+    "result": "PASS: back of the female red-haired doctor's head LEFT, standing male dark-haired man RIGHT in all 32 frames; male face matches REF_NICO_FACE_ONLY; no swap/morph"
+   }
   },
   {
    "shot_id": "F07",
@@ -377,7 +404,12 @@
     0.2,
     3.6
    ],
-   "default_crop": "f07_eyes"
+   "default_crop": "f07_eyes",
+   "identity_check": {
+    "date": "2026-11-04",
+    "method": "4 fps visual contact sheet (32 frames) + 8 fps swap-signature scan (red hair + navy right of centre): 0 hits",
+    "result": "PASS: single female red-haired face matching REF_IVY_FACE_ONLY all 32 frames; no second person"
+   }
   },
   {
    "shot_id": "F08",
@@ -415,7 +447,12 @@
     0.3,
     3.6
    ],
-   "default_crop": "f09_face"
+   "default_crop": "f09_face",
+   "identity_check": {
+    "date": "2026-11-04",
+    "method": "4 fps visual contact sheet (32 frames) + 8 fps swap-signature scan (red hair + navy right of centre): 0 hits",
+    "result": "PASS: single female red-haired doctor matching REF_IVY_FACE_ONLY in the approved 0.3-3.6 s; background figures are mannequin-like (excluded by crop); a male figure enters only at 6.75 s (outside the range)"
+   }
   },
   {
    "shot_id": "F10",
@@ -436,7 +473,12 @@
      "note": "Wide two-shot delivered instead of insert; 2x crop on the wound and gloved hands (irrigation, tape). Pre-splint, anatomical RIGHT forearm cut visible | crop f10_hands"
     }
    ],
-   "default_crop": "f10_hands"
+   "default_crop": "f10_hands",
+   "identity_check": {
+    "date": "2026-11-04",
+    "method": "4 fps visual contact sheet (32 frames) + 8 fps swap-signature scan (red hair + navy right of centre): 0 hits",
+    "result": "PASS: female red-haired doctor LEFT treats male dark-haired patient RIGHT in all 32 frames; no swap/morph"
+   }
   },
   {
    "shot_id": "F11",
@@ -456,7 +498,12 @@
      "status": "approved",
      "note": "Nico CU, black shirt, charcoal jacket on the IV pole, mouth closed. Healed left-brow scar not legible (same as the approved hospital clip)"
     }
-   ]
+   ],
+   "identity_check": {
+    "date": "2026-11-04",
+    "method": "4 fps visual contact sheet (32 frames) + 8 fps swap-signature scan (red hair + navy right of centre): 0 hits",
+    "result": "PASS: single male face matching REF_NICO_FACE_ONLY all 32 frames; a navy shoulder at frame edge 0-2 s"
+   }
   },
   {
    "shot_id": "F12",
@@ -477,7 +524,12 @@
      "note": "Wide two-shot; crop on Ivy only (excludes a white wrap at his wrist that would pre-date the splint); looks down, glances up, mouth closed | crop f12_ivy"
     }
    ],
-   "default_crop": "f12_ivy"
+   "default_crop": "f12_ivy",
+   "identity_check": {
+    "date": "2026-11-04",
+    "method": "4 fps visual contact sheet (32 frames) + 8 fps swap-signature scan (red hair + navy right of centre): 0 hits",
+    "result": "PASS: female red-haired doctor LEFT, male dark-haired patient RIGHT in all 32 frames; no swap/morph"
+   }
   },
   {
    "shot_id": "F13",
@@ -501,7 +553,12 @@
    "approved_range": [
     2.8,
     7.7
-   ]
+   ],
+   "identity_check": {
+    "date": "2026-11-04",
+    "method": "4 fps visual contact sheet (32 frames) + 8 fps swap-signature scan (red hair + navy right of centre): 0 hits",
+    "result": "PASS: female red-haired doctor LEFT treats male dark-haired patient RIGHT in all 32 frames (splint, cash, tuck); no swap/morph"
+   }
   },
   {
    "shot_id": "F14",
@@ -605,7 +662,14 @@
    "chapter": "CH04",
    "decisive": false,
    "mouth": "closed",
-   "flow_job": "F21"
+   "flow_job": "F21",
+   "review_log": [
+    {
+     "date": "2026-11-04",
+     "status": "rejected (take 1, not ingested)",
+     "note": "identity + role swap + wrong location; see review/exclusions.json; https://flow.google.com/u/2/project/0be44c4d-eaa1-494d-975a-29aba24d78c5/edit/ae64473f-5c42-4ce6-8963-1a868cc6a45b"
+    }
+   ]
   },
   {
    "shot_id": "F22",
