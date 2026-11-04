@@ -86,3 +86,6 @@ Tested for real here: all 62 shots from 191 synthetic stills (see PR). Not teste
 
 ## Known Colab failure (found in your saved notebook run) and fix
 Model load died with `TypeError: 'NoneType' object is not callable` at `perth.PerthImplicitWatermarker()`. Cause (reproduced): `resemble-perth` imports `pkg_resources`, which setuptools >= 81 no longer ships, so the watermarker silently becomes `None`. Fix (verified: watermarker instantiates): `pip install "setuptools<81"` in the TTS venv. Added to `scripts/cloud_tts.sh`, `setup_tts.bat` and the voice notebook. If you re-run the notebook, re-run the install cell. This only proves the load step; actual generation is still unverified.
+
+## Known Colab failure (found in your saved notebook run) and fix
+Model load died with `TypeError: 'NoneType' object is not callable` at `perth.PerthImplicitWatermarker()`. Cause (reproduced): `resemble-perth` imports `pkg_resources`, which setuptools >= 81 no longer ships, so the watermarker silently becomes `None`. Fix (verified: the watermarker instantiates): `pip install "setuptools<81"` in the TTS venv. Added to `scripts/cloud_tts.sh`, `setup_tts.bat` and the voice notebook; re-run the install cell. This only proves the load step; generation itself is still unverified.
