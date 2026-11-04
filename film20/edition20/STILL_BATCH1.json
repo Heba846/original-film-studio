@@ -1,0 +1,48 @@
+{
+ "batch": "STILL_BATCH1",
+ "rule": "animate with STILL_Fxx as literal first frame; 10 cr each",
+ "approved": [
+  {
+   "job": "F02",
+   "file": "Woman_hiding_in_parking_garage_ab2c6c27.jpg",
+   "sha256": "f299a69a7ecf3e1e",
+   "checks": "garage, crouched by her car's rear wheel, charger cable, navy scrubs, no ring/chain"
+  },
+  {
+   "job": "F08",
+   "file": "Injured_man_entering_emergency_room_0d6ba872.jpg",
+   "sha256": "8af11ef6b740e6b8",
+   "checks": "ER doors; his left hand clamps his bloodied right forearm; arm side correct"
+  },
+  {
+   "job": "F14",
+   "file": "Red-haired_doctor_counting_silently_ad512607.jpg",
+   "sha256": "d3cb203b5ccb0ea1",
+   "checks": "hands raised counting; stairwell door + silver sedan + dark hood"
+  },
+  {
+   "job": "F15",
+   "file": "Jacket_sleeve_on_stairwell_492e2191.jpg",
+   "sha256": "a579a46d36a97a0e",
+   "checks": "light sleeve + sneaker half a flight up, no face"
+  }
+ ],
+ "repair": [
+  {
+   "job": "F03",
+   "file": "Scarred_man_holding_pistol_aaca4235.jpg",
+   "fix": "mirrored: gun is in his splinted RIGHT hand and the cast/sling is on his LEFT arm. Need the white splint on the image-left forearm and the gun low in the image-right hand, no sling, heavy man slumped with face turned away. Location is OK."
+  },
+  {
+   "job": "F16",
+   "file": "Doctor_and_men_in_garage_23c444f8.jpg",
+   "fix": "mirrored: splint is on the image-right arm and the gun is in the image-left hand. Need the splint on the image-left forearm, the gun low in the image-right hand, left palm out toward Ivy, heavy man face away. Location and Ivy's scrubs are OK."
+  }
+ ],
+ "hold": [
+  {
+   "file": "Man_holding_pistol_in_garage_3b1ba191.jpg",
+   "note": "Nico crouched by the stairwell with Enzo on the stairs; arm side is OK. Matches no single job: F45 must show Enzo only, F05 is a hands insert. Not used."
+  }
+ ]
+}
