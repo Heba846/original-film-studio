@@ -1,0 +1,245 @@
+{
+ "date": "2026-11-04",
+ "batch": "STILL_BATCH2",
+ "rule": "approved = location+identity+roles+arm+date costume checked; animate with STILL_Fxx as the literal first frame",
+ "approved": [
+  {
+   "job": "F18",
+   "file": "Characters_in_apartment_meeting_404b31e5.jpg",
+   "sha16": "4eadfff121b9c75c",
+   "note": "home cardigan, morning, agents on couch"
+  },
+  {
+   "job": "F26",
+   "file": "Characters_meeting_in_closed_res…_104652de.jpg",
+   "sha16": "4a4ee44d9f199dea",
+   "note": "chairs up; splint on his right forearm (far arm) on table"
+  },
+  {
+   "job": "F39",
+   "file": "Doctor_crying_at_office_desk_52f9854b.jpg",
+   "sha16": "1b26e45d74b4987b",
+   "note": "Bell office evening, white coat over cardigan; Ivy scrubs, no visible ring"
+  },
+  {
+   "job": "F47",
+   "file": "Doctor_testifying_in_courtroom_fca05f6c.jpg",
+   "sha16": "0386ea60e09ee62f",
+   "note": "witness stand; emerald on LEFT hand"
+  },
+  {
+   "job": "F38",
+   "file": "Doctors_standing_at_nurses_station_18a0222f.jpg",
+   "sha16": "eda9bf4c13928198",
+   "note": "nurses' station, Bell coat+cardigan, Ivy scrubs no ring"
+  },
+  {
+   "job": "F51",
+   "file": "Man_holding_ledger_in_car_ecfef0f3.jpg",
+   "sha16": "e62d9c353fbb17fc",
+   "note": "black splint near (right) arm; left hand at glovebox"
+  },
+  {
+   "job": "F22",
+   "file": "Red-haired_doctor_holding_grocer…_bcc9a9bb.jpg",
+   "sha16": "cffd36e08273f4e4",
+   "note": "grocery bag + subpoena; man back-to-camera"
+  },
+  {
+   "job": "F41",
+   "file": "Scarred_man_looking_at_drawer_cca70014.jpg",
+   "sha16": "7c0bb10aba5f1025",
+   "note": "black splint right forearm; drawer open"
+  },
+  {
+   "job": "F29",
+   "file": "Uncle_visiting_scarred_man_in_ab9f2f6d.jpg",
+   "sha16": "d9ae862a8cbf458a",
+   "note": "study night; Sal camel coat + box; white splint right"
+  },
+  {
+   "job": "F53",
+   "file": "Doctor_waiting_for_scarred_man_ef2c7d0b.jpg",
+   "sha16": "af76e76d83e20542",
+   "note": "study; candy twist; emerald; black splint right (cardigan darker than gray)"
+  },
+  {
+   "job": "F57",
+   "file": "Men_seated_at_dining_table_40770ca7.jpg",
+   "sha16": "cb8d4b850cadb25f",
+   "note": "Ivy behind Nico, hand+ring on his shoulder; black splint right (cardigan black)"
+  }
+ ],
+ "near_pass_author_call": [
+  {
+   "job": "F17",
+   "file": "Officer_and_doctor_in_garage_70899586.jpg",
+   "issue_fix": "Ivy wears a gray cardigan over her scrubs at 4:31, but at 4:10 she was in scrubs only. Accept, or repair: Free Nano Banana repair (0 cr): keep the same characters, faces and framing; change ONLY: remove the cardigan; navy short-sleeved scrubs only."
+  },
+  {
+   "job": "F42",
+   "file": "Young_man_leaves_lunch_2cadec8c.jpg",
+   "issue_fix": "Ivy wears a floral blouse instead of the gray cardigan. Accept for Sunday, or repair: Free Nano Banana repair (0 cr): keep the same characters, faces and framing; change ONLY: Ivy in a gray cardigan, emerald on LEFT ring finger."
+  },
+  {
+   "job": "F25",
+   "file": "Doctor_lifts_phone_to_ear_b28bf9d7.jpg",
+   "issue_fix": "Red line on Ivy's neck, and a readable HOSPITAL sign. Repair: Free Nano Banana repair (0 cr): keep the same characters, faces and framing; change ONLY: no mark on her neck; the building sign unreadable/blurred."
+  }
+ ],
+ "repair_free": [
+  {
+   "job": "F20",
+   "file": "Doctor_opens_dark_apartment_door_153fa06e.jpg",
+   "prompt": "Free Nano Banana repair (0 cr): keep the same characters, faces and framing; change ONLY: floor lamp OFF; room dark, lit only by streetlight through the curtains and the stairwell light from the open door."
+  },
+  {
+   "job": "F35",
+   "file": "Doctor_tests_door_bolt_2fd090c1.jpg",
+   "prompt": "Free Nano Banana repair (0 cr): keep the same characters, faces and framing; change ONLY: Wedding day Oct 6: simple pale wedding dress (no scrubs); Vescari house bedroom with old wallpaper and a wooden connecting door, no hospital curtains. The loose square emerald is on her LEFT ring finger; her LEFT hand tests the crooked bolt."
+  },
+  {
+   "job": "F46",
+   "file": "Gray_sedan_in_hospital_garage_420bc39d.jpg",
+   "prompt": "Free Nano Banana repair (0 cr): keep the same characters, faces and framing; change ONLY: Parked on a city street at night under streetlights, not in a garage; gray luxury sedan with no badge; candy twist on the seat."
+  },
+  {
+   "job": "F49",
+   "file": "Man_and_woman_holding_hands_f9082a84.jpg",
+   "prompt": "Free Nano Banana repair (0 cr): keep the same characters, faces and framing; change ONLY: Both in the BACK seat of a car at dusk, with the driver's headrest in the foreground. the scarred man's splint must be on his anatomical RIGHT forearm (image-LEFT when he faces camera; the arm FARTHER from camera when he faces image-left); black velcro splint; his LEFT palm up; Ivy in a gray cardigan, emerald on LEFT ring finger."
+  },
+  {
+   "job": "F55",
+   "file": "Man_facing_uncle_in_dining_eb4e18a3.jpg",
+   "prompt": "Free Nano Banana repair (0 cr): keep the same characters, faces and framing; change ONLY: Vescari formal dining room at 7 p.m., white tablecloth, evidence laid on the cloth. Ivy (if shown) in a gray cardigan, emerald on LEFT ring finger, not scrubs."
+  },
+  {
+   "job": "F19",
+   "file": "Red-haired_doctor_at_window_b5becc35.jpg",
+   "prompt": "Free Nano Banana repair (0 cr): keep the same characters, faces and framing; change ONLY: Morning: pale daylight through the window, no night city lights."
+  },
+  {
+   "job": "F30",
+   "file": "Scarred_man_listening_at_desk_7aabdc63.jpg",
+   "prompt": "Free Nano Banana repair (0 cr): keep the same characters, faces and framing; change ONLY: Vescari study: dark wood panels, bookshelves, desk lamp; no filing cabinets, blinds or office clutter."
+  },
+  {
+   "job": "F48",
+   "file": "Scarred_man_watching_in_courtroom_2cf645b9.jpg",
+   "prompt": "Free Nano Banana repair (0 cr): keep the same characters, faces and framing; change ONLY: the scarred man's splint must be on his anatomical RIGHT forearm (image-LEFT when he faces camera; the arm FARTHER from camera when he faces image-left); black velcro splint; his LEFT hand on the bench rail."
+  },
+  {
+   "job": "F58",
+   "file": "Teenage_boy_leaves_detention_center_f1d56939.jpg",
+   "prompt": "Free Nano Banana repair (0 cr): keep the same characters, faces and framing; change ONLY: Ivy in a gray cardigan (not a leather jacket), emerald + plain gold band on her LEFT ring finger."
+  },
+  {
+   "job": "F31",
+   "file": "Uncle_exits_through_garden_door_947b72de.jpg",
+   "prompt": "Free Nano Banana repair (0 cr): keep the same characters, faces and framing; change ONLY: Night outside the garden door: dark garden, fig tree lit only by spill light from the room."
+  },
+  {
+   "job": "F56",
+   "file": "Uncle_looking_at_his_nephew_2013aa2f.jpg",
+   "prompt": "Free Nano Banana repair (0 cr): keep the same characters, faces and framing; change ONLY: the scarred man's splint must be on his anatomical RIGHT forearm (image-LEFT when he faces camera; the arm FARTHER from camera when he faces image-left); black velcro splint; Vescari dining room with white tablecloth, not a kitchen."
+  },
+  {
+   "job": "F40",
+   "file": "Scarred_man_and_doctor_kissing_fd364c6e.jpg",
+   "prompt": "Free Nano Banana repair (0 cr): keep the same characters, faces and framing; change ONLY: the scarred man's splint must be on his anatomical RIGHT forearm (image-LEFT when he faces camera; the arm FARTHER from camera when he faces image-left); black velcro splint, on the arm away from camera; his LEFT hand draws the pen from her bun. Ivy off duty: gray cardigan, emerald on LEFT ring finger."
+  },
+  {
+   "job": "F03",
+   "file": "Scarred_man_holding_pistol_aaca4235.jpg",
+   "prompt": "Free Nano Banana repair (0 cr): keep the same characters, faces and framing; change ONLY: the scarred man's splint must be on his anatomical RIGHT forearm (image-LEFT when he faces camera; the arm FARTHER from camera when he faces image-left); no sling; gun held low in his LEFT hand (image-right); heavy man slumped, face turned away."
+  },
+  {
+   "job": "F16",
+   "file": "Doctor_and_men_in_garage_23c444f8.jpg",
+   "prompt": "Free Nano Banana repair (0 cr): keep the same characters, faces and framing; change ONLY: the scarred man's splint must be on his anatomical RIGHT forearm (image-LEFT when he faces camera; the arm FARTHER from camera when he faces image-left); gun low in his LEFT hand (image-right), left palm out toward the doctor; heavy man face away."
+  },
+  {
+   "job": "F54",
+   "file": "Boy_hands_letter_to_doctor_4e509fed.jpg",
+   "prompt": "Free Nano Banana repair (0 cr): keep the same characters, faces and framing; change ONLY: Bell family kitchen at dawn, not a hospital room."
+  },
+  {
+   "job": "F52",
+   "file": "Car_trunk_with_jacket_cbc6012c.jpg",
+   "prompt": "Free Nano Banana repair (0 cr): keep the same characters, faces and framing; change ONLY: remove the red-haired doctor; Sal's garage, open trunk only."
+  },
+  {
+   "job": "F33",
+   "file": "Doctor_and_man_descending_courth…_4b21acc1.jpg",
+   "prompt": "Free Nano Banana repair (0 cr): keep the same characters, faces and framing; change ONLY: Oct 6 courthouse steps: Ivy in a simple wedding dress, emerald on LEFT ring finger, no scrubs."
+  },
+  {
+   "job": "F34",
+   "file": "Scarred_man_kissing_doctor_15af7515.jpg",
+   "prompt": "Free Nano Banana repair (0 cr): keep the same characters, faces and framing; change ONLY: Ivy in a simple wedding dress (no scrubs), courthouse steps, cameras."
+  },
+  {
+   "job": "F50",
+   "file": "Doctor_opening_desk_drawer_2f8d69d6.jpg",
+   "prompt": "Free Nano Banana repair (0 cr): keep the same characters, faces and framing; change ONLY: Nico absent; Ivy alone at the study desk drawer at midnight in a gray cardigan, emerald on LEFT ring finger."
+  },
+  {
+   "job": "F43",
+   "file": "Doctor_pocketing_foil_card_15e409cd.jpg",
+   "prompt": "Free Nano Banana repair (0 cr): keep the same characters, faces and framing; change ONLY: limp hand has no brace/splint; upstairs bathroom floor."
+  },
+  {
+   "job": "F59",
+   "file": "Doctor_resuscitating_patient_on_…_7161a9e4.jpg",
+   "prompt": "See F59_TEST_QA.json repair_still_prompt."
+  },
+  {
+   "job": "F36",
+   "file": "Doctor_threads_emerald_onto_chain_a1bbd975.jpg",
+   "prompt": "Free Nano Banana repair (0 cr): keep the same characters, faces and framing; change ONLY: Hospital staff locker room, Ivy alone in navy scrubs threading the emerald onto a gold chain; no bed, no Nico."
+  },
+  {
+   "job": "F37",
+   "file": "Doctor_treating_patient_in_traum…_a4073721.jpg",
+   "prompt": "Free Nano Banana repair (0 cr): keep the same characters, faces and framing; change ONLY: the patient in the trauma bay is JOEY (not the scarred man); glass wall."
+  },
+  {
+   "job": "F32",
+   "file": "Emerald_ring_slides_onto_finger_c3b8e111.jpg",
+   "prompt": "Free Nano Banana repair (0 cr): keep the same characters, faces and framing; change ONLY: Judge's chambers, close on hands sliding the emerald onto her LEFT ring finger; no hospital bay."
+  },
+  {
+   "job": "F24",
+   "file": "Man_filling_doorway_eaea6cb3.jpg",
+   "prompt": "Free Nano Banana repair (0 cr): keep the same characters, faces and framing; change ONLY: Hospital supply-room doorway with shelves of coiled IV tubing; huge man in a dark coat; no ER bay."
+  },
+  {
+   "job": "F28",
+   "file": "Red-haired_doctor_deciding_acros…_691645a8.jpg",
+   "prompt": "Free Nano Banana repair (0 cr): keep the same characters, faces and framing; change ONLY: Closed Italian restaurant table, chairs up; no hospital."
+  },
+  {
+   "job": "F27",
+   "file": "Scarred_man_holding_eye_contact_b105a6ea.jpg",
+   "prompt": "Free Nano Banana repair (0 cr): keep the same characters, faces and framing; change ONLY: Closed Italian restaurant table; no hospital set."
+  },
+  {
+   "job": "F21",
+   "file": "Scarred_man_watching_doctor_93e6a239.jpg",
+   "prompt": "Free Nano Banana repair (0 cr): keep the same characters, faces and framing; change ONLY: Ivy's dark apartment, old armchair, streetlight only; no hospital."
+  },
+  {
+   "job": "F23",
+   "file": "Shadow_crosses_hospital_supply_room_6a1312df.jpg",
+   "prompt": "Free Nano Banana repair (0 cr): keep the same characters, faces and framing; change ONLY: Ivy alone in the supply room; only a shadow at the door; the scarred man absent."
+  },
+  {
+   "job": "F44",
+   "file": "Young_man_grabs_doctor_sleeve_2bd02333.jpg",
+   "prompt": "Free Nano Banana repair (0 cr): keep the same characters, faces and framing; change ONLY: Enzo's wrists bare, no brace; ER bay."
+  }
+ ],
+ "hold": {
+  "I26": "Nico crouched by the stairwell with Enzo on the stairs. Arm OK, but it matches no single job (F45 Enzo alone, F05 hands insert)."
+ }
+}

@@ -662,5 +662,20 @@
   "projected_total_worst_case": 830,
   "headroom_after_worst_case": 170,
   "note": "Takes already generated (F18-F28, F44-F58) may be accepted without new spend; the worst case assumes all 61 remaining jobs need a new 10-credit animation. Headroom covers retakes. The account panel (840 observed) remains the authority; reconcile before each batch."
- }
+ },
+ "flow_blocked_attempts": [
+  {
+   "date": "2026-11-04",
+   "jobs": [
+    "F02",
+    "F08",
+    "F14",
+    "F15"
+   ],
+   "model": "Veo 3.1 Lite",
+   "result": "blocked by Flow 'unusual activity' before generation",
+   "credits_counted": 0,
+   "evidence_required_to_count": "balance drop or delivered output"
+  }
+ ]
 }
