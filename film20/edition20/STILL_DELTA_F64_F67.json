@@ -1,0 +1,32 @@
+{
+ "date": "2026-11-04",
+ "batch": "ENDING_DELTA_F64_F67",
+ "warning": "INDEX mapping swapped: STILL_F64.jpg shows F66 (pockets on bed); STILL_F66.jpg shows F64 (testimony). Rename before animating.",
+ "approved": [
+  {
+   "job": "F66",
+   "file": "STILL_F64.jpg",
+   "sha16": "72eba6c94e3b8d0a",
+   "note": "bedroom, evening; foil card, form, envelope and candy twist on the bed; pen from her hair; Nico has no splint. Rename to STILL_F66."
+  },
+  {
+   "job": "F65",
+   "file": "STILL_F65.jpg",
+   "sha16": "edddf37e9ef6efe8",
+   "note": "daylight; she unstraps the black splint on his RIGHT forearm (the arm farther from camera, on the table); emerald on her hand"
+  },
+  {
+   "job": "F67",
+   "file": "STILL_F67.jpg",
+   "sha16": "3152aa263ac72096",
+   "note": "Nico on the bed edge, no splint; door open behind her; emerald visible (gold band not visible at this size)"
+  }
+ ],
+ "repair_free": [
+  {
+   "job": "F64",
+   "file": "STILL_F66.jpg",
+   "prompt": "Free Nano Banana repair (0 cr): keep the same face, cardigan and framing; change ONLY: a plain grand-jury room: rows of seated jurors in ordinary clothes and a prosecutor at a small table, no public gallery and no press. The emerald AND the plain gold band are stacked on the SAME LEFT ring finger, band below the emerald; no ring on the right hand. Hands folded."
+  }
+ ]
+}
