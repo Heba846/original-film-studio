@@ -8,6 +8,19 @@ R = Path(__file__).resolve().parent.parent
 P = {j["id"]: j for j in json.loads((R / "edition20/FULL70_FLOW_PROMPTS.json").read_text())["jobs"]}
 M = {s["shot_id"]: s for s in json.loads((R / "edition20/media_manifest.json").read_text())["shots"]}
 T = json.loads((R / "src/film/data/film_timeline.json").read_text())
+_qp = R / "edition20/review/still_qa.json"
+Q = json.loads(_qp.read_text()) if _qp.exists() else {"approved": {}, "repair_prompts": {}, "near_pass_author_call": []}
+NEAR = {n["job"]: n for n in Q.get("near_pass_author_call", [])}
+
+
+def still_qa(jid):
+    if jid in Q["approved"]:
+        return {"verdict": "approved", "source": Q["approved"][jid]["file"], "first_frame": f"stills_approved/STILL_{jid}.jpg"}
+    if jid in NEAR:
+        return {"verdict": "author_call", "source": NEAR[jid]["file"], "issue_fix": NEAR[jid]["issue_fix"]}
+    if jid in Q["repair_prompts"]:
+        return {"verdict": "repair_free", "source": Q["repair_prompts"][jid]["file"], "repair_prompt": Q["repair_prompts"][jid]["prompt"]}
+    return {"verdict": "no_still"}
 
 LOC = {  # slug -> location override (independent of any reference image)
  "ivy_crouch": "hospital parking garage L2 (REF_GARAGE_F01): concrete pillars, yellow bumper guards, pooled water, sodium light; beside her dark car",
@@ -69,11 +82,13 @@ for jid, p in sorted(P.items()):
         "costume_override": {**{k: COST[k][ph] for k in who}, **others},
         "mouth": p["mouth"], "decisive": p["decisive_action"],
         "still_file": f"STILL_{jid}.png", "video_file": f"{jid}.mp4", "first_frame": f"STILL_{jid}.png (approved still; never hospital.png)",
-        "needed_ranges": need.get(jid, []),
+        "needed_ranges": need.get(jid, []), "still_qa": still_qa(jid),
         "still_prompt": p.get("still_prompt"), "animation_prompt": p["prompt"],
     })
 out = {"generated_from": "media_manifest.json + FULL70_FLOW_PROMPTS.json + film_timeline.json", "count": len(jobs),
        "rule": "free still -> QA -> one 10-credit animation with the approved still as first frame",
        "needed_ranges_format": "[segment, seconds_on_screen, source_in_s, source_out_s, speed]", "jobs": jobs}
 (R / "edition20/REMAINING_JOBS.json").write_text(json.dumps(out, indent=1, ensure_ascii=False), encoding="utf-8")
+from collections import Counter
+print(dict(Counter(j["still_qa"]["verdict"] for j in jobs)))
 print(len(jobs), "remaining jobs; missing locations:", [j["id"] for j in jobs if not j["location_override"]])

@@ -4,6 +4,9 @@ import timeline from './data/film_timeline.json';
 import {ClipShot} from './components/ClipShot';
 import {CODE_COMPONENTS} from './components/registry';
 import {Placeholder} from './components/Placeholder';
+import {StillAnimatic} from './components/StillAnimatic';
+import approvedStills from './data/approved_stills.json';
+const STILLS = approvedStills as Record<string, string>;
 import {Finish, Memory} from './components/Atmosphere';
 import {Captions, ChapterTitle, DateStamp, Hud, Cue} from './components/Overlays';
 import {STAMPS} from './stamps';
@@ -31,6 +34,7 @@ const CutVisual: React.FC<{c: Cut; strict: boolean; tl: TLType}> = ({c, strict, 
   const body = c.dur - (c.unresolved_f ?? 0);
   if (!sh || !DONE.has(sh.status) || (sh.kind !== 'code' && !sh.on_disk)) {
     if (strict) throw new Error(`Strict render reached unfinished picture ${c.shot} (${c.seg})`);
+    if (STILLS[c.shot]) return <StillAnimatic src={STILLS[c.shot]} dur={c.dur + c.overlap} shotId={c.shot} slug={c.slug} />;
     const plan = sh && sh.kind !== 'code' ? `planned ${c.src_in?.toFixed(2)}–${c.src_out?.toFixed(2)} s @ ${c.rate?.toFixed(3)}x · ${(c.dur / 24).toFixed(2)} s on screen`
       + (sh.window_is_estimate ? ' · window is an ESTIMATE (file not delivered)' : '') : undefined;
     return <Placeholder shotId={c.shot} slug={c.slug} event={sh?.narrative_event ?? 'undefined shot'} status={sh?.status ?? 'missing'}
