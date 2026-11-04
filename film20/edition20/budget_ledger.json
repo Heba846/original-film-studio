@@ -677,5 +677,25 @@
    "credits_counted": 0,
    "evidence_required_to_count": "balance drop or delivered output"
   }
- ]
+ ],
+ "flow_failed_refunded": [
+  {
+   "date": "2026-11-04",
+   "job": "F60",
+   "result": "content filter fail, refunded",
+   "credits_counted": 0
+  },
+  {
+   "date": "2026-11-04",
+   "job": "F64",
+   "result": "audio failure x2 (Return silent videos ON), refunded",
+   "credits_counted": 0
+  }
+ ],
+ "latest_author_observation": {
+  "date": "2026-11-04",
+  "account": "Flow PRO (author account)",
+  "balance_ui": 830,
+  "note": "author-reported; not reconciled by us"
+ }
 }
