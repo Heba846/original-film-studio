@@ -1,0 +1,33 @@
+{
+  "name": "thoughtkind-film-pilot",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "start": "remotion studio src/index.tsx",
+    "render": "remotion render src/index.tsx Opening output/Opening.mp4",
+    "typecheck": "tsc -p .",
+    "film:build": "python3 tools/film_build.py",
+    "budget": "python3 tools/validate_budget.py",
+    "render:test": "remotion render src/index.tsx Film20-Test-CH01 output/Film20_Test_CH01_v2_720p.mp4 --crf=20",
+    "render:final": "remotion render src/index.tsx Film20-Final output/Film20_Final.mp4 --crf=16",
+    "manifest": "python3 tools/make_manifest.py --force",
+    "flow:sheet": "python3 tools/flow_sheet.py",
+    "test": "python3 tools/test_film.py",
+    "test:render": "python3 tools/test_film.py --render",
+    "render:ch00": "remotion render src/index.tsx Film20-Editor-CH00 output/Film20_Editor_CH00_720p_PREVIEW.mp4 --crf=20",
+    "render:evidence": "remotion render src/index.tsx Evidence-Gallery output/Evidence_Samples_v2_720p.mp4 --crf=20"
+  },
+  "dependencies": {
+    "@fontsource/caveat": "^5.2.6",
+    "@fontsource/cormorant-garamond": "^5.2.6",
+    "@fontsource/courier-prime": "^5.2.6",
+    "@remotion/cli": "^4.0.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "remotion": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.0",
+    "typescript": "^5.0.0"
+  }
+}

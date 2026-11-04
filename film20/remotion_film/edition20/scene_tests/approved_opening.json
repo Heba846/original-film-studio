@@ -1,0 +1,187 @@
+{
+ "tag": "approved_opening",
+ "segments": [
+  "n001",
+  "n024"
+ ],
+ "segment_cuts": {
+  "n001": [
+   {
+    "shot": "F01",
+    "slug": "garage_env",
+    "secs": "fill",
+    "inn": null,
+    "rate": null
+   }
+  ],
+  "n002": [
+   {
+    "shot": "F01",
+    "slug": "garage_env",
+    "secs": 3.0,
+    "inn": null,
+    "rate": null
+   },
+   {
+    "shot": "CODE_MAP",
+    "secs": "fill",
+    "inn": null,
+    "rate": null,
+    "beat": "heard",
+    "why": "'what a life ending sounds like in concrete': the two shots, heard"
+   }
+  ],
+  "n003": [
+   {
+    "shot": "CODE_MAP",
+    "secs": 5.6,
+    "inn": null,
+    "rate": null,
+    "beat": "saw",
+    "why": "'I looked over the hood': what she saw, drawn (the aftermath shot is not delivered yet)"
+   },
+   {
+    "shot": "F04",
+    "slug": "frankie_hand",
+    "secs": 5.6,
+    "inn": 0.2,
+    "rate": null
+   },
+   {
+    "shot": "HOSP",
+    "secs": "fill",
+    "inn": 0.0,
+    "rate": 0.85,
+    "memory": true,
+    "why": "'the plaster splint I had built thirty minutes earlier, in bay fourteen, with my own two hands'"
+   }
+  ],
+  "n004": [
+   {
+    "shot": "F06",
+    "slug": "nico_ots",
+    "secs": 2.0,
+    "inn": 0.3,
+    "rate": null
+   },
+   {
+    "shot": "F07",
+    "slug": "ivy_reaction",
+    "secs": "fill",
+    "inn": null,
+    "rate": null
+   }
+  ],
+  "n005": [
+   {
+    "shot": "CODE_CONTRACT",
+    "secs": "fill",
+    "inn": null,
+    "rate": null,
+    "beat": "pages",
+    "why": "flash-forward: 'Three days later I married him' - the marriage, as a contract"
+   }
+  ],
+  "n006": [
+   {
+    "shot": "CODE_EHR",
+    "secs": 7.0,
+    "inn": null,
+    "rate": null,
+    "beat": "arrival"
+   },
+   {
+    "shot": "F09",
+    "slug": "ivy_walks",
+    "secs": 3.3,
+    "inn": 0.3,
+    "rate": null
+   },
+   {
+    "shot": "F10",
+    "slug": "bay_hands",
+    "secs": 2.1,
+    "inn": 0.2,
+    "rate": null
+   },
+   {
+    "shot": "CODE_EHR",
+    "secs": "fill",
+    "inn": null,
+    "rate": null,
+    "beat": "name_blank"
+   }
+  ],
+  "n009": [
+   {
+    "shot": "F10",
+    "slug": "bay_hands",
+    "secs": 2.6,
+    "inn": null,
+    "rate": null
+   },
+   {
+    "shot": "CODE_EHR",
+    "secs": 1.6,
+    "inn": null,
+    "rate": null,
+    "beat": "complaint"
+   },
+   {
+    "shot": "F11",
+    "slug": "nico_bay_cu",
+    "secs": "fill",
+    "inn": null,
+    "rate": null
+   }
+  ],
+  "n018": [
+   {
+    "shot": "HOSP",
+    "secs": 5.5,
+    "inn": 0.0,
+    "rate": 0.85,
+    "why": "the splint being built: the event the opening already glimpsed"
+   },
+   {
+    "shot": "CODE_EHR",
+    "secs": "fill",
+    "inn": null,
+    "rate": null,
+    "beat": "instructions"
+   },
+   {
+    "shot": "F13",
+    "slug": "money_tray",
+    "secs": 1.9,
+    "inn": 2.9,
+    "rate": null
+   }
+  ],
+  "n024": [
+   {
+    "shot": "CODE_MAP",
+    "secs": 7.0,
+    "inn": null,
+    "rate": null,
+    "beat": "arrive",
+    "why": "back to the garage at 4:08: the map returns for the 4:10 chapter"
+   },
+   {
+    "shot": "F01",
+    "slug": "garage_env",
+    "secs": 5.0,
+    "inn": 0.2,
+    "rate": null,
+    "why": "Level two again: the place she hid"
+   },
+   {
+    "shot": "CODE_MAP",
+    "secs": "fill",
+    "inn": null,
+    "rate": null,
+    "beat": "heard"
+   }
+  ]
+ }
+}

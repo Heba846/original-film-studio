@@ -1,0 +1,25 @@
+# word  CMU phones (for names missing from the bundled dictionary)
+brancato B R AE N K AA T OW
+vescari V EH S K AA R IY
+reyes's R EY AH S IH Z
+brancato's B R AE N K AA T OW Z
+breastbone B R EH S T B OW N
+brigid's B R IH JH IH D Z
+cannoli K AH N OW L IY
+carmine's K AA R M AY N Z
+cefalu CH EH F AH L UW
+consigliere K AA N S IH L Y EH R EY
+croaked K R OW K T
+decompressed D IY K AH M P R EH S T
+dottoressa D AA T AO R EH S AH
+enzo's EH N Z OW Z
+frankie's F R AE NG K IY Z
+gowanus G AH W AA N AH S
+iv AY V IY
+iv(2) IH V
+naloxone N AH L AA K S OW N
+nico's N IY K OW Z
+oxycodone AA K S IY K OW D OW N
+priya P R IY Y AH
+scrubs S K R AH B Z
+zio Z IY OW

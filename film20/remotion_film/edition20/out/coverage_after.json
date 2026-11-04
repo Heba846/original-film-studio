@@ -1,0 +1,901 @@
+{
+ "total_s": 1246.03,
+ "coverage_s": {
+  "approved_on_disk": 91.25,
+  "code_authored": 394.17,
+  "planned_primary": 478.29,
+  "planned_reuse": 282.33,
+  "delivered_unreviewed": 0.0,
+  "unresolved": 0.0
+ },
+ "segments": {
+  "n001": {
+   "approved_on_disk": 3.21,
+   "code_authored": 0.0,
+   "planned_primary": 0.0,
+   "planned_reuse": 0.0,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n002": {
+   "approved_on_disk": 2.58,
+   "code_authored": 0.0,
+   "planned_primary": 6.38,
+   "planned_reuse": 0.0,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n003": {
+   "approved_on_disk": 4.0,
+   "code_authored": 0.0,
+   "planned_primary": 13.0,
+   "planned_reuse": 0.0,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n004": {
+   "approved_on_disk": 4.75,
+   "code_authored": 0.0,
+   "planned_primary": 0.0,
+   "planned_reuse": 0.0,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n005": {
+   "approved_on_disk": 2.0,
+   "code_authored": 0.0,
+   "planned_primary": 2.79,
+   "planned_reuse": 0.0,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n006": {
+   "approved_on_disk": 3.29,
+   "code_authored": 5.83,
+   "planned_primary": 8.79,
+   "planned_reuse": 0.0,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n009": {
+   "approved_on_disk": 7.33,
+   "code_authored": 1.58,
+   "planned_primary": 0.0,
+   "planned_reuse": 0.0,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n010": {
+   "approved_on_disk": 1.92,
+   "code_authored": 0.0,
+   "planned_primary": 0.0,
+   "planned_reuse": 0.0,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n011": {
+   "approved_on_disk": 2.62,
+   "code_authored": 0.0,
+   "planned_primary": 0.0,
+   "planned_reuse": 0.0,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n013": {
+   "approved_on_disk": 1.88,
+   "code_authored": 0.0,
+   "planned_primary": 0.0,
+   "planned_reuse": 0.0,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n014": {
+   "approved_on_disk": 1.71,
+   "code_authored": 0.0,
+   "planned_primary": 0.0,
+   "planned_reuse": 0.0,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n015": {
+   "approved_on_disk": 4.17,
+   "code_authored": 0.0,
+   "planned_primary": 0.0,
+   "planned_reuse": 0.0,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n016": {
+   "approved_on_disk": 0.0,
+   "code_authored": 1.88,
+   "planned_primary": 0.0,
+   "planned_reuse": 0.0,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n017": {
+   "approved_on_disk": 1.54,
+   "code_authored": 0.0,
+   "planned_primary": 0.0,
+   "planned_reuse": 0.0,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n018": {
+   "approved_on_disk": 7.42,
+   "code_authored": 5.29,
+   "planned_primary": 0.0,
+   "planned_reuse": 0.0,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n019": {
+   "approved_on_disk": 3.12,
+   "code_authored": 0.0,
+   "planned_primary": 0.0,
+   "planned_reuse": 0.0,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n020": {
+   "approved_on_disk": 2.58,
+   "code_authored": 6.25,
+   "planned_primary": 0.0,
+   "planned_reuse": 0.0,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n024": {
+   "approved_on_disk": 6.88,
+   "code_authored": 6.0,
+   "planned_primary": 0.0,
+   "planned_reuse": 5.58,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n026": {
+   "approved_on_disk": 0.0,
+   "code_authored": 0.0,
+   "planned_primary": 3.21,
+   "planned_reuse": 0.0,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n027": {
+   "approved_on_disk": 0.0,
+   "code_authored": 0.0,
+   "planned_primary": 2.83,
+   "planned_reuse": 0.0,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n028": {
+   "approved_on_disk": 1.21,
+   "code_authored": 4.42,
+   "planned_primary": 16.83,
+   "planned_reuse": 0.0,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n029": {
+   "approved_on_disk": 0.0,
+   "code_authored": 10.38,
+   "planned_primary": 8.79,
+   "planned_reuse": 0.0,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n030": {
+   "approved_on_disk": 0.0,
+   "code_authored": 0.0,
+   "planned_primary": 0.0,
+   "planned_reuse": 5.88,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n031": {
+   "approved_on_disk": 0.0,
+   "code_authored": 18.88,
+   "planned_primary": 5.0,
+   "planned_reuse": 0.0,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n032": {
+   "approved_on_disk": 0.0,
+   "code_authored": 4.42,
+   "planned_primary": 2.42,
+   "planned_reuse": 8.58,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n034": {
+   "approved_on_disk": 6.46,
+   "code_authored": 8.0,
+   "planned_primary": 3.0,
+   "planned_reuse": 0.0,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n035": {
+   "approved_on_disk": 0.0,
+   "code_authored": 0.0,
+   "planned_primary": 4.88,
+   "planned_reuse": 0.0,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n036": {
+   "approved_on_disk": 0.0,
+   "code_authored": 0.0,
+   "planned_primary": 14.96,
+   "planned_reuse": 0.0,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n037": {
+   "approved_on_disk": 0.0,
+   "code_authored": 4.58,
+   "planned_primary": 0.0,
+   "planned_reuse": 4.08,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n038": {
+   "approved_on_disk": 0.0,
+   "code_authored": 4.54,
+   "planned_primary": 3.21,
+   "planned_reuse": 0.0,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n039": {
+   "approved_on_disk": 0.0,
+   "code_authored": 0.0,
+   "planned_primary": 3.38,
+   "planned_reuse": 0.0,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n040": {
+   "approved_on_disk": 0.0,
+   "code_authored": 0.0,
+   "planned_primary": 1.33,
+   "planned_reuse": 0.0,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n041": {
+   "approved_on_disk": 0.0,
+   "code_authored": 0.0,
+   "planned_primary": 0.0,
+   "planned_reuse": 2.33,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n042": {
+   "approved_on_disk": 0.0,
+   "code_authored": 0.0,
+   "planned_primary": 1.79,
+   "planned_reuse": 0.0,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n045": {
+   "approved_on_disk": 0.0,
+   "code_authored": 0.0,
+   "planned_primary": 0.0,
+   "planned_reuse": 7.83,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n046": {
+   "approved_on_disk": 0.0,
+   "code_authored": 0.0,
+   "planned_primary": 0.0,
+   "planned_reuse": 7.96,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n051": {
+   "approved_on_disk": 0.0,
+   "code_authored": 13.75,
+   "planned_primary": 4.58,
+   "planned_reuse": 0.0,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n052": {
+   "approved_on_disk": 0.0,
+   "code_authored": 0.0,
+   "planned_primary": 7.08,
+   "planned_reuse": 0.0,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n053": {
+   "approved_on_disk": 0.0,
+   "code_authored": 0.0,
+   "planned_primary": 2.96,
+   "planned_reuse": 0.0,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n054": {
+   "approved_on_disk": 2.42,
+   "code_authored": 0.0,
+   "planned_primary": 7.96,
+   "planned_reuse": 5.0,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n055": {
+   "approved_on_disk": 0.0,
+   "code_authored": 0.0,
+   "planned_primary": 0.0,
+   "planned_reuse": 2.83,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n056": {
+   "approved_on_disk": 0.0,
+   "code_authored": 17.83,
+   "planned_primary": 3.71,
+   "planned_reuse": 0.0,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n059": {
+   "approved_on_disk": 0.0,
+   "code_authored": 3.21,
+   "planned_primary": 0.0,
+   "planned_reuse": 0.0,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n060": {
+   "approved_on_disk": 0.0,
+   "code_authored": 0.0,
+   "planned_primary": 3.29,
+   "planned_reuse": 0.0,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n061": {
+   "approved_on_disk": 0.0,
+   "code_authored": 0.0,
+   "planned_primary": 1.42,
+   "planned_reuse": 0.0,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n062": {
+   "approved_on_disk": 0.0,
+   "code_authored": 3.0,
+   "planned_primary": 0.0,
+   "planned_reuse": 0.0,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n063": {
+   "approved_on_disk": 0.0,
+   "code_authored": 0.0,
+   "planned_primary": 4.62,
+   "planned_reuse": 0.0,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n064": {
+   "approved_on_disk": 0.0,
+   "code_authored": 0.0,
+   "planned_primary": 1.46,
+   "planned_reuse": 0.0,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n065": {
+   "approved_on_disk": 0.0,
+   "code_authored": 0.0,
+   "planned_primary": 1.67,
+   "planned_reuse": 0.0,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n066": {
+   "approved_on_disk": 0.0,
+   "code_authored": 0.0,
+   "planned_primary": 7.25,
+   "planned_reuse": 0.0,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n078": {
+   "approved_on_disk": 0.0,
+   "code_authored": 0.0,
+   "planned_primary": 10.38,
+   "planned_reuse": 0.0,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n079": {
+   "approved_on_disk": 0.0,
+   "code_authored": 3.58,
+   "planned_primary": 0.0,
+   "planned_reuse": 7.71,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n080": {
+   "approved_on_disk": 0.0,
+   "code_authored": 0.0,
+   "planned_primary": 6.42,
+   "planned_reuse": 4.0,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n081": {
+   "approved_on_disk": 0.0,
+   "code_authored": 0.0,
+   "planned_primary": 8.42,
+   "planned_reuse": 2.21,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n084": {
+   "approved_on_disk": 0.0,
+   "code_authored": 13.75,
+   "planned_primary": 0.0,
+   "planned_reuse": 0.0,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n085": {
+   "approved_on_disk": 0.0,
+   "code_authored": 1.0,
+   "planned_primary": 0.0,
+   "planned_reuse": 7.88,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n086": {
+   "approved_on_disk": 0.0,
+   "code_authored": 0.0,
+   "planned_primary": 16.46,
+   "planned_reuse": 0.0,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n087": {
+   "approved_on_disk": 0.0,
+   "code_authored": 0.0,
+   "planned_primary": 0.0,
+   "planned_reuse": 3.71,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n088": {
+   "approved_on_disk": 0.0,
+   "code_authored": 3.0,
+   "planned_primary": 8.5,
+   "planned_reuse": 0.0,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n092": {
+   "approved_on_disk": 0.0,
+   "code_authored": 0.0,
+   "planned_primary": 16.83,
+   "planned_reuse": 9.38,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n093": {
+   "approved_on_disk": 0.0,
+   "code_authored": 12.83,
+   "planned_primary": 0.0,
+   "planned_reuse": 0.0,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n094": {
+   "approved_on_disk": 0.0,
+   "code_authored": 3.0,
+   "planned_primary": 7.5,
+   "planned_reuse": 3.0,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n096": {
+   "approved_on_disk": 0.0,
+   "code_authored": 3.0,
+   "planned_primary": 8.42,
+   "planned_reuse": 7.67,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n097": {
+   "approved_on_disk": 0.0,
+   "code_authored": 0.0,
+   "planned_primary": 11.21,
+   "planned_reuse": 4.79,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n098": {
+   "approved_on_disk": 0.0,
+   "code_authored": 13.04,
+   "planned_primary": 0.0,
+   "planned_reuse": 0.0,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n099": {
+   "approved_on_disk": 0.0,
+   "code_authored": 13.29,
+   "planned_primary": 0.0,
+   "planned_reuse": 0.0,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n100": {
+   "approved_on_disk": 0.0,
+   "code_authored": 0.0,
+   "planned_primary": 5.71,
+   "planned_reuse": 9.0,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n101": {
+   "approved_on_disk": 0.0,
+   "code_authored": 6.54,
+   "planned_primary": 15.42,
+   "planned_reuse": 0.0,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n102": {
+   "approved_on_disk": 0.0,
+   "code_authored": 0.0,
+   "planned_primary": 7.08,
+   "planned_reuse": 0.0,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n103": {
+   "approved_on_disk": 3.0,
+   "code_authored": 4.12,
+   "planned_primary": 8.42,
+   "planned_reuse": 0.0,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n104": {
+   "approved_on_disk": 0.0,
+   "code_authored": 0.0,
+   "planned_primary": 0.0,
+   "planned_reuse": 11.21,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n109": {
+   "approved_on_disk": 0.0,
+   "code_authored": 15.83,
+   "planned_primary": 0.0,
+   "planned_reuse": 0.0,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n110": {
+   "approved_on_disk": 0.0,
+   "code_authored": 23.5,
+   "planned_primary": 0.0,
+   "planned_reuse": 3.58,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n111": {
+   "approved_on_disk": 0.0,
+   "code_authored": 0.0,
+   "planned_primary": 6.92,
+   "planned_reuse": 0.0,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n112": {
+   "approved_on_disk": 0.0,
+   "code_authored": 0.0,
+   "planned_primary": 8.58,
+   "planned_reuse": 3.88,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n113": {
+   "approved_on_disk": 0.0,
+   "code_authored": 0.0,
+   "planned_primary": 2.12,
+   "planned_reuse": 0.0,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n115": {
+   "approved_on_disk": 0.0,
+   "code_authored": 0.0,
+   "planned_primary": 0.0,
+   "planned_reuse": 7.21,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n116": {
+   "approved_on_disk": 0.0,
+   "code_authored": 0.0,
+   "planned_primary": 11.42,
+   "planned_reuse": 6.29,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n119": {
+   "approved_on_disk": 0.0,
+   "code_authored": 6.42,
+   "planned_primary": 8.42,
+   "planned_reuse": 7.17,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n120": {
+   "approved_on_disk": 0.0,
+   "code_authored": 15.42,
+   "planned_primary": 8.42,
+   "planned_reuse": 3.42,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n121": {
+   "approved_on_disk": 0.0,
+   "code_authored": 0.0,
+   "planned_primary": 8.42,
+   "planned_reuse": 4.0,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n123": {
+   "approved_on_disk": 0.0,
+   "code_authored": 0.0,
+   "planned_primary": 6.42,
+   "planned_reuse": 0.0,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n124": {
+   "approved_on_disk": 0.0,
+   "code_authored": 23.17,
+   "planned_primary": 8.42,
+   "planned_reuse": 0.0,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n125": {
+   "approved_on_disk": 0.0,
+   "code_authored": 5.42,
+   "planned_primary": 8.42,
+   "planned_reuse": 6.17,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n126": {
+   "approved_on_disk": 0.0,
+   "code_authored": 3.58,
+   "planned_primary": 4.58,
+   "planned_reuse": 0.0,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n127": {
+   "approved_on_disk": 0.0,
+   "code_authored": 0.0,
+   "planned_primary": 2.58,
+   "planned_reuse": 3.96,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n128": {
+   "approved_on_disk": 0.0,
+   "code_authored": 0.0,
+   "planned_primary": 0.0,
+   "planned_reuse": 14.21,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n129": {
+   "approved_on_disk": 0.0,
+   "code_authored": 0.0,
+   "planned_primary": 7.67,
+   "planned_reuse": 0.0,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n130": {
+   "approved_on_disk": 0.0,
+   "code_authored": 4.42,
+   "planned_primary": 0.0,
+   "planned_reuse": 4.88,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n134": {
+   "approved_on_disk": 0.0,
+   "code_authored": 8.88,
+   "planned_primary": 0.0,
+   "planned_reuse": 0.0,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n135": {
+   "approved_on_disk": 0.0,
+   "code_authored": 4.38,
+   "planned_primary": 0.0,
+   "planned_reuse": 0.0,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n136": {
+   "approved_on_disk": 0.0,
+   "code_authored": 2.58,
+   "planned_primary": 8.42,
+   "planned_reuse": 2.17,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n141": {
+   "approved_on_disk": 0.0,
+   "code_authored": 5.0,
+   "planned_primary": 8.42,
+   "planned_reuse": 10.54,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n142": {
+   "approved_on_disk": 0.0,
+   "code_authored": 6.0,
+   "planned_primary": 8.42,
+   "planned_reuse": 5.25,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n143": {
+   "approved_on_disk": 0.0,
+   "code_authored": 0.0,
+   "planned_primary": 0.0,
+   "planned_reuse": 3.67,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n144": {
+   "approved_on_disk": 0.0,
+   "code_authored": 0.0,
+   "planned_primary": 8.42,
+   "planned_reuse": 11.71,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n145": {
+   "approved_on_disk": 0.0,
+   "code_authored": 0.0,
+   "planned_primary": 7.25,
+   "planned_reuse": 0.0,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n146": {
+   "approved_on_disk": 0.0,
+   "code_authored": 0.0,
+   "planned_primary": 0.0,
+   "planned_reuse": 5.17,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n147": {
+   "approved_on_disk": 0.0,
+   "code_authored": 5.0,
+   "planned_primary": 8.42,
+   "planned_reuse": 10.29,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n148": {
+   "approved_on_disk": 4.58,
+   "code_authored": 0.0,
+   "planned_primary": 6.42,
+   "planned_reuse": 12.04,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n149": {
+   "approved_on_disk": 0.0,
+   "code_authored": 0.0,
+   "planned_primary": 0.0,
+   "planned_reuse": 1.88,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n150": {
+   "approved_on_disk": 0.0,
+   "code_authored": 0.0,
+   "planned_primary": 0.0,
+   "planned_reuse": 5.33,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n151": {
+   "approved_on_disk": 5.58,
+   "code_authored": 8.79,
+   "planned_primary": 6.08,
+   "planned_reuse": 0.0,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n152": {
+   "approved_on_disk": 0.0,
+   "code_authored": 0.0,
+   "planned_primary": 2.5,
+   "planned_reuse": 0.0,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n154": {
+   "approved_on_disk": 0.0,
+   "code_authored": 14.96,
+   "planned_primary": 0.0,
+   "planned_reuse": 0.0,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n155": {
+   "approved_on_disk": 0.0,
+   "code_authored": 17.92,
+   "planned_primary": 8.42,
+   "planned_reuse": 0.0,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n156": {
+   "approved_on_disk": 4.42,
+   "code_authored": 0.0,
+   "planned_primary": 8.42,
+   "planned_reuse": 7.12,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n157": {
+   "approved_on_disk": 2.58,
+   "code_authored": 3.75,
+   "planned_primary": 0.0,
+   "planned_reuse": 0.0,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n159": {
+   "approved_on_disk": 0.0,
+   "code_authored": 22.17,
+   "planned_primary": 8.42,
+   "planned_reuse": 6.83,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n160": {
+   "approved_on_disk": 0.0,
+   "code_authored": 0.0,
+   "planned_primary": 8.58,
+   "planned_reuse": 3.75,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  },
+  "n161": {
+   "approved_on_disk": 0.0,
+   "code_authored": 0.0,
+   "planned_primary": 8.42,
+   "planned_reuse": 11.21,
+   "delivered_unreviewed": 0.0,
+   "unresolved": 0.0
+  }
+ }
+}

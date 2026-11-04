@@ -1,0 +1,324 @@
+{
+ "source": "v1 manifest (70 Flow jobs + U01), film_build.py shortfall at 0.85x, before correction",
+ "total_short_s": 269.64,
+ "blocks": [
+  {
+   "segment": "n003",
+   "chapter": "CH00",
+   "span_s": 17.0,
+   "shot": "F03",
+   "block_s": 10.21,
+   "short_s": 0.8
+  },
+  {
+   "segment": "n028",
+   "chapter": "CH02",
+   "span_s": 22.46,
+   "shot": "F16",
+   "block_s": 14.96,
+   "short_s": 5.55
+  },
+  {
+   "segment": "n029",
+   "chapter": "CH02",
+   "span_s": 19.17,
+   "shot": "F18",
+   "block_s": 19.17,
+   "short_s": 9.75
+  },
+  {
+   "segment": "n031",
+   "chapter": "CH03",
+   "span_s": 23.88,
+   "shot": "F20",
+   "block_s": 23.88,
+   "short_s": 14.46
+  },
+  {
+   "segment": "n036",
+   "chapter": "CH04",
+   "span_s": 14.96,
+   "shot": "F22",
+   "block_s": 14.96,
+   "short_s": 5.55
+  },
+  {
+   "segment": "n051",
+   "chapter": "CH04",
+   "span_s": 18.38,
+   "shot": "F26",
+   "block_s": 18.38,
+   "short_s": 8.96
+  },
+  {
+   "segment": "n054",
+   "chapter": "CH04",
+   "span_s": 15.33,
+   "shot": "F28",
+   "block_s": 15.33,
+   "short_s": 5.92
+  },
+  {
+   "segment": "n078",
+   "chapter": "CH06",
+   "span_s": 10.38,
+   "shot": "F32",
+   "block_s": 10.38,
+   "short_s": 0.96
+  },
+  {
+   "segment": "n079",
+   "chapter": "CH06",
+   "span_s": 11.29,
+   "shot": "F32",
+   "block_s": 11.29,
+   "short_s": 1.88
+  },
+  {
+   "segment": "n080",
+   "chapter": "CH06",
+   "span_s": 10.42,
+   "shot": "F33",
+   "block_s": 10.42,
+   "short_s": 1.0
+  },
+  {
+   "segment": "n086",
+   "chapter": "CH07",
+   "span_s": 16.46,
+   "shot": "F36",
+   "block_s": 16.46,
+   "short_s": 7.05
+  },
+  {
+   "segment": "n092",
+   "chapter": "CH08",
+   "span_s": 26.21,
+   "shot": "F39",
+   "block_s": 17.46,
+   "short_s": 8.05
+  },
+  {
+   "segment": "n094",
+   "chapter": "CH08",
+   "span_s": 13.5,
+   "shot": "F40",
+   "block_s": 13.5,
+   "short_s": 4.09
+  },
+  {
+   "segment": "n096",
+   "chapter": "CH08",
+   "span_s": 19.04,
+   "shot": "F40",
+   "block_s": 19.04,
+   "short_s": 9.63
+  },
+  {
+   "segment": "n097",
+   "chapter": "CH08",
+   "span_s": 16.0,
+   "shot": "F41",
+   "block_s": 16.0,
+   "short_s": 6.59
+  },
+  {
+   "segment": "n100",
+   "chapter": "CH08",
+   "span_s": 14.71,
+   "shot": "F43",
+   "block_s": 14.71,
+   "short_s": 5.3
+  },
+  {
+   "segment": "n101",
+   "chapter": "CH09",
+   "span_s": 21.96,
+   "shot": "F44",
+   "block_s": 11.0,
+   "short_s": 1.59
+  },
+  {
+   "segment": "n101",
+   "chapter": "CH09",
+   "span_s": 21.96,
+   "shot": "F45",
+   "block_s": 10.96,
+   "short_s": 1.55
+  },
+  {
+   "segment": "n103",
+   "chapter": "CH09",
+   "span_s": 15.54,
+   "shot": "F47",
+   "block_s": 10.38,
+   "short_s": 0.96
+  },
+  {
+   "segment": "n112",
+   "chapter": "CH11",
+   "span_s": 12.5,
+   "shot": "F50",
+   "block_s": 12.5,
+   "short_s": 3.09
+  },
+  {
+   "segment": "n116",
+   "chapter": "CH11",
+   "span_s": 17.71,
+   "shot": "F52",
+   "block_s": 17.71,
+   "short_s": 8.3
+  },
+  {
+   "segment": "n119",
+   "chapter": "CH11",
+   "span_s": 22.0,
+   "shot": "F53",
+   "block_s": 22.0,
+   "short_s": 12.59
+  },
+  {
+   "segment": "n120",
+   "chapter": "CH12",
+   "span_s": 27.25,
+   "shot": "F54",
+   "block_s": 13.62,
+   "short_s": 4.21
+  },
+  {
+   "segment": "n121",
+   "chapter": "CH12",
+   "span_s": 12.42,
+   "shot": "F55",
+   "block_s": 12.42,
+   "short_s": 3.0
+  },
+  {
+   "segment": "n124",
+   "chapter": "CH12",
+   "span_s": 31.54,
+   "shot": "F57",
+   "block_s": 15.75,
+   "short_s": 6.34
+  },
+  {
+   "segment": "n125",
+   "chapter": "CH13",
+   "span_s": 20.0,
+   "shot": "F58",
+   "block_s": 20.0,
+   "short_s": 10.59
+  },
+  {
+   "segment": "n128",
+   "chapter": "CH13",
+   "span_s": 14.21,
+   "shot": "F59",
+   "block_s": 14.21,
+   "short_s": 4.8
+  },
+  {
+   "segment": "n136",
+   "chapter": "CH14",
+   "span_s": 13.21,
+   "shot": "F60",
+   "block_s": 13.21,
+   "short_s": 3.8
+  },
+  {
+   "segment": "n141",
+   "chapter": "CH16",
+   "span_s": 23.92,
+   "shot": "F61",
+   "block_s": 23.92,
+   "short_s": 14.5
+  },
+  {
+   "segment": "n142",
+   "chapter": "CH16",
+   "span_s": 19.67,
+   "shot": "F61",
+   "block_s": 19.67,
+   "short_s": 10.25
+  },
+  {
+   "segment": "n144",
+   "chapter": "CH16",
+   "span_s": 20.17,
+   "shot": "F62",
+   "block_s": 20.17,
+   "short_s": 10.75
+  },
+  {
+   "segment": "n147",
+   "chapter": "CH17",
+   "span_s": 23.71,
+   "shot": "F63",
+   "block_s": 23.71,
+   "short_s": 14.3
+  },
+  {
+   "segment": "n151",
+   "chapter": "CH17",
+   "span_s": 20.46,
+   "shot": "F65",
+   "block_s": 20.46,
+   "short_s": 11.05
+  },
+  {
+   "segment": "n155",
+   "chapter": "CH18",
+   "span_s": 26.33,
+   "shot": "F66",
+   "block_s": 13.17,
+   "short_s": 3.75
+  },
+  {
+   "segment": "n156",
+   "chapter": "CH18",
+   "span_s": 19.96,
+   "shot": "F67",
+   "block_s": 19.96,
+   "short_s": 10.55
+  },
+  {
+   "segment": "n159",
+   "chapter": "CH19",
+   "span_s": 37.42,
+   "shot": "F68",
+   "block_s": 37.42,
+   "short_s": 28.0
+  },
+  {
+   "segment": "n160",
+   "chapter": "CH19",
+   "span_s": 12.33,
+   "shot": "F69",
+   "block_s": 12.33,
+   "short_s": 2.92
+  },
+  {
+   "segment": "n161",
+   "chapter": "CH19",
+   "span_s": 16.62,
+   "shot": "F70",
+   "block_s": 16.62,
+   "short_s": 7.21
+  }
+ ],
+ "u01_before": [
+  {
+   "segment": "n109",
+   "shot": "U01",
+   "block_s": 7.92,
+   "status": "missing"
+  },
+  {
+   "segment": "n109",
+   "shot": "CODE_LOT",
+   "block_s": 7.92,
+   "status": "code"
+  }
+ ]
+}

@@ -1,0 +1,172 @@
+{
+ "F01": {
+  "file": "public/flow/F01.mp4",
+  "probe": {
+   "ok": true,
+   "codec": "h264",
+   "w": 1280,
+   "h": 720,
+   "fps": 24.0,
+   "duration": 7.916667,
+   "audio": true
+  },
+  "issues": [],
+  "planned_max_source_s": 6.2083,
+  "frozen_share": 0.0,
+  "black": [],
+  "embedded_audio_mean_db": -28.0
+ },
+ "F02": {
+  "file": "public/flow/F02.mp4",
+  "probe": {
+   "ok": true,
+   "codec": "h264",
+   "w": 1280,
+   "h": 720,
+   "fps": 24.0,
+   "duration": 7.916667,
+   "audio": true
+  },
+  "issues": [],
+  "planned_max_source_s": 6.575,
+  "frozen_share": 0.0,
+  "black": [],
+  "embedded_audio_mean_db": -26.4
+ },
+ "F06": {
+  "file": "public/flow/F06.mp4",
+  "probe": {
+   "ok": true,
+   "codec": "h264",
+   "w": 1280,
+   "h": 720,
+   "fps": 24.0,
+   "duration": 7.916667,
+   "audio": true
+  },
+  "issues": [],
+  "planned_max_source_s": 7.6667,
+  "frozen_share": 0.005,
+  "black": [],
+  "embedded_audio_mean_db": -40.5
+ },
+ "F04": {
+  "file": "public/flow/F04.mp4",
+  "probe": {
+   "ok": true,
+   "codec": "h264",
+   "w": 1280,
+   "h": 720,
+   "fps": 24.0,
+   "duration": 7.916667,
+   "audio": true
+  },
+  "issues": [],
+  "planned_max_source_s": 7.5458,
+  "frozen_share": 0.0,
+  "black": [],
+  "embedded_audio_mean_db": -35.7
+ },
+ "F07": {
+  "file": "public/flow/F07.mp4",
+  "probe": {
+   "ok": true,
+   "codec": "h264",
+   "w": 1280,
+   "h": 720,
+   "fps": 24.0,
+   "duration": 7.916667,
+   "audio": true
+  },
+  "issues": [],
+  "planned_max_source_s": 6.2917,
+  "frozen_share": 0.0,
+  "black": [],
+  "embedded_audio_mean_db": -27.6
+ },
+ "F09": {
+  "file": "public/flow/F09.mp4",
+  "probe": {
+   "ok": true,
+   "codec": "h264",
+   "w": 1280,
+   "h": 720,
+   "fps": 24.0,
+   "duration": 7.916667,
+   "audio": true
+  },
+  "issues": [],
+  "planned_max_source_s": 7.6994,
+  "frozen_share": 0.0,
+  "black": [],
+  "embedded_audio_mean_db": -32.7
+ },
+ "F10": {
+  "file": "public/flow/F10.mp4",
+  "probe": {
+   "ok": true,
+   "codec": "h264",
+   "w": 1280,
+   "h": 720,
+   "fps": 24.0,
+   "duration": 7.916667,
+   "audio": true
+  },
+  "issues": [],
+  "planned_max_source_s": 6.075,
+  "frozen_share": 0.0,
+  "black": [],
+  "embedded_audio_mean_db": -44.6
+ },
+ "F11": {
+  "file": "public/flow/F11.mp4",
+  "probe": {
+   "ok": true,
+   "codec": "h264",
+   "w": 1280,
+   "h": 720,
+   "fps": 24.0,
+   "duration": 7.916667,
+   "audio": true
+  },
+  "issues": [],
+  "planned_max_source_s": 7.6999,
+  "frozen_share": 0.0,
+  "black": [],
+  "embedded_audio_mean_db": -51.9
+ },
+ "F12": {
+  "file": "public/flow/F12.mp4",
+  "probe": {
+   "ok": true,
+   "codec": "h264",
+   "w": 1280,
+   "h": 720,
+   "fps": 24.0,
+   "duration": 7.916667,
+   "audio": true
+  },
+  "issues": [],
+  "planned_max_source_s": 7.675,
+  "frozen_share": 0.0,
+  "black": [],
+  "embedded_audio_mean_db": -31.1
+ },
+ "F13": {
+  "file": "public/flow/F13.mp4",
+  "probe": {
+   "ok": true,
+   "codec": "h264",
+   "w": 1280,
+   "h": 720,
+   "fps": 24.0,
+   "duration": 7.916667,
+   "audio": true
+  },
+  "issues": [],
+  "planned_max_source_s": 7.6996,
+  "frozen_share": 0.0,
+  "black": [],
+  "embedded_audio_mean_db": -33.8
+ }
+}

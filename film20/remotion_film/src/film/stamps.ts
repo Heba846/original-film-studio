@@ -1,0 +1,30 @@
+/** Short on-screen dates/times, keyed by the segment they open. Every value is stated in the
+ *  script or derived from the canon ledger's master timeline (original-film-studio
+ *  docs/adaptation/canon_ledger.md §1). Edit here, not inside components. */
+export const STAMPS: Record<string, string> = {
+  n002: 'FRI · OCT 3 · 4:10 AM',
+  n006: '3:05 AM',
+  n018: '3:40 AM',
+  n024: '4:08 AM',
+  n029: '4:16 AM',
+  n031: 'SAT · OCT 4 · 8:00 AM',
+  n036: 'SAT · 7:00 PM',
+  n051: 'SUN · OCT 5',
+  n084: 'MON · OCT 6',
+  n092: 'TUE · OCT 7',
+  n096: 'THU · OCT 16',
+  n098: 'FRI · 6:41 AM',
+  n101: 'SUN · OCT 19',
+  n109: 'MON · OCT 27',
+  n112: 'MON · NOV 3',
+  n119: 'MIDNIGHT',
+  n120: 'TUE · NOV 4 · 1:10 AM',
+  n124: 'DAWN',
+  n125: 'TUE · 7:00 PM',
+  n136: '12:52 PM',
+  n141: 'MON · NOV 10 · 11:31 PM',
+  n147: 'TUE · NOV 11 · 2:14 AM',
+  n148: 'THU · NOV 13',
+  n151: '2:00 PM',
+  n159: 'APRIL',
+};

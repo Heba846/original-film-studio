@@ -1,0 +1,125 @@
+{
+ "about": "TTS/recording inputs for the 4 pickups. Text is verbatim from Pickup_Lines_EN.md (verified equal to the EDL).",
+ "jobs": [
+  {
+   "segment_id": "n005",
+   "speaker": "heba",
+   "chapter": "CH00",
+   "text": "I went back inside. Three days later, I married him.",
+   "output": "public/pickups/n005_20min.wav",
+   "format": {
+    "container": "wav",
+    "channels": 1,
+    "sample_rate_hz": 24000,
+    "bits": 16
+   },
+   "target_lufs_integrated": -19,
+   "peak_ceiling_dbfs": -1,
+   "estimated_duration_s": 2.75,
+   "pause_after_s": 1.0,
+   "tone_reference_only": "public/audio/n005.wav",
+   "never_use_as_audio": "public/audio/n005.wav",
+   "context_before": {
+    "id": "n004",
+    "speaker": "lion",
+    "text": "Go back inside, Dr. Marlowe. You were never here."
+   },
+   "context_after": {
+    "id": "n006",
+    "speaker": "heba",
+    "text": "It started at 3:05 that morning, with a man walking into my ER holding his own arm closed. Half the waiting room went quiet for him. Denise at triage half stood up. The security guard found something interesting on his shoes. Everybody knew a rule about this man. Nobody had told me."
+   },
+   "edit_reason": "Remove trailer-style promises and the stay-to-the-end hook; keep the personal memory."
+  },
+  {
+   "segment_id": "n145",
+   "speaker": "heba",
+   "chapter": "CH16",
+   "text": "Reyes came through the front door two minutes later with a warrant. She arrested Carmine Brancato.",
+   "output": "public/pickups/n145_20min.wav",
+   "format": {
+    "container": "wav",
+    "channels": 1,
+    "sample_rate_hz": 24000,
+    "bits": 16
+   },
+   "target_lufs_integrated": -19,
+   "peak_ceiling_dbfs": -1,
+   "estimated_duration_s": 5.9,
+   "pause_after_s": 0.3,
+   "tone_reference_only": "public/audio/n145.wav",
+   "never_use_as_audio": "public/audio/n145.wav",
+   "context_before": {
+    "id": "n144",
+    "speaker": "heba",
+    "text": "Six guns turned. I stepped in front of him. \"Be quiet. It's my turn.\" I told Brancato what I'd tell a jury. His son was breathing because of me. If anyone fired, I would stand in a courtroom and say who. He said, \"In my house, we don't point guns at the doctor.\" He told them to put them down."
+   },
+   "context_after": {
+    "id": "n146",
+    "speaker": "lion",
+    "text": "I came in with nothing because you were in that room. That's the truth, Ivy."
+   },
+   "edit_reason": "Remove the lingering gunshot-recovery detail after deleting the port shooting subplot."
+  },
+  {
+   "segment_id": "n148",
+   "speaker": "heba",
+   "chapter": "CH17",
+   "text": "Thursday, third grand jury. I waived my privilege myself, that morning at six, for October third and nothing else. I told them what I saw. Two shots at 4:10. A man sliding down a silver car. A second gun near his open hand. Nico standing over him with a gun in his left hand, pointed at the floor, held wrong, and his right hand in my splint.",
+   "output": "public/pickups/n148_20min.wav",
+   "format": {
+    "container": "wav",
+    "channels": 1,
+    "sample_rate_hz": 24000,
+    "bits": 16
+   },
+   "target_lufs_integrated": -19,
+   "peak_ceiling_dbfs": -1,
+   "estimated_duration_s": 22.26,
+   "pause_after_s": 0.4,
+   "tone_reference_only": "public/audio/n148.wav",
+   "never_use_as_audio": "public/audio/n148.wav",
+   "context_before": {
+    "id": "n147",
+    "speaker": "lion",
+    "text": "Enzo turned himself in at two-fourteen Tuesday morning. In the visiting room I said, I'm sorry I made you carry it, and I cried in front of a guard. Then I went to Holloway about the gun, buried in the planter on Van Brunt Street under the geraniums. I told Feld to draw an uncontested divorce and leave it on the hall table. She gets to choose once with nothing on the table. That means I don't ask."
+   },
+   "context_after": {
+    "id": "n149",
+    "speaker": "heba",
+    "text": "\"Did you see who fired?\""
+   },
+   "edit_reason": "Remove a wedding-night text reference not established in this edition."
+  },
+  {
+   "segment_id": "n154",
+   "speaker": "heba",
+   "chapter": "CH18",
+   "text": "That evening there was a cream envelope on the hall table. Term Five. Three stapled pages. He'd signed it with his right hand, slowly, like a man writing in a foreign language. I put the papers down and went upstairs.",
+   "output": "public/pickups/n154_20min.wav",
+   "format": {
+    "container": "wav",
+    "channels": 1,
+    "sample_rate_hz": 24000,
+    "bits": 16
+   },
+   "target_lufs_integrated": -19,
+   "peak_ceiling_dbfs": -1,
+   "estimated_duration_s": 14.65,
+   "pause_after_s": 0.5,
+   "tone_reference_only": "public/audio/n154.wav",
+   "never_use_as_audio": "public/audio/n154.wav",
+   "context_before": {
+    "id": "n152",
+    "speaker": "lion",
+    "text": "Thank you, Dr. Marlowe."
+   },
+   "context_after": {
+    "id": "n155",
+    "speaker": "heba",
+    "text": "I didn't knock. \"Here's the thing about the divorce,\" I said. \"I haven't asked.\" I emptied my cardigan pockets onto his bed: Enzo's foil card, the pharmacy form, his note, Bell's envelope, a candy twist. Everything I'd carried through five weeks. I took the pen out of my hair. On page eleven, under his left-handed line, I wrote, She does. And under that: Term six. Nobody in this house is quiet anymore."
+   },
+   "edit_reason": "Remove an apology whose conflict is not established in the shorter cut."
+  }
+ ]
+}

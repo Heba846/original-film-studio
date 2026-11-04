@@ -1,0 +1,21 @@
+{
+  "duration":16,"fps":24,
+  "shots":[
+    {"file":"garage.mp4","start":0,"end":4,"sourceStart":0,"scale":1,"origin":"center center"},
+    {"file":"nico.mp4","start":4,"end":8,"sourceStart":0,"scale":1.12,"origin":"left center"},
+    {"file":"garage.mp4","start":8,"end":12.5,"sourceStart":0,"scale":1.12,"origin":"center center"},
+    {"file":"nico.mp4","start":12.5,"end":16,"sourceStart":0,"scale":1.12,"origin":"left center"}
+  ],
+  "audio":[
+    {"file":"n001.wav","start":0.4166666667,"end":2.5366666667},
+    {"file":"n002.wav","start":3.125,"end":11.685},
+    {"file":"n004.wav","start":12.5,"end":15.4280833333}
+  ],
+  "captions":[
+    {"start":0.4166666667,"end":2.5366666667,"text":"Two shots. That's all it took."},
+    {"start":3.125,"end":5.3,"text":"Ten past four that Friday morning,"},
+    {"start":5.3,"end":8.45,"text":"crouched behind my own bumper\nin a hospital garage,"},
+    {"start":8.45,"end":11.685,"text":"I learned what a life ending\nsounds like in concrete."},
+    {"start":12.5,"end":15.4280833333,"text":"Go back inside, Dr. Marlowe.\nYou were never here."}
+  ]
+}

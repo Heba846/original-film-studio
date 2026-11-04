@@ -1,0 +1,228 @@
+{
+ "method": "edit of existing recordings; no synthesis",
+ "threshold_db": -45.0,
+ "crossfade_s": 0.015,
+ "aligner": "PocketSphinx forced alignment, bundled en-us model (local)",
+ "lines": {
+  "n005": {
+   "source": "public/audio/n005.wav",
+   "source_sha256": "ed7d5063db6178ac343083a99ab4f51d5b945db4d71081b3623e79d6c005ac71",
+   "source_duration_s": 14.28,
+   "sample_rate": 24000,
+   "source_alignment_score": 0.06564697026698106,
+   "kept_ranges_s": [
+    [
+     0.0,
+     3.82
+    ]
+   ],
+   "joins_at_output_s": [],
+   "joined_pauses_s": [],
+   "kept_sentences": [
+    "I went back inside.",
+    "Three days later I married him."
+   ],
+   "removed_sentences": [
+    "This is how a Brooklyn don became my husband to keep me silent, and who was really on those stairs.",
+    "Stay to the end and you'll hear one sentence I swore to under oath, the one I had never said to him."
+   ],
+   "retained_text_written": "I went back inside. Three days later I married him.",
+   "boundary_notes": [
+    {
+     "run": [
+      "I went back inside.",
+      "Three days later I married him."
+     ],
+     "word_onset": 0.21,
+     "word_end": 3.46,
+     "decay_end": 3.47,
+     "next_breath_or_onset": 4.24
+    }
+   ],
+   "output": "public/pickups/n005_20min.wav",
+   "output_sha256": "474ff257c1995cc0835d6971010ce506c1e957439fdec163144e37c991f2a9fe",
+   "output_duration_s": 3.82,
+   "max_word_timing_drift_s": 0.02,
+   "realign_score": 0.4405378057170272,
+   "status": "ready (all checks passed)"
+  },
+  "n145": {
+   "source": "public/audio/n145.wav",
+   "source_sha256": "be649f1c291d0317c9ce92619159a460c16aff735fe3693d3da8b9ec6b934c2b",
+   "source_duration_s": 9.96,
+   "sample_rate": 24000,
+   "source_alignment_score": 0.12316931912409547,
+   "kept_ranges_s": [
+    [
+     0.0,
+     6.93
+    ]
+   ],
+   "joins_at_output_s": [],
+   "joined_pauses_s": [],
+   "kept_sentences": [
+    "Reyes came through the front door two minutes later with a warrant signed at six.",
+    "She arrested Carmine Brancato."
+   ],
+   "removed_sentences": [
+    "In the car, Nico was gray, pulse 110."
+   ],
+   "retained_text_written": "Reyes came through the front door two minutes later with a warrant signed at six. She arrested Carmine Brancato.",
+   "boundary_notes": [
+    {
+     "run": [
+      "Reyes came through the front door two minutes later with a warrant signed at six.",
+      "She arrested Carmine Brancato."
+     ],
+     "word_onset": 0.48,
+     "word_end": 6.58,
+     "decay_end": 6.58,
+     "next_breath_or_onset": 7.01
+    }
+   ],
+   "output": "public/pickups/n145_20min.wav",
+   "output_sha256": "f4a5e614ba05d40075fac65131568dd3671c18a75b6ba871941eab27298e6b31",
+   "output_duration_s": 6.93,
+   "max_word_timing_drift_s": 0.01,
+   "realign_score": 0.2771113593475875,
+   "status": "ready (all checks passed)"
+  },
+  "n148": {
+   "source": "public/audio/n148.wav",
+   "source_sha256": "9bb2d01fd1f6b341fae37b09f4f1c7e5eaef375d4ea6122362d8084f667c19bf",
+   "source_duration_s": 26.19,
+   "sample_rate": 24000,
+   "source_alignment_score": 0.00587914940164407,
+   "kept_ranges_s": [
+    [
+     0.0,
+     8.08
+    ],
+    [
+     11.64,
+     26.19
+    ]
+   ],
+   "joins_at_output_s": [
+    8.065
+   ],
+   "joined_pauses_s": [
+    0.375
+   ],
+   "kept_sentences": [
+    "Thursday, third grand jury.",
+    "I waived my privilege myself, that morning at six, for October third and nothing else.",
+    "I told them what I saw.",
+    "Two shots at four ten.",
+    "A man sliding down a silver car.",
+    "A second gun near his open hand.",
+    "Nico standing over him with a gun in his left hand, pointed at the floor, held wrong, and his right hand in my splint."
+   ],
+   "removed_sentences": [
+    "Reyes's first text on my wedding night was true: it was mine."
+   ],
+   "retained_text_written": "Thursday, third grand jury. I waived my privilege myself, that morning at six, for October third and nothing else. I told them what I saw. Two shots at 4:10. A man sliding down a silver car. A second gun near his open hand. Nico standing over him with a gun in his left hand, pointed at the floor, held wrong, and his right hand in my splint.",
+   "boundary_notes": [
+    {
+     "run": [
+      "Thursday, third grand jury.",
+      "I waived my privilege myself, that morning at six, for October third and nothing else."
+     ],
+     "word_onset": 0.2,
+     "word_end": 7.74,
+     "decay_end": 7.74,
+     "next_breath_or_onset": 8.11
+    },
+    {
+     "run": [
+      "I told them what I saw.",
+      "Two shots at four ten.",
+      "A man sliding down a silver car.",
+      "A second gun near his open hand.",
+      "Nico standing over him with a gun in his left hand, pointed at the floor, held wrong, and his right hand in my splint."
+     ],
+     "word_onset": 11.69,
+     "word_end": 26.19,
+     "decay_end": 26.19,
+     "next_breath_or_onset": 26.19
+    }
+   ],
+   "output": "public/pickups/n148_20min.wav",
+   "output_sha256": "a0c24892827b4130a46b38e7fba453b5ac8f23b9130a68437b3b098cfccf4e1c",
+   "output_duration_s": 22.615,
+   "max_word_timing_drift_s": 0.015,
+   "realign_score": 0.011749109778284823,
+   "status": "ready (all checks passed)"
+  },
+  "n154": {
+   "source": "public/audio/n154.wav",
+   "source_sha256": "a9f3dad9f9b1a00e36b1394d1cf65c2ac955b660837a4b90fba8d6fdbefcbfdb",
+   "source_duration_s": 18.31,
+   "sample_rate": 24000,
+   "source_alignment_score": 0.03391388347909236,
+   "kept_ranges_s": [
+    [
+     0.0,
+     12.06
+    ],
+    [
+     15.91,
+     18.31
+    ]
+   ],
+   "joins_at_output_s": [
+    12.045
+   ],
+   "joined_pauses_s": [
+    0.385
+   ],
+   "kept_sentences": [
+    "That evening there was a cream envelope on the hall table.",
+    "Term Five.",
+    "Three stapled pages.",
+    "He'd signed it with his right hand, slowly, like a man writing in a foreign language.",
+    "I put the papers down and went upstairs."
+   ],
+   "removed_sentences": [
+    "Tommy knocked twenty minutes later and apologized for blaming me."
+   ],
+   "retained_text_written": "That evening there was a cream envelope on the hall table. Term Five. Three stapled pages. He'd signed it with his right hand, slowly, like a man writing in a foreign language. I put the papers down and went upstairs.",
+   "boundary_notes": [
+    {
+     "run": [
+      "That evening there was a cream envelope on the hall table.",
+      "Term Five.",
+      "Three stapled pages.",
+      "He'd signed it with his right hand, slowly, like a man writing in a foreign language."
+     ],
+     "word_onset": 0.55,
+     "word_end": 11.71,
+     "decay_end": 11.71,
+     "next_breath_or_onset": 12.16
+    },
+    {
+     "run": [
+      "I put the papers down and went upstairs."
+     ],
+     "word_onset": 15.96,
+     "word_end": 18.11,
+     "decay_end": 18.11,
+     "next_breath_or_onset": 18.31
+    }
+   ],
+   "output": "public/pickups/n154_20min.wav",
+   "output_sha256": "9ff67097ec20cb594ac1b87367ecc5e7fda9df0cfca4b889109204d4875f37df",
+   "output_duration_s": 14.445,
+   "max_word_timing_drift_s": 0.005,
+   "realign_score": 0.0731042182480897,
+   "status": "ready (all checks passed)"
+  }
+ },
+ "ready": [
+  "n005",
+  "n145",
+  "n148",
+  "n154"
+ ],
+ "blockers": []
+}
