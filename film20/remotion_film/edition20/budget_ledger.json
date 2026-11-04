@@ -480,6 +480,16 @@
    "credits_charged": 0,
    "result_files": [],
    "verdict": "author: generating at 0 credits (free); not delivered"
+  },
+  {
+   "date": "2026-11-04",
+   "job_id": "F59",
+   "pool": "primary",
+   "model": "Veo 3.1 Lite",
+   "outputs": 1,
+   "credits_charged": 10,
+   "result_files": [],
+   "verdict": "F59_TEST submitted (author) from approved STILL_F59_CHECK as first frame; not delivered"
   }
  ],
  "plan_version": 2,
@@ -626,7 +636,8 @@
  "workflow": {
   "rule": "STILL FIRST: every remaining shot = free correct-composition still -> author visual review -> ONE 10-credit Veo 3.1 Lite animation using the approved still as the literal first frame. Never use the full hospital.png as a video start frame (it clones the ER background).",
   "authorized_videos_now": [
-   "F06_R1 (done)"
+   "F06_R1 (done)",
+   "F59_TEST (submitted)"
   ],
   "note": "No other video generation authorized until the author approves stills."
  },
