@@ -120,6 +120,80 @@ def cmd_tts(a):
     return 0 if res["ok"] else 1
 
 
+def cmd_voices(a):
+    from . import batch
+    p = proj.load(_pdir(a))
+    ids = [s["id"] for s in p["speakers"]]
+    res = batch.prep_voices(ids)
+    print(json.dumps(res, indent=2))
+    return 0 if all("ref" in v for v in res.values()) else 1
+
+
+def cmd_ttsbatch(a):
+    from . import batch, tts
+    d = _pdir(a)
+    p = proj.load(d)
+    try:
+        res = batch.render_all(p, d, engine=a.engine, stock=a.stock, overwrite=a.overwrite,
+                               only=set(a.segments.split(",")) if a.segments else None, limit=a.limit,
+                               stand_in_ok=a.stand_in)
+    except tts.TTSError as e:
+        print("TTS batch not run:", e)
+        return 1
+    proj.save(d, p)
+    print(json.dumps(res, indent=2))
+    return 0 if res["ok"] else 1
+
+
+def cmd_clips(a):
+    from . import clips
+    d = _pdir(a)
+    p = proj.load(d)
+    nar_pl = nar.plan(p, d)
+    p = nar.sync_shot_durations(p, nar_pl)["project"]
+    rep = clips.coverage_report(p, d)
+    print(f"{'shot':6} {'need s':>7} {'clips':>5} {'stills':>6} {'clip s':>7} {'speed':>6} {'reused s':>9} {'missing s':>9} {'longest still':>14}")
+    for r in rep["shots"]:
+        print(f"{r['shot']:6} {r['duration']:7.1f} {r['clips']:5} {r['stills']:6} {r['clip_seconds']:7.1f} {r['speed']:6.2f} "
+              f"{r['reused_seconds']:9.1f} {r['missing_seconds']:9.1f} {r['longest_still']:14.1f}")
+    print(f"\nFilm {rep['total_seconds']:.0f}s | unique footage placed {rep['unique_seconds']:.0f}s | "
+          f"repeated {rep['reused_seconds']:.0f}s | uncovered {rep['missing_seconds']:.0f}s | "
+          f"shots with NO footage at all: {len(rep['shots_without_footage'])}")
+    if not nar_pl["all_measured"]:
+        print("NOTE: narration timing is ESTIMATED (not every segment has audio yet).")
+    return 0
+
+
+def cmd_stills(a):
+    from . import stills
+    d = _pdir(a)
+    p = proj.load(d)
+    p = nar.sync_shot_durations(p, nar.plan(p, d))["project"]
+    out = stills.write_jobs(p, d)
+    j = json.loads(out.read_text(encoding="utf-8"))
+    print(f"{j['total_images']} images planned for {len(j['jobs'])} shots -> {out}")
+    return 0
+
+
+def cmd_build(a):
+    from . import build as bd
+    d = _pdir(a)
+    p = proj.load(d)
+    try:
+        rep = bd.build(p, d, out_name=a.name, progress=lambda s, f: print(f"  [{f:4.0%}] {s}"),
+                       music=a.music, fps=a.fps, shot_transition=a.shot_transition, burn=not a.soft_captions)
+    except bd.BuildError as e:
+        print("BUILD REFUSED:", e)
+        return 1
+    except rn.ValidationFailed as e:
+        for i in e.report.errors:
+            print("[ERROR]", i.message)
+        return 1
+    print(json.dumps({k: v for k, v in rep.items() if k != "chapters"}, indent=2))
+    print(open(rep["chapters_file"], encoding="utf-8").read())
+    return 0
+
+
 def cmd_pilot(a):
     from . import pilot
     if a.dryrun:
@@ -181,6 +255,20 @@ def main(argv=None):
     s = sub.add_parser("tts"); s.add_argument("action", choices=["status", "generate", "download"])
     s.add_argument("project", nargs="?", default="pilot_married_to_the_don"); s.add_argument("--segments")
     s.add_argument("--overwrite", action="store_true"); s.add_argument("--yes", action="store_true"); s.set_defaults(fn=cmd_tts)
+    s = sub.add_parser("voices"); s.add_argument("project", nargs="?", default="married_to_the_don_full_film")
+    s.set_defaults(fn=cmd_voices)
+    s = sub.add_parser("ttsbatch", aliases=["tts-batch"]); s.add_argument("project", nargs="?", default="married_to_the_don_full_film")
+    s.add_argument("--engine", choices=["chatterbox", "espeak"], default="chatterbox")
+    s.add_argument("--stock", action="store_true", help="chatterbox built-in voice, no cloning")
+    s.add_argument("--stand-in", action="store_true", help="allow the robotic espeak stand-in (pipeline tests only)")
+    s.add_argument("--segments"); s.add_argument("--limit", type=int); s.add_argument("--overwrite", action="store_true")
+    s.set_defaults(fn=cmd_ttsbatch)
+    s = sub.add_parser("clips"); s.add_argument("project", nargs="?", default="married_to_the_don_full_film"); s.set_defaults(fn=cmd_clips)
+    s = sub.add_parser("stills"); s.add_argument("project", nargs="?", default="married_to_the_don_full_film"); s.set_defaults(fn=cmd_stills)
+    s = sub.add_parser("build"); s.add_argument("project", nargs="?", default="married_to_the_don_full_film")
+    s.add_argument("--name", default="film.mp4"); s.add_argument("--music"); s.add_argument("--fps", type=int)
+    s.add_argument("--shot-transition", choices=["cut", "fade"]); s.add_argument("--soft-captions", action="store_true")
+    s.set_defaults(fn=cmd_build)
     s = sub.add_parser("pilot"); s.add_argument("--force", action="store_true")
     s.add_argument("--dryrun", action="store_true", help="synthetic tones+art check of assembly; not voices"); s.set_defaults(fn=cmd_pilot)
     s = sub.add_parser("adapt"); s.add_argument("action", choices=["build", "stats"]); s.set_defaults(fn=cmd_adapt)

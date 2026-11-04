@@ -32,7 +32,7 @@ SHOT_DEFAULTS = {
     "id": "", "title": "", "kind": "image", "asset": "", "duration": 5.0,
     "trim_start": 0.0, "motion": "none", "transition": "cut", "characters": [],
     "location": "", "action": "", "camera": "", "dialogue": "", "continuity_notes": "",
-    "segments": [], "negative_extra": "", "locks": "",
+    "segments": [], "clips": [], "negative_extra": "", "locks": "",
 }
 SPEAKER_DEFAULTS = {"id": "", "display_name": "", "role": "", "consent_confirmed": False,
                     "consent_statement": "", "reference_audio": "", "reference_transcript": ""}

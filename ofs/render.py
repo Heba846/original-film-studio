@@ -12,7 +12,7 @@ import subprocess
 import tempfile
 from pathlib import Path
 
-from . import __version__, media, narration as nar, project as proj, validate as val
+from . import __version__, clips as clips_mod, media, narration as nar, project as proj, validate as val
 
 W, H = 1920, 1080
 FADE = 0.3
@@ -106,7 +106,16 @@ def render(project: dict, base, out_path, progress=None) -> dict:
         for i, s in enumerate(shots):
             cb(f"shot {s['id']} ({i + 1}/{len(shots)})", i / (len(shots) + 1))
             name = f"clip_{i:03}.mp4"
-            _run(shot_command(ffmpeg, s, proj.resolve(base, s["asset"]), tmp / name, fps, crf, preset), cwd=tmp)
+            sc = clips_mod.discover(s, base) if s["kind"] == "video" else []
+            st = clips_mod.discover_stills(s, base) if s["kind"] == "video" else []
+            if sc or st:
+                durs = [float(media.probe(p)["duration"] or 0) for p in sc]
+                splan = clips_mod.plan_shot_mixed(float(s["duration"]), durs, len(st))
+                if not splan["covered"]:
+                    raise RenderError(f"shot {s['id']}: footage cannot cover {s['duration']}s")
+                _run(clips_mod.shot_command(ffmpeg, s, sc, splan, tmp / name, fps, crf, preset, still_paths=st), cwd=tmp)
+            else:
+                _run(shot_command(ffmpeg, s, proj.resolve(base, s["asset"]), tmp / name, fps, crf, preset), cwd=tmp)
             names.append(name)
         (tmp / "list.txt").write_text("".join(f"file '{n}'\n" for n in names), encoding="utf-8")
         cb("joining shots", len(shots) / (len(shots) + 1))
