@@ -203,12 +203,13 @@ def validate(project: dict, base, probe_fn=media.probe, check_tools: bool = True
 
         asset = s["asset"]
         shot_clips = clips_mod.discover(s, base) if kind == "video" else []
-        if shot_clips:
-            for cp in shot_clips:
+        shot_stills = clips_mod.discover_stills(s, base) if kind == "video" else []
+        if shot_clips or shot_stills:
+            for cp in shot_clips + shot_stills:
                 if not cp.is_file():
                     r.add("error", "missing_file", f"Shot {sid}: clip not found: {cp}", sid)
                     continue
-                cinfo = probe(cp, "unreadable_media", f"Shot {sid} clip {cp.name}", sid)
+                cinfo = probe(cp, "unreadable_media", f"Shot {sid} file {cp.name}", sid)
                 if cinfo and not cinfo["has_video"]:
                     r.add("error", "no_video_stream", f"Shot {sid}: {cp.name} has no picture.", sid)
             pl_ = None
@@ -219,7 +220,10 @@ def validate(project: dict, base, probe_fn=media.probe, check_tools: bool = True
                         durs_.append(float(media.probe(cp)["duration"] or 0))
                     except Exception:  # noqa: BLE001
                         pass
-                pl_ = clips_mod.plan_shot(d, durs_)
+                pl_ = clips_mod.plan_shot_mixed(d, durs_, len(shot_stills))
+            if pl_ and pl_.get("longest_still", 0) > 14:
+                r.add("warning", "long_static_still",
+                      f"Shot {sid}: a still stays on screen {pl_['longest_still']:.0f}s. Add more stills for this shot.", sid)
             if pl_ and pl_["reused_seconds"] > 0.5:
                 r.add("warning", "clips_reused",
                       f"Shot {sid}: {pl_['reused_seconds']:.0f}s of {d:g}s repeats footage "

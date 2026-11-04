@@ -31,7 +31,7 @@ def prepare(project: dict, base, segments_json=DEFAULT_SEGMENTS_JSON, music=None
     sync = nar.sync_shot_durations(p, pl)
     p = sync["project"]
     for s in p["shots"]:
-        if clips_mod.discover(s, base):
+        if clips_mod.discover(s, base) or clips_mod.discover_stills(s, base):
             s["kind"] = "video"
         if shot_transition:
             s["transition"] = shot_transition
@@ -39,7 +39,7 @@ def prepare(project: dict, base, segments_json=DEFAULT_SEGMENTS_JSON, music=None
         p["render"]["fps"] = int(fps)
     cov = clips_mod.coverage_report(p, base)
     unfilled = [s["id"] for s, r in zip(p["shots"], cov["shots"])
-                if r["clips"] == 0 and not (s["asset"] and proj.resolve(base, s["asset"]).is_file())]
+                if r["clips"] == 0 and r["stills"] == 0 and not (s["asset"] and proj.resolve(base, s["asset"]).is_file())]
     cues = cap.build_cues(p, pl)
     srt_path = cap.write_srt(cues, outdir / "film.srt")
     seg_ch = cap.load_seg_chapters(Path(segments_json) if Path(segments_json).is_absolute() else Path.cwd() / segments_json)
@@ -58,7 +58,7 @@ def build(project: dict, base, out_name="film.mp4", progress=None, **kw) -> dict
     ctx = prepare(project, base, **kw)
     if ctx["unfilled"]:
         raise BuildError("no clips (or still) for shots: " + ", ".join(ctx["unfilled"]) +
-                         ". Put 8 s clips in media/clips/<shot>.mp4 (or <shot>_2.mp4, or media/clips/<shot>/*.mp4).")
+                         ". Put 8 s clips in media/clips/<shot>.mp4 and/or images in media/stills/<shot>_1.png, <shot>_2.png ...")
     p = ctx["project"]
     out = ctx["outdir"] / out_name
     res = rn.render(p, Path(base), out, progress)

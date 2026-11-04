@@ -7,6 +7,11 @@ Rules (hard):
   framing so the reuse is less obvious).
 - If a shot cannot be covered, the planner says how many seconds are missing; it never pads.
 
+Still images (media/stills/<shot>_1.png, <shot>_2.jpg, or media/stills/<shot>/*.png) are used the same way:
+a shot with ONLY stills is split into equal beats, each with its own Ken Burns move (zoom in / pan / zoom out /
+pan back) and joined by crossfades. A shot with clips AND stills plays the clips once (no repeats, no slow-down)
+and then fills the rest with stills.
+
 Clip discovery for shot `s05` (first match wins):
   1. shot["clips"] = ["media/clips/foo.mp4", ...]   (explicit, in order)
   2. media/clips/s05/*.mp4                          (a folder per shot)
@@ -30,20 +35,28 @@ def _natural(p: Path):
     return [int(t) if t.isdigit() else t.lower() for t in re.split(r"(\d+)", p.name)]
 
 
-def discover(shot: dict, base) -> list[Path]:
+def _discover(shot: dict, base, sub: str, exts, explicit_key=None) -> list[Path]:
     base = Path(base)
-    if shot.get("clips"):
-        return [proj.resolve(base, c) for c in shot["clips"]]
-    root = base / "media" / "clips"
+    if explicit_key and shot.get(explicit_key):
+        return [proj.resolve(base, c) for c in shot[explicit_key]]
+    root = base / "media" / sub
     sid = shot["id"]
     d = root / sid
     if d.is_dir():
-        return sorted((p for p in d.iterdir() if p.suffix.lower() in media.VIDEO_EXT), key=_natural)
+        return sorted((p for p in d.iterdir() if p.suffix.lower() in exts), key=_natural)
     if not root.is_dir():
         return []
     pat = re.compile(r"^" + re.escape(sid) + r"(?:$|[_\-.])", re.IGNORECASE)
     return sorted((p for p in root.iterdir()
-                   if p.is_file() and p.suffix.lower() in media.VIDEO_EXT and pat.match(p.name)), key=_natural)
+                   if p.is_file() and p.suffix.lower() in exts and pat.match(p.name)), key=_natural)
+
+
+def discover(shot: dict, base) -> list[Path]:
+    return _discover(shot, base, "clips", media.VIDEO_EXT, "clips")
+
+
+def discover_stills(shot: dict, base) -> list[Path]:
+    return _discover(shot, base, "stills", media.IMAGE_EXT)
 
 
 def plan_shot(duration: float, clip_durs: list[float], xf: float = XFADE, max_slow: float = MAX_SLOW) -> dict:
@@ -96,6 +109,55 @@ def plan_shot(duration: float, clip_durs: list[float], xf: float = XFADE, max_sl
     return res
 
 
+STILL_MOTIONS = ["zoom_in", "pan_right", "zoom_out", "pan_left"]
+
+
+def plan_shot_mixed(duration: float, clip_durs: list[float], n_stills: int, xf: float = XFADE) -> dict:
+    """Plan a shot from video clips and/or still images. Pieces carry kind 'video' | 'still'.
+
+    - only stills: equal beats, each with its own Ken Burns move
+    - clips + stills: clips play once at normal speed, stills fill the remainder (no repeats, no slow-down)
+    - only clips (or clips already cover the shot): plan_shot()"""
+    clip_durs = [float(c) for c in clip_durs if c and c > 0.2]
+    if n_stills <= 0:
+        return plan_shot(duration, clip_durs, xf)
+    if clip_durs and sum(clip_durs) - (len(clip_durs) - 1) * xf >= duration:
+        return plan_shot(duration, clip_durs, xf)
+    pieces, k = [], len(clip_durs)
+    for i, c in enumerate(clip_durs):
+        pieces.append({"kind": "video", "clip": i, "src_start": 0.0, "src_len": c, "out_len": c, "speed": 1.0,
+                       "pass_no": 0})
+    n = n_stills
+    while n >= 1:
+        beat = (duration - sum(clip_durs) + (k + n - 1) * xf) / n
+        if beat >= MIN_PIECE:
+            break
+        n -= 1
+    if n < 1:   # remainder too short for even one still: let the clips stretch/reframe instead
+        return plan_shot(duration, clip_durs, xf) if clip_durs else {
+            "pieces": [], "covered": False, "missing_seconds": round(duration, 2), "speed": 1.0, "slowed": False,
+            "unique_seconds": 0.0, "reused_seconds": 0.0}
+    for j in range(n):
+        pieces.append({"kind": "still", "clip": j, "src_start": 0.0, "src_len": beat, "out_len": round(beat, 4),
+                       "speed": 1.0, "pass_no": 0, "motion": STILL_MOTIONS[j % len(STILL_MOTIONS)]})
+    static = max((p["out_len"] for p in pieces if p["kind"] == "still"), default=0.0)
+    return {"pieces": pieces, "speed": 1.0, "slowed": False, "covered": True, "unique_seconds": round(duration, 2),
+            "reused_seconds": 0.0, "missing_seconds": 0.0, "stills_used": n, "longest_still": round(static, 2)}
+
+
+def _still_chain(n, pc, fps):
+    dur = pc["out_len"]
+    frames = max(1, round(dur * fps))
+    m = pc.get("motion", "zoom_in")
+    z = {"zoom_in": (f"1+0.15*on/{frames}", "iw/2-(iw/zoom/2)"),
+         "zoom_out": (f"1.15-0.15*on/{frames}", "iw/2-(iw/zoom/2)"),
+         "pan_right": ("1.15", f"(iw-iw/zoom)*on/{frames}"),
+         "pan_left": ("1.15", f"(iw-iw/zoom)*(1-on/{frames})")}[m]
+    return (f"[{n}:v]scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},setsar=1,"
+            f"scale={W * 2}:{H * 2},zoompan=z='{z[0]}':x='{z[1]}':y='ih/2-(ih/zoom/2)':d={frames}:s={W}x{H}:fps={fps},"
+            f"format=yuv420p,trim=duration={dur:.4f},setpts=PTS-STARTPTS[p{n}]")
+
+
 def _fit(zoom: float = 1.0) -> str:
     f = (f"scale={W}:{H}:force_original_aspect_ratio=decrease,pad={W}:{H}:(ow-iw)/2:(oh-ih)/2:color=black,setsar=1")
     if zoom > 1.0:
@@ -103,13 +165,17 @@ def _fit(zoom: float = 1.0) -> str:
     return f
 
 
-def shot_command(ffmpeg, shot, clip_paths, plan, out, fps, crf, preset) -> list:
+def shot_command(ffmpeg, shot, clip_paths, plan, out, fps, crf, preset, still_paths=()) -> list:
     """One ffmpeg command: trimmed pieces -> xfade chain -> exactly the shot duration, no freezing."""
     dur = float(shot["duration"])
     pieces = plan["pieces"]
     cmd = [ffmpeg, "-y", "-hide_banner", "-loglevel", "error"]
     chains = []
     for n, pc in enumerate(pieces):
+        if pc.get("kind") == "still":
+            cmd += ["-i", str(still_paths[pc["clip"]])]
+            chains.append(_still_chain(n, pc, fps))
+            continue
         cmd += ["-ss", f"{pc['src_start']}", "-t", f"{pc['src_len'] + 0.1:.3f}", "-i", str(clip_paths[pc["clip"]])]
         zoom = PUNCH[pc["pass_no"] % len(PUNCH)]
         chains.append(f"[{n}:v]setpts=(PTS-STARTPTS)/{pc['speed']:.5f},fps={fps},{_fit(zoom)},format=yuv420p,"
@@ -131,11 +197,12 @@ def shot_command(ffmpeg, shot, clip_paths, plan, out, fps, crf, preset) -> list:
 
 
 def coverage_report(project: dict, base, probe_fn=media.probe) -> dict:
-    """Per-shot clip coverage using the shot durations currently in the project."""
+    """Per-shot coverage (clips and stills) using the shot durations currently in the project."""
     project = proj.normalize(project)
     rows = []
     for s in project["shots"]:
         paths = discover(s, base)
+        stills = discover_stills(s, base)
         durs = []
         for p in paths:
             try:
@@ -143,14 +210,15 @@ def coverage_report(project: dict, base, probe_fn=media.probe) -> dict:
             except Exception:  # noqa: BLE001
                 durs.append(0.0)
         d = float(s["duration"])
-        pl = plan_shot(d, durs)
-        rows.append({"shot": s["id"], "duration": round(d, 2), "clips": len(paths),
+        pl = plan_shot_mixed(d, durs, len(stills))
+        rows.append({"shot": s["id"], "duration": round(d, 2), "clips": len(paths), "stills": len(stills),
                      "clip_seconds": round(sum(durs), 1), "covered": pl["covered"], "speed": pl["speed"],
                      "unique_seconds": pl["unique_seconds"], "reused_seconds": pl["reused_seconds"],
-                     "missing_seconds": pl["missing_seconds"],
+                     "missing_seconds": pl["missing_seconds"], "longest_still": pl.get("longest_still", 0.0),
                      "clips_for_all_unique": int(-(-(d + 0.5) // 7.5))})
     return {"shots": rows, "total_seconds": round(sum(r["duration"] for r in rows), 1),
             "unique_seconds": round(sum(r["unique_seconds"] for r in rows), 1),
             "reused_seconds": round(sum(r["reused_seconds"] for r in rows), 1),
             "missing_seconds": round(sum(r["missing_seconds"] for r in rows), 1),
-            "shots_without_clips": [r["shot"] for r in rows if r["clips"] == 0]}
+            "shots_without_footage": [r["shot"] for r in rows if r["clips"] == 0 and r["stills"] == 0],
+            "shots_without_clips": [r["shot"] for r in rows if r["clips"] == 0 and r["stills"] == 0]}

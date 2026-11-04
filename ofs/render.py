@@ -107,12 +107,13 @@ def render(project: dict, base, out_path, progress=None) -> dict:
             cb(f"shot {s['id']} ({i + 1}/{len(shots)})", i / (len(shots) + 1))
             name = f"clip_{i:03}.mp4"
             sc = clips_mod.discover(s, base) if s["kind"] == "video" else []
-            if sc:
+            st = clips_mod.discover_stills(s, base) if s["kind"] == "video" else []
+            if sc or st:
                 durs = [float(media.probe(p)["duration"] or 0) for p in sc]
-                splan = clips_mod.plan_shot(float(s["duration"]), durs)
+                splan = clips_mod.plan_shot_mixed(float(s["duration"]), durs, len(st))
                 if not splan["covered"]:
-                    raise RenderError(f"shot {s['id']}: clips cannot cover {s['duration']}s")
-                _run(clips_mod.shot_command(ffmpeg, s, sc, splan, tmp / name, fps, crf, preset), cwd=tmp)
+                    raise RenderError(f"shot {s['id']}: footage cannot cover {s['duration']}s")
+                _run(clips_mod.shot_command(ffmpeg, s, sc, splan, tmp / name, fps, crf, preset, still_paths=st), cwd=tmp)
             else:
                 _run(shot_command(ffmpeg, s, proj.resolve(base, s["asset"]), tmp / name, fps, crf, preset), cwd=tmp)
             names.append(name)

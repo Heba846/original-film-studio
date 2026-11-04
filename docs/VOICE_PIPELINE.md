@@ -74,3 +74,12 @@ laptop struggles (`preset: medium` in `project.json`; use `veryfast` for drafts)
 3. The ~100 Veo clips named by shot.
 4. Optional music bed. Your call on `exaggeration` after listening.
 - Colab notebook: `notebooks/colab_voice_cloning.ipynb` (open in Colab, click through the cells).
+
+## Cheapest path that finishes the film: automatic stills + a few video clips
+Manual 8 s clips for ~100 shots is not practical, so the build also accepts still images.
+1. `python -m ofs stills married_to_the_don_full_film` writes `output/stills_jobs.json`: one image per ~9 s of narration (about 190 images for the whole film), each beat with a different camera angle.
+2. Open `notebooks/colab_stills.ipynb` on Colab (T4 GPU). It generates every image with SDXL base (commercial use allowed), is resumable, and downloads `stills.zip`. **Untested on Colab**; the character look can drift between images, so judge the first 4 test images before running all.
+3. Unzip into `projects/married_to_the_don_full_film/media/stills/` (names `s05_1.png`, `s05_2.png` ...).
+4. Optional: add a few real Veo clips for the key moments (`media/clips/s05.mp4`). A shot with clips and stills plays the clips once at normal speed and fills the rest with stills; a shot with only stills is split into equal beats with different Ken Burns moves and crossfades.
+5. `python -m ofs clips ...` shows coverage; `python -m ofs build ...` renders the film.
+Tested for real here: all 62 shots from 191 synthetic stills (see PR). Not tested: SDXL generation itself.

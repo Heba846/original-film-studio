@@ -152,15 +152,26 @@ def cmd_clips(a):
     nar_pl = nar.plan(p, d)
     p = nar.sync_shot_durations(p, nar_pl)["project"]
     rep = clips.coverage_report(p, d)
-    print(f"{'shot':6} {'need s':>7} {'clips':>5} {'clip s':>7} {'speed':>6} {'reused s':>9} {'missing s':>9} {'clips for all-unique':>21}")
+    print(f"{'shot':6} {'need s':>7} {'clips':>5} {'stills':>6} {'clip s':>7} {'speed':>6} {'reused s':>9} {'missing s':>9} {'longest still':>14}")
     for r in rep["shots"]:
-        print(f"{r['shot']:6} {r['duration']:7.1f} {r['clips']:5} {r['clip_seconds']:7.1f} {r['speed']:6.2f} "
-              f"{r['reused_seconds']:9.1f} {r['missing_seconds']:9.1f} {r['clips_for_all_unique']:21}")
+        print(f"{r['shot']:6} {r['duration']:7.1f} {r['clips']:5} {r['stills']:6} {r['clip_seconds']:7.1f} {r['speed']:6.2f} "
+              f"{r['reused_seconds']:9.1f} {r['missing_seconds']:9.1f} {r['longest_still']:14.1f}")
     print(f"\nFilm {rep['total_seconds']:.0f}s | unique footage placed {rep['unique_seconds']:.0f}s | "
           f"repeated {rep['reused_seconds']:.0f}s | uncovered {rep['missing_seconds']:.0f}s | "
-          f"shots with no clips: {len(rep['shots_without_clips'])}")
+          f"shots with NO footage at all: {len(rep['shots_without_footage'])}")
     if not nar_pl["all_measured"]:
         print("NOTE: narration timing is ESTIMATED (not every segment has audio yet).")
+    return 0
+
+
+def cmd_stills(a):
+    from . import stills
+    d = _pdir(a)
+    p = proj.load(d)
+    p = nar.sync_shot_durations(p, nar.plan(p, d))["project"]
+    out = stills.write_jobs(p, d)
+    j = json.loads(out.read_text(encoding="utf-8"))
+    print(f"{j['total_images']} images planned for {len(j['jobs'])} shots -> {out}")
     return 0
 
 
@@ -253,6 +264,7 @@ def main(argv=None):
     s.add_argument("--segments"); s.add_argument("--limit", type=int); s.add_argument("--overwrite", action="store_true")
     s.set_defaults(fn=cmd_ttsbatch)
     s = sub.add_parser("clips"); s.add_argument("project", nargs="?", default="married_to_the_don_full_film"); s.set_defaults(fn=cmd_clips)
+    s = sub.add_parser("stills"); s.add_argument("project", nargs="?", default="married_to_the_don_full_film"); s.set_defaults(fn=cmd_stills)
     s = sub.add_parser("build"); s.add_argument("project", nargs="?", default="married_to_the_don_full_film")
     s.add_argument("--name", default="film.mp4"); s.add_argument("--music"); s.add_argument("--fps", type=int)
     s.add_argument("--shot-transition", choices=["cut", "fade"]); s.add_argument("--soft-captions", action="store_true")
