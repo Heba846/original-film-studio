@@ -369,6 +369,11 @@
      "date": "2026-11-04",
      "status": "approved",
      "note": "F06_R1 (retake 1): garage, over Ivy's shoulder (red bun, one pen, navy shoulder), Nico STANDING by a silver sedan at the steel stairwell door, clean face (no bandage), charcoal suit over black shirt, white plaster on anatomical RIGHT forearm, eye contact 0.3-2.4 s; 3.2-5.2 s reaches for the stairwell door with his left hand (fits 'Go back inside'). Notes: left hand holds no gun (check against F03/F05 when delivered); sedan side-on not nose-out; scar not legible at this size. | usable range 0.2-7.7 s"
+    },
+    {
+     "date": "2026-11-04",
+     "status": "approved (ranges refined)",
+     "note": "author: he gestures/touches the stairwell door ~3-5 s. Usable: 0.2-2.4 s (eye contact, n004 'Go back inside') and 5.6-7.7 s (calm, memory in n034). Excluded 2.4-5.6 s."
     }
    ],
    "approved_range": [
@@ -379,7 +384,13 @@
     "date": "2026-11-04",
     "method": "4 fps visual contact sheet (32 frames) + 8 fps swap-signature scan (red hair + navy right of centre): 0 hits",
     "result": "PASS: back of the female red-haired doctor's head LEFT, standing male dark-haired man RIGHT in all 32 frames; male face matches REF_NICO_FACE_ONLY; no swap/morph"
-   }
+   },
+   "excluded_ranges": [
+    [
+     2.4,
+     5.6
+    ]
+   ]
   },
   {
    "shot_id": "F07",
@@ -1723,14 +1734,22 @@
   "n034": [
    {
     "shot": "CODE_SUBPOENA",
-    "secs": 4.0,
+    "secs": 4.4,
     "inn": null,
     "rate": null,
     "beat": "doc"
    },
    {
+    "shot": "F18",
+    "slug": "fbi_couch",
+    "secs": 3.0,
+    "inn": 3.0,
+    "rate": null,
+    "why": "'He offered a new name, a new city': Holloway's offer"
+   },
+   {
     "shot": "CODE_SUBPOENA",
-    "secs": 4.0,
+    "secs": 4.5,
     "inn": null,
     "rate": null,
     "beat": "date"
@@ -1738,7 +1757,7 @@
    {
     "shot": "F19",
     "slug": "ivy_window",
-    "secs": 3.0,
+    "secs": 3.1,
     "inn": null,
     "rate": null
    },
@@ -1746,10 +1765,10 @@
     "shot": "F06",
     "slug": "nico_ots",
     "secs": "fill",
-    "inn": 2.0,
-    "rate": null,
+    "inn": 5.6,
+    "rate": 0.85,
     "memory": true,
-    "why": "'a man in a nice suit told me to go back inside': the moment she quotes; silent, never-shown range"
+    "why": "'a man in a nice suit told me to go back inside': the moment she quotes; F06 calm tail after the door gesture"
    }
   ],
   "n035": [

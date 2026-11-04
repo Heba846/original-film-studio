@@ -16,7 +16,7 @@ L = json.loads((R / "edition20/budget_ledger.json").read_text())
 FICTION = ("Original fictional illustrated characters invented for this film; not based on, and not resembling, any real "
            "person, actor or public figure.")
 STYLE = ("Reference images are for faces only (REF_IVY_FACE_ONLY.png, REF_NICO_FACE_ONLY.png) and, for the garage, location only "
-         "(REF_GARAGE_F01.png); never copy a reference image's background or composition; this is NOT a continuation of any image. "
+         "(REF_GARAGE_F01.png); never copy a reference image's background or composition. "
          "Painterly illustrated cinematic style: visible soft brush texture, warm sodium-orange and "
          "teal-shadow palette, shallow depth of field, natural restrained motion, stable faces and positions, no morphing, "
          "no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9, 8 seconds.")
@@ -178,9 +178,12 @@ for j in J:
     if {"IVY", "NICO"} <= set(present) and IDENTITY_LOCK not in prompt and j["job_id"] not in AS_SENT:
         prompt = prompt.replace(" Continuity:", f" {IDENTITY_LOCK} Continuity:", 1)
     still = None
-    if not (j["job_id"] in AS_SENT or APPROVED.get(j["job_id"])):
-        still = ("FREE STILL FIRST (identity check before any video spend): a single 16:9 still frame, no motion, of exactly this moment. "
+    if not APPROVED.get(j["job_id"]):
+        still = ("FREE STILL FIRST (Nano Banana, 0 credits): a single 16:9 still frame, no motion, of exactly this moment, in the correct "
+                 "location. Use REF_IVY_FACE_ONLY / REF_NICO_FACE_ONLY (or hospital.png as an IMAGE reference) for faces only. "
                  + prompt.replace(", 8 seconds.", ".").replace("natural restrained motion, ", ""))
+        prompt = (f"ANIMATE THE APPROVED STILL: use STILL_{j['job_id']}.png as the literal first frame (never hospital.png). "
+                  f"Keep its composition, location, people and roles; only add the motion described. " + prompt)
     ER = {"er_entrance", "ivy_walks", "bay_hands", "nico_bay_cu", "ivy_bay_cu", "money_tray"}
     faces = [f"REF_{k}_FACE_ONLY.png" for k in ("IVY", "NICO") if k in present]
     ref = " + ".join(faces) + " (faces only)" if faces else "no character reference"
@@ -188,15 +191,16 @@ for j in J:
     if j["slug"] in GARAGE_SLUGS: ref += " + REF_GARAGE_F01.png (location)"
     jobs.append({
         "id": j["job_id"], "slug": j["slug"], "batch": j["batch"], "chapter": j["chapter"], "category": j["category"],
-        "status_note": ("RETAKE (retake pool, 10 cr): take 1 rejected (see edition20/review) - new prompt" if j["job_id"] in retakes
+        "status_note": ("RETAKE, still-first (retake pool, 10 cr): take 1 rejected (see edition20/review) - new prompt" if j["job_id"] in retakes
+                        else "REGENERATE still-first: earlier attempt failed and was refunded" if j["job_id"] in refused
                         else "PENDING REVIEW (author-side take not delivered): if it fails, use this corrected prompt" if j["job_id"] == "F05"
-                        else "SUBMITTED / GENERATING - prompt kept exactly as sent" if j["job_id"] in generating
+                        else "TAKE 1 GENERATED - deliver for review; if it fails, still-first retake with this prompt" if j["job_id"] in generating
                         else "APPROVED (restricted where noted in review) - do not regenerate" if APPROVED.get(j["job_id"])
                         else "REGENERATE (primary job): earlier attempts failed and were refunded" if j["job_id"] in refused
                         else "GENERATED in Flow, download failed - re-download, do not regenerate" if j["job_id"] == "F05"
                         else "not yet generated"),
         "prompt": prompt,
-        "required_reference": ref,
+        "required_reference": (f"VIDEO: STILL_{j['job_id']}.png (approved still) as literal first frame; STILL: " + ref) if not APPROVED.get(j["job_id"]) else ref,
         "still_prompt": still,
         "continuity_phase": j["continuity_phase"], "continuity": cont,
         "expected_duration_s": 8, "usable_window_s": [0.2, 7.7], "outputs_per_prompt": 1,

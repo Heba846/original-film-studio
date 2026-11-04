@@ -1,10 +1,10 @@
 {
  "total_s": 1246.03,
  "coverage_s": {
-  "approved_on_disk": 91.25,
-  "code_authored": 394.17,
-  "planned_primary": 478.29,
-  "planned_reuse": 282.33,
+  "approved_on_disk": 87.25,
+  "code_authored": 395.08,
+  "planned_primary": 478.38,
+  "planned_reuse": 285.33,
   "delivered_unreviewed": 0.0,
   "unresolved": 0.0
  },
@@ -210,10 +210,10 @@
    "unresolved": 0.0
   },
   "n034": {
-   "approved_on_disk": 6.46,
-   "code_authored": 8.0,
-   "planned_primary": 3.0,
-   "planned_reuse": 0.0,
+   "approved_on_disk": 2.46,
+   "code_authored": 8.92,
+   "planned_primary": 3.08,
+   "planned_reuse": 3.0,
    "delivered_unreviewed": 0.0,
    "unresolved": 0.0
   },

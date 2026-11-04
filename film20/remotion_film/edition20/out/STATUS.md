@@ -7,10 +7,10 @@
 ## Picture coverage (every frame counted once; crossfade overlaps counted as source use only)
 | | Seconds | Share |
 |---|---:|---:|
-| (a) approved footage on disk | 91.2 | 7.3% |
-| (a) authored code scenes (finished) | 394.2 | 31.6% |
-| (b) conditional: planned Flow job, first use | 478.3 | 38.4% |
-| (b) conditional: planned Flow job, motivated reuse | 282.3 | 22.7% |
+| (a) approved footage on disk | 87.2 | 7.0% |
+| (a) authored code scenes (finished) | 395.1 | 31.7% |
+| (b) conditional: planned Flow job, first use | 478.4 | 38.4% |
+| (b) conditional: planned Flow job, motivated reuse | 285.3 | 22.9% |
 | delivered but not yet reviewed | 0.0 | 0.0% |
 | **(c) unresolved / unplanned** | **0.0** | **0.0%** |
 
@@ -22,7 +22,7 @@
 ## Shots still required before Final (61)
 F02, F03, F05, F08, F14, F15, F16, F17, F18, F19, F20, F21, F22, F23, F24, F25, F26, F27, F28, F29, F30, F31, F32, F33, F34, F35, F36, F37, F38, F39, F40, F41, F42, F43, F44, F45, F46, F47, F48, F49, F50, F51, F52, F53, F54, F55, F56, F57, F58, F59, F60, F61, F62, F63, F64, F65, F66, F67, F68, F69, F70
 
-## Reuse ledger (90 reuse occurrences)
+## Reuse ledger (91 reuse occurrences)
 | Asset | Use # | Where | Treatment | Narrative reason |
 |---|---:|---|---|---|
 | ContractPage | 2 | n119 (CH11) | direct | the contract returns because its page count now proves a leak |
@@ -50,7 +50,7 @@ F02, F03, F05, F08, F14, F15, F16, F17, F18, F19, F20, F21, F22, F23, F24, F25, 
 | flow/F04.mp4 | 3 | n148 (CH17) | memory | 'A second gun near his open hand' |
 | flow/F05.mp4 | 2 | n032 (CH03) | memory | 'my splint on his right': the hands as evidence |
 | flow/F05.mp4 | 3 | n148 (CH17) | memory | 'a gun in his left hand, pointed at the floor... his right hand in my splint' |
-| flow/F06.mp4 | 2 | n034 (CH03) | memory | 'a man in a nice suit told me to go back inside': the moment she quotes; silent, never-shown range |
+| flow/F06.mp4 | 2 | n034 (CH03) | memory | 'a man in a nice suit told me to go back inside': the moment she quotes; F06 calm tail after the door gesture |
 | flow/F08.mp4 | 2 | n046 (CH04) | memory | 'You bled on my shoes': Friday, 3:05 |
 | flow/F08.mp4 | 3 | n156 (CH18) | memory | 'I chose that emergency room': the night he walked in |
 | flow/F12.mp4 | 2 | n054 (CH04) | memory | 'or keep my work': Ivy at work in Bay 14 |
@@ -58,7 +58,8 @@ F02, F03, F05, F08, F14, F15, F16, F17, F18, F19, F20, F21, F22, F23, F24, F25, 
 | flow/F14.mp4 | 2 | n030 (CH02) | direct | 'I had a name on my tongue': the same night's frozen face, re-read as silence |
 | flow/F15.mp4 | 2 | n104 (CH09) | memory | 'Enzo was the light jacket on the stairs': the anonymous sleeve, now named |
 | flow/F15.mp4 | 3 | n125 (CH13) | memory | 'send Enzo down them': the stairs |
-| flow/F18.mp4 | 2 | n054 (CH04) | memory | 'become someone else in a city I'd never seen': Holloway's offer |
+| flow/F18.mp4 | 2 | n034 (CH03) | direct | 'He offered a new name, a new city': Holloway's offer |
+| flow/F18.mp4 | 3 | n054 (CH04) | memory | 'become someone else in a city I'd never seen': Holloway's offer |
 | flow/F19.mp4 | 2 | n080 (CH06) | memory | 'We don't touch civilians': Ivy, the civilian he is protecting |
 | flow/F20.mp4 | 2 | n037 (CH04) | direct | Theo crying beside Nico: the later part of the same take |
 | flow/F20.mp4 | 3 | n054 (CH04) | memory | 'keep my work and my brother': Theo, as she weighs it |
@@ -120,11 +121,13 @@ F02, F03, F05, F08, F14, F15, F16, F17, F18, F19, F20, F21, F22, F23, F24, F25, 
 - n024 flow/F02.mp4: returns 100 s after its last use — check it does not feel repetitive
 - n024 flow/F01.mp4: returns 82 s after its last use — check it does not feel repetitive
 - n030 flow/F14.mp4: returns 20 s after its last use — check it does not feel repetitive
+- n034 flow/F18.mp4: returns 17 s after its last use — check it does not feel repetitive
 - n037 flow/F20.mp4: returns 11 s after its last use — check it does not feel repetitive
 - n041 flow/F22.mp4: returns 3 s after its last use — check it does not feel repetitive
 - n045 flow/F21.mp4: returns 0 s after its last use — check it does not feel repetitive
 - n046 flow/F22.mp4: returns 12 s after its last use — check it does not feel repetitive
 - n054 flow/F20.mp4: returns 66 s after its last use — check it does not feel repetitive
+- n054 flow/F18.mp4: returns 107 s after its last use — check it does not feel repetitive
 - n055 flow/F25.mp4: returns 0 s after its last use — check it does not feel repetitive
 - n079 flow/F29.mp4: returns 2 s after its last use — check it does not feel repetitive
 - n079 flow/F28.mp4: returns 28 s after its last use — check it does not feel repetitive
@@ -171,6 +174,7 @@ F02, F03, F05, F08, F14, F15, F16, F17, F18, F19, F20, F21, F22, F23, F24, F25, 
 - hospital.mp4: 3 uses (n018, n151, n156) — review as a sequence
 - GarageMap: 3 uses (n024, n032, n103) — review as a sequence
 - flow/F15.mp4: 3 uses (n028, n104, n125) — review as a sequence
+- flow/F18.mp4: 3 uses (n031, n034, n054) — review as a sequence
 - Subpoena: 3 uses (n034, n038, n079) — review as a sequence
 - flow/F20.mp4: 3 uses (n036, n037, n054) — review as a sequence
 - flow/F22.mp4: 3 uses (n036, n041, n046) — review as a sequence

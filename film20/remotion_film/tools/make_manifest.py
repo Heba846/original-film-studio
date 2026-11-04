@@ -304,9 +304,10 @@ SV = {
  "n032": [c("fbi_couch", 2.4), c("aftermath_wide", 4.6, inn=0.4, memory=True, why="testimony re-reads the aftermath"),
           c("nico_hands", 4.0, inn=0.4, memory=True, why="'my splint on his right': the hands as evidence"),
           g("CODE_MAP", F, beat="heard", why="'I heard two shots. I saw what came after': the map now separates hearing from seeing")],
- "n034": [g("CODE_SUBPOENA", 4.0, beat="doc"), g("CODE_SUBPOENA", 4.0, beat="date"), c("ivy_window", 3.0),
-          c("nico_ots", F, inn=2.0, memory=True,
-            why="'a man in a nice suit told me to go back inside': the moment she quotes; silent, never-shown range")],
+ "n034": [g("CODE_SUBPOENA", 4.4, beat="doc"), c("fbi_couch", 3.0, inn=3.0, why="'He offered a new name, a new city': Holloway's offer"),
+          g("CODE_SUBPOENA", 4.5, beat="date"), c("ivy_window", 3.1),
+          c("nico_ots", F, inn=5.6, rate=0.85, memory=True,
+            why="'a man in a nice suit told me to go back inside': the moment she quotes; F06 calm tail after the door gesture")],
  "n035": [c("ivy_window", F)],
  # ---- CH04 Two Ways This Ends
  "n036": [c("apt_wide", 8.8, rate=0.85), c("ivy_doorway", F, rate=0.85)],
@@ -468,7 +469,7 @@ if __name__ == "__main__":
     cats = {}
     for j in J: cats[j["category"]] = cats.get(j["category"], 0) + 1
     # carry review verdicts over a regeneration: never silently reset an approval or a rejection
-    KEEP = ("status", "review_log", "approved_range", "default_crop", "identity_check")
+    KEEP = ("status", "review_log", "approved_range", "default_crop", "identity_check", "excluded_ranges")
     if MAN.exists():
         old = {x["shot_id"]: x for x in json.loads(MAN.read_text())["shots"]}
         for sh in shots:

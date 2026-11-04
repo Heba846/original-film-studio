@@ -60,7 +60,7 @@ if total > cap - reserve_floor: err.append(f"total {total} breaks into the reser
 if total > cap: err.append(f"total {total} > cap {cap}")
 if len({m for m in models if not m.startswith("(not recorded")}) > 1: err.append(f"more than one model used: {sorted(models)}")
 
-may_spend = pr["confirmed_in_flow_ui"] and pr["model_name_in_flow"] and not err and L.get("flow_status", {}).get("state") not in ("BLOCKED", "VIDEO_UNVERIFIED")
+may_spend = pr["confirmed_in_flow_ui"] and pr["model_name_in_flow"] and not err and L.get("flow_status", {}).get("state") not in ("BLOCKED", "VIDEO_UNVERIFIED", "STILL_REVIEW_GATE")
 b1 = [j for j in J if j["batch"] == 1]
 print(f"Cap {cap} | pools primary {pools['primary']} / retakes {pools['retakes']} / reserve {pools['reserve_unspent']}")
 print(f"Price assumed {pr['credits_per_output']} cr/output x {pr['outputs_per_prompt']} output/prompt "
@@ -77,6 +77,6 @@ if obs:
     print(f"Account panel (observed): {obs[-1]['balance_credits']} cr; per-job ledger total {total} cr; "
           f"UI net reduction {acct.get('original_balance_credits', 0) - obs[-1]['balance_credits']} cr -> {L.get('reconciliation', {}).get('status', '')[:14]}")
     if obs[-1]["balance_credits"] < floor: err.append(f"account balance below the {floor}-credit floor")
-if L.get("flow_status", {}).get("state") in ("BLOCKED", "VIDEO_UNVERIFIED"): print("FLOW:", L["flow_status"]["detail"])
-print("PLAN VALID" if not err else "PLAN INVALID", "| spending authorized by ledger:", "YES" if may_spend else ("NO (Flow video generation blocked/unverified; see flow_status)" if L.get("flow_status", {}).get("state") in ("BLOCKED", "VIDEO_UNVERIFIED") else "NO (confirm model + price in Flow first)"))
+if L.get("flow_status", {}).get("state") in ("BLOCKED", "VIDEO_UNVERIFIED", "STILL_REVIEW_GATE"): print("FLOW:", L["flow_status"]["detail"])
+print("PLAN VALID" if not err else "PLAN INVALID", "| spending authorized by ledger:", "YES" if may_spend else ("NO (" + L["flow_status"].get("state", "") + ": " + L["flow_status"].get("detail", "")[:70] + ")" if L.get("flow_status", {}).get("state") in ("BLOCKED", "VIDEO_UNVERIFIED", "STILL_REVIEW_GATE") else "NO (confirm model + price in Flow first)"))
 sys.exit(1 if err else 0)

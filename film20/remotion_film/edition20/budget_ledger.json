@@ -19,7 +19,13 @@
    "No automatic upgrade to a more expensive model or quality tier. A model change needs a new pricing record.",
    "Reference/ingredient images generated inside Flow are charged to the primary pool (pool 'supporting_image'). Uploading existing stills is free.",
    "The 100-credit reserve stays unspent unless the owner explicitly releases it (reserve_released_by_owner)."
-  ]
+  ],
+  "still_images": {
+   "model": "Nano Banana 2.1",
+   "credits_per_image": 0,
+   "confirmed_in_flow_ui": true,
+   "note": "author: image generation is FREE on this account"
+  }
  },
  "reserve_released_by_owner": false,
  "batches": [
@@ -219,9 +225,9 @@
    "pool": "primary",
    "model": "Veo 3.1 Lite",
    "outputs": 1,
-   "credits_charged": 10,
+   "credits_charged": 0,
    "result_files": [],
-   "verdict": "submitted (author), generating"
+   "verdict": "second batch: generation failed; refunded (author)"
   },
   {
    "date": "2026-11-04",
@@ -291,7 +297,7 @@
    "outputs": 1,
    "credits_charged": 10,
    "result_files": [],
-   "verdict": "submitted (author), generating"
+   "verdict": "take 1 REJECTED (author thumbnail): hospital gurney / IV pole / surgical lamp instead of the closed restaurant; never ingested"
   },
   {
    "date": "2026-11-04",
@@ -323,7 +329,7 @@
    "result_files": [
     "public/flow/F06.mp4"
    ],
-   "verdict": "retake 1 (F06_R1) approved after frame audit; charge recorded at the verified 10 cr/output price - not separately confirmed by the author"
+   "verdict": "F06_R1: animated from a FREE new scene still (STILL_F06) as literal first frame; approved after frame audit (usable 0.2-2.4 s and 5.6-7.7 s)"
   },
   {
    "date": "2026-11-04",
@@ -517,6 +523,12 @@
    "pool": "retake",
    "credits": 10,
    "reason": "take 1 identity/role swap + wrong location"
+  },
+  {
+   "job_id": "F26",
+   "pool": "retake",
+   "credits": 10,
+   "reason": "take 1 wrong location (hospital instead of restaurant)"
   }
  ],
  "batch2_report": {
@@ -537,8 +549,46 @@
  },
  "net_committed_credits": 220,
  "free_items": {
-  "still_images_completed": 34,
-  "note": "author: free still batches completed at 0 credits; not used by the film yet"
+  "scene_stills_generated": [
+   "F02",
+   "F06",
+   "F26",
+   "F03",
+   "F08",
+   "F14",
+   "F15",
+   "F16",
+   "F17",
+   "F18",
+   "F19",
+   "F20",
+   "F21",
+   "F22",
+   "F23",
+   "F24",
+   "F25",
+   "F27",
+   "F28"
+  ],
+  "scene_stills_in_progress": [
+   "F29",
+   "F30",
+   "F31",
+   "F32",
+   "F33",
+   "F34",
+   "F35",
+   "F36",
+   "F37",
+   "F38",
+   "F39",
+   "F40",
+   "F41",
+   "F42",
+   "F43"
+  ],
+  "earlier_free_stills": 34,
+  "credits": 0
  },
  "account_observations": [
   {
@@ -555,21 +605,51 @@
   }
  ],
  "reconciliation": {
-  "ledger_per_job_net_credits": 230,
+  "ledger_per_job_net_credits": 220,
   "ui_net_reduction_credits": 170,
-  "status": "UNRECONCILED - per-job ledger and the account panel differ; both kept as observed, no refunds invented. Hard limits: film cap 1000 credits; at least 10 account credits always left untouched."
+  "status": "UNRECONCILED - per-job ledger and the account panel differ; both kept as observed, no refunds invented. Hard limits: film cap 1000 credits; at least 10 account credits always left untouched.",
+  "author_expected_net": 220
  },
  "flow_status": {
   "date": "2026-11-04",
   "image_generation": {
-   "state": "RESTORED",
-   "evidence": "author: Nano Banana 2.1 free still STILL_F59_CHECK generated and its output prompt confirmed"
+   "state": "WORKING",
+   "evidence": "Nano Banana 2.1 free stills generated (0 credits)"
   },
   "video_generation": {
-   "state": "NOT RETESTED",
-   "detail": "after the 'unusual activity' / reCAPTCHA block; no new video credits spent"
+   "state": "WORKING",
+   "evidence": "F06_R1 animated from STILL_F06 (10 credits)"
   },
-  "state": "VIDEO_UNVERIFIED",
-  "detail": "Image generation restored; video generation not yet retested. No video spend until the author confirms it works."
+  "state": "STILL_REVIEW_GATE",
+  "detail": "Video works, but no new animation is authorized until the author approves the corresponding still; only F06_R1 was authorized."
+ },
+ "workflow": {
+  "rule": "STILL FIRST: every remaining shot = free correct-composition still -> author visual review -> ONE 10-credit Veo 3.1 Lite animation using the approved still as the literal first frame. Never use the full hospital.png as a video start frame (it clones the ER background).",
+  "authorized_videos_now": [
+   "F06_R1 (done)"
+  ],
+  "note": "No other video generation authorized until the author approves stills."
+ },
+ "replan": {
+  "date": "2026-11-04",
+  "hard_cap_credits": 1000,
+  "account_floor_credits": 10,
+  "net_spent_per_ledger": 220,
+  "approved_jobs": [
+   "F01",
+   "F04",
+   "F06",
+   "F07",
+   "F09",
+   "F10",
+   "F11",
+   "F12",
+   "F13"
+  ],
+  "jobs_still_needing_an_accepted_take": 61,
+  "worst_case_if_every_remaining_job_needs_one_new_animation": 610,
+  "projected_total_worst_case": 830,
+  "headroom_after_worst_case": 170,
+  "note": "Takes already generated (F18-F28, F44-F58) may be accepted without new spend; the worst case assumes all 61 remaining jobs need a new 10-credit animation. Headroom covers retakes. The account panel (840 observed) remains the authority; reconcile before each batch."
  }
 }

@@ -305,6 +305,9 @@ def main() -> int:
             c["src_out"] = round(inn + (c["dur"] - c["unresolved_f"] + c["overlap"]) / FPS * rate, 4)
             cursor[(asset, c["chapter"])] = c["src_out"]
             rng = (c["src_in"], c["src_out"])
+            for xa, xb in sh.get("excluded_ranges", []):
+                if rng[0] < xb and xa < rng[1]:
+                    problems.append(f"{c['seg']} {c['shot']}: uses {rng[0]:.2f}-{rng[1]:.2f}s, overlapping excluded {xa}-{xb}s")
             if asset in NO_REUSE_FROM and rng[1] > NO_REUSE_FROM[asset] + 1e-6:
                 c["no_reuse_range"] = True
         else:
