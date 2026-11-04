@@ -2854,7 +2854,7 @@
    "shot": "F19",
    "slug": "ivy_window",
    "kind": "flow_job",
-   "status": "missing",
+   "status": "approved",
    "asset": "flow/F19.mp4",
    "src_in": 0.2,
    "src_out": 3.2833,
@@ -2893,7 +2893,7 @@
    "shot": "F19",
    "slug": "ivy_window",
    "kind": "flow_job",
-   "status": "missing",
+   "status": "approved",
    "asset": "flow/F19.mp4",
    "src_in": 3.2833,
    "src_out": 7.6996,
@@ -3737,7 +3737,7 @@
    "shot": "F19",
    "slug": "ivy_window",
    "kind": "flow_job",
-   "status": "missing",
+   "status": "approved",
    "asset": "flow/F19.mp4",
    "src_in": 0.2,
    "src_out": 4.2,
@@ -10623,15 +10623,15 @@
   "F19": {
    "kind": "flow_job",
    "source": "flow/F19.mp4",
-   "status": "missing",
+   "status": "approved",
    "component": null,
    "narrative_event": "Ivy by the window: half a laugh, then resolve",
    "window": [
     0.2,
     7.7
    ],
-   "window_is_estimate": true,
-   "on_disk": false
+   "window_is_estimate": false,
+   "on_disk": true
   },
   "F20": {
    "kind": "flow_job",
@@ -11298,10 +11298,10 @@
   }
  },
  "coverage_frames": {
-  "approved_on_disk": 2094,
+  "approved_on_disk": 2381,
   "code_authored": 9482,
-  "planned_primary": 11481,
-  "planned_reuse": 6848,
+  "planned_primary": 11290,
+  "planned_reuse": 6752,
   "delivered_unreviewed": 0,
   "unresolved": 0
  },
@@ -11318,7 +11318,6 @@
    "F16",
    "F17",
    "F18",
-   "F19",
    "F20",
    "F21",
    "F22",

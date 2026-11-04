@@ -43,9 +43,11 @@ for e in L["entries"]:
     if e["pool"] not in spent: err.append(f"unknown pool {e['pool']}"); continue
     spent[e["pool"]] += e["credits_charged"]
     models.add(e["model"])
-    if pr["model_name_in_flow"] and e["model"] != pr["model_name_in_flow"] and not e["model"].startswith("(not recorded"):
-        err.append(f"{e['job_id']}: model '{e['model']}' differs from pinned '{pr['model_name_in_flow']}' (no auto-upgrade)")
-    if e["credits_charged"] != e["outputs"] * pr["credits_per_output"] and not (e["credits_charged"] == 0 and ("refunded" in e.get("verdict", "") or "0 credits" in e.get("verdict", ""))):
+    extra = pr.get("additional_models", {})  # author-recorded model switches, each with its own confirmed price
+    price = extra[e["model"]]["credits_per_output"] if e["model"] in extra else pr["credits_per_output"]
+    if pr["model_name_in_flow"] and e["model"] != pr["model_name_in_flow"] and e["model"] not in extra and not e["model"].startswith("(not recorded"):
+        err.append(f"{e['job_id']}: model '{e['model']}' differs from pinned '{pr['model_name_in_flow']}' and has no pricing record (no auto-upgrade)")
+    if e["credits_charged"] != e["outputs"] * price and not (e["credits_charged"] == 0 and ("refunded" in e.get("verdict", "") or "0 credits" in e.get("verdict", ""))):
         err.append(f"{e['job_id']}: charged {e['credits_charged']} != outputs x price")
     if e["pool"] == "primary" and e["job_id"] not in ids:
         err.append(f"{e['job_id']}: primary spend on a job not in flow_jobs.json")
@@ -58,7 +60,7 @@ if spent["retake"] > pools["retakes"]: err.append(f"retakes {spent['retake']} > 
 reserve_floor = 0 if L["reserve_released_by_owner"] else pools["reserve_unspent"]
 if total > cap - reserve_floor: err.append(f"total {total} breaks into the reserve")
 if total > cap: err.append(f"total {total} > cap {cap}")
-if len({m for m in models if not m.startswith("(not recorded")}) > 1: err.append(f"more than one model used: {sorted(models)}")
+if len({m for m in models if not m.startswith("(not recorded") and m not in pr.get("additional_models", {})}) > 1: err.append(f"more than one model used: {sorted(models)}")
 
 may_spend = pr["confirmed_in_flow_ui"] and pr["model_name_in_flow"] and not err and L.get("flow_status", {}).get("state") not in ("BLOCKED", "VIDEO_UNVERIFIED", "STILL_REVIEW_GATE")
 b1 = [j for j in J if j["batch"] == 1]

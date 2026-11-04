@@ -7,10 +7,10 @@
 ## Picture coverage (every frame counted once; crossfade overlaps counted as source use only)
 | | Seconds | Share |
 |---|---:|---:|
-| (a) approved footage on disk | 87.2 | 7.0% |
+| (a) approved footage on disk | 99.2 | 8.0% |
 | (a) authored code scenes (finished) | 395.1 | 31.7% |
-| (b) conditional: planned Flow job, first use | 478.4 | 38.4% |
-| (b) conditional: planned Flow job, motivated reuse | 285.3 | 22.9% |
+| (b) conditional: planned Flow job, first use | 470.4 | 37.8% |
+| (b) conditional: planned Flow job, motivated reuse | 281.3 | 22.6% |
 | delivered but not yet reviewed | 0.0 | 0.0% |
 | **(c) unresolved / unplanned** | **0.0** | **0.0%** |
 
@@ -19,8 +19,8 @@
 ## Missing narration (pickups)
 - none
 
-## Shots still required before Final (61)
-F02, F03, F05, F08, F14, F15, F16, F17, F18, F19, F20, F21, F22, F23, F24, F25, F26, F27, F28, F29, F30, F31, F32, F33, F34, F35, F36, F37, F38, F39, F40, F41, F42, F43, F44, F45, F46, F47, F48, F49, F50, F51, F52, F53, F54, F55, F56, F57, F58, F59, F60, F61, F62, F63, F64, F65, F66, F67, F68, F69, F70
+## Shots still required before Final (60)
+F02, F03, F05, F08, F14, F15, F16, F17, F18, F20, F21, F22, F23, F24, F25, F26, F27, F28, F29, F30, F31, F32, F33, F34, F35, F36, F37, F38, F39, F40, F41, F42, F43, F44, F45, F46, F47, F48, F49, F50, F51, F52, F53, F54, F55, F56, F57, F58, F59, F60, F61, F62, F63, F64, F65, F66, F67, F68, F69, F70
 
 ## Reuse ledger (91 reuse occurrences)
 | Asset | Use # | Where | Treatment | Narrative reason |

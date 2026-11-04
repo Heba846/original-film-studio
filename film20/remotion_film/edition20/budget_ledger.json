@@ -25,6 +25,14 @@
    "credits_per_image": 0,
    "confirmed_in_flow_ui": true,
    "note": "author: image generation is FREE on this account"
+  },
+  "additional_models": {
+   "Omni 1.1 Flash 720p": {
+    "credits_per_output": 12,
+    "confirmed_in_flow_ui": true,
+    "confirmed_on": "2026-11-04",
+    "basis": "author-reported: F19 first-frame test charged 12 cr for one 8.04 s 1280x720 24 fps output"
+   }
   }
  },
  "reserve_released_by_owner": false,
@@ -490,6 +498,19 @@
    "credits_charged": 10,
    "result_files": [],
    "verdict": "F59_TEST delivered 2026-11-04 (sha256 f703ae33..., 7.93 s, 1280x720). NOT approved: the mask is not sealed over the nose and mouth, Ivy is in scrubs instead of the gray cardigan, and Brancato is absent. 10 cr spent, no refund claimed."
+  },
+  {
+   "date": "2026-11-04",
+   "job_id": "F19",
+   "pool": "primary",
+   "model": "Omni 1.1 Flash 720p",
+   "outputs": 1,
+   "credits_charged": 12,
+   "result_files": [
+    "F19.mp4 sha256 3e8163b4..."
+   ],
+   "verdict": "APPROVED 0.2-7.7 s after identity sheet + location/costume QA",
+   "first_frame": "STILL_F19 (approved repair still)"
   }
  ],
  "plan_version": 2,
@@ -696,6 +717,24 @@
   "date": "2026-11-04",
   "account": "Flow PRO (author account)",
   "balance_ui": 830,
-  "note": "author-reported; not reconciled by us"
+  "note": "author-reported; not reconciled by us; Omni 1.1 Flash 720p works (12 cr per clip)"
+ },
+ "batch_omni_A": {
+  "date": "2026-11-04",
+  "status": "queued by author, not yet delivered",
+  "jobs": [
+   "F02",
+   "F08",
+   "F14",
+   "F15",
+   "F18",
+   "F22",
+   "F26",
+   "F29",
+   "F38",
+   "F39"
+  ],
+  "max_credits": 120,
+  "counted": 0
  }
 }

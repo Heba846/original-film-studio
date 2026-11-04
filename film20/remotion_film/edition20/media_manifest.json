@@ -641,13 +641,29 @@
    "slug": "ivy_window",
    "kind": "flow_job",
    "source": "flow/F19.mp4",
-   "status": "missing",
+   "status": "approved",
    "narrative_event": "Ivy by the window: half a laugh, then resolve",
    "continuity_phase": "P0",
    "chapter": "CH03",
    "decisive": false,
    "mouth": "closed",
-   "flow_job": "F19"
+   "flow_job": "F19",
+   "identity_check": {
+    "date": "2026-11-04",
+    "method": "4 fps visual + swap-signature scan",
+    "result": "4fps sheet 0-7.75s: one woman only, red bun + pen, freckles stable, gray home cardigan over dark top, morning window, no ring/chain (P0), no swap/morph"
+   },
+   "approved_range": [
+    0.2,
+    7.7
+   ],
+   "review_log": [
+    {
+     "date": "2026-11-04",
+     "status": "approved",
+     "note": "Omni 1.1 Flash 720p first-frame test, 12 cr (author-reported); full QA pass | usable range 0.2-7.7 s"
+    }
+   ]
   },
   {
    "shot_id": "F20",
