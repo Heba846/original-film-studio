@@ -2,12 +2,17 @@
  "date": "2026-11-04",
  "status": "ALL delivered stills reviewed (bulk 77 + ending delta + final delta)",
  "superseded": "Ending_F64_F67.zip numeric names (F64/F66 swapped); use Flow_New_Delta/verified/",
- "approved_count": 49,
+ "approved_count": 61,
  "approved": {
   "F02": {
    "file": "Woman_hiding_in_parking_garage_ab2c6c27.jpg",
    "note": "garage, crouched by her car's rear wheel, charger cable, navy scrubs, no ring/chain",
    "sha16": "f299a69a7ecf3e1e"
+  },
+  "F03": {
+   "file": "End10/F03_end.png",
+   "note": "white splint RIGHT image-left, pistol low LEFT; heavy balding overcoat man slumped by sedan, face down",
+   "sha16": "c90ef127c087d790"
   },
   "F05": {
    "file": "Repairs/media/F05.png",
@@ -28,6 +33,11 @@
    "file": "Jacket_sleeve_on_stairwell_492e2191.jpg",
    "note": "light sleeve + sneaker half a flight up, no face",
    "sha16": "a579a46d36a97a0e"
+  },
+  "F16": {
+   "file": "End10/F16_end.png",
+   "note": "Nico between Ivy (navy scrubs) and slumped overcoat man, left palm out; white splint right forearm; no gun shown",
+   "sha16": "e3d1d103a03aa322"
   },
   "F17": {
    "file": "Repairs/media/F17.png",
@@ -64,6 +74,11 @@
    "note": "Ivy alone; shadow at the door glass; IV tubing",
    "sha16": "8c081c4740391ece"
   },
+  "F24": {
+   "file": "End10/F24_end.png",
+   "note": "Rocco dark coat fills supply-room doorway, folded crossword; no readable lettering",
+   "sha16": "89f59c2c36170e03"
+  },
   "F25": {
    "file": "Repairs/media/F25.png",
    "note": "sign lettering blurred; red neck line kept (scripted)",
@@ -78,6 +93,11 @@
    "file": "Repairs/media/F27.png",
    "note": "closed restaurant; Tommy in a dark suit; splint on Nico's far (right) arm",
    "sha16": "9f0490bb79d02e2c"
+  },
+  "F28": {
+   "file": "End10/F28_end.png",
+   "note": "Ivy alone close, closed restaurant chairs up (Nico off-screen by design)",
+   "sha16": "eeaaa292b30d0d39"
   },
   "F29": {
    "file": "Uncle_visiting_scarred_man_in_ab9f2f6d.jpg",
@@ -99,16 +119,31 @@
    "note": "use as a HANDS INSERT only: emerald onto her LEFT ring finger; white splint on his right. Her black jacket is not the P1 dress, so frame on the hands",
    "sha16": "175177f4dcc5b59d"
   },
+  "F33": {
+   "file": "End10/F33_end.png",
+   "note": "suit sleeves both arms, white cast right forearm image-left; pale dress; emerald on her hanging LEFT hand; no lettering",
+   "sha16": "6864b4968ee2a282"
+  },
   "F34": {
    "file": "R3/F34_r3.png",
    "note": "courthouse steps, cameras, wedding dress; Nico's bare near (left) hand on her back, splint on the far (right) arm; no ring on Nico",
    "sha16": "382c47ad47664a30",
    "supersedes": "earlier candidate"
   },
+  "F35": {
+   "file": "Final3/F35_end.png",
+   "note": "LEFT hand (thumb lower side) on the crooked bolt, emerald LEFT ring finger, lace sleeve",
+   "sha16": "661011860e3cc79c"
+  },
   "F36": {
    "file": "Repairs/media/F36.png",
    "note": "staff locker room, alone, scrubs, chain",
    "sha16": "222d51870de52a6a"
+  },
+  "F37": {
+   "file": "Final3/F37_joey.png",
+   "note": "distinct Joey: round face, buzz cut, white gown on trauma gurney; Ivy scrubs; suited men behind glass",
+   "sha16": "61f17511e397e1fe"
   },
   "F38": {
    "file": "Doctors_standing_at_nurses_station_18a0222f.jpg",
@@ -119,6 +154,11 @@
    "file": "Doctor_crying_at_office_desk_52f9854b.jpg",
    "note": "Bell office evening, white coat over cardigan; Ivy scrubs, no visible ring",
    "sha16": "1b26e45d74b4987b"
+  },
+  "F40": {
+   "file": "Repairs/media/F40_v2.png",
+   "note": "pen from her bun; black brace on his far (right) arm visible behind her head; emerald off duty LEFT hand; cardigan",
+   "sha16": "fefd52015fc398f5"
   },
   "F41": {
    "file": "Scarred_man_looking_at_drawer_cca70014.jpg",
@@ -187,6 +227,11 @@
    "note": "study; candy twist; emerald; black splint right (cardigan darker than gray)",
    "sha16": "af76e76d83e20542"
   },
+  "F54": {
+   "file": "Final3/F54_end.png",
+   "note": "Bell kitchen at dawn, gray cardigan, Danny hands letter; no readable lettering",
+   "sha16": "0c9378b220495e39"
+  },
   "F55": {
    "file": "Repairs/media/F55.png",
    "note": "dining room, white tablecloth, evidence; black splint on his near (right) arm; Ivy in a gray cardigan",
@@ -202,6 +247,16 @@
    "file": "Men_seated_at_dining_table_40770ca7.jpg",
    "note": "Ivy behind Nico, hand+ring on his shoulder; black splint right (cardigan black)",
    "sha16": "cb8d4b850cadb25f"
+  },
+  "F58": {
+   "file": "End10/F58_end.png",
+   "note": "Theo walks out; Ivy gray cardigan at her car",
+   "sha16": "8d1f505ff3bc2023"
+  },
+  "F59": {
+   "file": "End10/F59_end.png",
+   "note": "gray cardigan, gloves, mask sealed over nose+mouth, bag squeezed; Enzo kneels with hands on shoulder/upper chest (no locked-arm compressions); Brancato watching",
+   "sha16": "92e358efb2a9c8c3"
   },
   "F60": {
    "file": "Repairs/media/F60.png",
@@ -222,6 +277,11 @@
    "file": "Repairs/media/F63.png",
    "note": "Enzo in a tan jumpsuit; white shirt; black splint on Nico's far (right) arm; guard",
    "sha16": "298153d97c23e921"
+  },
+  "F64": {
+   "file": "End10/F64_end.png",
+   "note": "plain grand-jury room, jurors + prosecutor; emerald + gold band on the LEFT hand, right hand bare",
+   "sha16": "98c392edfa04174e"
   },
   "F65": {
    "file": "verified/STILL_F65.jpg",
@@ -255,77 +315,16 @@
   }
  },
  "near_pass_author_call": [],
- "repair_count": 12,
+ "repair_count": 1,
  "repair_groups": {
-  "final4_round4": [
-   "F03",
-   "F16",
-   "F33"
-  ],
-  "qa_holds": [
-   "F24",
-   "F28",
-   "F35",
-   "F37",
-   "F40",
-   "F54",
-   "F58",
-   "F59",
-   "F64"
+  "hold": [
+   "F32"
   ]
  },
  "repair_prompts": {
-  "F03": {
-   "file": "Final4/F03_qa4.png",
-   "prompt": "Free Nano Banana repair (0 cr): keep everything else exactly; change ONLY: the slumped man beside the silver sedan must be the SAME heavy man as F16: fifties, heavy, balding, in a good dark OVERCOAT, face turned away. Not a dark-haired man in a T-shirt. Nico's arms, gun and the garage are correct.",
-   "previous_candidates": "archived in edition20/review/candidates_archive/"
-  },
-  "F16": {
-   "file": "Final4/F16_qa4.png",
-   "prompt": "Free Nano Banana repair (0 cr): keep everything else exactly; change ONLY: blocking. The scarred man must stand BETWEEN the red-haired doctor and the slumped heavy man, one pace toward her, his LEFT palm out to stop her. The doctor is on the far side of him from the heavy man, hands out, rising from behind her dark car. Gun low in his left hand only if his palm is not needed; otherwise tuck it at his left side. Arms, scrubs and the heavy man are correct.",
-   "previous_candidates": "archived in edition20/review/candidates_archive/"
-  },
-  "F24": {
-   "file": "Repairs/media/F24.png",
-   "prompt": "Free Nano Banana repair (0 cr): keep the same faces, framing and composition; change ONLY: blur or remove the readable 'SUPPLY ROOM / MEDICAL SUPPLIES' lettering on the door; keep Rocco, the coat and the crossword."
-  },
-  "F28": {
-   "file": "Repairs/media/F28.png",
-   "prompt": "the scarred man's splint goes on his anatomical RIGHT forearm (image-LEFT when he faces camera; the arm FARTHER from camera when he faces image-left); make the WHITE plaster splint clearly visible on his right forearm, which rests on the table. Keep the restaurant and the chairs."
-  },
-  "F33": {
-   "file": "Final4/F33_qa4.png",
-   "prompt": "Free Nano Banana repair (0 cr): keep everything else exactly; change ONLY: the emerald is on her LEFT ring finger. Her right hand, which links his arm, wears NO ring; or link his arm with her LEFT hand so the emerald shows. Suit sleeves, the forearm cast and the dress are correct.",
-   "previous_candidates": "archived in edition20/review/candidates_archive/"
-  },
-  "F35": {
-   "file": "R3/F35_r3.png",
-   "prompt": "Free Nano Banana repair (0 cr): keep everything; change ONLY: make it her LEFT hand: thumb on the LOWER side of the hand as it reaches right toward the bolt (back of hand to camera). The loose square emerald is on the LEFT ring finger; lace wedding sleeve."
-  },
-  "F37": {
-   "file": "Repairs/media/F37.png",
-   "prompt": "Free Nano Banana repair (0 cr): keep the same faces, framing and composition; change ONLY: the stabbed patient is JOEY: short dark hair, clean-shaven. He must NOT have gold curls or resemble the curly-haired young man."
-  },
-  "F40": {
-   "file": "Scarred_man_and_doctor_kissing_fd364c6e.jpg",
-   "prompt": "Free Nano Banana repair (0 cr): keep the same characters, faces and framing; change ONLY: the scarred man's splint must be on his anatomical RIGHT forearm (image-LEFT when he faces camera; the arm FARTHER from camera when he faces image-left); black velcro splint, on the arm away from camera; his LEFT hand draws the pen from her bun. Ivy off duty: gray cardigan, emerald on LEFT ring finger.",
-   "author_hold": "F40_v2: the far-arm brace is hidden"
-  },
-  "F54": {
-   "file": "R3/F54_r3.png",
-   "prompt": "Free Nano Banana repair (0 cr): keep everything; change ONLY: blur or erase all lettering: the 'THE BELL FAMILY' magnet note and the cereal-box text. Keep the gray cardigan, Danny and the letter."
-  },
-  "F58": {
-   "file": "Repairs/media/F58.png",
-   "prompt": "Free Nano Banana repair (0 cr): keep the same faces, framing and composition; change ONLY: the doctor's cardigan is GRAY, not green (match F59-F64). Keep the emerald + gold band on her LEFT ring finger."
-  },
-  "F59": {
-   "file": "Repairs/media/F59.png",
-   "prompt": "Free Nano Banana repair (0 cr): keep the same faces, framing and composition; change ONLY: the curly-haired young man kneels at the boy's shoulder with one hand on the boy's shoulder; both hands OFF the chest (no compressions). Keep the mask grip, the gray cardigan and Brancato."
-  },
-  "F64": {
-   "file": "Repairs/media/F64.png",
-   "prompt": "Free Nano Banana repair (0 cr): keep the same faces, framing and composition; change ONLY: put BOTH rings on the SAME LEFT ring finger, plain gold band below the emerald; the right hand bare. Keep the grand-jury room."
+  "F32": {
+   "file": "End10/F32_end.png",
+   "prompt": "Free repair (0 cr): keep the hands-only close-up; change ONLY: the woman's hand receiving the ring must be her LEFT hand. Palm down, fingers pointing to image-left, THUMB on the NEAR/LOWER side toward camera. The emerald slides onto that hand's ring finger; his white-cast right hand holds it."
   }
  },
  "hold": {
@@ -424,5 +423,8 @@
   "F16": "HOLD: blocking wrong (Ivy stands next to Frankie; Nico is not between them, no palm out)",
   "F33": "HOLD: emerald on her RIGHT hand (the hand linking his arm)",
   "F45": "APPROVED"
+ },
+ "rejected_stills": {
+  "F37_end.png": "reused Nico as patient (wrong identity)"
  }
 }

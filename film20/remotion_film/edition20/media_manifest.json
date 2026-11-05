@@ -353,7 +353,7 @@
    "slug": "nico_hands",
    "kind": "flow_job",
    "source": "flow/F05.mp4",
-   "status": "missing",
+   "status": "approved",
    "narrative_event": "Nico's hands: splinted right, gun low in the left",
    "continuity_phase": "P0",
    "chapter": "CH00",
@@ -365,7 +365,21 @@
      "date": "2026-11-04",
      "status": "unapproved (author-side, not delivered)",
      "note": "author inspection in Flow: no faces; the splinted RIGHT hand appears to hold the pistol (must be LEFT hand) and the suit is gray (must be charcoal). Pending arm/action review; likely retake."
+    },
+    {
+     "date": "2026-11-05",
+     "status": "approved",
+     "note": "Omni 1.1 Flash 720p Batch B, 12 cr; generated audio muted | usable range 0.0-8.0 s"
     }
+   ],
+   "identity_check": {
+    "date": "2026-11-05",
+    "method": "4 fps visual + swap-signature scan",
+    "result": "waist insert: white splint RIGHT forearm image-left, pistol low LEFT hand image-right, stable 0-8s"
+   },
+   "approved_range": [
+    0.0,
+    8.0
    ]
   },
   {
@@ -679,13 +693,29 @@
    "slug": "mopped_bay",
    "kind": "flow_job",
    "source": "flow/F17.mp4",
-   "status": "missing",
+   "status": "approved",
    "narrative_event": "4:31 - the mopped bay, the officer, the dead camera",
    "continuity_phase": "P0",
    "chapter": "CH02",
    "decisive": false,
    "mouth": "closed",
-   "flow_job": "F17"
+   "flow_job": "F17",
+   "identity_check": {
+    "date": "2026-11-05",
+    "method": "4 fps visual + swap-signature scan",
+    "result": "officer with flashlight left, Ivy navy scrubs right, empty mopped bay, dome; positions fixed (A5 auto-flag = composition, cleared by human check)"
+   },
+   "approved_range": [
+    0.0,
+    8.0
+   ],
+   "review_log": [
+    {
+     "date": "2026-11-05",
+     "status": "approved",
+     "note": "Omni 1.1 Flash 720p Batch B, 12 cr; generated audio muted | usable range 0.0-8.0 s"
+    }
+   ]
   },
   {
    "shot_id": "F18",
@@ -750,20 +780,36 @@
    "slug": "apt_wide",
    "kind": "flow_job",
    "source": "flow/F20.mp4",
-   "status": "missing",
+   "status": "approved",
    "narrative_event": "Nico in her mother's armchair in the dark; Theo beside him",
    "continuity_phase": "P0",
    "chapter": "CH04",
    "decisive": false,
    "mouth": "closed",
-   "flow_job": "F20"
+   "flow_job": "F20",
+   "identity_check": {
+    "date": "2026-11-05",
+    "method": "4 fps visual + swap-signature scan",
+    "result": "dark apartment lamp off; Ivy+grocery bag at door; Nico white splint image-left; Theo; stable"
+   },
+   "approved_range": [
+    0.0,
+    8.0
+   ],
+   "review_log": [
+    {
+     "date": "2026-11-05",
+     "status": "approved",
+     "note": "Omni 1.1 Flash 720p Batch B, 12 cr; generated audio muted | usable range 0.0-8.0 s"
+    }
+   ]
   },
   {
    "shot_id": "F21",
    "slug": "nico_armchair",
    "kind": "flow_job",
    "source": "flow/F21.mp4",
-   "status": "missing",
+   "status": "approved",
    "narrative_event": "Nico in the armchair (his lines placed on it, no lip-sync)",
    "continuity_phase": "P0",
    "chapter": "CH04",
@@ -775,7 +821,21 @@
      "date": "2026-11-04",
      "status": "rejected (take 1, not ingested)",
      "note": "identity + role swap + wrong location; see review/exclusions.json; https://flow.google.com/u/2/project/0be44c4d-eaa1-494d-975a-29aba24d78c5/edit/ae64473f-5c42-4ce6-8963-1a868cc6a45b"
+    },
+    {
+     "date": "2026-11-05",
+     "status": "approved",
+     "note": "Omni 1.1 Flash 720p Batch B, 12 cr; generated audio muted | usable range 0.0-8.0 s"
     }
+   ],
+   "identity_check": {
+    "date": "2026-11-05",
+    "method": "4 fps visual + swap-signature scan",
+    "result": "R1: dark apartment, Ivy left with mug, Nico in armchair with white splint on far right arm; streetlight; stable"
+   },
+   "approved_range": [
+    0.0,
+    8.0
    ]
   },
   {
@@ -812,13 +872,29 @@
    "slug": "supply_room",
    "kind": "flow_job",
    "source": "flow/F23.mp4",
-   "status": "missing",
+   "status": "approved",
    "narrative_event": "Supply room: the door clicks shut",
    "continuity_phase": "P0",
    "chapter": "CH04",
    "decisive": false,
    "mouth": "n/a",
-   "flow_job": "F23"
+   "flow_job": "F23",
+   "identity_check": {
+    "date": "2026-11-05",
+    "method": "4 fps visual + swap-signature scan",
+    "result": "Ivy alone in supply room, shadow behind door glass, IV tubing; stable"
+   },
+   "approved_range": [
+    0.0,
+    8.0
+   ],
+   "review_log": [
+    {
+     "date": "2026-11-05",
+     "status": "approved",
+     "note": "Omni 1.1 Flash 720p Batch B, 12 cr; generated audio muted | usable range 0.0-8.0 s"
+    }
+   ]
   },
   {
    "shot_id": "F24",
@@ -838,13 +914,29 @@
    "slug": "ivy_car_dusk",
    "kind": "flow_job",
    "source": "flow/F25.mp4",
-   "status": "missing",
+   "status": "approved",
    "narrative_event": "Ivy by her car at dusk; she calls",
    "continuity_phase": "P0",
    "chapter": "CH04",
    "decisive": false,
    "mouth": "closed",
-   "flow_job": "F25"
+   "flow_job": "F25",
+   "identity_check": {
+    "date": "2026-11-05",
+    "method": "4 fps visual + swap-signature scan",
+    "result": "dusk hospital lot, Ivy cardigan over scrubs, phone to ear/down; scripted neck line; stable"
+   },
+   "approved_range": [
+    0.0,
+    8.0
+   ],
+   "review_log": [
+    {
+     "date": "2026-11-05",
+     "status": "approved",
+     "note": "Omni 1.1 Flash 720p Batch B, 12 cr; generated audio muted | usable range 0.0-8.0 s"
+    }
+   ]
   },
   {
    "shot_id": "F26",
@@ -880,13 +972,29 @@
    "slug": "nico_tommy",
    "kind": "flow_job",
    "source": "flow/F27.mp4",
-   "status": "missing",
+   "status": "approved",
    "narrative_event": "Nico holds her eyes; Tommy looks at the table",
    "continuity_phase": "P0",
    "chapter": "CH05",
    "decisive": false,
    "mouth": "closed",
-   "flow_job": "F27"
+   "flow_job": "F27",
+   "identity_check": {
+    "date": "2026-11-05",
+    "method": "4 fps visual + swap-signature scan",
+    "result": "closed restaurant, Tommy dark suit left, Nico white splint far arm; stable"
+   },
+   "approved_range": [
+    0.0,
+    8.0
+   ],
+   "review_log": [
+    {
+     "date": "2026-11-05",
+     "status": "approved",
+     "note": "Omni 1.1 Flash 720p Batch B, 12 cr; generated audio muted | usable range 0.0-8.0 s"
+    }
+   ]
   },
   {
    "shot_id": "F28",
@@ -935,26 +1043,58 @@
    "slug": "nico_desk",
    "kind": "flow_job",
    "source": "flow/F30.mp4",
-   "status": "missing",
+   "status": "approved",
    "narrative_event": "Nico at the desk: 'We don't touch civilians'",
    "continuity_phase": "P0",
    "chapter": "CH06",
    "decisive": false,
    "mouth": "closed",
-   "flow_job": "F30"
+   "flow_job": "F30",
+   "identity_check": {
+    "date": "2026-11-05",
+    "method": "4 fps visual + swap-signature scan",
+    "result": "wood study, Nico white splint image-left, listener foreground; stable"
+   },
+   "approved_range": [
+    0.0,
+    8.0
+   ],
+   "review_log": [
+    {
+     "date": "2026-11-05",
+     "status": "approved",
+     "note": "Omni 1.1 Flash 720p Batch B, 12 cr; generated audio muted | usable range 0.0-8.0 s"
+    }
+   ]
   },
   {
    "shot_id": "F31",
    "slug": "sal_exits",
    "kind": "flow_job",
    "source": "flow/F31.mp4",
-   "status": "missing",
+   "status": "approved",
    "narrative_event": "Sal's hands up; he leaves the garden door open",
    "continuity_phase": "P0",
    "chapter": "CH06",
    "decisive": false,
    "mouth": "closed",
-   "flow_job": "F31"
+   "flow_job": "F31",
+   "identity_check": {
+    "date": "2026-11-05",
+    "method": "4 fps visual + swap-signature scan",
+    "result": "Sal camel coat, hands up, night garden door, curtain moves; stable"
+   },
+   "approved_range": [
+    0.0,
+    8.0
+   ],
+   "review_log": [
+    {
+     "date": "2026-11-05",
+     "status": "approved",
+     "note": "Omni 1.1 Flash 720p Batch B, 12 cr; generated audio muted | usable range 0.0-8.0 s"
+    }
+   ]
   },
   {
    "shot_id": "F32",
@@ -987,13 +1127,29 @@
    "slug": "kiss",
    "kind": "flow_job",
    "source": "flow/F34.mp4",
-   "status": "missing",
+   "status": "approved",
    "narrative_event": "The kiss for the cameras",
    "continuity_phase": "P1",
    "chapter": "CH07",
    "decisive": true,
    "mouth": "closed",
-   "flow_job": "F34"
+   "flow_job": "F34",
+   "identity_check": {
+    "date": "2026-11-05",
+    "method": "4 fps visual + swap-signature scan",
+    "result": "courthouse kiss, wedding dress, cameras; Nico bare near(left) hand on her back, cast on far(right) arm throughout"
+   },
+   "approved_range": [
+    0.0,
+    8.0
+   ],
+   "review_log": [
+    {
+     "date": "2026-11-05",
+     "status": "approved",
+     "note": "Omni 1.1 Flash 720p Batch B, 12 cr; generated audio muted | usable range 0.0-8.0 s"
+    }
+   ]
   },
   {
    "shot_id": "F35",
@@ -1013,13 +1169,29 @@
    "slug": "ring_chain",
    "kind": "flow_job",
    "source": "flow/F36.mp4",
-   "status": "missing",
+   "status": "approved",
    "narrative_event": "Ring onto the chain",
    "continuity_phase": "P2",
    "chapter": "CH08",
    "decisive": false,
    "mouth": "n/a",
-   "flow_job": "F36"
+   "flow_job": "F36",
+   "identity_check": {
+    "date": "2026-11-05",
+    "method": "4 fps visual + swap-signature scan",
+    "result": "locker room, Ivy alone scrubs, threads ring onto chain; stable"
+   },
+   "approved_range": [
+    0.0,
+    8.0
+   ],
+   "review_log": [
+    {
+     "date": "2026-11-05",
+     "status": "approved",
+     "note": "Omni 1.1 Flash 720p Batch B, 12 cr; generated audio muted | usable range 0.0-8.0 s"
+    }
+   ]
   },
   {
    "shot_id": "F37",
@@ -1110,169 +1282,377 @@
    "slug": "eyes_drawer",
    "kind": "flow_job",
    "source": "flow/F41.mp4",
-   "status": "missing",
+   "status": "approved",
    "narrative_event": "His eyes drop to the drawer",
    "continuity_phase": "P2",
    "chapter": "CH08",
    "decisive": false,
    "mouth": "closed",
-   "flow_job": "F41"
+   "flow_job": "F41",
+   "identity_check": {
+    "date": "2026-11-05",
+    "method": "4 fps visual + swap-signature scan",
+    "result": "study, black splint RIGHT forearm image-left, opens drawer; stable"
+   },
+   "approved_range": [
+    0.0,
+    8.0
+   ],
+   "review_log": [
+    {
+     "date": "2026-11-05",
+     "status": "approved",
+     "note": "Omni 1.1 Flash 720p Batch B, 12 cr; generated audio muted | usable range 0.0-8.0 s"
+    }
+   ]
   },
   {
    "shot_id": "F42",
    "slug": "fig_lunch",
    "kind": "flow_job",
    "source": "flow/F42.mp4",
-   "status": "missing",
+   "status": "approved",
    "narrative_event": "Sunday lunch under the fig",
    "continuity_phase": "P2",
    "chapter": "CH09",
    "decisive": false,
    "mouth": "closed",
-   "flow_job": "F42"
+   "flow_job": "F42",
+   "identity_check": {
+    "date": "2026-11-05",
+    "method": "4 fps visual + swap-signature scan",
+    "result": "fig lunch, Ivy gray cardigan, Nico black splint, Enzo walks away; roles stable"
+   },
+   "approved_range": [
+    0.0,
+    8.0
+   ],
+   "review_log": [
+    {
+     "date": "2026-11-05",
+     "status": "approved",
+     "note": "Omni 1.1 Flash 720p Batch B, 12 cr; generated audio muted | usable range 0.0-8.0 s"
+    }
+   ]
   },
   {
    "shot_id": "F43",
    "slug": "foil_card",
    "kind": "flow_job",
    "source": "flow/F43.mp4",
-   "status": "missing",
+   "status": "approved",
    "narrative_event": "The foil card",
    "continuity_phase": "P2",
    "chapter": "CH09",
    "decisive": false,
    "mouth": "n/a",
-   "flow_job": "F43"
+   "flow_job": "F43",
+   "identity_check": {
+    "date": "2026-11-05",
+    "method": "4 fps visual + swap-signature scan",
+    "result": "bathroom floor, bare limp hand, Ivy slips foil card into cardigan pocket; stable"
+   },
+   "approved_range": [
+    0.0,
+    8.0
+   ],
+   "review_log": [
+    {
+     "date": "2026-11-05",
+     "status": "approved",
+     "note": "Omni 1.1 Flash 720p Batch B, 12 cr; generated audio muted | usable range 0.0-8.0 s"
+    }
+   ]
   },
   {
    "shot_id": "F44",
    "slug": "enzo_sleeve",
    "kind": "flow_job",
    "source": "flow/F44.mp4",
-   "status": "missing",
+   "status": "approved",
    "narrative_event": "Enzo grabs her sleeve",
    "continuity_phase": "P2",
    "chapter": "CH09",
    "decisive": false,
    "mouth": "closed",
-   "flow_job": "F44"
+   "flow_job": "F44",
+   "identity_check": {
+    "date": "2026-11-05",
+    "method": "4 fps visual + swap-signature scan",
+    "result": "ER, Enzo no brace grabs her sleeve, Ivy back to camera; stable"
+   },
+   "approved_range": [
+    0.0,
+    8.0
+   ],
+   "review_log": [
+    {
+     "date": "2026-11-05",
+     "status": "approved",
+     "note": "Omni 1.1 Flash 720p Batch B, 12 cr; generated audio muted | usable range 0.0-8.0 s"
+    }
+   ]
   },
   {
    "shot_id": "F45",
    "slug": "enzo_stairs",
    "kind": "flow_job",
    "source": "flow/F45.mp4",
-   "status": "missing",
+   "status": "approved",
    "narrative_event": "NEW Oct 3: Enzo half a flight up the stairs",
    "continuity_phase": "P0",
    "chapter": "CH09",
    "decisive": true,
    "mouth": "closed",
-   "flow_job": "F45"
+   "flow_job": "F45",
+   "identity_check": {
+    "date": "2026-11-05",
+    "method": "4 fps visual + swap-signature scan",
+    "result": "Enzo alone gold curls gray jacket, pistol low, descends stairwell; stable"
+   },
+   "approved_range": [
+    0.0,
+    8.0
+   ],
+   "review_log": [
+    {
+     "date": "2026-11-05",
+     "status": "approved",
+     "note": "Omni 1.1 Flash 720p Batch B, 12 cr; generated audio muted | usable range 0.0-8.0 s"
+    }
+   ]
   },
   {
    "shot_id": "F46",
    "slug": "lincoln",
    "kind": "flow_job",
    "source": "flow/F46.mp4",
-   "status": "missing",
+   "status": "approved",
    "narrative_event": "Gray Lincoln; the candy twist",
    "continuity_phase": "P2",
    "chapter": "CH10",
    "decisive": false,
    "mouth": "n/a",
-   "flow_job": "F46"
+   "flow_job": "F46",
+   "identity_check": {
+    "date": "2026-11-05",
+    "method": "4 fps visual + swap-signature scan",
+    "result": "gray sedan, night street, candy twist on console; stable"
+   },
+   "approved_range": [
+    0.0,
+    8.0
+   ],
+   "review_log": [
+    {
+     "date": "2026-11-05",
+     "status": "approved",
+     "note": "Omni 1.1 Flash 720p Batch B, 12 cr; generated audio muted | usable range 0.0-8.0 s"
+    }
+   ]
   },
   {
    "shot_id": "F47",
    "slug": "courtroom",
    "kind": "flow_job",
    "source": "flow/F47.mp4",
-   "status": "missing",
+   "status": "approved",
    "narrative_event": "Courtroom 6B",
    "continuity_phase": "P2",
    "chapter": "CH11",
    "decisive": false,
    "mouth": "closed",
-   "flow_job": "F47"
+   "flow_job": "F47",
+   "identity_check": {
+    "date": "2026-11-05",
+    "method": "4 fps visual + swap-signature scan",
+    "result": "witness stand, Ivy black blazer, prosecutor navy suit at lectern; stable"
+   },
+   "approved_range": [
+    0.0,
+    8.0
+   ],
+   "review_log": [
+    {
+     "date": "2026-11-05",
+     "status": "approved",
+     "note": "Omni 1.1 Flash 720p Batch B, 12 cr; generated audio muted | usable range 0.0-8.0 s"
+    }
+   ]
   },
   {
    "shot_id": "F48",
    "slug": "nico_gallery",
    "kind": "flow_job",
    "source": "flow/F48.mp4",
-   "status": "missing",
+   "status": "approved",
    "narrative_event": "Nico hears it for the first time",
    "continuity_phase": "P2",
    "chapter": "CH11",
    "decisive": false,
    "mouth": "closed",
-   "flow_job": "F48"
+   "flow_job": "F48",
+   "identity_check": {
+    "date": "2026-11-05",
+    "method": "4 fps visual + swap-signature scan",
+    "result": "gallery bench, black splint RIGHT forearm image-left, left hand on rail; stable"
+   },
+   "approved_range": [
+    0.0,
+    8.0
+   ],
+   "review_log": [
+    {
+     "date": "2026-11-05",
+     "status": "approved",
+     "note": "Omni 1.1 Flash 720p Batch C, 12 cr; generated audio muted | usable range 0.0-8.0 s"
+    }
+   ]
   },
   {
    "shot_id": "F49",
    "slug": "palm_up",
    "kind": "flow_job",
    "source": "flow/F49.mp4",
-   "status": "missing",
+   "status": "approved",
    "narrative_event": "Palm up",
    "continuity_phase": "P2",
    "chapter": "CH11",
    "decisive": false,
    "mouth": "n/a",
-   "flow_job": "F49"
+   "flow_job": "F49",
+   "identity_check": {
+    "date": "2026-11-05",
+    "method": "4 fps visual + swap-signature scan",
+    "result": "hands-only back seat: Ivy LEFT hand with emerald over Nico's bare left palm; stable"
+   },
+   "approved_range": [
+    0.0,
+    8.0
+   ],
+   "review_log": [
+    {
+     "date": "2026-11-05",
+     "status": "approved",
+     "note": "Omni 1.1 Flash 720p Batch C, 12 cr; generated audio muted | usable range 0.0-8.0 s"
+    }
+   ]
   },
   {
    "shot_id": "F50",
    "slug": "drawer_midnight",
    "kind": "flow_job",
    "source": "flow/F50.mp4",
-   "status": "missing",
+   "status": "approved",
    "narrative_event": "The drawer at midnight",
    "continuity_phase": "P2",
    "chapter": "CH11",
    "decisive": false,
    "mouth": "n/a",
-   "flow_job": "F50"
+   "flow_job": "F50",
+   "identity_check": {
+    "date": "2026-11-05",
+    "method": "4 fps visual + swap-signature scan",
+    "result": "Ivy alone gray cardigan, midnight study drawer, candy twist; stable"
+   },
+   "approved_range": [
+    0.0,
+    8.0
+   ],
+   "review_log": [
+    {
+     "date": "2026-11-05",
+     "status": "approved",
+     "note": "Omni 1.1 Flash 720p Batch C, 12 cr; generated audio muted | usable range 0.0-8.0 s"
+    }
+   ]
   },
   {
    "shot_id": "F51",
    "slug": "glovebox",
    "kind": "flow_job",
    "source": "flow/F51.mp4",
-   "status": "missing",
+   "status": "approved",
    "narrative_event": "Sal's garage, 1:10 a.m.: the ledger",
    "continuity_phase": "P2",
    "chapter": "CH12",
    "decisive": false,
    "mouth": "n/a",
-   "flow_job": "F51"
+   "flow_job": "F51",
+   "identity_check": {
+    "date": "2026-11-05",
+    "method": "4 fps visual + swap-signature scan",
+    "result": "Nico in sedan, black splint near(right) arm, left hand at glovebox; stable"
+   },
+   "approved_range": [
+    0.0,
+    8.0
+   ],
+   "review_log": [
+    {
+     "date": "2026-11-05",
+     "status": "approved",
+     "note": "Omni 1.1 Flash 720p Batch C, 12 cr; generated audio muted | usable range 0.0-8.0 s"
+    }
+   ]
   },
   {
    "shot_id": "F52",
    "slug": "trunk",
    "kind": "flow_job",
    "source": "flow/F52.mp4",
-   "status": "missing",
+   "status": "approved",
    "narrative_event": "Trunk: receipt and tan jacket",
    "continuity_phase": "P2",
    "chapter": "CH12",
    "decisive": false,
    "mouth": "n/a",
-   "flow_job": "F52"
+   "flow_job": "F52",
+   "identity_check": {
+    "date": "2026-11-05",
+    "method": "4 fps visual + swap-signature scan",
+    "result": "Sal's garage trunk: receipt + tan jacket; Nico black splint image-left; stable"
+   },
+   "approved_range": [
+    0.0,
+    8.0
+   ],
+   "review_log": [
+    {
+     "date": "2026-11-05",
+     "status": "approved",
+     "note": "Omni 1.1 Flash 720p Batch C, 12 cr; generated audio muted | usable range 0.0-8.0 s"
+    }
+   ]
   },
   {
    "shot_id": "F53",
    "slug": "ivy_twist",
    "kind": "flow_job",
    "source": "flow/F53.mp4",
-   "status": "missing",
+   "status": "approved",
    "narrative_event": "Ivy with the candy twist",
    "continuity_phase": "P2",
    "chapter": "CH12",
    "decisive": false,
    "mouth": "closed",
-   "flow_job": "F53"
+   "flow_job": "F53",
+   "identity_check": {
+    "date": "2026-11-05",
+    "method": "4 fps visual + swap-signature scan",
+    "result": "study: Ivy with candy twist + emerald, Nico black splint image-left in doorway; stable"
+   },
+   "approved_range": [
+    0.0,
+    8.0
+   ],
+   "review_log": [
+    {
+     "date": "2026-11-05",
+     "status": "approved",
+     "note": "Omni 1.1 Flash 720p Batch C, 12 cr; generated audio muted | usable range 0.0-8.0 s"
+    }
+   ]
   },
   {
    "shot_id": "F54",
@@ -1292,13 +1672,29 @@
    "slug": "table_evidence",
    "kind": "flow_job",
    "source": "flow/F55.mp4",
-   "status": "missing",
+   "status": "approved",
    "narrative_event": "Evidence on the tablecloth",
    "continuity_phase": "P2",
    "chapter": "CH13",
    "decisive": false,
    "mouth": "closed",
-   "flow_job": "F55"
+   "flow_job": "F55",
+   "identity_check": {
+    "date": "2026-11-05",
+    "method": "4 fps visual + swap-signature scan",
+    "result": "dining room white cloth, evidence; Nico black splint near(right) arm; Sal camel; Ivy gray cardigan; stable"
+   },
+   "approved_range": [
+    0.0,
+    8.0
+   ],
+   "review_log": [
+    {
+     "date": "2026-11-05",
+     "status": "approved",
+     "note": "Omni 1.1 Flash 720p Batch C, 12 cr; generated audio muted | usable range 0.0-8.0 s"
+    }
+   ]
   },
   {
    "shot_id": "F56",
@@ -1318,13 +1714,29 @@
    "slug": "ivy_speaks",
    "kind": "flow_job",
    "source": "flow/F57.mp4",
-   "status": "missing",
+   "status": "approved",
    "narrative_event": "Reverse: Nico across from Sal, Ivy standing behind him",
    "continuity_phase": "P2",
    "chapter": "CH13",
    "decisive": false,
    "mouth": "closed",
-   "flow_job": "F57"
+   "flow_job": "F57",
+   "identity_check": {
+    "date": "2026-11-05",
+    "method": "4 fps visual + swap-signature scan",
+    "result": "Sal back to camera, Nico black splint image-left, Ivy behind with hand on shoulder; stable"
+   },
+   "approved_range": [
+    0.0,
+    8.0
+   ],
+   "review_log": [
+    {
+     "date": "2026-11-05",
+     "status": "approved",
+     "note": "Omni 1.1 Flash 720p Batch C, 12 cr; generated audio muted | usable range 0.0-8.0 s"
+    }
+   ]
   },
   {
    "shot_id": "F58",
@@ -1370,13 +1782,29 @@
    "slug": "nico_enters",
    "kind": "flow_job",
    "source": "flow/F61.mp4",
-   "status": "missing",
+   "status": "approved",
    "narrative_event": "Nico enters unarmed; Ivy steps in front",
    "continuity_phase": "P3",
    "chapter": "CH16",
    "decisive": true,
    "mouth": "closed",
-   "flow_job": "F61"
+   "flow_job": "F61",
+   "identity_check": {
+    "date": "2026-11-05",
+    "method": "4 fps visual + swap-signature scan",
+    "result": "club entrance: Nico black splint image-left, empty hands; Ivy gray cardigan steps in; guns; stable"
+   },
+   "approved_range": [
+    0.0,
+    8.0
+   ],
+   "review_log": [
+    {
+     "date": "2026-11-05",
+     "status": "approved",
+     "note": "Omni 1.1 Flash 720p Batch C, 12 cr; generated audio muted | usable range 0.0-8.0 s"
+    }
+   ]
   },
   {
    "shot_id": "F62",
@@ -1422,13 +1850,29 @@
    "slug": "splint_off",
    "kind": "flow_job",
    "source": "flow/F65.mp4",
-   "status": "missing",
+   "status": "approved",
    "narrative_event": "The splint comes off; his fist closes",
    "continuity_phase": "P4",
    "chapter": "CH17",
    "decisive": true,
    "mouth": "n/a",
-   "flow_job": "F65"
+   "flow_job": "F65",
+   "identity_check": {
+    "date": "2026-11-05",
+    "method": "4 fps visual + swap-signature scan",
+    "result": "kitchen daylight: Ivy unstraps black splint from Nico's right forearm, splint set down; stable"
+   },
+   "approved_range": [
+    0.0,
+    8.0
+   ],
+   "review_log": [
+    {
+     "date": "2026-11-05",
+     "status": "approved",
+     "note": "Omni 1.1 Flash 720p Batch C, 12 cr; generated audio muted | usable range 0.0-8.0 s"
+    }
+   ]
   },
   {
    "shot_id": "F66",
@@ -1448,52 +1892,116 @@
    "slug": "nico_listens",
    "kind": "flow_job",
    "source": "flow/F67.mp4",
-   "status": "missing",
+   "status": "approved",
    "narrative_event": "Nico listening; the door open",
    "continuity_phase": "P4",
    "chapter": "CH18",
    "decisive": false,
    "mouth": "closed",
-   "flow_job": "F67"
+   "flow_job": "F67",
+   "identity_check": {
+    "date": "2026-11-05",
+    "method": "4 fps visual + swap-signature scan",
+    "result": "bedroom: Nico on bed edge no splint, door open behind Ivy; stable"
+   },
+   "approved_range": [
+    0.0,
+    8.0
+   ],
+   "review_log": [
+    {
+     "date": "2026-11-05",
+     "status": "approved",
+     "note": "Omni 1.1 Flash 720p Batch C, 12 cr; generated audio muted | usable range 0.0-8.0 s"
+    }
+   ]
   },
   {
    "shot_id": "F68",
    "slug": "april_garden",
    "kind": "flow_job",
    "source": "flow/F68.mp4",
-   "status": "missing",
+   "status": "approved",
    "narrative_event": "April garden: lemon trees out of burlap",
    "continuity_phase": "P5",
    "chapter": "CH19",
    "decisive": false,
    "mouth": "closed",
-   "flow_job": "F68"
+   "flow_job": "F68",
+   "identity_check": {
+    "date": "2026-11-05",
+    "method": "4 fps visual + swap-signature scan",
+    "result": "April garden: Lucia black dress + cross, no ring; Theo; burlap lemon trees; stable"
+   },
+   "approved_range": [
+    0.0,
+    8.0
+   ],
+   "review_log": [
+    {
+     "date": "2026-11-05",
+     "status": "approved",
+     "note": "Omni 1.1 Flash 720p Batch C, 12 cr; generated audio muted | usable range 0.0-8.0 s"
+    }
+   ]
   },
   {
    "shot_id": "F69",
    "slug": "reyes_gate",
    "kind": "flow_job",
    "source": "flow/F69.mp4",
-   "status": "missing",
+   "status": "approved",
    "narrative_event": "Reyes at the gate",
    "continuity_phase": "P5",
    "chapter": "CH19",
    "decisive": false,
    "mouth": "closed",
-   "flow_job": "F69"
+   "flow_job": "F69",
+   "identity_check": {
+    "date": "2026-11-05",
+    "method": "4 fps visual + swap-signature scan",
+    "result": "Reyes rain jacket at gate with file, no ring; stable"
+   },
+   "approved_range": [
+    0.0,
+    8.0
+   ],
+   "review_log": [
+    {
+     "date": "2026-11-05",
+     "status": "approved",
+     "note": "Omni 1.1 Flash 720p Batch C, 12 cr; generated audio muted | usable range 0.0-8.0 s"
+    }
+   ]
   },
   {
    "shot_id": "F70",
    "slug": "stairs_14",
    "kind": "flow_job",
    "source": "flow/F70.mp4",
-   "status": "missing",
+   "status": "approved",
    "narrative_event": "Fourteen stairs",
    "continuity_phase": "P5",
    "chapter": "CH19",
    "decisive": false,
    "mouth": "closed",
-   "flow_job": "F70"
+   "flow_job": "F70",
+   "identity_check": {
+    "date": "2026-11-05",
+    "method": "4 fps visual + swap-signature scan",
+    "result": "Ivy climbs narrow stairs; emerald LEFT hand on wall, right hand bare on rail; study door; stable"
+   },
+   "approved_range": [
+    0.0,
+    8.0
+   ],
+   "review_log": [
+    {
+     "date": "2026-11-05",
+     "status": "approved",
+     "note": "Omni 1.1 Flash 720p Batch C, 12 cr; generated audio muted | usable range 0.0-8.0 s"
+    }
+   ]
   }
  ],
  "segment_cuts": {

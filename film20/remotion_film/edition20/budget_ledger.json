@@ -631,6 +631,390 @@
     "F39.mp4"
    ],
    "verdict": "Batch A: APPROVED 0-8 s after 4 fps identity sheet + location/arm/ring QA; generated audio muted"
+  },
+  {
+   "date": "2026-11-05",
+   "job_id": "F05",
+   "pool": "primary",
+   "model": "Omni 1.1 Flash 720p",
+   "outputs": 1,
+   "credits_charged": 12,
+   "result_files": [
+    "F05.mp4"
+   ],
+   "verdict": "Batch B: APPROVED 0-8 s after sampled-frame + auto identity QA; audio muted"
+  },
+  {
+   "date": "2026-11-05",
+   "job_id": "F17",
+   "pool": "primary",
+   "model": "Omni 1.1 Flash 720p",
+   "outputs": 1,
+   "credits_charged": 12,
+   "result_files": [
+    "F17.mp4"
+   ],
+   "verdict": "Batch B: APPROVED 0-8 s after sampled-frame + auto identity QA; audio muted"
+  },
+  {
+   "date": "2026-11-05",
+   "job_id": "F20",
+   "pool": "primary",
+   "model": "Omni 1.1 Flash 720p",
+   "outputs": 1,
+   "credits_charged": 12,
+   "result_files": [
+    "F20.mp4"
+   ],
+   "verdict": "Batch B: APPROVED 0-8 s after sampled-frame + auto identity QA; audio muted"
+  },
+  {
+   "date": "2026-11-05",
+   "job_id": "F21",
+   "pool": "retake",
+   "model": "Omni 1.1 Flash 720p",
+   "outputs": 1,
+   "credits_charged": 12,
+   "result_files": [
+    "F21.mp4 (as F21_R1)"
+   ],
+   "verdict": "Batch B: APPROVED 0-8 s after sampled-frame + auto identity QA; audio muted"
+  },
+  {
+   "date": "2026-11-05",
+   "job_id": "F23",
+   "pool": "primary",
+   "model": "Omni 1.1 Flash 720p",
+   "outputs": 1,
+   "credits_charged": 12,
+   "result_files": [
+    "F23.mp4"
+   ],
+   "verdict": "Batch B: APPROVED 0-8 s after sampled-frame + auto identity QA; audio muted"
+  },
+  {
+   "date": "2026-11-05",
+   "job_id": "F25",
+   "pool": "primary",
+   "model": "Omni 1.1 Flash 720p",
+   "outputs": 1,
+   "credits_charged": 12,
+   "result_files": [
+    "F25.mp4"
+   ],
+   "verdict": "Batch B: APPROVED 0-8 s after sampled-frame + auto identity QA; audio muted"
+  },
+  {
+   "date": "2026-11-05",
+   "job_id": "F27",
+   "pool": "primary",
+   "model": "Omni 1.1 Flash 720p",
+   "outputs": 1,
+   "credits_charged": 12,
+   "result_files": [
+    "F27.mp4"
+   ],
+   "verdict": "Batch B: APPROVED 0-8 s after sampled-frame + auto identity QA; audio muted"
+  },
+  {
+   "date": "2026-11-05",
+   "job_id": "F30",
+   "pool": "primary",
+   "model": "Omni 1.1 Flash 720p",
+   "outputs": 1,
+   "credits_charged": 12,
+   "result_files": [
+    "F30.mp4"
+   ],
+   "verdict": "Batch B: APPROVED 0-8 s after sampled-frame + auto identity QA; audio muted"
+  },
+  {
+   "date": "2026-11-05",
+   "job_id": "F31",
+   "pool": "primary",
+   "model": "Omni 1.1 Flash 720p",
+   "outputs": 1,
+   "credits_charged": 12,
+   "result_files": [
+    "F31.mp4"
+   ],
+   "verdict": "Batch B: APPROVED 0-8 s after sampled-frame + auto identity QA; audio muted"
+  },
+  {
+   "date": "2026-11-05",
+   "job_id": "F34",
+   "pool": "primary",
+   "model": "Omni 1.1 Flash 720p",
+   "outputs": 1,
+   "credits_charged": 12,
+   "result_files": [
+    "F34.mp4"
+   ],
+   "verdict": "Batch B: APPROVED 0-8 s after sampled-frame + auto identity QA; audio muted"
+  },
+  {
+   "date": "2026-11-05",
+   "job_id": "F36",
+   "pool": "primary",
+   "model": "Omni 1.1 Flash 720p",
+   "outputs": 1,
+   "credits_charged": 12,
+   "result_files": [
+    "F36.mp4"
+   ],
+   "verdict": "Batch B: APPROVED 0-8 s after sampled-frame + auto identity QA; audio muted"
+  },
+  {
+   "date": "2026-11-05",
+   "job_id": "F41",
+   "pool": "primary",
+   "model": "Omni 1.1 Flash 720p",
+   "outputs": 1,
+   "credits_charged": 12,
+   "result_files": [
+    "F41.mp4"
+   ],
+   "verdict": "Batch B: APPROVED 0-8 s after sampled-frame + auto identity QA; audio muted"
+  },
+  {
+   "date": "2026-11-05",
+   "job_id": "F42",
+   "pool": "primary",
+   "model": "Omni 1.1 Flash 720p",
+   "outputs": 1,
+   "credits_charged": 12,
+   "result_files": [
+    "F42.mp4"
+   ],
+   "verdict": "Batch B: APPROVED 0-8 s after sampled-frame + auto identity QA; audio muted"
+  },
+  {
+   "date": "2026-11-05",
+   "job_id": "F43",
+   "pool": "primary",
+   "model": "Omni 1.1 Flash 720p",
+   "outputs": 1,
+   "credits_charged": 12,
+   "result_files": [
+    "F43.mp4 (delivered as Hand_slipping_foil_card_into_a1ff8fe0.mp4)"
+   ],
+   "verdict": "Batch B: APPROVED 0-8 s after sampled-frame + auto identity QA; audio muted"
+  },
+  {
+   "date": "2026-11-05",
+   "job_id": "F44",
+   "pool": "primary",
+   "model": "Omni 1.1 Flash 720p",
+   "outputs": 1,
+   "credits_charged": 12,
+   "result_files": [
+    "F44.mp4"
+   ],
+   "verdict": "Batch B: APPROVED 0-8 s after sampled-frame + auto identity QA; audio muted"
+  },
+  {
+   "date": "2026-11-05",
+   "job_id": "F45",
+   "pool": "primary",
+   "model": "Omni 1.1 Flash 720p",
+   "outputs": 1,
+   "credits_charged": 12,
+   "result_files": [
+    "F45.mp4"
+   ],
+   "verdict": "Batch B: APPROVED 0-8 s after sampled-frame + auto identity QA; audio muted"
+  },
+  {
+   "date": "2026-11-05",
+   "job_id": "F46",
+   "pool": "primary",
+   "model": "Omni 1.1 Flash 720p",
+   "outputs": 1,
+   "credits_charged": 12,
+   "result_files": [
+    "F46.mp4"
+   ],
+   "verdict": "Batch B: APPROVED 0-8 s after sampled-frame + auto identity QA; audio muted"
+  },
+  {
+   "date": "2026-11-05",
+   "job_id": "F47",
+   "pool": "primary",
+   "model": "Omni 1.1 Flash 720p",
+   "outputs": 1,
+   "credits_charged": 12,
+   "result_files": [
+    "F47.mp4"
+   ],
+   "verdict": "Batch B: APPROVED 0-8 s after sampled-frame + auto identity QA; audio muted"
+  },
+  {
+   "date": "2026-11-05",
+   "job_id": "F48",
+   "pool": "primary",
+   "model": "Omni 1.1 Flash 720p",
+   "outputs": 1,
+   "credits_charged": 12,
+   "result_files": [
+    "F48.mp4"
+   ],
+   "verdict": "Batch C: APPROVED 0-8 s after sampled-frame + auto identity QA; audio muted"
+  },
+  {
+   "date": "2026-11-05",
+   "job_id": "F49",
+   "pool": "primary",
+   "model": "Omni 1.1 Flash 720p",
+   "outputs": 1,
+   "credits_charged": 12,
+   "result_files": [
+    "F49.mp4"
+   ],
+   "verdict": "Batch C: APPROVED 0-8 s after sampled-frame + auto identity QA; audio muted"
+  },
+  {
+   "date": "2026-11-05",
+   "job_id": "F50",
+   "pool": "primary",
+   "model": "Omni 1.1 Flash 720p",
+   "outputs": 1,
+   "credits_charged": 12,
+   "result_files": [
+    "F50.mp4"
+   ],
+   "verdict": "Batch C: APPROVED 0-8 s after sampled-frame + auto identity QA; audio muted"
+  },
+  {
+   "date": "2026-11-05",
+   "job_id": "F51",
+   "pool": "primary",
+   "model": "Omni 1.1 Flash 720p",
+   "outputs": 1,
+   "credits_charged": 12,
+   "result_files": [
+    "F51.mp4"
+   ],
+   "verdict": "Batch C: APPROVED 0-8 s after sampled-frame + auto identity QA; audio muted"
+  },
+  {
+   "date": "2026-11-05",
+   "job_id": "F52",
+   "pool": "primary",
+   "model": "Omni 1.1 Flash 720p",
+   "outputs": 1,
+   "credits_charged": 12,
+   "result_files": [
+    "F52.mp4"
+   ],
+   "verdict": "Batch C: APPROVED 0-8 s after sampled-frame + auto identity QA; audio muted"
+  },
+  {
+   "date": "2026-11-05",
+   "job_id": "F53",
+   "pool": "primary",
+   "model": "Omni 1.1 Flash 720p",
+   "outputs": 1,
+   "credits_charged": 12,
+   "result_files": [
+    "F53.mp4"
+   ],
+   "verdict": "Batch C: APPROVED 0-8 s after sampled-frame + auto identity QA; audio muted"
+  },
+  {
+   "date": "2026-11-05",
+   "job_id": "F55",
+   "pool": "primary",
+   "model": "Omni 1.1 Flash 720p",
+   "outputs": 1,
+   "credits_charged": 12,
+   "result_files": [
+    "F55.mp4"
+   ],
+   "verdict": "Batch C: APPROVED 0-8 s after sampled-frame + auto identity QA; audio muted"
+  },
+  {
+   "date": "2026-11-05",
+   "job_id": "F57",
+   "pool": "primary",
+   "model": "Omni 1.1 Flash 720p",
+   "outputs": 1,
+   "credits_charged": 12,
+   "result_files": [
+    "F57.mp4"
+   ],
+   "verdict": "Batch C: APPROVED 0-8 s after sampled-frame + auto identity QA; audio muted"
+  },
+  {
+   "date": "2026-11-05",
+   "job_id": "F61",
+   "pool": "primary",
+   "model": "Omni 1.1 Flash 720p",
+   "outputs": 1,
+   "credits_charged": 12,
+   "result_files": [
+    "F61.mp4"
+   ],
+   "verdict": "Batch C: APPROVED 0-8 s after sampled-frame + auto identity QA; audio muted"
+  },
+  {
+   "date": "2026-11-05",
+   "job_id": "F65",
+   "pool": "primary",
+   "model": "Omni 1.1 Flash 720p",
+   "outputs": 1,
+   "credits_charged": 12,
+   "result_files": [
+    "F65.mp4"
+   ],
+   "verdict": "Batch C: APPROVED 0-8 s after sampled-frame + auto identity QA; audio muted"
+  },
+  {
+   "date": "2026-11-05",
+   "job_id": "F67",
+   "pool": "primary",
+   "model": "Omni 1.1 Flash 720p",
+   "outputs": 1,
+   "credits_charged": 12,
+   "result_files": [
+    "F67.mp4"
+   ],
+   "verdict": "Batch C: APPROVED 0-8 s after sampled-frame + auto identity QA; audio muted"
+  },
+  {
+   "date": "2026-11-05",
+   "job_id": "F68",
+   "pool": "primary",
+   "model": "Omni 1.1 Flash 720p",
+   "outputs": 1,
+   "credits_charged": 12,
+   "result_files": [
+    "F68.mp4"
+   ],
+   "verdict": "Batch C: APPROVED 0-8 s after sampled-frame + auto identity QA; audio muted"
+  },
+  {
+   "date": "2026-11-05",
+   "job_id": "F69",
+   "pool": "primary",
+   "model": "Omni 1.1 Flash 720p",
+   "outputs": 1,
+   "credits_charged": 12,
+   "result_files": [
+    "F69.mp4"
+   ],
+   "verdict": "Batch C: APPROVED 0-8 s after sampled-frame + auto identity QA; audio muted"
+  },
+  {
+   "date": "2026-11-05",
+   "job_id": "F70",
+   "pool": "primary",
+   "model": "Omni 1.1 Flash 720p",
+   "outputs": 1,
+   "credits_charged": 12,
+   "result_files": [
+    "F70.mp4"
+   ],
+   "verdict": "Batch C: APPROVED 0-8 s after sampled-frame + auto identity QA; audio muted"
   }
  ],
  "plan_version": 2,
@@ -662,14 +1046,7 @@
   "film_cap_credits": 1000,
   "minimum_untouched_account_credits": 10
  },
- "planned_retakes": [
-  {
-   "job_id": "F21",
-   "pool": "retake",
-   "credits": 10,
-   "reason": "take 1 identity/role swap + wrong location"
-  }
- ],
+ "planned_retakes": [],
  "batch2_report": {
   "submitted": [
    "F18",
@@ -747,6 +1124,12 @@
    "source": "author UI (actual, not estimated 758)",
    "balance_credits": 698,
    "note": "after F19 test 12 + Batch A 120 (Omni 1.1 Flash 720p)"
+  },
+  {
+   "date": "2026-11-05",
+   "source": "author UI, after Batch D charged",
+   "balance_credits": 170,
+   "note": "author: enough for the last 6 jobs (72 cr)"
   }
  ],
  "reconciliation": {
@@ -849,5 +1232,61 @@
   ],
   "max_credits": 120,
   "counted": 120
+ },
+ "batch_omni_B": {
+  "date": "2026-11-05",
+  "jobs": 18,
+  "credits": 216,
+  "status": "delivered + approved 18/18"
+ },
+ "batch_omni_C": {
+  "date": "2026-11-05",
+  "delivered": [
+   "F48",
+   "F49",
+   "F50",
+   "F51",
+   "F52",
+   "F53",
+   "F55",
+   "F57",
+   "F61",
+   "F65",
+   "F67",
+   "F68",
+   "F69",
+   "F70"
+  ],
+  "credits": 168,
+  "status": "14 delivered + approved",
+  "not_delivered_policy_fail": [
+   "F56",
+   "F60",
+   "F62",
+   "F63",
+   "F66"
+  ],
+  "note": "UI policy failures (author): not counted; inventory to be rechecked after reload before any retake"
+ },
+ "batch_omni_D": {
+  "date": "2026-11-05",
+  "jobs": [
+   "F03",
+   "F16",
+   "F24",
+   "F28",
+   "F32",
+   "F33",
+   "F35",
+   "F37",
+   "F54",
+   "F58",
+   "F59",
+   "F64"
+  ],
+  "max_credits": 144,
+  "status": "processing (author)",
+  "counted": 0,
+  "warning": "F32 still held (ring on her RIGHT hand); its clip will be rejected unless the hand reads as LEFT"
  }
 }

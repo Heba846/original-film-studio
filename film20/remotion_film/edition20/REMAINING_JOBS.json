@@ -1,6 +1,6 @@
 {
  "generated_from": "media_manifest.json + FULL70_FLOW_PROMPTS.json + film_timeline.json",
- "count": 50,
+ "count": 18,
  "rule": "free still -> QA -> one 10-credit animation with the approved still as first frame",
  "needed_ranges_format": "[segment, seconds_on_screen, source_in_s, source_out_s, speed]",
  "jobs": [
@@ -53,60 +53,12 @@
     ]
    ],
    "still_qa": {
-    "verdict": "repair_free",
-    "source": "Final4/F03_qa4.png",
-    "repair_prompt": "Free Nano Banana repair (0 cr): keep everything else exactly; change ONLY: the slumped man beside the silver sedan must be the SAME heavy man as F16: fifties, heavy, balding, in a good dark OVERCOAT, face turned away. Not a dark-haired man in a T-shirt. Nico's arms, gun and the garage are correct."
+    "verdict": "approved",
+    "source": "End10/F03_end.png",
+    "first_frame": "stills_approved/STILL_F03.jpg"
    },
    "still_prompt": "FREE STILL FIRST (Nano Banana, 0 credits): a single 16:9 still frame, no motion, of exactly this moment, in the correct location. Use REF_IVY_FACE_ONLY / REF_NICO_FACE_ONLY (or hospital.png as an IMAGE reference) for faces only. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. Locked-off medium-wide shot from behind the hood of a parked car in a hospital parking garage interior, level two, 4 a.m., low solid concrete ceiling, orange sodium lights, pooled water on the concrete floor with sodium reflections, NO falling rain. Thirty feet away beside a silver sedan: the scarred man: an original fictional man, 34, dark wavy hair, short stubble, gray eyes, a thin HEALED WHITE old scar through his anatomical LEFT eyebrow - when he faces camera it is the eyebrow on the RIGHT side of the image - and no bandage, tape or plaster anywhere on his face; his injured arm is his anatomical RIGHT forearm, on the LEFT side of the image when he faces camera (face as in REF_NICO_FACE_ONLY.png) (no fresh cut, no blood on the face), standing upright and still, a ruined charcoal suit jacket over a black shirt, the jacket draped over his right shoulder, his anatomical RIGHT forearm in a white plaster splint from fingertips to just below the elbow held against his chest, his LEFT hand holding a black pistol low, pointed at the floor. At his feet a DIFFERENT man, the heavy man in the overcoat: heavy, fifties, balding, in a good dark overcoat, slumped sitting against the sedan's rear door, his face turned away from camera; no blood visible. Nobody fires, no muzzle flash, no smoke. Roles and positions stay fixed for the whole shot. Nobody treats or bandages anyone. Location: the same parking garage as REF_GARAGE_F01.png - level two, low concrete ceiling, concrete pillars with yellow bumper guards, pooled water with sodium-orange reflections, no falling rain; a silver sedan parked nose-out facing camera in the centre bay in front of a gray steel stairwell door, open concrete stairs to the right of the door; the doctor's own car is a dark car whose glossy hood fills the near foreground. No workshop, no tool chests, no shelving, no hospital interior, no curtains, no IV poles. Continuity: Fri Oct 3 - Sun Oct 5: the doctor wears no ring, no necklace, no chain; the scarred man has a WHITE plaster splint on his anatomical RIGHT forearm from fingertips to below the elbow and wears a ruined charcoal suit over a black shirt (jacket off in the ER bay). Reference images are for faces only (REF_IVY_FACE_ONLY.png, REF_NICO_FACE_ONLY.png) and, for the garage, location only (REF_GARAGE_F01.png); never copy a reference image's background or composition. Painterly illustrated cinematic style: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9.",
    "animation_prompt": "ANIMATE THE APPROVED STILL: use STILL_F03.png as the literal first frame (never hospital.png). Keep its composition, location, people and roles; only add the motion described. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. Locked-off medium-wide shot from behind the hood of a parked car in a hospital parking garage interior, level two, 4 a.m., low solid concrete ceiling, orange sodium lights, pooled water on the concrete floor with sodium reflections, NO falling rain. Thirty feet away beside a silver sedan: the scarred man: an original fictional man, 34, dark wavy hair, short stubble, gray eyes, a thin HEALED WHITE old scar through his anatomical LEFT eyebrow - when he faces camera it is the eyebrow on the RIGHT side of the image - and no bandage, tape or plaster anywhere on his face; his injured arm is his anatomical RIGHT forearm, on the LEFT side of the image when he faces camera (face as in REF_NICO_FACE_ONLY.png) (no fresh cut, no blood on the face), standing upright and still, a ruined charcoal suit jacket over a black shirt, the jacket draped over his right shoulder, his anatomical RIGHT forearm in a white plaster splint from fingertips to just below the elbow held against his chest, his LEFT hand holding a black pistol low, pointed at the floor. At his feet a DIFFERENT man, the heavy man in the overcoat: heavy, fifties, balding, in a good dark overcoat, slumped sitting against the sedan's rear door, his face turned away from camera; no blood visible. Nobody fires, no muzzle flash, no smoke. Roles and positions stay fixed for the whole shot. Nobody treats or bandages anyone. Location: the same parking garage as REF_GARAGE_F01.png - level two, low concrete ceiling, concrete pillars with yellow bumper guards, pooled water with sodium-orange reflections, no falling rain; a silver sedan parked nose-out facing camera in the centre bay in front of a gray steel stairwell door, open concrete stairs to the right of the door; the doctor's own car is a dark car whose glossy hood fills the near foreground. No workshop, no tool chests, no shelving, no hospital interior, no curtains, no IV poles. Continuity: Fri Oct 3 - Sun Oct 5: the doctor wears no ring, no necklace, no chain; the scarred man has a WHITE plaster splint on his anatomical RIGHT forearm from fingertips to below the elbow and wears a ruined charcoal suit over a black shirt (jacket off in the ER bay). Reference images are for faces only (REF_IVY_FACE_ONLY.png, REF_NICO_FACE_ONLY.png) and, for the garage, location only (REF_GARAGE_F01.png); never copy a reference image's background or composition. Painterly illustrated cinematic style: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, natural restrained motion, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9, 8 seconds."
-  },
-  {
-   "id": "F05",
-   "slug": "nico_hands",
-   "batch": 1,
-   "chapter": "CH00",
-   "phase": "P0",
-   "status": "PENDING REVIEW (author-side take not delivered): if it fails, use this corrected prompt",
-   "event": "Nico's hands: splinted right, gun low in the left",
-   "location_override": "garage L2 beside the silver sedan, waist height",
-   "costume_override": {
-    "NICO": "ruined charcoal suit over black shirt; WHITE plaster splint anatomical RIGHT forearm (image-left facing camera); healed white scar anatomical LEFT brow (image-right); gun only ever in his LEFT hand"
-   },
-   "mouth": "n/a",
-   "decisive": true,
-   "still_file": "STILL_F05.png",
-   "video_file": "F05.mp4",
-   "first_frame": "STILL_F05.png (approved still; never hospital.png)",
-   "needed_ranges": [
-    [
-     "n003",
-     6.58,
-     0.2,
-     6.7833,
-     1.0
-    ],
-    [
-     "n032",
-     4.0,
-     0.4,
-     4.65,
-     1.0
-    ],
-    [
-     "n148",
-     7.46,
-     0.2,
-     7.6583,
-     1.0
-    ]
-   ],
-   "still_qa": {
-    "verdict": "approved",
-    "source": "Repairs/media/F05.png",
-    "first_frame": "stills_approved/STILL_F05.jpg"
-   },
-   "still_prompt": "FREE STILL FIRST (Nano Banana, 0 credits): a single 16:9 still frame, no motion, of exactly this moment, in the correct location. Use REF_IVY_FACE_ONLY / REF_NICO_FACE_ONLY (or hospital.png as an IMAGE reference) for faces only. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. Close insert at waist height in the parking garage of REF_GARAGE_F01.png: a man's anatomical RIGHT forearm in a white plaster splint from fingertips to elbow, held still against a CHARCOAL (not gray) suit jacket and black shirt - the splinted hand holds NOTHING; his LEFT hand (the unsplinted hand) loosely holds a black pistol pointed at the wet floor. As seen from the front the splint is on the LEFT side of the image and the gun on the RIGHT side. No face. Slight breathing movement only. Continuity: Fri Oct 3 - Sun Oct 5: the doctor wears no ring, no necklace, no chain; the scarred man has a WHITE plaster splint on his anatomical RIGHT forearm from fingertips to below the elbow and wears a ruined charcoal suit over a black shirt (jacket off in the ER bay). Reference images are for faces only (REF_IVY_FACE_ONLY.png, REF_NICO_FACE_ONLY.png) and, for the garage, location only (REF_GARAGE_F01.png); never copy a reference image's background or composition. Painterly illustrated cinematic style: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9.",
-   "animation_prompt": "ANIMATE THE APPROVED STILL: use STILL_F05.png as the literal first frame (never hospital.png). Keep its composition, location, people and roles; only add the motion described. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. Close insert at waist height in the parking garage of REF_GARAGE_F01.png: a man's anatomical RIGHT forearm in a white plaster splint from fingertips to elbow, held still against a CHARCOAL (not gray) suit jacket and black shirt - the splinted hand holds NOTHING; his LEFT hand (the unsplinted hand) loosely holds a black pistol pointed at the wet floor. As seen from the front the splint is on the LEFT side of the image and the gun on the RIGHT side. No face. Slight breathing movement only. Continuity: Fri Oct 3 - Sun Oct 5: the doctor wears no ring, no necklace, no chain; the scarred man has a WHITE plaster splint on his anatomical RIGHT forearm from fingertips to below the elbow and wears a ruined charcoal suit over a black shirt (jacket off in the ER bay). Reference images are for faces only (REF_IVY_FACE_ONLY.png, REF_NICO_FACE_ONLY.png) and, for the garage, location only (REF_GARAGE_F01.png); never copy a reference image's background or composition. Painterly illustrated cinematic style: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, natural restrained motion, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9, 8 seconds."
   },
   {
    "id": "F16",
@@ -143,200 +95,12 @@
     ]
    ],
    "still_qa": {
-    "verdict": "repair_free",
-    "source": "Final4/F16_qa4.png",
-    "repair_prompt": "Free Nano Banana repair (0 cr): keep everything else exactly; change ONLY: blocking. The scarred man must stand BETWEEN the red-haired doctor and the slumped heavy man, one pace toward her, his LEFT palm out to stop her. The doctor is on the far side of him from the heavy man, hands out, rising from behind her dark car. Gun low in his left hand only if his palm is not needed; otherwise tuck it at his left side. Arms, scrubs and the heavy man are correct."
+    "verdict": "approved",
+    "source": "End10/F16_end.png",
+    "first_frame": "stills_approved/STILL_F16.jpg"
    },
    "still_prompt": "FREE STILL FIRST (Nano Banana, 0 credits): a single 16:9 still frame, no motion, of exactly this moment, in the correct location. Use REF_IVY_FACE_ONLY / REF_NICO_FACE_ONLY (or hospital.png as an IMAGE reference) for faces only. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. the red-haired doctor rises from behind her car, hands out; the scarred man (gun low in LEFT hand) steps one pace to block her from the heavy man in the overcoat, left palm out; the heavy man in the overcoat slumped, face away; mouths closed. Characters: the heavy man in the overcoat: fifties, heavy, balding, good dark overcoat; the scarred man: an original fictional man, 34, dark wavy hair, short stubble, gray eyes, a thin HEALED WHITE old scar through his anatomical LEFT eyebrow - when he faces camera it is the eyebrow on the RIGHT side of the image - and no bandage, tape or plaster anywhere on his face; his injured arm is his anatomical RIGHT forearm, on the LEFT side of the image when he faces camera (face as in REF_NICO_FACE_ONLY.png); the red-haired doctor: an original fictional woman, 28, pale freckled skin, messy copper-red hair in a bun with a ballpoint pen through it (face as in REF_IVY_FACE_ONLY.png). Mouths stay closed; nobody speaks. Location: the same parking garage as REF_GARAGE_F01.png - level two, low concrete ceiling, concrete pillars with yellow bumper guards, pooled water with sodium-orange reflections, no falling rain; a silver sedan parked nose-out facing camera in the centre bay in front of a gray steel stairwell door, open concrete stairs to the right of the door; the doctor's own car is a dark car whose glossy hood fills the near foreground. No workshop, no tool chests, no shelving, no hospital interior, no curtains, no IV poles. IDENTITY LOCK: the red-haired freckled WOMAN in navy scrubs is always the doctor and the one who treats; the dark-haired stubbled MAN is always the injured man/patient. Never swap their faces, genders, hair, clothes or roles, and never blend one face into the other. Continuity: Fri Oct 3 - Sun Oct 5: the doctor wears no ring, no necklace, no chain; the scarred man has a WHITE plaster splint on his anatomical RIGHT forearm from fingertips to below the elbow and wears a ruined charcoal suit over a black shirt (jacket off in the ER bay). Reference images are for faces only (REF_IVY_FACE_ONLY.png, REF_NICO_FACE_ONLY.png) and, for the garage, location only (REF_GARAGE_F01.png); never copy a reference image's background or composition. Painterly illustrated cinematic style: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9.",
    "animation_prompt": "ANIMATE THE APPROVED STILL: use STILL_F16.png as the literal first frame (never hospital.png). Keep its composition, location, people and roles; only add the motion described. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. the red-haired doctor rises from behind her car, hands out; the scarred man (gun low in LEFT hand) steps one pace to block her from the heavy man in the overcoat, left palm out; the heavy man in the overcoat slumped, face away; mouths closed. Characters: the heavy man in the overcoat: fifties, heavy, balding, good dark overcoat; the scarred man: an original fictional man, 34, dark wavy hair, short stubble, gray eyes, a thin HEALED WHITE old scar through his anatomical LEFT eyebrow - when he faces camera it is the eyebrow on the RIGHT side of the image - and no bandage, tape or plaster anywhere on his face; his injured arm is his anatomical RIGHT forearm, on the LEFT side of the image when he faces camera (face as in REF_NICO_FACE_ONLY.png); the red-haired doctor: an original fictional woman, 28, pale freckled skin, messy copper-red hair in a bun with a ballpoint pen through it (face as in REF_IVY_FACE_ONLY.png). Mouths stay closed; nobody speaks. Location: the same parking garage as REF_GARAGE_F01.png - level two, low concrete ceiling, concrete pillars with yellow bumper guards, pooled water with sodium-orange reflections, no falling rain; a silver sedan parked nose-out facing camera in the centre bay in front of a gray steel stairwell door, open concrete stairs to the right of the door; the doctor's own car is a dark car whose glossy hood fills the near foreground. No workshop, no tool chests, no shelving, no hospital interior, no curtains, no IV poles. IDENTITY LOCK: the red-haired freckled WOMAN in navy scrubs is always the doctor and the one who treats; the dark-haired stubbled MAN is always the injured man/patient. Never swap their faces, genders, hair, clothes or roles, and never blend one face into the other. Continuity: Fri Oct 3 - Sun Oct 5: the doctor wears no ring, no necklace, no chain; the scarred man has a WHITE plaster splint on his anatomical RIGHT forearm from fingertips to below the elbow and wears a ruined charcoal suit over a black shirt (jacket off in the ER bay). Reference images are for faces only (REF_IVY_FACE_ONLY.png, REF_NICO_FACE_ONLY.png) and, for the garage, location only (REF_GARAGE_F01.png); never copy a reference image's background or composition. Painterly illustrated cinematic style: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, natural restrained motion, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9, 8 seconds."
-  },
-  {
-   "id": "F17",
-   "slug": "mopped_bay",
-   "batch": 2,
-   "chapter": "CH02",
-   "phase": "P0",
-   "status": "not yet generated",
-   "event": "4:31 - the mopped bay, the officer, the dead camera",
-   "location_override": "garage L2, the sedan's bay EMPTY and freshly mopped, dead camera dome",
-   "costume_override": {
-    "IVY": "navy short-sleeved scrubs (work) or faded T-shirt + gray cardigan (home); copper-red bun with ONE pen; NO ring/chain",
-    "NICO": "ruined charcoal suit over black shirt; WHITE plaster splint anatomical RIGHT forearm (image-left facing camera); healed white scar anatomical LEFT brow (image-right); gun only ever in his LEFT hand"
-   },
-   "mouth": "closed",
-   "decisive": false,
-   "still_file": "STILL_F17.png",
-   "video_file": "F17.mp4",
-   "first_frame": "STILL_F17.png (approved still; never hospital.png)",
-   "needed_ranges": [
-    [
-     "n029",
-     8.79,
-     0.2,
-     7.6993,
-     0.853
-    ]
-   ],
-   "still_qa": {
-    "verdict": "approved",
-    "source": "Repairs/media/F17.png",
-    "first_frame": "stills_approved/STILL_F17.jpg"
-   },
-   "still_prompt": "FREE STILL FIRST (Nano Banana, 0 credits): a single 16:9 still frame, no motion, of exactly this moment, in the correct location. Use REF_IVY_FACE_ONLY / REF_NICO_FACE_ONLY (or hospital.png as an IMAGE reference) for faces only. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. Freshly mopped empty bay where the sedan stood; a young officer's flashlight sweeps; dead camera dome; the red-haired doctor in a gray cardigan over scrubs at the edge, lips pressed. Characters: the red-haired doctor: an original fictional woman, 28, pale freckled skin, messy copper-red hair in a bun with a ballpoint pen through it (face as in REF_IVY_FACE_ONLY.png). Mouths stay closed; nobody speaks. Location: the same parking garage as REF_GARAGE_F01.png - level two, low concrete ceiling, concrete pillars with yellow bumper guards, pooled water with sodium-orange reflections, no falling rain; the centre bay in front of the gray steel stairwell door is now EMPTY and freshly mopped - NO silver sedan, no man on the floor, open concrete stairs to the right of the door; the doctor's own car is a dark car whose glossy hood fills the near foreground. No workshop, no tool chests, no shelving, no hospital interior, no curtains, no IV poles. Continuity: Fri Oct 3 - Sun Oct 5: the doctor wears no ring, no necklace, no chain; the scarred man has a WHITE plaster splint on his anatomical RIGHT forearm from fingertips to below the elbow and wears a ruined charcoal suit over a black shirt (jacket off in the ER bay). Reference images are for faces only (REF_IVY_FACE_ONLY.png, REF_NICO_FACE_ONLY.png) and, for the garage, location only (REF_GARAGE_F01.png); never copy a reference image's background or composition. Painterly illustrated cinematic style: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9.",
-   "animation_prompt": "ANIMATE THE APPROVED STILL: use STILL_F17.png as the literal first frame (never hospital.png). Keep its composition, location, people and roles; only add the motion described. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. Freshly mopped empty bay where the sedan stood; a young officer's flashlight sweeps; dead camera dome; the red-haired doctor in a gray cardigan over scrubs at the edge, lips pressed. Characters: the red-haired doctor: an original fictional woman, 28, pale freckled skin, messy copper-red hair in a bun with a ballpoint pen through it (face as in REF_IVY_FACE_ONLY.png). Mouths stay closed; nobody speaks. Location: the same parking garage as REF_GARAGE_F01.png - level two, low concrete ceiling, concrete pillars with yellow bumper guards, pooled water with sodium-orange reflections, no falling rain; the centre bay in front of the gray steel stairwell door is now EMPTY and freshly mopped - NO silver sedan, no man on the floor, open concrete stairs to the right of the door; the doctor's own car is a dark car whose glossy hood fills the near foreground. No workshop, no tool chests, no shelving, no hospital interior, no curtains, no IV poles. Continuity: Fri Oct 3 - Sun Oct 5: the doctor wears no ring, no necklace, no chain; the scarred man has a WHITE plaster splint on his anatomical RIGHT forearm from fingertips to below the elbow and wears a ruined charcoal suit over a black shirt (jacket off in the ER bay). Reference images are for faces only (REF_IVY_FACE_ONLY.png, REF_NICO_FACE_ONLY.png) and, for the garage, location only (REF_GARAGE_F01.png); never copy a reference image's background or composition. Painterly illustrated cinematic style: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, natural restrained motion, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9, 8 seconds."
-  },
-  {
-   "id": "F20",
-   "slug": "apt_wide",
-   "batch": 2,
-   "chapter": "CH04",
-   "phase": "P0",
-   "status": "TAKE 1 GENERATED",
-   "event": "Nico in her mother's armchair in the dark; Theo beside him",
-   "location_override": "Ivy's apartment at 7 p.m., lamp off, door open to the stairwell, old armchair",
-   "costume_override": {
-    "IVY": "navy short-sleeved scrubs (work) or faded T-shirt + gray cardigan (home); copper-red bun with ONE pen; NO ring/chain",
-    "NICO": "ruined charcoal suit over black shirt; WHITE plaster splint anatomical RIGHT forearm (image-left facing camera); healed white scar anatomical LEFT brow (image-right); gun only ever in his LEFT hand",
-    "THEO": "early 20s, thin, pale, red ears"
-   },
-   "mouth": "closed",
-   "decisive": false,
-   "still_file": "STILL_F20.png",
-   "video_file": "F20.mp4",
-   "first_frame": "STILL_F20.png (approved still; never hospital.png)",
-   "needed_ranges": [
-    [
-     "n036",
-     8.79,
-     0.2,
-     7.6729,
-     0.85
-    ],
-    [
-     "n037",
-     4.08,
-     4.0,
-     7.6999,
-     0.9061
-    ],
-    [
-     "n054",
-     2.58,
-     1.4,
-     3.9833,
-     1.0
-    ]
-   ],
-   "still_qa": {
-    "verdict": "approved",
-    "source": "Repairs/media/F20.png",
-    "first_frame": "stills_approved/STILL_F20.jpg"
-   },
-   "still_prompt": "FREE STILL FIRST (Nano Banana, 0 credits): a single 16:9 still frame, no motion, of exactly this moment, in the correct location. Use REF_IVY_FACE_ONLY / REF_NICO_FACE_ONLY (or hospital.png as an IMAGE reference) for faces only. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. Door opens on a dark apartment at 7 p.m., the red-haired doctor with groceries; the scarred man seated in an old armchair, white splint resting on the arm; her younger brother her younger brother beside him, pale, crying quietly; slow push. Characters: the scarred man: an original fictional man, 34, dark wavy hair, short stubble, gray eyes, a thin HEALED WHITE old scar through his anatomical LEFT eyebrow - when he faces camera it is the eyebrow on the RIGHT side of the image - and no bandage, tape or plaster anywhere on his face; his injured arm is his anatomical RIGHT forearm, on the LEFT side of the image when he faces camera (face as in hospital.png); her younger brother: early 20s, thin, pale, red ears, short brown hair; the red-haired doctor: an original fictional woman, 28, pale freckled skin, messy copper-red hair in a bun with a ballpoint pen through it (face as in hospital.png). Mouths stay closed; nobody speaks. Continuity: Fri Oct 3 - Sun Oct 5: the doctor wears no ring, no necklace, no chain; the scarred man has a WHITE plaster splint on his anatomical RIGHT forearm from fingertips to below the elbow and wears a ruined charcoal suit over a black shirt (jacket off in the ER bay). Use hospital.png ONLY for the characters' faces, hair and costumes; take the location, background and props from this prompt (and from REF_garage_F01.png for the garage), never from hospital.png. Painterly illustrated cinematic style matching hospital.png: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9.",
-   "animation_prompt": "ANIMATE THE APPROVED STILL: use STILL_F20.png as the literal first frame (never hospital.png). Keep its composition, location, people and roles; only add the motion described. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. Door opens on a dark apartment at 7 p.m., the red-haired doctor with groceries; the scarred man seated in an old armchair, white splint resting on the arm; her younger brother her younger brother beside him, pale, crying quietly; slow push. Characters: the scarred man: an original fictional man, 34, dark wavy hair, short stubble, gray eyes, a thin HEALED WHITE old scar through his anatomical LEFT eyebrow - when he faces camera it is the eyebrow on the RIGHT side of the image - and no bandage, tape or plaster anywhere on his face; his injured arm is his anatomical RIGHT forearm, on the LEFT side of the image when he faces camera (face as in hospital.png); her younger brother: early 20s, thin, pale, red ears, short brown hair; the red-haired doctor: an original fictional woman, 28, pale freckled skin, messy copper-red hair in a bun with a ballpoint pen through it (face as in hospital.png). Mouths stay closed; nobody speaks. Continuity: Fri Oct 3 - Sun Oct 5: the doctor wears no ring, no necklace, no chain; the scarred man has a WHITE plaster splint on his anatomical RIGHT forearm from fingertips to below the elbow and wears a ruined charcoal suit over a black shirt (jacket off in the ER bay). Use hospital.png ONLY for the characters' faces, hair and costumes; take the location, background and props from this prompt (and from REF_garage_F01.png for the garage), never from hospital.png. Painterly illustrated cinematic style matching hospital.png: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, natural restrained motion, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9, 8 seconds."
-  },
-  {
-   "id": "F21",
-   "slug": "nico_armchair",
-   "batch": 2,
-   "chapter": "CH04",
-   "phase": "P0",
-   "status": "RETAKE, still-first (retake pool, 10 cr): take 1 rejected (see edition20/review)",
-   "event": "Nico in the armchair (his lines placed on it, no lip-sync)",
-   "location_override": "Ivy's dark apartment, old armchair, streetlight only (NOT a hospital)",
-   "costume_override": {
-    "NICO": "ruined charcoal suit over black shirt; WHITE plaster splint anatomical RIGHT forearm (image-left facing camera); healed white scar anatomical LEFT brow (image-right); gun only ever in his LEFT hand"
-   },
-   "mouth": "closed",
-   "decisive": false,
-   "still_file": "STILL_F21.png",
-   "video_file": "F21.mp4",
-   "first_frame": "STILL_F21.png (approved still; never hospital.png)",
-   "needed_ranges": [
-    [
-     "n038",
-     3.21,
-     0.2,
-     3.1396,
-     0.85
-    ],
-    [
-     "n039",
-     1.96,
-     3.1396,
-     4.8042,
-     0.85
-    ],
-    [
-     "n040",
-     1.33,
-     4.8042,
-     5.9375,
-     0.85
-    ],
-    [
-     "n042",
-     1.79,
-     5.9375,
-     7.7,
-     0.9837
-    ],
-    [
-     "n045",
-     7.83,
-     0.2,
-     7.6996,
-     0.9574
-    ]
-   ],
-   "still_qa": {
-    "verdict": "approved",
-    "source": "Repairs/media/F21.png",
-    "first_frame": "stills_approved/STILL_F21.jpg"
-   },
-   "still_prompt": "FREE STILL FIRST (Nano Banana, 0 credits): a single 16:9 still frame, no motion, of exactly this moment, in the correct location. Use REF_IVY_FACE_ONLY / REF_NICO_FACE_ONLY (or hospital.png as an IMAGE reference) for faces only. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. Medium close shot at night in a small dark APARTMENT living room (NOT a hospital: no gurney, no medical equipment, no gloves, no treatment): the scarred man (an original fictional MAN, 34, dark wavy hair, short stubble, gray eyes, face as in REF_NICO_FACE_ONLY.png; thin healed white scar through his anatomical LEFT eyebrow, the eyebrow on the RIGHT side of the image) sits in an old worn armchair, lamp off, lit only by streetlight through a window; ruined charcoal suit over a black shirt; his anatomical RIGHT forearm in a white plaster splint (LEFT side of the image) rests on the armchair's arm. He leans forward slightly, watching someone off-screen at the doorway; mouth CLOSED, he does not speak; nobody else in frame. Continuity: Fri Oct 3 - Sun Oct 5: the doctor wears no ring, no necklace, no chain; the scarred man has a WHITE plaster splint on his anatomical RIGHT forearm from fingertips to below the elbow and wears a ruined charcoal suit over a black shirt (jacket off in the ER bay). Reference images are for faces only (REF_IVY_FACE_ONLY.png, REF_NICO_FACE_ONLY.png) and, for the garage, location only (REF_GARAGE_F01.png); never copy a reference image's background or composition. Painterly illustrated cinematic style: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9.",
-   "animation_prompt": "ANIMATE THE APPROVED STILL: use STILL_F21.png as the literal first frame (never hospital.png). Keep its composition, location, people and roles; only add the motion described. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. Medium close shot at night in a small dark APARTMENT living room (NOT a hospital: no gurney, no medical equipment, no gloves, no treatment): the scarred man (an original fictional MAN, 34, dark wavy hair, short stubble, gray eyes, face as in REF_NICO_FACE_ONLY.png; thin healed white scar through his anatomical LEFT eyebrow, the eyebrow on the RIGHT side of the image) sits in an old worn armchair, lamp off, lit only by streetlight through a window; ruined charcoal suit over a black shirt; his anatomical RIGHT forearm in a white plaster splint (LEFT side of the image) rests on the armchair's arm. He leans forward slightly, watching someone off-screen at the doorway; mouth CLOSED, he does not speak; nobody else in frame. Continuity: Fri Oct 3 - Sun Oct 5: the doctor wears no ring, no necklace, no chain; the scarred man has a WHITE plaster splint on his anatomical RIGHT forearm from fingertips to below the elbow and wears a ruined charcoal suit over a black shirt (jacket off in the ER bay). Reference images are for faces only (REF_IVY_FACE_ONLY.png, REF_NICO_FACE_ONLY.png) and, for the garage, location only (REF_GARAGE_F01.png); never copy a reference image's background or composition. Painterly illustrated cinematic style: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, natural restrained motion, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9, 8 seconds."
-  },
-  {
-   "id": "F23",
-   "slug": "supply_room",
-   "batch": 2,
-   "chapter": "CH04",
-   "phase": "P0",
-   "status": "TAKE 1 GENERATED",
-   "event": "Supply room: the door clicks shut",
-   "location_override": "hospital supply room, shelves of coiled IV tubing, door",
-   "costume_override": {
-    "NICO": "ruined charcoal suit over black shirt; WHITE plaster splint anatomical RIGHT forearm (image-left facing camera); healed white scar anatomical LEFT brow (image-right); gun only ever in his LEFT hand"
-   },
-   "mouth": "n/a",
-   "decisive": false,
-   "still_file": "STILL_F23.png",
-   "video_file": "F23.mp4",
-   "first_frame": "STILL_F23.png (approved still; never hospital.png)",
-   "needed_ranges": [
-    [
-     "n051",
-     4.58,
-     0.2,
-     5.0333,
-     1.0
-    ],
-    [
-     "n053",
-     2.96,
-     5.0333,
-     7.6999,
-     0.9014
-    ]
-   ],
-   "still_qa": {
-    "verdict": "approved",
-    "source": "Repairs/media/F23.png",
-    "first_frame": "stills_approved/STILL_F23.jpg"
-   },
-   "still_prompt": "FREE STILL FIRST (Nano Banana, 0 credits): a single 16:9 still frame, no motion, of exactly this moment, in the correct location. Use REF_IVY_FACE_ONLY / REF_NICO_FACE_ONLY (or hospital.png as an IMAGE reference) for faces only. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. Hospital supply room, door clicks shut, shelves of coiled IV tubing, a shadow crosses; dim; no violence shown. Continuity: Fri Oct 3 - Sun Oct 5: the doctor wears no ring, no necklace, no chain; the scarred man has a WHITE plaster splint on his anatomical RIGHT forearm from fingertips to below the elbow and wears a ruined charcoal suit over a black shirt (jacket off in the ER bay). Use hospital.png ONLY for the characters' faces, hair and costumes; take the location, background and props from this prompt (and from REF_garage_F01.png for the garage), never from hospital.png. Painterly illustrated cinematic style matching hospital.png: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9.",
-   "animation_prompt": "ANIMATE THE APPROVED STILL: use STILL_F23.png as the literal first frame (never hospital.png). Keep its composition, location, people and roles; only add the motion described. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. Hospital supply room, door clicks shut, shelves of coiled IV tubing, a shadow crosses; dim; no violence shown. Continuity: Fri Oct 3 - Sun Oct 5: the doctor wears no ring, no necklace, no chain; the scarred man has a WHITE plaster splint on his anatomical RIGHT forearm from fingertips to below the elbow and wears a ruined charcoal suit over a black shirt (jacket off in the ER bay). Use hospital.png ONLY for the characters' faces, hair and costumes; take the location, background and props from this prompt (and from REF_garage_F01.png for the garage), never from hospital.png. Painterly illustrated cinematic style matching hospital.png: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, natural restrained motion, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9, 8 seconds."
   },
   {
    "id": "F24",
@@ -373,117 +137,12 @@
     ]
    ],
    "still_qa": {
-    "verdict": "repair_free",
-    "source": "Repairs/media/F24.png",
-    "repair_prompt": "Free Nano Banana repair (0 cr): keep the same faces, framing and composition; change ONLY: blur or remove the readable 'SUPPLY ROOM / MEDICAL SUPPLIES' lettering on the door; keep Rocco, the coat and the crossword."
+    "verdict": "approved",
+    "source": "End10/F24_end.png",
+    "first_frame": "stills_approved/STILL_F24.jpg"
    },
    "still_prompt": "FREE STILL FIRST (Nano Banana, 0 credits): a single 16:9 still frame, no motion, of exactly this moment, in the correct location. Use REF_IVY_FACE_ONLY / REF_NICO_FACE_ONLY (or hospital.png as an IMAGE reference) for faces only. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. Huge quiet man in a dark coat filling a doorway, folded crossword under his arm. Mouths stay closed; nobody speaks. Continuity: Fri Oct 3 - Sun Oct 5: the doctor wears no ring, no necklace, no chain; the scarred man has a WHITE plaster splint on his anatomical RIGHT forearm from fingertips to below the elbow and wears a ruined charcoal suit over a black shirt (jacket off in the ER bay). Use hospital.png ONLY for the characters' faces, hair and costumes; take the location, background and props from this prompt (and from REF_garage_F01.png for the garage), never from hospital.png. Painterly illustrated cinematic style matching hospital.png: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9.",
    "animation_prompt": "ANIMATE THE APPROVED STILL: use STILL_F24.png as the literal first frame (never hospital.png). Keep its composition, location, people and roles; only add the motion described. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. Huge quiet man in a dark coat filling a doorway, folded crossword under his arm. Mouths stay closed; nobody speaks. Continuity: Fri Oct 3 - Sun Oct 5: the doctor wears no ring, no necklace, no chain; the scarred man has a WHITE plaster splint on his anatomical RIGHT forearm from fingertips to below the elbow and wears a ruined charcoal suit over a black shirt (jacket off in the ER bay). Use hospital.png ONLY for the characters' faces, hair and costumes; take the location, background and props from this prompt (and from REF_garage_F01.png for the garage), never from hospital.png. Painterly illustrated cinematic style matching hospital.png: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, natural restrained motion, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9, 8 seconds."
-  },
-  {
-   "id": "F25",
-   "slug": "ivy_car_dusk",
-   "batch": 2,
-   "chapter": "CH04",
-   "phase": "P0",
-   "status": "TAKE 1 GENERATED",
-   "event": "Ivy by her car at dusk; she calls",
-   "location_override": "hospital parking lot at dusk, outdoors, by her car",
-   "costume_override": {
-    "IVY": "navy short-sleeved scrubs (work) or faded T-shirt + gray cardigan (home); copper-red bun with ONE pen; NO ring/chain",
-    "NICO": "ruined charcoal suit over black shirt; WHITE plaster splint anatomical RIGHT forearm (image-left facing camera); healed white scar anatomical LEFT brow (image-right); gun only ever in his LEFT hand"
-   },
-   "mouth": "closed",
-   "decisive": false,
-   "still_file": "STILL_F25.png",
-   "video_file": "F25.mp4",
-   "first_frame": "STILL_F25.png (approved still; never hospital.png)",
-   "needed_ranges": [
-    [
-     "n054",
-     5.0,
-     0.2,
-     4.45,
-     0.85
-    ],
-    [
-     "n054",
-     2.96,
-     4.45,
-     7.4083,
-     1.0
-    ],
-    [
-     "n055",
-     2.83,
-     0.2,
-     3.0333,
-     1.0
-    ],
-    [
-     "n136",
-     2.17,
-     3.0,
-     5.1667,
-     1.0
-    ]
-   ],
-   "still_qa": {
-    "verdict": "approved",
-    "source": "Repairs/media/F25.png",
-    "first_frame": "stills_approved/STILL_F25.jpg"
-   },
-   "still_prompt": "FREE STILL FIRST (Nano Banana, 0 credits): a single 16:9 still frame, no motion, of exactly this moment, in the correct location. Use REF_IVY_FACE_ONLY / REF_NICO_FACE_ONLY (or hospital.png as an IMAGE reference) for faces only. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. Dusk, hospital lot, the red-haired doctor in gray cardigan by her car, a red line around her throat; she decides and lifts the phone to her ear. Characters: the red-haired doctor: an original fictional woman, 28, pale freckled skin, messy copper-red hair in a bun with a ballpoint pen through it (face as in hospital.png). Mouths stay closed; nobody speaks. Continuity: Fri Oct 3 - Sun Oct 5: the doctor wears no ring, no necklace, no chain; the scarred man has a WHITE plaster splint on his anatomical RIGHT forearm from fingertips to below the elbow and wears a ruined charcoal suit over a black shirt (jacket off in the ER bay). Use hospital.png ONLY for the characters' faces, hair and costumes; take the location, background and props from this prompt (and from REF_garage_F01.png for the garage), never from hospital.png. Painterly illustrated cinematic style matching hospital.png: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9.",
-   "animation_prompt": "ANIMATE THE APPROVED STILL: use STILL_F25.png as the literal first frame (never hospital.png). Keep its composition, location, people and roles; only add the motion described. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. Dusk, hospital lot, the red-haired doctor in gray cardigan by her car, a red line around her throat; she decides and lifts the phone to her ear. Characters: the red-haired doctor: an original fictional woman, 28, pale freckled skin, messy copper-red hair in a bun with a ballpoint pen through it (face as in hospital.png). Mouths stay closed; nobody speaks. Continuity: Fri Oct 3 - Sun Oct 5: the doctor wears no ring, no necklace, no chain; the scarred man has a WHITE plaster splint on his anatomical RIGHT forearm from fingertips to below the elbow and wears a ruined charcoal suit over a black shirt (jacket off in the ER bay). Use hospital.png ONLY for the characters' faces, hair and costumes; take the location, background and props from this prompt (and from REF_garage_F01.png for the garage), never from hospital.png. Painterly illustrated cinematic style matching hospital.png: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, natural restrained motion, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9, 8 seconds."
-  },
-  {
-   "id": "F27",
-   "slug": "nico_tommy",
-   "batch": 2,
-   "chapter": "CH05",
-   "phase": "P0",
-   "status": "TAKE 1 GENERATED",
-   "event": "Nico holds her eyes; Tommy looks at the table",
-   "location_override": "closed Italian restaurant table",
-   "costume_override": {
-    "NICO": "ruined charcoal suit over black shirt; WHITE plaster splint anatomical RIGHT forearm (image-left facing camera); healed white scar anatomical LEFT brow (image-right); gun only ever in his LEFT hand",
-    "TOMMY": "dark suit"
-   },
-   "mouth": "closed",
-   "decisive": false,
-   "still_file": "STILL_F27.png",
-   "video_file": "F27.mp4",
-   "first_frame": "STILL_F27.png (approved still; never hospital.png)",
-   "needed_ranges": [
-    [
-     "n064",
-     1.46,
-     0.2,
-     1.4396,
-     0.85
-    ],
-    [
-     "n066",
-     7.25,
-     1.4396,
-     7.7,
-     0.8635
-    ],
-    [
-     "n100",
-     3.0,
-     2.0,
-     5.0,
-     1.0
-    ]
-   ],
-   "still_qa": {
-    "verdict": "approved",
-    "source": "Repairs/media/F27.png",
-    "first_frame": "stills_approved/STILL_F27.jpg"
-   },
-   "still_prompt": "FREE STILL FIRST (Nano Banana, 0 credits): a single 16:9 still frame, no motion, of exactly this moment, in the correct location. Use REF_IVY_FACE_ONLY / REF_NICO_FACE_ONLY (or hospital.png as an IMAGE reference) for faces only. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. Close on the scarred man, silent, holding someone's eyes; rack focus to the quiet associate beside him looking down at the table. Characters: the quiet associate: 30s, dark suit, close-cropped hair; the scarred man: an original fictional man, 34, dark wavy hair, short stubble, gray eyes, a thin HEALED WHITE old scar through his anatomical LEFT eyebrow - when he faces camera it is the eyebrow on the RIGHT side of the image - and no bandage, tape or plaster anywhere on his face; his injured arm is his anatomical RIGHT forearm, on the LEFT side of the image when he faces camera (face as in hospital.png). Mouths stay closed; nobody speaks. Continuity: Fri Oct 3 - Sun Oct 5: the doctor wears no ring, no necklace, no chain; the scarred man has a WHITE plaster splint on his anatomical RIGHT forearm from fingertips to below the elbow and wears a ruined charcoal suit over a black shirt (jacket off in the ER bay). Use hospital.png ONLY for the characters' faces, hair and costumes; take the location, background and props from this prompt (and from REF_garage_F01.png for the garage), never from hospital.png. Painterly illustrated cinematic style matching hospital.png: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9.",
-   "animation_prompt": "ANIMATE THE APPROVED STILL: use STILL_F27.png as the literal first frame (never hospital.png). Keep its composition, location, people and roles; only add the motion described. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. Close on the scarred man, silent, holding someone's eyes; rack focus to the quiet associate beside him looking down at the table. Characters: the quiet associate: 30s, dark suit, close-cropped hair; the scarred man: an original fictional man, 34, dark wavy hair, short stubble, gray eyes, a thin HEALED WHITE old scar through his anatomical LEFT eyebrow - when he faces camera it is the eyebrow on the RIGHT side of the image - and no bandage, tape or plaster anywhere on his face; his injured arm is his anatomical RIGHT forearm, on the LEFT side of the image when he faces camera (face as in hospital.png). Mouths stay closed; nobody speaks. Continuity: Fri Oct 3 - Sun Oct 5: the doctor wears no ring, no necklace, no chain; the scarred man has a WHITE plaster splint on his anatomical RIGHT forearm from fingertips to below the elbow and wears a ruined charcoal suit over a black shirt (jacket off in the ER bay). Use hospital.png ONLY for the characters' faces, hair and costumes; take the location, background and props from this prompt (and from REF_garage_F01.png for the garage), never from hospital.png. Painterly illustrated cinematic style matching hospital.png: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, natural restrained motion, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9, 8 seconds."
   },
   {
    "id": "F28",
@@ -534,109 +193,12 @@
     ]
    ],
    "still_qa": {
-    "verdict": "repair_free",
-    "source": "Repairs/media/F28.png",
-    "repair_prompt": "the scarred man's splint goes on his anatomical RIGHT forearm (image-LEFT when he faces camera; the arm FARTHER from camera when he faces image-left); make the WHITE plaster splint clearly visible on his right forearm, which rests on the table. Keep the restaurant and the chairs."
+    "verdict": "approved",
+    "source": "End10/F28_end.png",
+    "first_frame": "stills_approved/STILL_F28.jpg"
    },
    "still_prompt": "FREE STILL FIRST (Nano Banana, 0 credits): a single 16:9 still frame, no motion, of exactly this moment, in the correct location. Use REF_IVY_FACE_ONLY / REF_NICO_FACE_ONLY (or hospital.png as an IMAGE reference) for faces only. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. the red-haired doctor close across the table, measured, deciding. Characters: the red-haired doctor: an original fictional woman, 28, pale freckled skin, messy copper-red hair in a bun with a ballpoint pen through it (face as in hospital.png). Mouths stay closed; nobody speaks. Continuity: Fri Oct 3 - Sun Oct 5: the doctor wears no ring, no necklace, no chain; the scarred man has a WHITE plaster splint on his anatomical RIGHT forearm from fingertips to below the elbow and wears a ruined charcoal suit over a black shirt (jacket off in the ER bay). Use hospital.png ONLY for the characters' faces, hair and costumes; take the location, background and props from this prompt (and from REF_garage_F01.png for the garage), never from hospital.png. Painterly illustrated cinematic style matching hospital.png: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9.",
    "animation_prompt": "ANIMATE THE APPROVED STILL: use STILL_F28.png as the literal first frame (never hospital.png). Keep its composition, location, people and roles; only add the motion described. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. the red-haired doctor close across the table, measured, deciding. Characters: the red-haired doctor: an original fictional woman, 28, pale freckled skin, messy copper-red hair in a bun with a ballpoint pen through it (face as in hospital.png). Mouths stay closed; nobody speaks. Continuity: Fri Oct 3 - Sun Oct 5: the doctor wears no ring, no necklace, no chain; the scarred man has a WHITE plaster splint on his anatomical RIGHT forearm from fingertips to below the elbow and wears a ruined charcoal suit over a black shirt (jacket off in the ER bay). Use hospital.png ONLY for the characters' faces, hair and costumes; take the location, background and props from this prompt (and from REF_garage_F01.png for the garage), never from hospital.png. Painterly illustrated cinematic style matching hospital.png: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, natural restrained motion, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9, 8 seconds."
-  },
-  {
-   "id": "F30",
-   "slug": "nico_desk",
-   "batch": 3,
-   "chapter": "CH06",
-   "phase": "P0",
-   "status": "not yet generated",
-   "event": "Nico at the desk: 'We don't touch civilians'",
-   "location_override": "Vescari study, desk",
-   "costume_override": {
-    "NICO": "ruined charcoal suit over black shirt; WHITE plaster splint anatomical RIGHT forearm (image-left facing camera); healed white scar anatomical LEFT brow (image-right); gun only ever in his LEFT hand"
-   },
-   "mouth": "closed",
-   "decisive": false,
-   "still_file": "STILL_F30.png",
-   "video_file": "F30.mp4",
-   "first_frame": "STILL_F30.png (approved still; never hospital.png)",
-   "needed_ranges": [
-    [
-     "n078",
-     1.96,
-     0.2,
-     2.1583,
-     1.0
-    ],
-    [
-     "n080",
-     6.42,
-     2.1583,
-     7.6997,
-     0.8636
-    ],
-    [
-     "n081",
-     2.21,
-     0.2,
-     2.4083,
-     1.0
-    ]
-   ],
-   "still_qa": {
-    "verdict": "approved",
-    "source": "Repairs/media/F30.png",
-    "first_frame": "stills_approved/STILL_F30.jpg"
-   },
-   "still_prompt": "FREE STILL FIRST (Nano Banana, 0 credits): a single 16:9 still frame, no motion, of exactly this moment, in the correct location. Use REF_IVY_FACE_ONLY / REF_NICO_FACE_ONLY (or hospital.png as an IMAGE reference) for faces only. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. the scarred man close at the desk, listening, then hardening. Characters: the scarred man: an original fictional man, 34, dark wavy hair, short stubble, gray eyes, a thin HEALED WHITE old scar through his anatomical LEFT eyebrow - when he faces camera it is the eyebrow on the RIGHT side of the image - and no bandage, tape or plaster anywhere on his face; his injured arm is his anatomical RIGHT forearm, on the LEFT side of the image when he faces camera (face as in REF_NICO_FACE_ONLY.png). Mouths stay closed; nobody speaks. Continuity: Fri Oct 3 - Sun Oct 5: the doctor wears no ring, no necklace, no chain; the scarred man has a WHITE plaster splint on his anatomical RIGHT forearm from fingertips to below the elbow and wears a ruined charcoal suit over a black shirt (jacket off in the ER bay). Reference images are for faces only (REF_IVY_FACE_ONLY.png, REF_NICO_FACE_ONLY.png) and, for the garage, location only (REF_GARAGE_F01.png); never copy a reference image's background or composition. Painterly illustrated cinematic style: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9.",
-   "animation_prompt": "ANIMATE THE APPROVED STILL: use STILL_F30.png as the literal first frame (never hospital.png). Keep its composition, location, people and roles; only add the motion described. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. the scarred man close at the desk, listening, then hardening. Characters: the scarred man: an original fictional man, 34, dark wavy hair, short stubble, gray eyes, a thin HEALED WHITE old scar through his anatomical LEFT eyebrow - when he faces camera it is the eyebrow on the RIGHT side of the image - and no bandage, tape or plaster anywhere on his face; his injured arm is his anatomical RIGHT forearm, on the LEFT side of the image when he faces camera (face as in REF_NICO_FACE_ONLY.png). Mouths stay closed; nobody speaks. Continuity: Fri Oct 3 - Sun Oct 5: the doctor wears no ring, no necklace, no chain; the scarred man has a WHITE plaster splint on his anatomical RIGHT forearm from fingertips to below the elbow and wears a ruined charcoal suit over a black shirt (jacket off in the ER bay). Reference images are for faces only (REF_IVY_FACE_ONLY.png, REF_NICO_FACE_ONLY.png) and, for the garage, location only (REF_GARAGE_F01.png); never copy a reference image's background or composition. Painterly illustrated cinematic style: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, natural restrained motion, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9, 8 seconds."
-  },
-  {
-   "id": "F31",
-   "slug": "sal_exits",
-   "batch": 3,
-   "chapter": "CH06",
-   "phase": "P0",
-   "status": "not yet generated",
-   "event": "Sal's hands up; he leaves the garden door open",
-   "location_override": "Vescari study garden door at night, fig tree outside",
-   "costume_override": {
-    "NICO": "ruined charcoal suit over black shirt; WHITE plaster splint anatomical RIGHT forearm (image-left facing camera); healed white scar anatomical LEFT brow (image-right); gun only ever in his LEFT hand",
-    "SAL": "silver hair, camel coat, sugar on tie"
-   },
-   "mouth": "closed",
-   "decisive": false,
-   "still_file": "STILL_F31.png",
-   "video_file": "F31.mp4",
-   "first_frame": "STILL_F31.png (approved still; never hospital.png)",
-   "needed_ranges": [
-    [
-     "n081",
-     8.42,
-     0.2,
-     7.6993,
-     0.891
-    ],
-    [
-     "n121",
-     4.0,
-     0.2,
-     4.2,
-     1.0
-    ],
-    [
-     "n128",
-     3.42,
-     3.0,
-     6.4167,
-     1.0
-    ]
-   ],
-   "still_qa": {
-    "verdict": "approved",
-    "source": "Repairs/media/F31.png",
-    "first_frame": "stills_approved/STILL_F31.jpg"
-   },
-   "still_prompt": "FREE STILL FIRST (Nano Banana, 0 credits): a single 16:9 still frame, no motion, of exactly this moment, in the correct location. Use REF_IVY_FACE_ONLY / REF_NICO_FACE_ONLY (or hospital.png as an IMAGE reference) for faces only. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. the silver-haired uncle raises both hands, cannoli in one, then walks out through a garden door and leaves it open; curtain stirs; fig tree beyond. Characters: the silver-haired uncle: 60s, silver hair, camel coat, warm unhurried manner, a dusting of powdered sugar on his tie. Mouths stay closed; nobody speaks. Continuity: Fri Oct 3 - Sun Oct 5: the doctor wears no ring, no necklace, no chain; the scarred man has a WHITE plaster splint on his anatomical RIGHT forearm from fingertips to below the elbow and wears a ruined charcoal suit over a black shirt (jacket off in the ER bay). Reference images are for faces only (REF_IVY_FACE_ONLY.png, REF_NICO_FACE_ONLY.png) and, for the garage, location only (REF_GARAGE_F01.png); never copy a reference image's background or composition. Painterly illustrated cinematic style: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9.",
-   "animation_prompt": "ANIMATE THE APPROVED STILL: use STILL_F31.png as the literal first frame (never hospital.png). Keep its composition, location, people and roles; only add the motion described. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. the silver-haired uncle raises both hands, cannoli in one, then walks out through a garden door and leaves it open; curtain stirs; fig tree beyond. Characters: the silver-haired uncle: 60s, silver hair, camel coat, warm unhurried manner, a dusting of powdered sugar on his tie. Mouths stay closed; nobody speaks. Continuity: Fri Oct 3 - Sun Oct 5: the doctor wears no ring, no necklace, no chain; the scarred man has a WHITE plaster splint on his anatomical RIGHT forearm from fingertips to below the elbow and wears a ruined charcoal suit over a black shirt (jacket off in the ER bay). Reference images are for faces only (REF_IVY_FACE_ONLY.png, REF_NICO_FACE_ONLY.png) and, for the garage, location only (REF_GARAGE_F01.png); never copy a reference image's background or composition. Painterly illustrated cinematic style: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, natural restrained motion, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9, 8 seconds."
   },
   {
    "id": "F32",
@@ -722,61 +284,12 @@
     ]
    ],
    "still_qa": {
-    "verdict": "repair_free",
-    "source": "Final4/F33_qa4.png",
-    "repair_prompt": "Free Nano Banana repair (0 cr): keep everything else exactly; change ONLY: the emerald is on her LEFT ring finger. Her right hand, which links his arm, wears NO ring; or link his arm with her LEFT hand so the emerald shows. Suit sleeves, the forearm cast and the dress are correct."
+    "verdict": "approved",
+    "source": "End10/F33_end.png",
+    "first_frame": "stills_approved/STILL_F33.jpg"
    },
    "still_prompt": "FREE STILL FIRST (Nano Banana, 0 credits): a single 16:9 still frame, no motion, of exactly this moment, in the correct location. Use REF_IVY_FACE_ONLY / REF_NICO_FACE_ONLY (or hospital.png as an IMAGE reference) for faces only. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. Courthouse steps, eight reporters, three cameras; the red-haired doctor and the scarred man descend; the prosecutor watching from the top step. Characters: the prosecutor: 40s, neat, navy suit, straightens his cuffs; the scarred man: an original fictional man, 34, dark wavy hair, short stubble, gray eyes, a thin HEALED WHITE old scar through his anatomical LEFT eyebrow - when he faces camera it is the eyebrow on the RIGHT side of the image - and no bandage, tape or plaster anywhere on his face; his injured arm is his anatomical RIGHT forearm, on the LEFT side of the image when he faces camera (face as in REF_NICO_FACE_ONLY.png); the red-haired doctor: an original fictional woman, 28, pale freckled skin, messy copper-red hair in a bun with a ballpoint pen through it (face as in REF_IVY_FACE_ONLY.png). Mouths stay closed; nobody speaks. IDENTITY LOCK: the red-haired freckled WOMAN in navy scrubs is always the doctor and the one who treats; the dark-haired stubbled MAN is always the injured man/patient. Never swap their faces, genders, hair, clothes or roles, and never blend one face into the other. Continuity: Mon Oct 6 (wedding day): a square emerald ring, too big, on the doctor's LEFT ring finger; the scarred man's WHITE plaster splint on his anatomical RIGHT forearm. Reference images are for faces only (REF_IVY_FACE_ONLY.png, REF_NICO_FACE_ONLY.png) and, for the garage, location only (REF_GARAGE_F01.png); never copy a reference image's background or composition. Painterly illustrated cinematic style: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9.",
    "animation_prompt": "ANIMATE THE APPROVED STILL: use STILL_F33.png as the literal first frame (never hospital.png). Keep its composition, location, people and roles; only add the motion described. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. Courthouse steps, eight reporters, three cameras; the red-haired doctor and the scarred man descend; the prosecutor watching from the top step. Characters: the prosecutor: 40s, neat, navy suit, straightens his cuffs; the scarred man: an original fictional man, 34, dark wavy hair, short stubble, gray eyes, a thin HEALED WHITE old scar through his anatomical LEFT eyebrow - when he faces camera it is the eyebrow on the RIGHT side of the image - and no bandage, tape or plaster anywhere on his face; his injured arm is his anatomical RIGHT forearm, on the LEFT side of the image when he faces camera (face as in REF_NICO_FACE_ONLY.png); the red-haired doctor: an original fictional woman, 28, pale freckled skin, messy copper-red hair in a bun with a ballpoint pen through it (face as in REF_IVY_FACE_ONLY.png). Mouths stay closed; nobody speaks. IDENTITY LOCK: the red-haired freckled WOMAN in navy scrubs is always the doctor and the one who treats; the dark-haired stubbled MAN is always the injured man/patient. Never swap their faces, genders, hair, clothes or roles, and never blend one face into the other. Continuity: Mon Oct 6 (wedding day): a square emerald ring, too big, on the doctor's LEFT ring finger; the scarred man's WHITE plaster splint on his anatomical RIGHT forearm. Reference images are for faces only (REF_IVY_FACE_ONLY.png, REF_NICO_FACE_ONLY.png) and, for the garage, location only (REF_GARAGE_F01.png); never copy a reference image's background or composition. Painterly illustrated cinematic style: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, natural restrained motion, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9, 8 seconds."
-  },
-  {
-   "id": "F34",
-   "slug": "kiss",
-   "batch": 3,
-   "chapter": "CH07",
-   "phase": "P1",
-   "status": "not yet generated",
-   "event": "The kiss for the cameras",
-   "location_override": "courthouse steps, cameras",
-   "costume_override": {
-    "IVY": "simple dress for the wedding; emerald on LEFT ring finger (loose)",
-    "NICO": "dark suit; WHITE plaster splint RIGHT forearm"
-   },
-   "mouth": "closed",
-   "decisive": true,
-   "still_file": "STILL_F34.png",
-   "video_file": "F34.mp4",
-   "first_frame": "STILL_F34.png (approved still; never hospital.png)",
-   "needed_ranges": [
-    [
-     "n086",
-     8.04,
-     0.2,
-     7.6997,
-     0.9326
-    ],
-    [
-     "n097",
-     4.79,
-     0.2,
-     4.9917,
-     1.0
-    ],
-    [
-     "n112",
-     3.88,
-     4.0,
-     7.6998,
-     0.9548
-    ]
-   ],
-   "still_qa": {
-    "verdict": "approved",
-    "source": "R3/F34_r3.png",
-    "first_frame": "stills_approved/STILL_F34.jpg"
-   },
-   "still_prompt": "FREE STILL FIRST (Nano Banana, 0 credits): a single 16:9 still frame, no motion, of exactly this moment, in the correct location. Use REF_IVY_FACE_ONLY / REF_NICO_FACE_ONLY (or hospital.png as an IMAGE reference) for faces only. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. the scarred man kisses the red-haired doctor, his white-splinted right forearm along her spine; camera flashes; emerald on her left hand. Characters: the scarred man: an original fictional man, 34, dark wavy hair, short stubble, gray eyes, a thin HEALED WHITE old scar through his anatomical LEFT eyebrow - when he faces camera it is the eyebrow on the RIGHT side of the image - and no bandage, tape or plaster anywhere on his face; his injured arm is his anatomical RIGHT forearm, on the LEFT side of the image when he faces camera (face as in REF_NICO_FACE_ONLY.png); the red-haired doctor: an original fictional woman, 28, pale freckled skin, messy copper-red hair in a bun with a ballpoint pen through it (face as in REF_IVY_FACE_ONLY.png). Mouths stay closed; nobody speaks. Show the action once, clearly, with fixed roles and positions. IDENTITY LOCK: the red-haired freckled WOMAN in navy scrubs is always the doctor and the one who treats; the dark-haired stubbled MAN is always the injured man/patient. Never swap their faces, genders, hair, clothes or roles, and never blend one face into the other. Continuity: Mon Oct 6 (wedding day): a square emerald ring, too big, on the doctor's LEFT ring finger; the scarred man's WHITE plaster splint on his anatomical RIGHT forearm. Reference images are for faces only (REF_IVY_FACE_ONLY.png, REF_NICO_FACE_ONLY.png) and, for the garage, location only (REF_GARAGE_F01.png); never copy a reference image's background or composition. Painterly illustrated cinematic style: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9.",
-   "animation_prompt": "ANIMATE THE APPROVED STILL: use STILL_F34.png as the literal first frame (never hospital.png). Keep its composition, location, people and roles; only add the motion described. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. the scarred man kisses the red-haired doctor, his white-splinted right forearm along her spine; camera flashes; emerald on her left hand. Characters: the scarred man: an original fictional man, 34, dark wavy hair, short stubble, gray eyes, a thin HEALED WHITE old scar through his anatomical LEFT eyebrow - when he faces camera it is the eyebrow on the RIGHT side of the image - and no bandage, tape or plaster anywhere on his face; his injured arm is his anatomical RIGHT forearm, on the LEFT side of the image when he faces camera (face as in REF_NICO_FACE_ONLY.png); the red-haired doctor: an original fictional woman, 28, pale freckled skin, messy copper-red hair in a bun with a ballpoint pen through it (face as in REF_IVY_FACE_ONLY.png). Mouths stay closed; nobody speaks. Show the action once, clearly, with fixed roles and positions. IDENTITY LOCK: the red-haired freckled WOMAN in navy scrubs is always the doctor and the one who treats; the dark-haired stubbled MAN is always the injured man/patient. Never swap their faces, genders, hair, clothes or roles, and never blend one face into the other. Continuity: Mon Oct 6 (wedding day): a square emerald ring, too big, on the doctor's LEFT ring finger; the scarred man's WHITE plaster splint on his anatomical RIGHT forearm. Reference images are for faces only (REF_IVY_FACE_ONLY.png, REF_NICO_FACE_ONLY.png) and, for the garage, location only (REF_GARAGE_F01.png); never copy a reference image's background or composition. Painterly illustrated cinematic style: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, natural restrained motion, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9, 8 seconds."
   },
   {
    "id": "F35",
@@ -813,47 +326,12 @@
     ]
    ],
    "still_qa": {
-    "verdict": "repair_free",
-    "source": "R3/F35_r3.png",
-    "repair_prompt": "Free Nano Banana repair (0 cr): keep everything; change ONLY: make it her LEFT hand: thumb on the LOWER side of the hand as it reaches right toward the bolt (back of hand to camera). The loose square emerald is on the LEFT ring finger; lace wedding sleeve."
+    "verdict": "approved",
+    "source": "Final3/F35_end.png",
+    "first_frame": "stills_approved/STILL_F35.jpg"
    },
    "still_prompt": "FREE STILL FIRST (Nano Banana, 0 credits): a single 16:9 still frame, no motion, of exactly this moment, in the correct location. Use REF_IVY_FACE_ONLY / REF_NICO_FACE_ONLY (or hospital.png as an IMAGE reference) for faces only. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. A crooked new bolt on a connecting door; the red-haired doctor's hand tests it four times; the loose emerald turns on her finger. Characters: the red-haired doctor: an original fictional woman, 28, pale freckled skin, messy copper-red hair in a bun with a ballpoint pen through it (face as in REF_IVY_FACE_ONLY.png). Continuity: Mon Oct 6 (wedding day): a square emerald ring, too big, on the doctor's LEFT ring finger; the scarred man's WHITE plaster splint on his anatomical RIGHT forearm. Reference images are for faces only (REF_IVY_FACE_ONLY.png, REF_NICO_FACE_ONLY.png) and, for the garage, location only (REF_GARAGE_F01.png); never copy a reference image's background or composition. Painterly illustrated cinematic style: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9.",
    "animation_prompt": "ANIMATE THE APPROVED STILL: use STILL_F35.png as the literal first frame (never hospital.png). Keep its composition, location, people and roles; only add the motion described. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. A crooked new bolt on a connecting door; the red-haired doctor's hand tests it four times; the loose emerald turns on her finger. Characters: the red-haired doctor: an original fictional woman, 28, pale freckled skin, messy copper-red hair in a bun with a ballpoint pen through it (face as in REF_IVY_FACE_ONLY.png). Continuity: Mon Oct 6 (wedding day): a square emerald ring, too big, on the doctor's LEFT ring finger; the scarred man's WHITE plaster splint on his anatomical RIGHT forearm. Reference images are for faces only (REF_IVY_FACE_ONLY.png, REF_NICO_FACE_ONLY.png) and, for the garage, location only (REF_GARAGE_F01.png); never copy a reference image's background or composition. Painterly illustrated cinematic style: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, natural restrained motion, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9, 8 seconds."
-  },
-  {
-   "id": "F36",
-   "slug": "ring_chain",
-   "batch": 3,
-   "chapter": "CH08",
-   "phase": "P2",
-   "status": "not yet generated",
-   "event": "Ring onto the chain",
-   "location_override": "hospital staff locker room",
-   "costume_override": {
-    "IVY": "navy scrubs at work with the ring on a gold chain UNDER the top; off duty gray cardigan, emerald on LEFT ring finger",
-    "NICO": "dark suit or shirt sleeves; splint WHITE until Oct 10, then BLACK thermoplastic with 3 velcro straps, RIGHT forearm"
-   },
-   "mouth": "n/a",
-   "decisive": false,
-   "still_file": "STILL_F36.png",
-   "video_file": "F36.mp4",
-   "first_frame": "STILL_F36.png (approved still; never hospital.png)",
-   "needed_ranges": [
-    [
-     "n092",
-     8.42,
-     0.2,
-     7.6993,
-     0.891
-    ]
-   ],
-   "still_qa": {
-    "verdict": "approved",
-    "source": "Repairs/media/F36.png",
-    "first_frame": "stills_approved/STILL_F36.jpg"
-   },
-   "still_prompt": "FREE STILL FIRST (Nano Banana, 0 credits): a single 16:9 still frame, no motion, of exactly this moment, in the correct location. Use REF_IVY_FACE_ONLY / REF_NICO_FACE_ONLY (or hospital.png as an IMAGE reference) for faces only. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. the red-haired doctor threads the emerald onto a thin gold chain and tucks it under her navy scrub top. Characters: the red-haired doctor: an original fictional woman, 28, pale freckled skin, messy copper-red hair in a bun with a ballpoint pen through it (face as in REF_IVY_FACE_ONLY.png). Continuity: Oct 7 - Nov 4: at work the emerald ring hangs on a thin gold chain under her navy scrub top; off duty it is on her LEFT ring finger; the scarred man's splint on his anatomical RIGHT forearm is still WHITE plaster (before Oct 10). Reference images are for faces only (REF_IVY_FACE_ONLY.png, REF_NICO_FACE_ONLY.png) and, for the garage, location only (REF_GARAGE_F01.png); never copy a reference image's background or composition. Painterly illustrated cinematic style: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9.",
-   "animation_prompt": "ANIMATE THE APPROVED STILL: use STILL_F36.png as the literal first frame (never hospital.png). Keep its composition, location, people and roles; only add the motion described. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. the red-haired doctor threads the emerald onto a thin gold chain and tucks it under her navy scrub top. Characters: the red-haired doctor: an original fictional woman, 28, pale freckled skin, messy copper-red hair in a bun with a ballpoint pen through it (face as in REF_IVY_FACE_ONLY.png). Continuity: Oct 7 - Nov 4: at work the emerald ring hangs on a thin gold chain under her navy scrub top; off duty it is on her LEFT ring finger; the scarred man's splint on his anatomical RIGHT forearm is still WHITE plaster (before Oct 10). Reference images are for faces only (REF_IVY_FACE_ONLY.png, REF_NICO_FACE_ONLY.png) and, for the garage, location only (REF_GARAGE_F01.png); never copy a reference image's background or composition. Painterly illustrated cinematic style: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, natural restrained motion, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9, 8 seconds."
   },
   {
    "id": "F37",
@@ -897,9 +375,9 @@
     ]
    ],
    "still_qa": {
-    "verdict": "repair_free",
-    "source": "Repairs/media/F37.png",
-    "repair_prompt": "Free Nano Banana repair (0 cr): keep the same faces, framing and composition; change ONLY: the stabbed patient is JOEY: short dark hair, clean-shaven. He must NOT have gold curls or resemble the curly-haired young man."
+    "verdict": "approved",
+    "source": "Final3/F37_joey.png",
+    "first_frame": "stills_approved/STILL_F37.jpg"
    },
    "still_prompt": "FREE STILL FIRST (Nano Banana, 0 credits): a single 16:9 still frame, no motion, of exactly this moment, in the correct location. Use REF_IVY_FACE_ONLY / REF_NICO_FACE_ONLY (or hospital.png as an IMAGE reference) for faces only. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. ER trauma bay, the red-haired doctor working on a stabbed young man (clinical, not gory), suited men watching through glass; chain hidden. Characters: the red-haired doctor: an original fictional woman, 28, pale freckled skin, messy copper-red hair in a bun with a ballpoint pen through it (face as in REF_IVY_FACE_ONLY.png). Mouths stay closed; nobody speaks. Continuity: Oct 7 - Nov 4: at work the emerald ring hangs on a thin gold chain under her navy scrub top; off duty it is on her LEFT ring finger; the scarred man's splint on his anatomical RIGHT forearm is still WHITE plaster (before Oct 10). Reference images are for faces only (REF_IVY_FACE_ONLY.png, REF_NICO_FACE_ONLY.png) and, for the garage, location only (REF_GARAGE_F01.png); never copy a reference image's background or composition. Painterly illustrated cinematic style: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9.",
    "animation_prompt": "ANIMATE THE APPROVED STILL: use STILL_F37.png as the literal first frame (never hospital.png). Keep its composition, location, people and roles; only add the motion described. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. ER trauma bay, the red-haired doctor working on a stabbed young man (clinical, not gory), suited men watching through glass; chain hidden. Characters: the red-haired doctor: an original fictional woman, 28, pale freckled skin, messy copper-red hair in a bun with a ballpoint pen through it (face as in REF_IVY_FACE_ONLY.png). Mouths stay closed; nobody speaks. Continuity: Oct 7 - Nov 4: at work the emerald ring hangs on a thin gold chain under her navy scrub top; off duty it is on her LEFT ring finger; the scarred man's splint on his anatomical RIGHT forearm is still WHITE plaster (before Oct 10). Reference images are for faces only (REF_IVY_FACE_ONLY.png, REF_NICO_FACE_ONLY.png) and, for the garage, location only (REF_GARAGE_F01.png); never copy a reference image's background or composition. Painterly illustrated cinematic style: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, natural restrained motion, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9, 8 seconds."
@@ -932,568 +410,12 @@
     ]
    ],
    "still_qa": {
-    "verdict": "repair_free",
-    "source": "Scarred_man_and_doctor_kissing_fd364c6e.jpg",
-    "repair_prompt": "Free Nano Banana repair (0 cr): keep the same characters, faces and framing; change ONLY: the scarred man's splint must be on his anatomical RIGHT forearm (image-LEFT when he faces camera; the arm FARTHER from camera when he faces image-left); black velcro splint, on the arm away from camera; his LEFT hand draws the pen from her bun. Ivy off duty: gray cardigan, emerald on LEFT ring finger."
+    "verdict": "approved",
+    "source": "Repairs/media/F40_v2.png",
+    "first_frame": "stills_approved/STILL_F40.jpg"
    },
    "still_prompt": "FREE STILL FIRST (Nano Banana, 0 credits): a single 16:9 still frame, no motion, of exactly this moment, in the correct location. Use REF_IVY_FACE_ONLY / REF_NICO_FACE_ONLY (or hospital.png as an IMAGE reference) for faces only. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. Night, the scarred man's study: the scarred man pulls the pen from the red-haired doctor's bun with his LEFT hand (black splint, after Oct 10); she kisses him; she stops. Characters: the scarred man: an original fictional man, 34, dark wavy hair, short stubble, gray eyes, a thin HEALED WHITE old scar through his anatomical LEFT eyebrow - when he faces camera it is the eyebrow on the RIGHT side of the image - and no bandage, tape or plaster anywhere on his face; his injured arm is his anatomical RIGHT forearm, on the LEFT side of the image when he faces camera (face as in REF_NICO_FACE_ONLY.png); the red-haired doctor: an original fictional woman, 28, pale freckled skin, messy copper-red hair in a bun with a ballpoint pen through it (face as in REF_IVY_FACE_ONLY.png). Mouths stay closed; nobody speaks. Show the action once, clearly, with fixed roles and positions. IDENTITY LOCK: the red-haired freckled WOMAN in navy scrubs is always the doctor and the one who treats; the dark-haired stubbled MAN is always the injured man/patient. Never swap their faces, genders, hair, clothes or roles, and never blend one face into the other. Continuity: Oct 7 - Nov 4: at work the emerald ring hangs on a thin gold chain under her navy scrub top; off duty it is on her LEFT ring finger; the scarred man's splint on his anatomical RIGHT forearm is BLACK thermoplastic with three velcro straps. Reference images are for faces only (REF_IVY_FACE_ONLY.png, REF_NICO_FACE_ONLY.png) and, for the garage, location only (REF_GARAGE_F01.png); never copy a reference image's background or composition. Painterly illustrated cinematic style: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9.",
    "animation_prompt": "ANIMATE THE APPROVED STILL: use STILL_F40.png as the literal first frame (never hospital.png). Keep its composition, location, people and roles; only add the motion described. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. Night, the scarred man's study: the scarred man pulls the pen from the red-haired doctor's bun with his LEFT hand (black splint, after Oct 10); she kisses him; she stops. Characters: the scarred man: an original fictional man, 34, dark wavy hair, short stubble, gray eyes, a thin HEALED WHITE old scar through his anatomical LEFT eyebrow - when he faces camera it is the eyebrow on the RIGHT side of the image - and no bandage, tape or plaster anywhere on his face; his injured arm is his anatomical RIGHT forearm, on the LEFT side of the image when he faces camera (face as in REF_NICO_FACE_ONLY.png); the red-haired doctor: an original fictional woman, 28, pale freckled skin, messy copper-red hair in a bun with a ballpoint pen through it (face as in REF_IVY_FACE_ONLY.png). Mouths stay closed; nobody speaks. Show the action once, clearly, with fixed roles and positions. IDENTITY LOCK: the red-haired freckled WOMAN in navy scrubs is always the doctor and the one who treats; the dark-haired stubbled MAN is always the injured man/patient. Never swap their faces, genders, hair, clothes or roles, and never blend one face into the other. Continuity: Oct 7 - Nov 4: at work the emerald ring hangs on a thin gold chain under her navy scrub top; off duty it is on her LEFT ring finger; the scarred man's splint on his anatomical RIGHT forearm is BLACK thermoplastic with three velcro straps. Reference images are for faces only (REF_IVY_FACE_ONLY.png, REF_NICO_FACE_ONLY.png) and, for the garage, location only (REF_GARAGE_F01.png); never copy a reference image's background or composition. Painterly illustrated cinematic style: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, natural restrained motion, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9, 8 seconds."
-  },
-  {
-   "id": "F41",
-   "slug": "eyes_drawer",
-   "batch": 3,
-   "chapter": "CH08",
-   "phase": "P2",
-   "status": "not yet generated",
-   "event": "His eyes drop to the drawer",
-   "location_override": "Vescari study desk, top drawer",
-   "costume_override": {
-    "NICO": "dark suit or shirt sleeves; splint WHITE until Oct 10, then BLACK thermoplastic with 3 velcro straps, RIGHT forearm"
-   },
-   "mouth": "closed",
-   "decisive": false,
-   "still_file": "STILL_F41.png",
-   "video_file": "F41.mp4",
-   "first_frame": "STILL_F41.png (approved still; never hospital.png)",
-   "needed_ranges": [
-    [
-     "n097",
-     2.71,
-     0.2,
-     2.7146,
-     0.85
-    ],
-    [
-     "n100",
-     5.71,
-     2.7146,
-     7.6997,
-     0.8733
-    ],
-    [
-     "n119",
-     7.17,
-     0.2,
-     7.3667,
-     1.0
-    ]
-   ],
-   "still_qa": {
-    "verdict": "approved",
-    "source": "Scarred_man_looking_at_drawer_cca70014.jpg",
-    "first_frame": "stills_approved/STILL_F41.jpg"
-   },
-   "still_prompt": "FREE STILL FIRST (Nano Banana, 0 credits): a single 16:9 still frame, no motion, of exactly this moment, in the correct location. Use REF_IVY_FACE_ONLY / REF_NICO_FACE_ONLY (or hospital.png as an IMAGE reference) for faces only. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. Close on the scarred man as his gaze drops to the top drawer of his desk for one beat; black splint. Characters: the scarred man: an original fictional man, 34, dark wavy hair, short stubble, gray eyes, a thin HEALED WHITE old scar through his anatomical LEFT eyebrow - when he faces camera it is the eyebrow on the RIGHT side of the image - and no bandage, tape or plaster anywhere on his face; his injured arm is his anatomical RIGHT forearm, on the LEFT side of the image when he faces camera (face as in REF_NICO_FACE_ONLY.png). Mouths stay closed; nobody speaks. Continuity: Oct 7 - Nov 4: at work the emerald ring hangs on a thin gold chain under her navy scrub top; off duty it is on her LEFT ring finger; the scarred man's splint on his anatomical RIGHT forearm is BLACK thermoplastic with three velcro straps. Reference images are for faces only (REF_IVY_FACE_ONLY.png, REF_NICO_FACE_ONLY.png) and, for the garage, location only (REF_GARAGE_F01.png); never copy a reference image's background or composition. Painterly illustrated cinematic style: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9.",
-   "animation_prompt": "ANIMATE THE APPROVED STILL: use STILL_F41.png as the literal first frame (never hospital.png). Keep its composition, location, people and roles; only add the motion described. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. Close on the scarred man as his gaze drops to the top drawer of his desk for one beat; black splint. Characters: the scarred man: an original fictional man, 34, dark wavy hair, short stubble, gray eyes, a thin HEALED WHITE old scar through his anatomical LEFT eyebrow - when he faces camera it is the eyebrow on the RIGHT side of the image - and no bandage, tape or plaster anywhere on his face; his injured arm is his anatomical RIGHT forearm, on the LEFT side of the image when he faces camera (face as in REF_NICO_FACE_ONLY.png). Mouths stay closed; nobody speaks. Continuity: Oct 7 - Nov 4: at work the emerald ring hangs on a thin gold chain under her navy scrub top; off duty it is on her LEFT ring finger; the scarred man's splint on his anatomical RIGHT forearm is BLACK thermoplastic with three velcro straps. Reference images are for faces only (REF_IVY_FACE_ONLY.png, REF_NICO_FACE_ONLY.png) and, for the garage, location only (REF_GARAGE_F01.png); never copy a reference image's background or composition. Painterly illustrated cinematic style: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, natural restrained motion, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9, 8 seconds."
-  },
-  {
-   "id": "F42",
-   "slug": "fig_lunch",
-   "batch": 3,
-   "chapter": "CH09",
-   "phase": "P2",
-   "status": "not yet generated",
-   "event": "Sunday lunch under the fig",
-   "location_override": "Vescari garden, Sunday lunch under a fig tree",
-   "costume_override": {
-    "NICO": "dark suit or shirt sleeves; splint WHITE until Oct 10, then BLACK thermoplastic with 3 velcro straps, RIGHT forearm"
-   },
-   "mouth": "closed",
-   "decisive": false,
-   "still_file": "STILL_F42.png",
-   "video_file": "F42.mp4",
-   "first_frame": "STILL_F42.png (approved still; never hospital.png)",
-   "needed_ranges": [
-    [
-     "n101",
-     8.0,
-     0.2,
-     7.7,
-     0.9375
-    ],
-    [
-     "n141",
-     4.0,
-     3.5,
-     7.5,
-     1.0
-    ]
-   ],
-   "still_qa": {
-    "verdict": "approved",
-    "source": "Repairs/media/F42.png",
-    "first_frame": "stills_approved/STILL_F42.jpg"
-   },
-   "still_prompt": "FREE STILL FIRST (Nano Banana, 0 credits): a single 16:9 still frame, no motion, of exactly this moment, in the correct location. Use REF_IVY_FACE_ONLY / REF_NICO_FACE_ONLY (or hospital.png as an IMAGE reference) for faces only. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. Family garden lunch under a fig tree; the curly-haired young man (21, gold curls, gray jacket) excuses himself. Characters: the curly-haired young man: 21, gold curls, gray jacket. Mouths stay closed; nobody speaks. Continuity: Oct 7 - Nov 4: at work the emerald ring hangs on a thin gold chain under her navy scrub top; off duty it is on her LEFT ring finger; the scarred man's splint on his anatomical RIGHT forearm is BLACK thermoplastic with three velcro straps. Reference images are for faces only (REF_IVY_FACE_ONLY.png, REF_NICO_FACE_ONLY.png) and, for the garage, location only (REF_GARAGE_F01.png); never copy a reference image's background or composition. Painterly illustrated cinematic style: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9.",
-   "animation_prompt": "ANIMATE THE APPROVED STILL: use STILL_F42.png as the literal first frame (never hospital.png). Keep its composition, location, people and roles; only add the motion described. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. Family garden lunch under a fig tree; the curly-haired young man (21, gold curls, gray jacket) excuses himself. Characters: the curly-haired young man: 21, gold curls, gray jacket. Mouths stay closed; nobody speaks. Continuity: Oct 7 - Nov 4: at work the emerald ring hangs on a thin gold chain under her navy scrub top; off duty it is on her LEFT ring finger; the scarred man's splint on his anatomical RIGHT forearm is BLACK thermoplastic with three velcro straps. Reference images are for faces only (REF_IVY_FACE_ONLY.png, REF_NICO_FACE_ONLY.png) and, for the garage, location only (REF_GARAGE_F01.png); never copy a reference image's background or composition. Painterly illustrated cinematic style: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, natural restrained motion, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9, 8 seconds."
-  },
-  {
-   "id": "F43",
-   "slug": "foil_card",
-   "batch": 3,
-   "chapter": "CH09",
-   "phase": "P2",
-   "status": "not yet generated",
-   "event": "The foil card",
-   "location_override": "upstairs bathroom floor, Vescari house",
-   "costume_override": {
-    "IVY": "navy scrubs at work with the ring on a gold chain UNDER the top; off duty gray cardigan, emerald on LEFT ring finger",
-    "NICO": "dark suit or shirt sleeves; splint WHITE until Oct 10, then BLACK thermoplastic with 3 velcro straps, RIGHT forearm"
-   },
-   "mouth": "n/a",
-   "decisive": false,
-   "still_file": "STILL_F43.png",
-   "video_file": "F43.mp4",
-   "first_frame": "STILL_F43.png (approved still; never hospital.png)",
-   "needed_ranges": [
-    [
-     "n101",
-     7.42,
-     0.2,
-     7.6995,
-     0.9782
-    ],
-    [
-     "n110",
-     3.58,
-     0.2,
-     4.0333,
-     1.0
-    ],
-    [
-     "n127",
-     3.96,
-     3.6,
-     7.5583,
-     1.0
-    ]
-   ],
-   "still_qa": {
-    "verdict": "approved",
-    "source": "Repairs/media/F43.png",
-    "first_frame": "stills_approved/STILL_F43.jpg"
-   },
-   "still_prompt": "FREE STILL FIRST (Nano Banana, 0 credits): a single 16:9 still frame, no motion, of exactly this moment, in the correct location. Use REF_IVY_FACE_ONLY / REF_NICO_FACE_ONLY (or hospital.png as an IMAGE reference) for faces only. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. Bathroom floor: a foil blister card beside a limp hand; the red-haired doctor's hand slips it into her gray cardigan pocket. Characters: the red-haired doctor: an original fictional woman, 28, pale freckled skin, messy copper-red hair in a bun with a ballpoint pen through it (face as in REF_IVY_FACE_ONLY.png). Continuity: Oct 7 - Nov 4: at work the emerald ring hangs on a thin gold chain under her navy scrub top; off duty it is on her LEFT ring finger; the scarred man's splint on his anatomical RIGHT forearm is BLACK thermoplastic with three velcro straps. Reference images are for faces only (REF_IVY_FACE_ONLY.png, REF_NICO_FACE_ONLY.png) and, for the garage, location only (REF_GARAGE_F01.png); never copy a reference image's background or composition. Painterly illustrated cinematic style: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9.",
-   "animation_prompt": "ANIMATE THE APPROVED STILL: use STILL_F43.png as the literal first frame (never hospital.png). Keep its composition, location, people and roles; only add the motion described. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. Bathroom floor: a foil blister card beside a limp hand; the red-haired doctor's hand slips it into her gray cardigan pocket. Characters: the red-haired doctor: an original fictional woman, 28, pale freckled skin, messy copper-red hair in a bun with a ballpoint pen through it (face as in REF_IVY_FACE_ONLY.png). Continuity: Oct 7 - Nov 4: at work the emerald ring hangs on a thin gold chain under her navy scrub top; off duty it is on her LEFT ring finger; the scarred man's splint on his anatomical RIGHT forearm is BLACK thermoplastic with three velcro straps. Reference images are for faces only (REF_IVY_FACE_ONLY.png, REF_NICO_FACE_ONLY.png) and, for the garage, location only (REF_GARAGE_F01.png); never copy a reference image's background or composition. Painterly illustrated cinematic style: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, natural restrained motion, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9, 8 seconds."
-  },
-  {
-   "id": "F44",
-   "slug": "enzo_sleeve",
-   "batch": 3,
-   "chapter": "CH09",
-   "phase": "P2",
-   "status": "TAKE 1 GENERATED",
-   "event": "Enzo grabs her sleeve",
-   "location_override": "ER bay",
-   "costume_override": {
-    "IVY": "navy scrubs at work with the ring on a gold chain UNDER the top; off duty gray cardigan, emerald on LEFT ring finger",
-    "NICO": "dark suit or shirt sleeves; splint WHITE until Oct 10, then BLACK thermoplastic with 3 velcro straps, RIGHT forearm",
-    "ENZO": "gold curls, 21; light jacket (Oct 3) / gray jacket / tan jumpsuit (Nov 11)"
-   },
-   "mouth": "closed",
-   "decisive": false,
-   "still_file": "STILL_F44.png",
-   "video_file": "F44.mp4",
-   "first_frame": "STILL_F44.png (approved still; never hospital.png)",
-   "needed_ranges": [
-    [
-     "n102",
-     7.08,
-     0.2,
-     7.2833,
-     1.0
-    ],
-    [
-     "n104",
-     6.79,
-     0.2,
-     6.9917,
-     1.0
-    ],
-    [
-     "n141",
-     6.54,
-     0.2,
-     6.7417,
-     1.0
-    ],
-    [
-     "n159",
-     3.42,
-     4.0,
-     7.6667,
-     1.0
-    ]
-   ],
-   "still_qa": {
-    "verdict": "approved",
-    "source": "Repairs/media/F44.png",
-    "first_frame": "stills_approved/STILL_F44.jpg"
-   },
-   "still_prompt": "FREE STILL FIRST (Nano Banana, 0 credits): a single 16:9 still frame, no motion, of exactly this moment, in the correct location. Use REF_IVY_FACE_ONLY / REF_NICO_FACE_ONLY (or hospital.png as an IMAGE reference) for faces only. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. ER: the curly-haired young man on a gurney grabs the red-haired doctor's sleeve; framed from behind the red-haired doctor; no lip-sync. Characters: the curly-haired young man: 21, gold curls, gray jacket; the red-haired doctor: an original fictional woman, 28, pale freckled skin, messy copper-red hair in a bun with a ballpoint pen through it (face as in hospital.png). Mouths stay closed; nobody speaks. Continuity: Oct 7 - Nov 4: at work the emerald ring hangs on a thin gold chain under her navy scrub top; off duty it is on her LEFT ring finger; the scarred man's splint on his anatomical RIGHT forearm is BLACK thermoplastic with three velcro straps. Use hospital.png ONLY for the characters' faces, hair and costumes; take the location, background and props from this prompt (and from REF_garage_F01.png for the garage), never from hospital.png. Painterly illustrated cinematic style matching hospital.png: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9.",
-   "animation_prompt": "ANIMATE THE APPROVED STILL: use STILL_F44.png as the literal first frame (never hospital.png). Keep its composition, location, people and roles; only add the motion described. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. ER: the curly-haired young man on a gurney grabs the red-haired doctor's sleeve; framed from behind the red-haired doctor; no lip-sync. Characters: the curly-haired young man: 21, gold curls, gray jacket; the red-haired doctor: an original fictional woman, 28, pale freckled skin, messy copper-red hair in a bun with a ballpoint pen through it (face as in hospital.png). Mouths stay closed; nobody speaks. Continuity: Oct 7 - Nov 4: at work the emerald ring hangs on a thin gold chain under her navy scrub top; off duty it is on her LEFT ring finger; the scarred man's splint on his anatomical RIGHT forearm is BLACK thermoplastic with three velcro straps. Use hospital.png ONLY for the characters' faces, hair and costumes; take the location, background and props from this prompt (and from REF_garage_F01.png for the garage), never from hospital.png. Painterly illustrated cinematic style matching hospital.png: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, natural restrained motion, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9, 8 seconds."
-  },
-  {
-   "id": "F45",
-   "slug": "enzo_stairs",
-   "batch": 3,
-   "chapter": "CH09",
-   "phase": "P0",
-   "status": "TAKE 1 GENERATED",
-   "event": "NEW Oct 3: Enzo half a flight up the stairs",
-   "location_override": "garage stairwell at 4:10 a.m., Oct 3 (flashback)",
-   "costume_override": {
-    "NICO": "ruined charcoal suit over black shirt; WHITE plaster splint anatomical RIGHT forearm (image-left facing camera); healed white scar anatomical LEFT brow (image-right); gun only ever in his LEFT hand",
-    "ENZO": "gold curls, 21; light jacket (Oct 3) / gray jacket / tan jumpsuit (Nov 11)"
-   },
-   "mouth": "closed",
-   "decisive": true,
-   "still_file": "STILL_F45.png",
-   "video_file": "F45.mp4",
-   "first_frame": "STILL_F45.png (approved still; never hospital.png)",
-   "needed_ranges": [
-    [
-     "n103",
-     8.42,
-     0.2,
-     7.6993,
-     0.891
-    ],
-    [
-     "n147",
-     3.42,
-     0.2,
-     3.8667,
-     1.0
-    ]
-   ],
-   "still_qa": {
-    "verdict": "approved",
-    "source": "Final4/F45_final.png",
-    "first_frame": "stills_approved/STILL_F45.jpg"
-   },
-   "still_prompt": "FREE STILL FIRST (Nano Banana, 0 credits): a single 16:9 still frame, no motion, of exactly this moment, in the correct location. Use REF_IVY_FACE_ONLY / REF_NICO_FACE_ONLY (or hospital.png as an IMAGE reference) for faces only. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. Garage stairwell at 4:10 a.m., the curly-haired young man in a light jacket half a flight up, holding his breath, pistol in hand; orange light; never shows the scarred man firing. Characters: the scarred man: an original fictional man, 34, dark wavy hair, short stubble, gray eyes, a thin HEALED WHITE old scar through his anatomical LEFT eyebrow - when he faces camera it is the eyebrow on the RIGHT side of the image - and no bandage, tape or plaster anywhere on his face; his injured arm is his anatomical RIGHT forearm, on the LEFT side of the image when he faces camera (face as in hospital.png); the curly-haired young man: 21, gold curls, gray jacket. Mouths stay closed; nobody speaks. Show the action once, clearly, with fixed roles and positions. Location: the same parking garage as REF_garage_F01.png - level two, low concrete ceiling, concrete pillars with yellow bumper guards, pooled water with sodium-orange reflections, no falling rain; a silver sedan parked nose-out facing camera in the centre bay in front of a gray steel stairwell door, open concrete stairs to the right of the door; the doctor's own car is a dark car whose glossy hood fills the near foreground. No workshop, no tool chests, no shelving, no hospital interior, no curtains, no IV poles. Continuity: Fri Oct 3 - Sun Oct 5: the doctor wears no ring, no necklace, no chain; the scarred man has a WHITE plaster splint on his anatomical RIGHT forearm from fingertips to below the elbow and wears a ruined charcoal suit over a black shirt (jacket off in the ER bay). Use hospital.png ONLY for the characters' faces, hair and costumes; take the location, background and props from this prompt (and from REF_garage_F01.png for the garage), never from hospital.png. Painterly illustrated cinematic style matching hospital.png: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9.",
-   "animation_prompt": "ANIMATE THE APPROVED STILL: use STILL_F45.png as the literal first frame (never hospital.png). Keep its composition, location, people and roles; only add the motion described. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. Garage stairwell at 4:10 a.m., the curly-haired young man in a light jacket half a flight up, holding his breath, pistol in hand; orange light; never shows the scarred man firing. Characters: the scarred man: an original fictional man, 34, dark wavy hair, short stubble, gray eyes, a thin HEALED WHITE old scar through his anatomical LEFT eyebrow - when he faces camera it is the eyebrow on the RIGHT side of the image - and no bandage, tape or plaster anywhere on his face; his injured arm is his anatomical RIGHT forearm, on the LEFT side of the image when he faces camera (face as in hospital.png); the curly-haired young man: 21, gold curls, gray jacket. Mouths stay closed; nobody speaks. Show the action once, clearly, with fixed roles and positions. Location: the same parking garage as REF_garage_F01.png - level two, low concrete ceiling, concrete pillars with yellow bumper guards, pooled water with sodium-orange reflections, no falling rain; a silver sedan parked nose-out facing camera in the centre bay in front of a gray steel stairwell door, open concrete stairs to the right of the door; the doctor's own car is a dark car whose glossy hood fills the near foreground. No workshop, no tool chests, no shelving, no hospital interior, no curtains, no IV poles. Continuity: Fri Oct 3 - Sun Oct 5: the doctor wears no ring, no necklace, no chain; the scarred man has a WHITE plaster splint on his anatomical RIGHT forearm from fingertips to below the elbow and wears a ruined charcoal suit over a black shirt (jacket off in the ER bay). Use hospital.png ONLY for the characters' faces, hair and costumes; take the location, background and props from this prompt (and from REF_garage_F01.png for the garage), never from hospital.png. Painterly illustrated cinematic style matching hospital.png: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, natural restrained motion, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9, 8 seconds."
-  },
-  {
-   "id": "F46",
-   "slug": "lincoln",
-   "batch": 3,
-   "chapter": "CH10",
-   "phase": "P2",
-   "status": "TAKE 1 GENERATED",
-   "event": "Gray Lincoln; the candy twist",
-   "location_override": "street at night, gray luxury sedan (no badge)",
-   "costume_override": {
-    "NICO": "dark suit or shirt sleeves; splint WHITE until Oct 10, then BLACK thermoplastic with 3 velcro straps, RIGHT forearm"
-   },
-   "mouth": "n/a",
-   "decisive": false,
-   "still_file": "STILL_F46.png",
-   "video_file": "F46.mp4",
-   "first_frame": "STILL_F46.png (approved still; never hospital.png)",
-   "needed_ranges": [
-    [
-     "n111",
-     6.92,
-     0.2,
-     7.1167,
-     1.0
-    ],
-    [
-     "n120",
-     3.42,
-     4.4,
-     7.6998,
-     0.9658
-    ]
-   ],
-   "still_qa": {
-    "verdict": "approved",
-    "source": "Repairs/media/F46.png",
-    "first_frame": "stills_approved/STILL_F46.jpg"
-   },
-   "still_prompt": "FREE STILL FIRST (Nano Banana, 0 credits): a single 16:9 still frame, no motion, of exactly this moment, in the correct location. Use REF_IVY_FACE_ONLY / REF_NICO_FACE_ONLY (or hospital.png as an IMAGE reference) for faces only. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. A gray luxury sedan (no badge) at night; on the console a white twist of candy wrapper. Continuity: Oct 7 - Nov 4: at work the emerald ring hangs on a thin gold chain under her navy scrub top; off duty it is on her LEFT ring finger; the scarred man's splint on his anatomical RIGHT forearm is BLACK thermoplastic with three velcro straps. Use hospital.png ONLY for the characters' faces, hair and costumes; take the location, background and props from this prompt (and from REF_garage_F01.png for the garage), never from hospital.png. Painterly illustrated cinematic style matching hospital.png: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9.",
-   "animation_prompt": "ANIMATE THE APPROVED STILL: use STILL_F46.png as the literal first frame (never hospital.png). Keep its composition, location, people and roles; only add the motion described. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. A gray luxury sedan (no badge) at night; on the console a white twist of candy wrapper. Continuity: Oct 7 - Nov 4: at work the emerald ring hangs on a thin gold chain under her navy scrub top; off duty it is on her LEFT ring finger; the scarred man's splint on his anatomical RIGHT forearm is BLACK thermoplastic with three velcro straps. Use hospital.png ONLY for the characters' faces, hair and costumes; take the location, background and props from this prompt (and from REF_garage_F01.png for the garage), never from hospital.png. Painterly illustrated cinematic style matching hospital.png: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, natural restrained motion, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9, 8 seconds."
-  },
-  {
-   "id": "F47",
-   "slug": "courtroom",
-   "batch": 3,
-   "chapter": "CH11",
-   "phase": "P2",
-   "status": "TAKE 1 GENERATED",
-   "event": "Courtroom 6B",
-   "location_override": "Courtroom 6B, witness stand",
-   "costume_override": {
-    "IVY": "navy scrubs at work with the ring on a gold chain UNDER the top; off duty gray cardigan, emerald on LEFT ring finger",
-    "NICO": "dark suit or shirt sleeves; splint WHITE until Oct 10, then BLACK thermoplastic with 3 velcro straps, RIGHT forearm"
-   },
-   "mouth": "closed",
-   "decisive": false,
-   "still_file": "STILL_F47.png",
-   "video_file": "F47.mp4",
-   "first_frame": "STILL_F47.png (approved still; never hospital.png)",
-   "needed_ranges": [
-    [
-     "n112",
-     8.58,
-     0.2,
-     7.6993,
-     0.8737
-    ],
-    [
-     "n115",
-     7.21,
-     0.2,
-     7.4083,
-     1.0
-    ],
-    [
-     "n116",
-     3.58,
-     4.4,
-     7.6999,
-     0.9209
-    ]
-   ],
-   "still_qa": {
-    "verdict": "approved",
-    "source": "Doctor_testifying_in_courtroom_fca05f6c.jpg",
-    "first_frame": "stills_approved/STILL_F47.jpg"
-   },
-   "still_prompt": "FREE STILL FIRST (Nano Banana, 0 credits): a single 16:9 still frame, no motion, of exactly this moment, in the correct location. Use REF_IVY_FACE_ONLY / REF_NICO_FACE_ONLY (or hospital.png as an IMAGE reference) for faces only. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. the red-haired doctor on the witness stand, emerald on her finger; the prosecutor at the lectern, straightening his cuffs. Characters: the prosecutor: 40s, neat, navy suit, straightens his cuffs; the red-haired doctor: an original fictional woman, 28, pale freckled skin, messy copper-red hair in a bun with a ballpoint pen through it (face as in hospital.png). Mouths stay closed; nobody speaks. Continuity: Oct 7 - Nov 4: at work the emerald ring hangs on a thin gold chain under her navy scrub top; off duty it is on her LEFT ring finger; the scarred man's splint on his anatomical RIGHT forearm is BLACK thermoplastic with three velcro straps. Use hospital.png ONLY for the characters' faces, hair and costumes; take the location, background and props from this prompt (and from REF_garage_F01.png for the garage), never from hospital.png. Painterly illustrated cinematic style matching hospital.png: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9.",
-   "animation_prompt": "ANIMATE THE APPROVED STILL: use STILL_F47.png as the literal first frame (never hospital.png). Keep its composition, location, people and roles; only add the motion described. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. the red-haired doctor on the witness stand, emerald on her finger; the prosecutor at the lectern, straightening his cuffs. Characters: the prosecutor: 40s, neat, navy suit, straightens his cuffs; the red-haired doctor: an original fictional woman, 28, pale freckled skin, messy copper-red hair in a bun with a ballpoint pen through it (face as in hospital.png). Mouths stay closed; nobody speaks. Continuity: Oct 7 - Nov 4: at work the emerald ring hangs on a thin gold chain under her navy scrub top; off duty it is on her LEFT ring finger; the scarred man's splint on his anatomical RIGHT forearm is BLACK thermoplastic with three velcro straps. Use hospital.png ONLY for the characters' faces, hair and costumes; take the location, background and props from this prompt (and from REF_garage_F01.png for the garage), never from hospital.png. Painterly illustrated cinematic style matching hospital.png: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, natural restrained motion, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9, 8 seconds."
-  },
-  {
-   "id": "F48",
-   "slug": "nico_gallery",
-   "batch": 3,
-   "chapter": "CH11",
-   "phase": "P2",
-   "status": "TAKE 1 GENERATED",
-   "event": "Nico hears it for the first time",
-   "location_override": "Courtroom 6B gallery benches",
-   "costume_override": {
-    "NICO": "dark suit or shirt sleeves; splint WHITE until Oct 10, then BLACK thermoplastic with 3 velcro straps, RIGHT forearm"
-   },
-   "mouth": "closed",
-   "decisive": false,
-   "still_file": "STILL_F48.png",
-   "video_file": "F48.mp4",
-   "first_frame": "STILL_F48.png (approved still; never hospital.png)",
-   "needed_ranges": [
-    [
-     "n113",
-     2.12,
-     0.2,
-     2.325,
-     1.0
-    ],
-    [
-     "n116",
-     3.0,
-     2.325,
-     5.325,
-     1.0
-    ],
-    [
-     "n144",
-     3.42,
-     2.0,
-     5.4167,
-     1.0
-    ]
-   ],
-   "still_qa": {
-    "verdict": "approved",
-    "source": "R3/F48_r3.png",
-    "first_frame": "stills_approved/STILL_F48.jpg"
-   },
-   "still_prompt": "FREE STILL FIRST (Nano Banana, 0 credits): a single 16:9 still frame, no motion, of exactly this moment, in the correct location. Use REF_IVY_FACE_ONLY / REF_NICO_FACE_ONLY (or hospital.png as an IMAGE reference) for faces only. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. the scarred man in the gallery, still, eyes on her; black splint. Characters: the scarred man: an original fictional man, 34, dark wavy hair, short stubble, gray eyes, a thin HEALED WHITE old scar through his anatomical LEFT eyebrow - when he faces camera it is the eyebrow on the RIGHT side of the image - and no bandage, tape or plaster anywhere on his face; his injured arm is his anatomical RIGHT forearm, on the LEFT side of the image when he faces camera (face as in hospital.png). Mouths stay closed; nobody speaks. Continuity: Oct 7 - Nov 4: at work the emerald ring hangs on a thin gold chain under her navy scrub top; off duty it is on her LEFT ring finger; the scarred man's splint on his anatomical RIGHT forearm is BLACK thermoplastic with three velcro straps. Use hospital.png ONLY for the characters' faces, hair and costumes; take the location, background and props from this prompt (and from REF_garage_F01.png for the garage), never from hospital.png. Painterly illustrated cinematic style matching hospital.png: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9.",
-   "animation_prompt": "ANIMATE THE APPROVED STILL: use STILL_F48.png as the literal first frame (never hospital.png). Keep its composition, location, people and roles; only add the motion described. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. the scarred man in the gallery, still, eyes on her; black splint. Characters: the scarred man: an original fictional man, 34, dark wavy hair, short stubble, gray eyes, a thin HEALED WHITE old scar through his anatomical LEFT eyebrow - when he faces camera it is the eyebrow on the RIGHT side of the image - and no bandage, tape or plaster anywhere on his face; his injured arm is his anatomical RIGHT forearm, on the LEFT side of the image when he faces camera (face as in hospital.png). Mouths stay closed; nobody speaks. Continuity: Oct 7 - Nov 4: at work the emerald ring hangs on a thin gold chain under her navy scrub top; off duty it is on her LEFT ring finger; the scarred man's splint on his anatomical RIGHT forearm is BLACK thermoplastic with three velcro straps. Use hospital.png ONLY for the characters' faces, hair and costumes; take the location, background and props from this prompt (and from REF_garage_F01.png for the garage), never from hospital.png. Painterly illustrated cinematic style matching hospital.png: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, natural restrained motion, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9, 8 seconds."
-  },
-  {
-   "id": "F49",
-   "slug": "palm_up",
-   "batch": 3,
-   "chapter": "CH11",
-   "phase": "P2",
-   "status": "TAKE 1 GENERATED",
-   "event": "Palm up",
-   "location_override": "back seat of a car at dusk",
-   "costume_override": {
-    "IVY": "navy scrubs at work with the ring on a gold chain UNDER the top; off duty gray cardigan, emerald on LEFT ring finger",
-    "NICO": "dark suit or shirt sleeves; splint WHITE until Oct 10, then BLACK thermoplastic with 3 velcro straps, RIGHT forearm"
-   },
-   "mouth": "n/a",
-   "decisive": false,
-   "still_file": "STILL_F49.png",
-   "video_file": "F49.mp4",
-   "first_frame": "STILL_F49.png (approved still; never hospital.png)",
-   "needed_ranges": [
-    [
-     "n116",
-     8.42,
-     0.2,
-     7.6993,
-     0.891
-    ]
-   ],
-   "still_qa": {
-    "verdict": "approved",
-    "source": "R3/F49_r3.png",
-    "first_frame": "stills_approved/STILL_F49.jpg"
-   },
-   "still_prompt": "FREE STILL FIRST (Nano Banana, 0 credits): a single 16:9 still frame, no motion, of exactly this moment, in the correct location. Use REF_IVY_FACE_ONLY / REF_NICO_FACE_ONLY (or hospital.png as an IMAGE reference) for faces only. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. Car back seat at dusk: the scarred man's LEFT hand open palm-up; the red-haired doctor places her hand in it (emerald on her finger). Characters: the scarred man: an original fictional man, 34, dark wavy hair, short stubble, gray eyes, a thin HEALED WHITE old scar through his anatomical LEFT eyebrow - when he faces camera it is the eyebrow on the RIGHT side of the image - and no bandage, tape or plaster anywhere on his face; his injured arm is his anatomical RIGHT forearm, on the LEFT side of the image when he faces camera (face as in hospital.png); the red-haired doctor: an original fictional woman, 28, pale freckled skin, messy copper-red hair in a bun with a ballpoint pen through it (face as in hospital.png). Continuity: Oct 7 - Nov 4: at work the emerald ring hangs on a thin gold chain under her navy scrub top; off duty it is on her LEFT ring finger; the scarred man's splint on his anatomical RIGHT forearm is BLACK thermoplastic with three velcro straps. Use hospital.png ONLY for the characters' faces, hair and costumes; take the location, background and props from this prompt (and from REF_garage_F01.png for the garage), never from hospital.png. Painterly illustrated cinematic style matching hospital.png: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9.",
-   "animation_prompt": "ANIMATE THE APPROVED STILL: use STILL_F49.png as the literal first frame (never hospital.png). Keep its composition, location, people and roles; only add the motion described. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. Car back seat at dusk: the scarred man's LEFT hand open palm-up; the red-haired doctor places her hand in it (emerald on her finger). Characters: the scarred man: an original fictional man, 34, dark wavy hair, short stubble, gray eyes, a thin HEALED WHITE old scar through his anatomical LEFT eyebrow - when he faces camera it is the eyebrow on the RIGHT side of the image - and no bandage, tape or plaster anywhere on his face; his injured arm is his anatomical RIGHT forearm, on the LEFT side of the image when he faces camera (face as in hospital.png); the red-haired doctor: an original fictional woman, 28, pale freckled skin, messy copper-red hair in a bun with a ballpoint pen through it (face as in hospital.png). Continuity: Oct 7 - Nov 4: at work the emerald ring hangs on a thin gold chain under her navy scrub top; off duty it is on her LEFT ring finger; the scarred man's splint on his anatomical RIGHT forearm is BLACK thermoplastic with three velcro straps. Use hospital.png ONLY for the characters' faces, hair and costumes; take the location, background and props from this prompt (and from REF_garage_F01.png for the garage), never from hospital.png. Painterly illustrated cinematic style matching hospital.png: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, natural restrained motion, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9, 8 seconds."
-  },
-  {
-   "id": "F50",
-   "slug": "drawer_midnight",
-   "batch": 3,
-   "chapter": "CH11",
-   "phase": "P2",
-   "status": "TAKE 1 GENERATED",
-   "event": "The drawer at midnight",
-   "location_override": "Vescari study at midnight, desk drawer",
-   "costume_override": {
-    "IVY": "navy scrubs at work with the ring on a gold chain UNDER the top; off duty gray cardigan, emerald on LEFT ring finger",
-    "NICO": "dark suit or shirt sleeves; splint WHITE until Oct 10, then BLACK thermoplastic with 3 velcro straps, RIGHT forearm"
-   },
-   "mouth": "n/a",
-   "decisive": false,
-   "still_file": "STILL_F50.png",
-   "video_file": "F50.mp4",
-   "first_frame": "STILL_F50.png (approved still; never hospital.png)",
-   "needed_ranges": [
-    [
-     "n119",
-     8.42,
-     0.2,
-     7.6993,
-     0.891
-    ]
-   ],
-   "still_qa": {
-    "verdict": "approved",
-    "source": "Repairs/media/F50.png",
-    "first_frame": "stills_approved/STILL_F50.jpg"
-   },
-   "still_prompt": "FREE STILL FIRST (Nano Banana, 0 credits): a single 16:9 still frame, no motion, of exactly this moment, in the correct location. Use REF_IVY_FACE_ONLY / REF_NICO_FACE_ONLY (or hospital.png as an IMAGE reference) for faces only. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. Midnight study: the red-haired doctor opens a desk drawer; under papers, a white twist of candy wrapper. Characters: the red-haired doctor: an original fictional woman, 28, pale freckled skin, messy copper-red hair in a bun with a ballpoint pen through it (face as in hospital.png). Continuity: Oct 7 - Nov 4: at work the emerald ring hangs on a thin gold chain under her navy scrub top; off duty it is on her LEFT ring finger; the scarred man's splint on his anatomical RIGHT forearm is BLACK thermoplastic with three velcro straps. Use hospital.png ONLY for the characters' faces, hair and costumes; take the location, background and props from this prompt (and from REF_garage_F01.png for the garage), never from hospital.png. Painterly illustrated cinematic style matching hospital.png: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9.",
-   "animation_prompt": "ANIMATE THE APPROVED STILL: use STILL_F50.png as the literal first frame (never hospital.png). Keep its composition, location, people and roles; only add the motion described. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. Midnight study: the red-haired doctor opens a desk drawer; under papers, a white twist of candy wrapper. Characters: the red-haired doctor: an original fictional woman, 28, pale freckled skin, messy copper-red hair in a bun with a ballpoint pen through it (face as in hospital.png). Continuity: Oct 7 - Nov 4: at work the emerald ring hangs on a thin gold chain under her navy scrub top; off duty it is on her LEFT ring finger; the scarred man's splint on his anatomical RIGHT forearm is BLACK thermoplastic with three velcro straps. Use hospital.png ONLY for the characters' faces, hair and costumes; take the location, background and props from this prompt (and from REF_garage_F01.png for the garage), never from hospital.png. Painterly illustrated cinematic style matching hospital.png: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, natural restrained motion, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9, 8 seconds."
-  },
-  {
-   "id": "F51",
-   "slug": "glovebox",
-   "batch": 4,
-   "chapter": "CH12",
-   "phase": "P2",
-   "status": "TAKE 1 GENERATED",
-   "event": "Sal's garage, 1:10 a.m.: the ledger",
-   "location_override": "Sal's private garage at night, gray sedan (no badge)",
-   "costume_override": {
-    "NICO": "dark suit or shirt sleeves; splint WHITE until Oct 10, then BLACK thermoplastic with 3 velcro straps, RIGHT forearm",
-    "SAL": "silver hair, camel coat, sugar on tie"
-   },
-   "mouth": "n/a",
-   "decisive": false,
-   "still_file": "STILL_F51.png",
-   "video_file": "F51.mp4",
-   "first_frame": "STILL_F51.png (approved still; never hospital.png)",
-   "needed_ranges": [
-    [
-     "n120",
-     8.42,
-     0.2,
-     7.6993,
-     0.8653
-    ]
-   ],
-   "still_qa": {
-    "verdict": "approved",
-    "source": "Man_holding_ledger_in_car_ecfef0f3.jpg",
-    "first_frame": "stills_approved/STILL_F51.jpg"
-   },
-   "still_prompt": "FREE STILL FIRST (Nano Banana, 0 credits): a single 16:9 still frame, no motion, of exactly this moment, in the correct location. Use REF_IVY_FACE_ONLY / REF_NICO_FACE_ONLY (or hospital.png as an IMAGE reference) for faces only. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. Dark private garage, gray luxury sedan (no badge), glove box falls open on a black ledger; the scarred man's LEFT hand; black splint. Characters: the scarred man: an original fictional man, 34, dark wavy hair, short stubble, gray eyes, a thin HEALED WHITE old scar through his anatomical LEFT eyebrow - when he faces camera it is the eyebrow on the RIGHT side of the image - and no bandage, tape or plaster anywhere on his face; his injured arm is his anatomical RIGHT forearm, on the LEFT side of the image when he faces camera (face as in hospital.png). Continuity: Oct 7 - Nov 4: at work the emerald ring hangs on a thin gold chain under her navy scrub top; off duty it is on her LEFT ring finger; the scarred man's splint on his anatomical RIGHT forearm is BLACK thermoplastic with three velcro straps. Use hospital.png ONLY for the characters' faces, hair and costumes; take the location, background and props from this prompt (and from REF_garage_F01.png for the garage), never from hospital.png. Painterly illustrated cinematic style matching hospital.png: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9.",
-   "animation_prompt": "ANIMATE THE APPROVED STILL: use STILL_F51.png as the literal first frame (never hospital.png). Keep its composition, location, people and roles; only add the motion described. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. Dark private garage, gray luxury sedan (no badge), glove box falls open on a black ledger; the scarred man's LEFT hand; black splint. Characters: the scarred man: an original fictional man, 34, dark wavy hair, short stubble, gray eyes, a thin HEALED WHITE old scar through his anatomical LEFT eyebrow - when he faces camera it is the eyebrow on the RIGHT side of the image - and no bandage, tape or plaster anywhere on his face; his injured arm is his anatomical RIGHT forearm, on the LEFT side of the image when he faces camera (face as in hospital.png). Continuity: Oct 7 - Nov 4: at work the emerald ring hangs on a thin gold chain under her navy scrub top; off duty it is on her LEFT ring finger; the scarred man's splint on his anatomical RIGHT forearm is BLACK thermoplastic with three velcro straps. Use hospital.png ONLY for the characters' faces, hair and costumes; take the location, background and props from this prompt (and from REF_garage_F01.png for the garage), never from hospital.png. Painterly illustrated cinematic style matching hospital.png: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, natural restrained motion, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9, 8 seconds."
-  },
-  {
-   "id": "F52",
-   "slug": "trunk",
-   "batch": 4,
-   "chapter": "CH12",
-   "phase": "P2",
-   "status": "TAKE 1 GENERATED",
-   "event": "Trunk: receipt and tan jacket",
-   "location_override": "Sal's garage, open car trunk",
-   "costume_override": {
-    "NICO": "dark suit or shirt sleeves; splint WHITE until Oct 10, then BLACK thermoplastic with 3 velcro straps, RIGHT forearm"
-   },
-   "mouth": "n/a",
-   "decisive": false,
-   "still_file": "STILL_F52.png",
-   "video_file": "F52.mp4",
-   "first_frame": "STILL_F52.png (approved still; never hospital.png)",
-   "needed_ranges": [
-    [
-     "n121",
-     8.42,
-     0.2,
-     7.6993,
-     0.891
-    ],
-    [
-     "n125",
-     2.96,
-     2.0,
-     5.2083,
-     1.0
-    ]
-   ],
-   "still_qa": {
-    "verdict": "approved",
-    "source": "Repairs/media/F52.png",
-    "first_frame": "stills_approved/STILL_F52.jpg"
-   },
-   "still_prompt": "FREE STILL FIRST (Nano Banana, 0 credits): a single 16:9 still frame, no motion, of exactly this moment, in the correct location. Use REF_IVY_FACE_ONLY / REF_NICO_FACE_ONLY (or hospital.png as an IMAGE reference) for faces only. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. Car trunk: a deli receipt and a boy's tan jacket from a discount rack. Continuity: Oct 7 - Nov 4: at work the emerald ring hangs on a thin gold chain under her navy scrub top; off duty it is on her LEFT ring finger; the scarred man's splint on his anatomical RIGHT forearm is BLACK thermoplastic with three velcro straps. Use hospital.png ONLY for the characters' faces, hair and costumes; take the location, background and props from this prompt (and from REF_garage_F01.png for the garage), never from hospital.png. Painterly illustrated cinematic style matching hospital.png: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9.",
-   "animation_prompt": "ANIMATE THE APPROVED STILL: use STILL_F52.png as the literal first frame (never hospital.png). Keep its composition, location, people and roles; only add the motion described. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. Car trunk: a deli receipt and a boy's tan jacket from a discount rack. Continuity: Oct 7 - Nov 4: at work the emerald ring hangs on a thin gold chain under her navy scrub top; off duty it is on her LEFT ring finger; the scarred man's splint on his anatomical RIGHT forearm is BLACK thermoplastic with three velcro straps. Use hospital.png ONLY for the characters' faces, hair and costumes; take the location, background and props from this prompt (and from REF_garage_F01.png for the garage), never from hospital.png. Painterly illustrated cinematic style matching hospital.png: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, natural restrained motion, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9, 8 seconds."
-  },
-  {
-   "id": "F53",
-   "slug": "ivy_twist",
-   "batch": 4,
-   "chapter": "CH12",
-   "phase": "P2",
-   "status": "TAKE 1 GENERATED",
-   "event": "Ivy with the candy twist",
-   "location_override": "Vescari study at night",
-   "costume_override": {
-    "IVY": "navy scrubs at work with the ring on a gold chain UNDER the top; off duty gray cardigan, emerald on LEFT ring finger",
-    "NICO": "dark suit or shirt sleeves; splint WHITE until Oct 10, then BLACK thermoplastic with 3 velcro straps, RIGHT forearm"
-   },
-   "mouth": "closed",
-   "decisive": false,
-   "still_file": "STILL_F53.png",
-   "video_file": "F53.mp4",
-   "first_frame": "STILL_F53.png (approved still; never hospital.png)",
-   "needed_ranges": [
-    [
-     "n123",
-     6.42,
-     0.2,
-     6.6167,
-     1.0
-    ]
-   ],
-   "still_qa": {
-    "verdict": "approved",
-    "source": "Doctor_waiting_for_scarred_man_ef2c7d0b.jpg",
-    "first_frame": "stills_approved/STILL_F53.jpg"
-   },
-   "still_prompt": "FREE STILL FIRST (Nano Banana, 0 credits): a single 16:9 still frame, no motion, of exactly this moment, in the correct location. Use REF_IVY_FACE_ONLY / REF_NICO_FACE_ONLY (or hospital.png as an IMAGE reference) for faces only. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. the red-haired doctor in the study at night holding a white candy twist, looking up as the scarred man enters. Characters: the scarred man: an original fictional man, 34, dark wavy hair, short stubble, gray eyes, a thin HEALED WHITE old scar through his anatomical LEFT eyebrow - when he faces camera it is the eyebrow on the RIGHT side of the image - and no bandage, tape or plaster anywhere on his face; his injured arm is his anatomical RIGHT forearm, on the LEFT side of the image when he faces camera (face as in hospital.png); the red-haired doctor: an original fictional woman, 28, pale freckled skin, messy copper-red hair in a bun with a ballpoint pen through it (face as in hospital.png). Mouths stay closed; nobody speaks. Continuity: Oct 7 - Nov 4: at work the emerald ring hangs on a thin gold chain under her navy scrub top; off duty it is on her LEFT ring finger; the scarred man's splint on his anatomical RIGHT forearm is BLACK thermoplastic with three velcro straps. Use hospital.png ONLY for the characters' faces, hair and costumes; take the location, background and props from this prompt (and from REF_garage_F01.png for the garage), never from hospital.png. Painterly illustrated cinematic style matching hospital.png: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9.",
-   "animation_prompt": "ANIMATE THE APPROVED STILL: use STILL_F53.png as the literal first frame (never hospital.png). Keep its composition, location, people and roles; only add the motion described. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. the red-haired doctor in the study at night holding a white candy twist, looking up as the scarred man enters. Characters: the scarred man: an original fictional man, 34, dark wavy hair, short stubble, gray eyes, a thin HEALED WHITE old scar through his anatomical LEFT eyebrow - when he faces camera it is the eyebrow on the RIGHT side of the image - and no bandage, tape or plaster anywhere on his face; his injured arm is his anatomical RIGHT forearm, on the LEFT side of the image when he faces camera (face as in hospital.png); the red-haired doctor: an original fictional woman, 28, pale freckled skin, messy copper-red hair in a bun with a ballpoint pen through it (face as in hospital.png). Mouths stay closed; nobody speaks. Continuity: Oct 7 - Nov 4: at work the emerald ring hangs on a thin gold chain under her navy scrub top; off duty it is on her LEFT ring finger; the scarred man's splint on his anatomical RIGHT forearm is BLACK thermoplastic with three velcro straps. Use hospital.png ONLY for the characters' faces, hair and costumes; take the location, background and props from this prompt (and from REF_garage_F01.png for the garage), never from hospital.png. Painterly illustrated cinematic style matching hospital.png: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, natural restrained motion, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9, 8 seconds."
   },
   {
    "id": "F54",
@@ -1532,53 +454,12 @@
     ]
    ],
    "still_qa": {
-    "verdict": "repair_free",
-    "source": "R3/F54_r3.png",
-    "repair_prompt": "Free Nano Banana repair (0 cr): keep everything; change ONLY: blur or erase all lettering: the 'THE BELL FAMILY' magnet note and the cereal-box text. Keep the gray cardigan, Danny and the letter."
+    "verdict": "approved",
+    "source": "Final3/F54_end.png",
+    "first_frame": "stills_approved/STILL_F54.jpg"
    },
    "still_prompt": "FREE STILL FIRST (Nano Banana, 0 credits): a single 16:9 still frame, no motion, of exactly this moment, in the correct location. Use REF_IVY_FACE_ONLY / REF_NICO_FACE_ONLY (or hospital.png as an IMAGE reference) for faces only. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. Dawn kitchen table; the pale teenage boy, 17, pale, hands the red-haired doctor a folded letter. Characters: the pale teenage boy: 17, thin, pale, hooded sweatshirt; the red-haired doctor: an original fictional woman, 28, pale freckled skin, messy copper-red hair in a bun with a ballpoint pen through it (face as in hospital.png). Mouths stay closed; nobody speaks. Continuity: Oct 7 - Nov 4: at work the emerald ring hangs on a thin gold chain under her navy scrub top; off duty it is on her LEFT ring finger; the scarred man's splint on his anatomical RIGHT forearm is BLACK thermoplastic with three velcro straps. Use hospital.png ONLY for the characters' faces, hair and costumes; take the location, background and props from this prompt (and from REF_garage_F01.png for the garage), never from hospital.png. Painterly illustrated cinematic style matching hospital.png: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9.",
    "animation_prompt": "ANIMATE THE APPROVED STILL: use STILL_F54.png as the literal first frame (never hospital.png). Keep its composition, location, people and roles; only add the motion described. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. Dawn kitchen table; the pale teenage boy, 17, pale, hands the red-haired doctor a folded letter. Characters: the pale teenage boy: 17, thin, pale, hooded sweatshirt; the red-haired doctor: an original fictional woman, 28, pale freckled skin, messy copper-red hair in a bun with a ballpoint pen through it (face as in hospital.png). Mouths stay closed; nobody speaks. Continuity: Oct 7 - Nov 4: at work the emerald ring hangs on a thin gold chain under her navy scrub top; off duty it is on her LEFT ring finger; the scarred man's splint on his anatomical RIGHT forearm is BLACK thermoplastic with three velcro straps. Use hospital.png ONLY for the characters' faces, hair and costumes; take the location, background and props from this prompt (and from REF_garage_F01.png for the garage), never from hospital.png. Painterly illustrated cinematic style matching hospital.png: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, natural restrained motion, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9, 8 seconds."
-  },
-  {
-   "id": "F55",
-   "slug": "table_evidence",
-   "batch": 4,
-   "chapter": "CH13",
-   "phase": "P2",
-   "status": "TAKE 1 GENERATED",
-   "event": "Evidence on the tablecloth",
-   "location_override": "Vescari dining room 7 p.m., white tablecloth",
-   "costume_override": {
-    "NICO": "dark suit or shirt sleeves; splint WHITE until Oct 10, then BLACK thermoplastic with 3 velcro straps, RIGHT forearm"
-   },
-   "mouth": "closed",
-   "decisive": false,
-   "still_file": "STILL_F55.png",
-   "video_file": "F55.mp4",
-   "first_frame": "STILL_F55.png (approved still; never hospital.png)",
-   "needed_ranges": [
-    [
-     "n125",
-     8.42,
-     0.2,
-     7.6993,
-     0.8653
-    ],
-    [
-     "n128",
-     5.0,
-     0.2,
-     5.2,
-     1.0
-    ]
-   ],
-   "still_qa": {
-    "verdict": "approved",
-    "source": "Repairs/media/F55.png",
-    "first_frame": "stills_approved/STILL_F55.jpg"
-   },
-   "still_prompt": "FREE STILL FIRST (Nano Banana, 0 credits): a single 16:9 still frame, no motion, of exactly this moment, in the correct location. Use REF_IVY_FACE_ONLY / REF_NICO_FACE_ONLY (or hospital.png as an IMAGE reference) for faces only. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. Dining room 7 p.m.: notebook, receipt and tan jacket on a white tablecloth between the scarred man and the silver-haired uncle; pastry box. Characters: the scarred man: an original fictional man, 34, dark wavy hair, short stubble, gray eyes, a thin HEALED WHITE old scar through his anatomical LEFT eyebrow - when he faces camera it is the eyebrow on the RIGHT side of the image - and no bandage, tape or plaster anywhere on his face; his injured arm is his anatomical RIGHT forearm, on the LEFT side of the image when he faces camera (face as in hospital.png); the silver-haired uncle: 60s, silver hair, camel coat, warm unhurried manner, a dusting of powdered sugar on his tie. Mouths stay closed; nobody speaks. Continuity: Oct 7 - Nov 4: at work the emerald ring hangs on a thin gold chain under her navy scrub top; off duty it is on her LEFT ring finger; the scarred man's splint on his anatomical RIGHT forearm is BLACK thermoplastic with three velcro straps. Use hospital.png ONLY for the characters' faces, hair and costumes; take the location, background and props from this prompt (and from REF_garage_F01.png for the garage), never from hospital.png. Painterly illustrated cinematic style matching hospital.png: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9.",
-   "animation_prompt": "ANIMATE THE APPROVED STILL: use STILL_F55.png as the literal first frame (never hospital.png). Keep its composition, location, people and roles; only add the motion described. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. Dining room 7 p.m.: notebook, receipt and tan jacket on a white tablecloth between the scarred man and the silver-haired uncle; pastry box. Characters: the scarred man: an original fictional man, 34, dark wavy hair, short stubble, gray eyes, a thin HEALED WHITE old scar through his anatomical LEFT eyebrow - when he faces camera it is the eyebrow on the RIGHT side of the image - and no bandage, tape or plaster anywhere on his face; his injured arm is his anatomical RIGHT forearm, on the LEFT side of the image when he faces camera (face as in hospital.png); the silver-haired uncle: 60s, silver hair, camel coat, warm unhurried manner, a dusting of powdered sugar on his tie. Mouths stay closed; nobody speaks. Continuity: Oct 7 - Nov 4: at work the emerald ring hangs on a thin gold chain under her navy scrub top; off duty it is on her LEFT ring finger; the scarred man's splint on his anatomical RIGHT forearm is BLACK thermoplastic with three velcro straps. Use hospital.png ONLY for the characters' faces, hair and costumes; take the location, background and props from this prompt (and from REF_garage_F01.png for the garage), never from hospital.png. Painterly illustrated cinematic style matching hospital.png: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, natural restrained motion, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9, 8 seconds."
   },
   {
    "id": "F56",
@@ -1623,56 +504,6 @@
    "animation_prompt": "ANIMATE THE APPROVED STILL: use STILL_F56.png as the literal first frame (never hospital.png). Keep its composition, location, people and roles; only add the motion described. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. the silver-haired uncle looks at his hands, then at his nephew; a phone lies on the tablecloth. Characters: the silver-haired uncle: 60s, silver hair, camel coat, warm unhurried manner, a dusting of powdered sugar on his tie. Mouths stay closed; nobody speaks. Continuity: Oct 7 - Nov 4: at work the emerald ring hangs on a thin gold chain under her navy scrub top; off duty it is on her LEFT ring finger; the scarred man's splint on his anatomical RIGHT forearm is BLACK thermoplastic with three velcro straps. Use hospital.png ONLY for the characters' faces, hair and costumes; take the location, background and props from this prompt (and from REF_garage_F01.png for the garage), never from hospital.png. Painterly illustrated cinematic style matching hospital.png: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, natural restrained motion, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9, 8 seconds."
   },
   {
-   "id": "F57",
-   "slug": "ivy_speaks",
-   "batch": 4,
-   "chapter": "CH13",
-   "phase": "P2",
-   "status": "TAKE 1 GENERATED",
-   "event": "Reverse: Nico across from Sal, Ivy standing behind him",
-   "location_override": "Vescari dining room, reverse angle",
-   "costume_override": {
-    "IVY": "navy scrubs at work with the ring on a gold chain UNDER the top; off duty gray cardigan, emerald on LEFT ring finger",
-    "NICO": "dark suit or shirt sleeves; splint WHITE until Oct 10, then BLACK thermoplastic with 3 velcro straps, RIGHT forearm",
-    "SAL": "silver hair, camel coat, sugar on tie"
-   },
-   "mouth": "closed",
-   "decisive": false,
-   "still_file": "STILL_F57.png",
-   "video_file": "F57.mp4",
-   "first_frame": "STILL_F57.png (approved still; never hospital.png)",
-   "needed_ranges": [
-    [
-     "n126",
-     4.58,
-     0.2,
-     4.7833,
-     1.0
-    ],
-    [
-     "n127",
-     2.58,
-     4.7833,
-     7.3666,
-     1.0
-    ],
-    [
-     "n128",
-     5.79,
-     0.2,
-     5.9917,
-     1.0
-    ]
-   ],
-   "still_qa": {
-    "verdict": "approved",
-    "source": "Men_seated_at_dining_table_40770ca7.jpg",
-    "first_frame": "stills_approved/STILL_F57.jpg"
-   },
-   "still_prompt": "FREE STILL FIRST (Nano Banana, 0 credits): a single 16:9 still frame, no motion, of exactly this moment, in the correct location. Use REF_IVY_FACE_ONLY / REF_NICO_FACE_ONLY (or hospital.png as an IMAGE reference) for faces only. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. Reverse angle over the silver-haired uncle: the scarred man seated, black-splinted arm on the tablecloth, delivering a verdict; the red-haired doctor standing behind his shoulder, then she speaks to the silver-haired uncle. Characters: the scarred man: an original fictional man, 34, dark wavy hair, short stubble, gray eyes, a thin HEALED WHITE old scar through his anatomical LEFT eyebrow - when he faces camera it is the eyebrow on the RIGHT side of the image - and no bandage, tape or plaster anywhere on his face; his injured arm is his anatomical RIGHT forearm, on the LEFT side of the image when he faces camera (face as in hospital.png); the red-haired doctor: an original fictional woman, 28, pale freckled skin, messy copper-red hair in a bun with a ballpoint pen through it (face as in hospital.png); the silver-haired uncle: 60s, silver hair, camel coat, warm unhurried manner, a dusting of powdered sugar on his tie. Mouths stay closed; nobody speaks. Continuity: Oct 7 - Nov 4: at work the emerald ring hangs on a thin gold chain under her navy scrub top; off duty it is on her LEFT ring finger; the scarred man's splint on his anatomical RIGHT forearm is BLACK thermoplastic with three velcro straps. Use hospital.png ONLY for the characters' faces, hair and costumes; take the location, background and props from this prompt (and from REF_garage_F01.png for the garage), never from hospital.png. Painterly illustrated cinematic style matching hospital.png: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9.",
-   "animation_prompt": "ANIMATE THE APPROVED STILL: use STILL_F57.png as the literal first frame (never hospital.png). Keep its composition, location, people and roles; only add the motion described. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. Reverse angle over the silver-haired uncle: the scarred man seated, black-splinted arm on the tablecloth, delivering a verdict; the red-haired doctor standing behind his shoulder, then she speaks to the silver-haired uncle. Characters: the scarred man: an original fictional man, 34, dark wavy hair, short stubble, gray eyes, a thin HEALED WHITE old scar through his anatomical LEFT eyebrow - when he faces camera it is the eyebrow on the RIGHT side of the image - and no bandage, tape or plaster anywhere on his face; his injured arm is his anatomical RIGHT forearm, on the LEFT side of the image when he faces camera (face as in hospital.png); the red-haired doctor: an original fictional woman, 28, pale freckled skin, messy copper-red hair in a bun with a ballpoint pen through it (face as in hospital.png); the silver-haired uncle: 60s, silver hair, camel coat, warm unhurried manner, a dusting of powdered sugar on his tie. Mouths stay closed; nobody speaks. Continuity: Oct 7 - Nov 4: at work the emerald ring hangs on a thin gold chain under her navy scrub top; off duty it is on her LEFT ring finger; the scarred man's splint on his anatomical RIGHT forearm is BLACK thermoplastic with three velcro straps. Use hospital.png ONLY for the characters' faces, hair and costumes; take the location, background and props from this prompt (and from REF_garage_F01.png for the garage), never from hospital.png. Painterly illustrated cinematic style matching hospital.png: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, natural restrained motion, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9, 8 seconds."
-  },
-  {
    "id": "F58",
    "slug": "theo_out",
    "batch": 4,
@@ -1701,9 +532,9 @@
     ]
    ],
    "still_qa": {
-    "verdict": "repair_free",
-    "source": "Repairs/media/F58.png",
-    "repair_prompt": "Free Nano Banana repair (0 cr): keep the same faces, framing and composition; change ONLY: the doctor's cardigan is GRAY, not green (match F59-F64). Keep the emerald + gold band on her LEFT ring finger."
+    "verdict": "approved",
+    "source": "End10/F58_end.png",
+    "first_frame": "stills_approved/STILL_F58.jpg"
    },
    "still_prompt": "FREE STILL FIRST (Nano Banana, 0 credits): a single 16:9 still frame, no motion, of exactly this moment, in the correct location. Use REF_IVY_FACE_ONLY / REF_NICO_FACE_ONLY (or hospital.png as an IMAGE reference) for faces only. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. her younger brother walks out of a detention center to the red-haired doctor at her car; in the car he looks at the windshield, she listens. Characters: her younger brother: early 20s, thin, pale, red ears, short brown hair; the red-haired doctor: an original fictional woman, 28, pale freckled skin, messy copper-red hair in a bun with a ballpoint pen through it (face as in hospital.png). Mouths stay closed; nobody speaks. Continuity: Nov 5 - Nov 13 morning: a plain gold band under the emerald on her LEFT ring finger; the scarred man's BLACK splint on his anatomical RIGHT forearm. Use hospital.png ONLY for the characters' faces, hair and costumes; take the location, background and props from this prompt (and from REF_garage_F01.png for the garage), never from hospital.png. Painterly illustrated cinematic style matching hospital.png: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9.",
    "animation_prompt": "ANIMATE THE APPROVED STILL: use STILL_F58.png as the literal first frame (never hospital.png). Keep its composition, location, people and roles; only add the motion described. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. her younger brother walks out of a detention center to the red-haired doctor at her car; in the car he looks at the windshield, she listens. Characters: her younger brother: early 20s, thin, pale, red ears, short brown hair; the red-haired doctor: an original fictional woman, 28, pale freckled skin, messy copper-red hair in a bun with a ballpoint pen through it (face as in hospital.png). Mouths stay closed; nobody speaks. Continuity: Nov 5 - Nov 13 morning: a plain gold band under the emerald on her LEFT ring finger; the scarred man's BLACK splint on his anatomical RIGHT forearm. Use hospital.png ONLY for the characters' faces, hair and costumes; take the location, background and props from this prompt (and from REF_garage_F01.png for the garage), never from hospital.png. Painterly illustrated cinematic style matching hospital.png: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, natural restrained motion, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9, 8 seconds."
@@ -1756,9 +587,9 @@
     ]
    ],
    "still_qa": {
-    "verdict": "repair_free",
-    "source": "Repairs/media/F59.png",
-    "repair_prompt": "Free Nano Banana repair (0 cr): keep the same faces, framing and composition; change ONLY: the curly-haired young man kneels at the boy's shoulder with one hand on the boy's shoulder; both hands OFF the chest (no compressions). Keep the mask grip, the gray cardigan and Brancato."
+    "verdict": "approved",
+    "source": "End10/F59_end.png",
+    "first_frame": "stills_approved/STILL_F59.jpg"
    },
    "still_prompt": "FREE STILL FIRST (Nano Banana, 0 credits): a single 16:9 still frame, no motion, of exactly this moment, in the correct location. Use REF_IVY_FACE_ONLY / REF_NICO_FACE_ONLY (or hospital.png as an IMAGE reference) for faces only. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. Social club at night; the heavyset rival in a brown cardigan buttoned wrong; his son on the floor; the curly-haired young man breathing for him. Characters: the heavyset rival: 60s, heavyset, brown cardigan buttoned wrong; the curly-haired young man: 21, gold curls, gray jacket. Mouths stay closed; nobody speaks. Continuity: Nov 5 - Nov 13 morning: a plain gold band under the emerald on her LEFT ring finger; the scarred man's BLACK splint on his anatomical RIGHT forearm. Reference images are for faces only (REF_IVY_FACE_ONLY.png, REF_NICO_FACE_ONLY.png) and, for the garage, location only (REF_GARAGE_F01.png); never copy a reference image's background or composition. Painterly illustrated cinematic style: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9.",
    "animation_prompt": "ANIMATE THE APPROVED STILL: use STILL_F59.png as the literal first frame (never hospital.png). Keep its composition, location, people and roles; only add the motion described. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. Social club at night; the heavyset rival in a brown cardigan buttoned wrong; his son on the floor; the curly-haired young man breathing for him. Characters: the heavyset rival: 60s, heavyset, brown cardigan buttoned wrong; the curly-haired young man: 21, gold curls, gray jacket. Mouths stay closed; nobody speaks. Continuity: Nov 5 - Nov 13 morning: a plain gold band under the emerald on her LEFT ring finger; the scarred man's BLACK splint on his anatomical RIGHT forearm. Reference images are for faces only (REF_IVY_FACE_ONLY.png, REF_NICO_FACE_ONLY.png) and, for the garage, location only (REF_GARAGE_F01.png); never copy a reference image's background or composition. Painterly illustrated cinematic style: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, natural restrained motion, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9, 8 seconds."
@@ -1812,41 +643,6 @@
    },
    "still_prompt": "FREE STILL FIRST (Nano Banana, 0 credits): a single 16:9 still frame, no motion, of exactly this moment, in the correct location. Use REF_IVY_FACE_ONLY / REF_NICO_FACE_ONLY (or hospital.png as an IMAGE reference) for faces only. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. the red-haired doctor kneels bagging the boy with a bag-valve mask; the curly-haired young man beside her; the heavyset rival's hand draws a typed page from his cardigan (illegible). Characters: the heavyset rival: 60s, heavyset, brown cardigan buttoned wrong; the curly-haired young man: 21, gold curls, gray jacket; the red-haired doctor: an original fictional woman, 28, pale freckled skin, messy copper-red hair in a bun with a ballpoint pen through it (face as in REF_IVY_FACE_ONLY.png). Mouths stay closed; nobody speaks. Continuity: Nov 5 - Nov 13 morning: a plain gold band under the emerald on her LEFT ring finger; the scarred man's BLACK splint on his anatomical RIGHT forearm. Reference images are for faces only (REF_IVY_FACE_ONLY.png, REF_NICO_FACE_ONLY.png) and, for the garage, location only (REF_GARAGE_F01.png); never copy a reference image's background or composition. Painterly illustrated cinematic style: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9.",
    "animation_prompt": "ANIMATE THE APPROVED STILL: use STILL_F60.png as the literal first frame (never hospital.png). Keep its composition, location, people and roles; only add the motion described. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. the red-haired doctor kneels bagging the boy with a bag-valve mask; the curly-haired young man beside her; the heavyset rival's hand draws a typed page from his cardigan (illegible). Characters: the heavyset rival: 60s, heavyset, brown cardigan buttoned wrong; the curly-haired young man: 21, gold curls, gray jacket; the red-haired doctor: an original fictional woman, 28, pale freckled skin, messy copper-red hair in a bun with a ballpoint pen through it (face as in REF_IVY_FACE_ONLY.png). Mouths stay closed; nobody speaks. Continuity: Nov 5 - Nov 13 morning: a plain gold band under the emerald on her LEFT ring finger; the scarred man's BLACK splint on his anatomical RIGHT forearm. Reference images are for faces only (REF_IVY_FACE_ONLY.png, REF_NICO_FACE_ONLY.png) and, for the garage, location only (REF_GARAGE_F01.png); never copy a reference image's background or composition. Painterly illustrated cinematic style: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, natural restrained motion, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9, 8 seconds."
-  },
-  {
-   "id": "F61",
-   "slug": "nico_enters",
-   "batch": 4,
-   "chapter": "CH16",
-   "phase": "P3",
-   "status": "not yet generated",
-   "event": "Nico enters unarmed; Ivy steps in front",
-   "location_override": "Bath Avenue club entrance",
-   "costume_override": {
-    "IVY": "gray cardigan; emerald + plain gold band on LEFT ring finger",
-    "NICO": "rumpled white shirt or dark suit; BLACK splint RIGHT forearm"
-   },
-   "mouth": "closed",
-   "decisive": true,
-   "still_file": "STILL_F61.png",
-   "video_file": "F61.mp4",
-   "first_frame": "STILL_F61.png (approved still; never hospital.png)",
-   "needed_ranges": [
-    [
-     "n144",
-     8.42,
-     0.2,
-     7.6993,
-     0.891
-    ]
-   ],
-   "still_qa": {
-    "verdict": "approved",
-    "source": "Repairs/media/F61.png",
-    "first_frame": "stills_approved/STILL_F61.jpg"
-   },
-   "still_prompt": "FREE STILL FIRST (Nano Banana, 0 credits): a single 16:9 still frame, no motion, of exactly this moment, in the correct location. Use REF_IVY_FACE_ONLY / REF_NICO_FACE_ONLY (or hospital.png as an IMAGE reference) for faces only. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. the scarred man enters with empty hands, black splint; guns turn; the red-haired doctor steps in front of him; guns lower. Characters: the scarred man: an original fictional man, 34, dark wavy hair, short stubble, gray eyes, a thin HEALED WHITE old scar through his anatomical LEFT eyebrow - when he faces camera it is the eyebrow on the RIGHT side of the image - and no bandage, tape or plaster anywhere on his face; his injured arm is his anatomical RIGHT forearm, on the LEFT side of the image when he faces camera (face as in REF_NICO_FACE_ONLY.png); the red-haired doctor: an original fictional woman, 28, pale freckled skin, messy copper-red hair in a bun with a ballpoint pen through it (face as in REF_IVY_FACE_ONLY.png). Mouths stay closed; nobody speaks. Show the action once, clearly, with fixed roles and positions. IDENTITY LOCK: the red-haired freckled WOMAN in navy scrubs is always the doctor and the one who treats; the dark-haired stubbled MAN is always the injured man/patient. Never swap their faces, genders, hair, clothes or roles, and never blend one face into the other. Continuity: Nov 5 - Nov 13 morning: a plain gold band under the emerald on her LEFT ring finger; the scarred man's BLACK splint on his anatomical RIGHT forearm. Reference images are for faces only (REF_IVY_FACE_ONLY.png, REF_NICO_FACE_ONLY.png) and, for the garage, location only (REF_GARAGE_F01.png); never copy a reference image's background or composition. Painterly illustrated cinematic style: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9.",
-   "animation_prompt": "ANIMATE THE APPROVED STILL: use STILL_F61.png as the literal first frame (never hospital.png). Keep its composition, location, people and roles; only add the motion described. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. the scarred man enters with empty hands, black splint; guns turn; the red-haired doctor steps in front of him; guns lower. Characters: the scarred man: an original fictional man, 34, dark wavy hair, short stubble, gray eyes, a thin HEALED WHITE old scar through his anatomical LEFT eyebrow - when he faces camera it is the eyebrow on the RIGHT side of the image - and no bandage, tape or plaster anywhere on his face; his injured arm is his anatomical RIGHT forearm, on the LEFT side of the image when he faces camera (face as in REF_NICO_FACE_ONLY.png); the red-haired doctor: an original fictional woman, 28, pale freckled skin, messy copper-red hair in a bun with a ballpoint pen through it (face as in REF_IVY_FACE_ONLY.png). Mouths stay closed; nobody speaks. Show the action once, clearly, with fixed roles and positions. IDENTITY LOCK: the red-haired freckled WOMAN in navy scrubs is always the doctor and the one who treats; the dark-haired stubbled MAN is always the injured man/patient. Never swap their faces, genders, hair, clothes or roles, and never blend one face into the other. Continuity: Nov 5 - Nov 13 morning: a plain gold band under the emerald on her LEFT ring finger; the scarred man's BLACK splint on his anatomical RIGHT forearm. Reference images are for faces only (REF_IVY_FACE_ONLY.png, REF_NICO_FACE_ONLY.png) and, for the garage, location only (REF_GARAGE_F01.png); never copy a reference image's background or composition. Painterly illustrated cinematic style: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, natural restrained motion, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9, 8 seconds."
   },
   {
    "id": "F62",
@@ -1967,54 +763,12 @@
     ]
    ],
    "still_qa": {
-    "verdict": "repair_free",
-    "source": "Repairs/media/F64.png",
-    "repair_prompt": "Free Nano Banana repair (0 cr): keep the same faces, framing and composition; change ONLY: put BOTH rings on the SAME LEFT ring finger, plain gold band below the emerald; the right hand bare. Keep the grand-jury room."
+    "verdict": "approved",
+    "source": "End10/F64_end.png",
+    "first_frame": "stills_approved/STILL_F64.jpg"
    },
    "still_prompt": "FREE STILL FIRST (Nano Banana, 0 credits): a single 16:9 still frame, no motion, of exactly this moment, in the correct location. Use REF_IVY_FACE_ONLY / REF_NICO_FACE_ONLY (or hospital.png as an IMAGE reference) for faces only. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. the red-haired doctor testifying in a plain grand-jury room, hands folded, emerald with a gold band. Characters: the red-haired doctor: an original fictional woman, 28, pale freckled skin, messy copper-red hair in a bun with a ballpoint pen through it (face as in REF_IVY_FACE_ONLY.png). Mouths stay closed; nobody speaks. Continuity: Nov 5 - Nov 13 morning: a plain gold band under the emerald on her LEFT ring finger; the scarred man's BLACK splint on his anatomical RIGHT forearm. Reference images are for faces only (REF_IVY_FACE_ONLY.png, REF_NICO_FACE_ONLY.png) and, for the garage, location only (REF_GARAGE_F01.png); never copy a reference image's background or composition. Painterly illustrated cinematic style: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9.",
    "animation_prompt": "ANIMATE THE APPROVED STILL: use STILL_F64.png as the literal first frame (never hospital.png). Keep its composition, location, people and roles; only add the motion described. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. the red-haired doctor testifying in a plain grand-jury room, hands folded, emerald with a gold band. Characters: the red-haired doctor: an original fictional woman, 28, pale freckled skin, messy copper-red hair in a bun with a ballpoint pen through it (face as in REF_IVY_FACE_ONLY.png). Mouths stay closed; nobody speaks. Continuity: Nov 5 - Nov 13 morning: a plain gold band under the emerald on her LEFT ring finger; the scarred man's BLACK splint on his anatomical RIGHT forearm. Reference images are for faces only (REF_IVY_FACE_ONLY.png, REF_NICO_FACE_ONLY.png) and, for the garage, location only (REF_GARAGE_F01.png); never copy a reference image's background or composition. Painterly illustrated cinematic style: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, natural restrained motion, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9, 8 seconds."
-  },
-  {
-   "id": "F65",
-   "slug": "splint_off",
-   "batch": 4,
-   "chapter": "CH17",
-   "phase": "P4",
-   "status": "not yet generated",
-   "event": "The splint comes off; his fist closes",
-   "location_override": "Vescari house, daylight, close on his arm",
-   "costume_override": {
-    "IVY": "gray cardigan; emerald + gold band",
-    "NICO": "no splint"
-   },
-   "mouth": "n/a",
-   "decisive": true,
-   "still_file": "STILL_F65.png",
-   "video_file": "F65.mp4",
-   "first_frame": "STILL_F65.png (approved still; never hospital.png)",
-   "needed_ranges": [
-    [
-     "n151",
-     6.08,
-     0.2,
-     5.3708,
-     0.85
-    ],
-    [
-     "n152",
-     2.5,
-     5.3708,
-     7.6998,
-     0.9316
-    ]
-   ],
-   "still_qa": {
-    "verdict": "approved",
-    "source": "verified/STILL_F65.jpg",
-    "first_frame": "stills_approved/STILL_F65.jpg"
-   },
-   "still_prompt": "FREE STILL FIRST (Nano Banana, 0 credits): a single 16:9 still frame, no motion, of exactly this moment, in the correct location. Use REF_IVY_FACE_ONLY / REF_NICO_FACE_ONLY (or hospital.png as an IMAGE reference) for faces only. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. the red-haired doctor unstraps the scarred man's black splint; his right fist slowly closes; he looks at his hand. Characters: the scarred man: an original fictional man, 34, dark wavy hair, short stubble, gray eyes, a thin HEALED WHITE old scar through his anatomical LEFT eyebrow - when he faces camera it is the eyebrow on the RIGHT side of the image - and no bandage, tape or plaster anywhere on his face; his injured arm is his anatomical RIGHT forearm, on the LEFT side of the image when he faces camera (face as in REF_NICO_FACE_ONLY.png); the red-haired doctor: an original fictional woman, 28, pale freckled skin, messy copper-red hair in a bun with a ballpoint pen through it (face as in REF_IVY_FACE_ONLY.png). Show the action once, clearly, with fixed roles and positions. IDENTITY LOCK: the red-haired freckled WOMAN in navy scrubs is always the doctor and the one who treats; the dark-haired stubbled MAN is always the injured man/patient. Never swap their faces, genders, hair, clothes or roles, and never blend one face into the other. Continuity: Nov 13, 2 p.m.: at the start his anatomical RIGHT forearm is in the BLACK thermoplastic splint (three velcro straps); in this shot it is removed and afterwards there is no splint. She wears the emerald with a gold band. Reference images are for faces only (REF_IVY_FACE_ONLY.png, REF_NICO_FACE_ONLY.png) and, for the garage, location only (REF_GARAGE_F01.png); never copy a reference image's background or composition. Painterly illustrated cinematic style: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9.",
-   "animation_prompt": "ANIMATE THE APPROVED STILL: use STILL_F65.png as the literal first frame (never hospital.png). Keep its composition, location, people and roles; only add the motion described. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. the red-haired doctor unstraps the scarred man's black splint; his right fist slowly closes; he looks at his hand. Characters: the scarred man: an original fictional man, 34, dark wavy hair, short stubble, gray eyes, a thin HEALED WHITE old scar through his anatomical LEFT eyebrow - when he faces camera it is the eyebrow on the RIGHT side of the image - and no bandage, tape or plaster anywhere on his face; his injured arm is his anatomical RIGHT forearm, on the LEFT side of the image when he faces camera (face as in REF_NICO_FACE_ONLY.png); the red-haired doctor: an original fictional woman, 28, pale freckled skin, messy copper-red hair in a bun with a ballpoint pen through it (face as in REF_IVY_FACE_ONLY.png). Show the action once, clearly, with fixed roles and positions. IDENTITY LOCK: the red-haired freckled WOMAN in navy scrubs is always the doctor and the one who treats; the dark-haired stubbled MAN is always the injured man/patient. Never swap their faces, genders, hair, clothes or roles, and never blend one face into the other. Continuity: Nov 13, 2 p.m.: at the start his anatomical RIGHT forearm is in the BLACK thermoplastic splint (three velcro straps); in this shot it is removed and afterwards there is no splint. She wears the emerald with a gold band. Reference images are for faces only (REF_IVY_FACE_ONLY.png, REF_NICO_FACE_ONLY.png) and, for the garage, location only (REF_GARAGE_F01.png); never copy a reference image's background or composition. Painterly illustrated cinematic style: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, natural restrained motion, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9, 8 seconds."
   },
   {
    "id": "F66",
@@ -2057,155 +811,6 @@
    },
    "still_prompt": "FREE STILL FIRST (Nano Banana, 0 credits): a single 16:9 still frame, no motion, of exactly this moment, in the correct location. Use REF_IVY_FACE_ONLY / REF_NICO_FACE_ONLY (or hospital.png as an IMAGE reference) for faces only. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. the red-haired doctor empties her cardigan pockets onto a bed: foil card, folded form, envelope, candy twist; takes the pen from her hair. Characters: the red-haired doctor: an original fictional woman, 28, pale freckled skin, messy copper-red hair in a bun with a ballpoint pen through it (face as in REF_IVY_FACE_ONLY.png). Mouths stay closed; nobody speaks. Continuity: Nov 13 afternoon onward: the scarred man wears NO splint; she wears the emerald with the gold band. Reference images are for faces only (REF_IVY_FACE_ONLY.png, REF_NICO_FACE_ONLY.png) and, for the garage, location only (REF_GARAGE_F01.png); never copy a reference image's background or composition. Painterly illustrated cinematic style: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9.",
    "animation_prompt": "ANIMATE THE APPROVED STILL: use STILL_F66.png as the literal first frame (never hospital.png). Keep its composition, location, people and roles; only add the motion described. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. the red-haired doctor empties her cardigan pockets onto a bed: foil card, folded form, envelope, candy twist; takes the pen from her hair. Characters: the red-haired doctor: an original fictional woman, 28, pale freckled skin, messy copper-red hair in a bun with a ballpoint pen through it (face as in REF_IVY_FACE_ONLY.png). Mouths stay closed; nobody speaks. Continuity: Nov 13 afternoon onward: the scarred man wears NO splint; she wears the emerald with the gold band. Reference images are for faces only (REF_IVY_FACE_ONLY.png, REF_NICO_FACE_ONLY.png) and, for the garage, location only (REF_GARAGE_F01.png); never copy a reference image's background or composition. Painterly illustrated cinematic style: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, natural restrained motion, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9, 8 seconds."
-  },
-  {
-   "id": "F67",
-   "slug": "nico_listens",
-   "batch": 4,
-   "chapter": "CH18",
-   "phase": "P4",
-   "status": "not yet generated",
-   "event": "Nico listening; the door open",
-   "location_override": "Nico's bedroom, door open",
-   "costume_override": {
-    "IVY": "gray cardigan; emerald + gold band",
-    "NICO": "no splint"
-   },
-   "mouth": "closed",
-   "decisive": false,
-   "still_file": "STILL_F67.png",
-   "video_file": "F67.mp4",
-   "first_frame": "STILL_F67.png (approved still; never hospital.png)",
-   "needed_ranges": [
-    [
-     "n156",
-     8.42,
-     0.2,
-     7.6993,
-     0.891
-    ]
-   ],
-   "still_qa": {
-    "verdict": "approved",
-    "source": "verified/STILL_F67.jpg",
-    "first_frame": "stills_approved/STILL_F67.jpg"
-   },
-   "still_prompt": "FREE STILL FIRST (Nano Banana, 0 credits): a single 16:9 still frame, no motion, of exactly this moment, in the correct location. Use REF_IVY_FACE_ONLY / REF_NICO_FACE_ONLY (or hospital.png as an IMAGE reference) for faces only. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. the scarred man sitting on the bed edge, no splint, listening; the door behind the red-haired doctor open. Characters: the scarred man: an original fictional man, 34, dark wavy hair, short stubble, gray eyes, a thin HEALED WHITE old scar through his anatomical LEFT eyebrow - when he faces camera it is the eyebrow on the RIGHT side of the image - and no bandage, tape or plaster anywhere on his face; his injured arm is his anatomical RIGHT forearm, on the LEFT side of the image when he faces camera (face as in REF_NICO_FACE_ONLY.png); the red-haired doctor: an original fictional woman, 28, pale freckled skin, messy copper-red hair in a bun with a ballpoint pen through it (face as in REF_IVY_FACE_ONLY.png). Mouths stay closed; nobody speaks. IDENTITY LOCK: the red-haired freckled WOMAN in navy scrubs is always the doctor and the one who treats; the dark-haired stubbled MAN is always the injured man/patient. Never swap their faces, genders, hair, clothes or roles, and never blend one face into the other. Continuity: Nov 13 afternoon onward: the scarred man wears NO splint; she wears the emerald with the gold band. Reference images are for faces only (REF_IVY_FACE_ONLY.png, REF_NICO_FACE_ONLY.png) and, for the garage, location only (REF_GARAGE_F01.png); never copy a reference image's background or composition. Painterly illustrated cinematic style: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9.",
-   "animation_prompt": "ANIMATE THE APPROVED STILL: use STILL_F67.png as the literal first frame (never hospital.png). Keep its composition, location, people and roles; only add the motion described. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. the scarred man sitting on the bed edge, no splint, listening; the door behind the red-haired doctor open. Characters: the scarred man: an original fictional man, 34, dark wavy hair, short stubble, gray eyes, a thin HEALED WHITE old scar through his anatomical LEFT eyebrow - when he faces camera it is the eyebrow on the RIGHT side of the image - and no bandage, tape or plaster anywhere on his face; his injured arm is his anatomical RIGHT forearm, on the LEFT side of the image when he faces camera (face as in REF_NICO_FACE_ONLY.png); the red-haired doctor: an original fictional woman, 28, pale freckled skin, messy copper-red hair in a bun with a ballpoint pen through it (face as in REF_IVY_FACE_ONLY.png). Mouths stay closed; nobody speaks. IDENTITY LOCK: the red-haired freckled WOMAN in navy scrubs is always the doctor and the one who treats; the dark-haired stubbled MAN is always the injured man/patient. Never swap their faces, genders, hair, clothes or roles, and never blend one face into the other. Continuity: Nov 13 afternoon onward: the scarred man wears NO splint; she wears the emerald with the gold band. Reference images are for faces only (REF_IVY_FACE_ONLY.png, REF_NICO_FACE_ONLY.png) and, for the garage, location only (REF_GARAGE_F01.png); never copy a reference image's background or composition. Painterly illustrated cinematic style: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, natural restrained motion, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9, 8 seconds."
-  },
-  {
-   "id": "F68",
-   "slug": "april_garden",
-   "batch": 4,
-   "chapter": "CH19",
-   "phase": "P5",
-   "status": "not yet generated",
-   "event": "April garden: lemon trees out of burlap",
-   "location_override": "Vescari garden in April, lemon trees",
-   "costume_override": {},
-   "mouth": "closed",
-   "decisive": false,
-   "still_file": "STILL_F68.png",
-   "video_file": "F68.mp4",
-   "first_frame": "STILL_F68.png (approved still; never hospital.png)",
-   "needed_ranges": [
-    [
-     "n159",
-     8.42,
-     0.2,
-     7.6993,
-     0.8653
-    ],
-    [
-     "n160",
-     3.75,
-     0.2,
-     3.95,
-     1.0
-    ]
-   ],
-   "still_qa": {
-    "verdict": "approved",
-    "source": "Repairs/media/F68.png",
-    "first_frame": "stills_approved/STILL_F68.jpg"
-   },
-   "still_prompt": "FREE STILL FIRST (Nano Banana, 0 credits): a single 16:9 still frame, no motion, of exactly this moment, in the correct location. Use REF_IVY_FACE_ONLY / REF_NICO_FACE_ONLY (or hospital.png as an IMAGE reference) for faces only. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. Spring garden, lemon trees being unwrapped from burlap; the older woman in black in black with a gold cross; her younger brother at the table. Characters: the older woman in black: 60s, black dress, small gold cross necklace; her younger brother: early 20s, thin, pale, red ears, short brown hair. Mouths stay closed; nobody speaks. Continuity: April: spring light, no splint; she wears the emerald with the gold band. Reference images are for faces only (REF_IVY_FACE_ONLY.png, REF_NICO_FACE_ONLY.png) and, for the garage, location only (REF_GARAGE_F01.png); never copy a reference image's background or composition. Painterly illustrated cinematic style: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9.",
-   "animation_prompt": "ANIMATE THE APPROVED STILL: use STILL_F68.png as the literal first frame (never hospital.png). Keep its composition, location, people and roles; only add the motion described. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. Spring garden, lemon trees being unwrapped from burlap; the older woman in black in black with a gold cross; her younger brother at the table. Characters: the older woman in black: 60s, black dress, small gold cross necklace; her younger brother: early 20s, thin, pale, red ears, short brown hair. Mouths stay closed; nobody speaks. Continuity: April: spring light, no splint; she wears the emerald with the gold band. Reference images are for faces only (REF_IVY_FACE_ONLY.png, REF_NICO_FACE_ONLY.png) and, for the garage, location only (REF_GARAGE_F01.png); never copy a reference image's background or composition. Painterly illustrated cinematic style: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, natural restrained motion, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9, 8 seconds."
-  },
-  {
-   "id": "F69",
-   "slug": "reyes_gate",
-   "batch": 4,
-   "chapter": "CH19",
-   "phase": "P5",
-   "status": "not yet generated",
-   "event": "Reyes at the gate",
-   "location_override": "Vescari garden gate, warm Saturday",
-   "costume_override": {
-    "REYES": "rumpled rain jacket"
-   },
-   "mouth": "closed",
-   "decisive": false,
-   "still_file": "STILL_F69.png",
-   "video_file": "F69.mp4",
-   "first_frame": "STILL_F69.png (approved still; never hospital.png)",
-   "needed_ranges": [
-    [
-     "n160",
-     8.58,
-     0.2,
-     7.6993,
-     0.8737
-    ]
-   ],
-   "still_qa": {
-    "verdict": "approved",
-    "source": "Repairs/media/F69.png",
-    "first_frame": "stills_approved/STILL_F69.jpg"
-   },
-   "still_prompt": "FREE STILL FIRST (Nano Banana, 0 credits): a single 16:9 still frame, no motion, of exactly this moment, in the correct location. Use REF_IVY_FACE_ONLY / REF_NICO_FACE_ONLY (or hospital.png as an IMAGE reference) for faces only. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. the woman agent in a rain jacket at a garden gate on a warm Saturday, holding a file. Characters: the woman agent: 40s, dark hair pulled back, rumpled rain jacket. Mouths stay closed; nobody speaks. Continuity: April: spring light, no splint; she wears the emerald with the gold band. Reference images are for faces only (REF_IVY_FACE_ONLY.png, REF_NICO_FACE_ONLY.png) and, for the garage, location only (REF_GARAGE_F01.png); never copy a reference image's background or composition. Painterly illustrated cinematic style: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9.",
-   "animation_prompt": "ANIMATE THE APPROVED STILL: use STILL_F69.png as the literal first frame (never hospital.png). Keep its composition, location, people and roles; only add the motion described. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. the woman agent in a rain jacket at a garden gate on a warm Saturday, holding a file. Characters: the woman agent: 40s, dark hair pulled back, rumpled rain jacket. Mouths stay closed; nobody speaks. Continuity: April: spring light, no splint; she wears the emerald with the gold band. Reference images are for faces only (REF_IVY_FACE_ONLY.png, REF_NICO_FACE_ONLY.png) and, for the garage, location only (REF_GARAGE_F01.png); never copy a reference image's background or composition. Painterly illustrated cinematic style: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, natural restrained motion, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9, 8 seconds."
-  },
-  {
-   "id": "F70",
-   "slug": "stairs_14",
-   "batch": 4,
-   "chapter": "CH19",
-   "phase": "P5",
-   "status": "not yet generated",
-   "event": "Fourteen stairs",
-   "location_override": "Vescari house, narrow staircase up to the study door",
-   "costume_override": {
-    "IVY": "light spring cardigan; emerald + gold band"
-   },
-   "mouth": "closed",
-   "decisive": false,
-   "still_file": "STILL_F70.png",
-   "video_file": "F70.mp4",
-   "first_frame": "STILL_F70.png (approved still; never hospital.png)",
-   "needed_ranges": [
-    [
-     "n161",
-     8.42,
-     0.2,
-     7.6993,
-     0.891
-    ],
-    [
-     "n161",
-     8.21,
-     0.2,
-     7.7,
-     0.9137
-    ]
-   ],
-   "still_qa": {
-    "verdict": "approved",
-    "source": "Repairs/media/F70.png",
-    "first_frame": "stills_approved/STILL_F70.jpg"
-   },
-   "still_prompt": "FREE STILL FIRST (Nano Banana, 0 credits): a single 16:9 still frame, no motion, of exactly this moment, in the correct location. Use REF_IVY_FACE_ONLY / REF_NICO_FACE_ONLY (or hospital.png as an IMAGE reference) for faces only. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. the red-haired doctor climbing a narrow staircase, counting, toward a study door at the top; final image. Characters: the red-haired doctor: an original fictional woman, 28, pale freckled skin, messy copper-red hair in a bun with a ballpoint pen through it (face as in REF_IVY_FACE_ONLY.png). Mouths stay closed; nobody speaks. Continuity: April: spring light, no splint; she wears the emerald with the gold band. Reference images are for faces only (REF_IVY_FACE_ONLY.png, REF_NICO_FACE_ONLY.png) and, for the garage, location only (REF_GARAGE_F01.png); never copy a reference image's background or composition. Painterly illustrated cinematic style: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9.",
-   "animation_prompt": "ANIMATE THE APPROVED STILL: use STILL_F70.png as the literal first frame (never hospital.png). Keep its composition, location, people and roles; only add the motion described. Original fictional illustrated characters invented for this film; not based on, and not resembling, any real person, actor or public figure. the red-haired doctor climbing a narrow staircase, counting, toward a study door at the top; final image. Characters: the red-haired doctor: an original fictional woman, 28, pale freckled skin, messy copper-red hair in a bun with a ballpoint pen through it (face as in REF_IVY_FACE_ONLY.png). Mouths stay closed; nobody speaks. Continuity: April: spring light, no splint; she wears the emerald with the gold band. Reference images are for faces only (REF_IVY_FACE_ONLY.png, REF_NICO_FACE_ONLY.png) and, for the garage, location only (REF_GARAGE_F01.png); never copy a reference image's background or composition. Painterly illustrated cinematic style: visible soft brush texture, warm sodium-orange and teal-shadow palette, shallow depth of field, natural restrained motion, stable faces and positions, no morphing, no smoke, no on-screen text, no readable signs, clocks, plates or logos, no subtitles, no mirror image, 16:9, 8 seconds."
   }
  ]
 }

@@ -13,4 +13,5 @@ PY
 mkdir -p output/final
 npx remotion render src/index.tsx Film20-Final output/final/Film20_Final_720p.mp4 --crf=16 --log=error
 cp edition20/out/Film20_captions.srt edition20/out/Film20_chapters.txt edition20/out/Film20_chapters.ffmetadata output/final/
-echo "output/final/Film20_Final_720p.mp4 + captions/chapters"
+python3 tools/verify_final.py output/final/Film20_Final_720p.mp4 --srt output/final/Film20_captions.srt
+echo "output/final/Film20_Final_720p.mp4 + captions/chapters (see output/final/VERIFY.json)"

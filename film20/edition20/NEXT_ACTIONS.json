@@ -1,5 +1,5 @@
 {
- "checkpoint": "2026-11-05 (final4 round 4)",
+ "checkpoint": "2026-11-05 after Batch C + END stills",
  "export_ready": false,
  "gate": {
   "final_export_allowed": false,
@@ -32,59 +32,16 @@
   "HOSP"
  ],
  "ready_to_animate_from_approved_still": [
-  "F05",
-  "F17",
-  "F20",
-  "F21",
-  "F23",
-  "F25",
-  "F27",
-  "F30",
-  "F31",
-  "F32",
-  "F34",
-  "F36",
-  "F41",
-  "F42",
-  "F43",
-  "F44",
-  "F45",
-  "F46",
-  "F47",
-  "F48",
-  "F49",
-  "F50",
-  "F51",
-  "F52",
-  "F53",
-  "F55",
+  "F40",
   "F56",
-  "F57",
   "F60",
-  "F61",
   "F62",
   "F63",
-  "F65",
-  "F66",
-  "F67",
-  "F68",
-  "F69",
-  "F70"
+  "F66"
  ],
- "ready_cost_estimate_cr": 456,
+ "ready_cost_estimate_cr": 72,
  "holds_need_still_fix": {
-  "F03": "Free Nano Banana repair (0 cr): keep everything else exactly; change ONLY: the slumped man beside the silver sedan must be the SAME heavy man as F16: fifties, heavy, balding, in a good dark OVERCOAT, face turned away. Not a dark-haired man in a T-shirt. Nico's arms, gun and the garage are correct.",
-  "F16": "Free Nano Banana repair (0 cr): keep everything else exactly; change ONLY: blocking. The scarred man must stand BETWEEN the red-haired doctor and the slumped heavy man, one pace toward her, his LEFT palm out to stop her. The doctor is on the far side of him from the heavy man, hands out, rising from behind her dark car. Gun low in his left hand only if his palm is not needed; otherwise tuck it at his left side. Arms, scrubs and the heavy man are correct.",
-  "F24": "Free Nano Banana repair (0 cr): keep the same faces, framing and composition; change ONLY: blur or remove the readable 'SUPPLY ROOM / MEDICAL SUPPLIES' lettering on the door; keep Rocco, the coat and the crossword.",
-  "F28": "the scarred man's splint goes on his anatomical RIGHT forearm (image-LEFT when he faces camera; the arm FARTHER from camera when he faces image-left); make the WHITE plaster splint clearly visible on his right forearm, which rests on the table. Keep the restaurant and the chairs.",
-  "F33": "Free Nano Banana repair (0 cr): keep everything else exactly; change ONLY: the emerald is on her LEFT ring finger. Her right hand, which links his arm, wears NO ring; or link his arm with her LEFT hand so the emerald shows. Suit sleeves, the forearm cast and the dress are correct.",
-  "F35": "Free Nano Banana repair (0 cr): keep everything; change ONLY: make it her LEFT hand: thumb on the LOWER side of the hand as it reaches right toward the bolt (back of hand to camera). The loose square emerald is on the LEFT ring finger; lace wedding sleeve.",
-  "F37": "Free Nano Banana repair (0 cr): keep the same faces, framing and composition; change ONLY: the stabbed patient is JOEY: short dark hair, clean-shaven. He must NOT have gold curls or resemble the curly-haired young man.",
-  "F40": "Free Nano Banana repair (0 cr): keep the same characters, faces and framing; change ONLY: the scarred man's splint must be on his anatomical RIGHT forearm (image-LEFT when he faces camera; the arm FARTHER from camera when he faces image-left); black velcro splint, on the arm away from camera; his LEFT hand draws the pen from her bun. Ivy off duty: gray cardigan, emerald on LEFT ring finger.",
-  "F54": "Free Nano Banana repair (0 cr): keep everything; change ONLY: blur or erase all lettering: the 'THE BELL FAMILY' magnet note and the cereal-box text. Keep the gray cardigan, Danny and the letter.",
-  "F58": "Free Nano Banana repair (0 cr): keep the same faces, framing and composition; change ONLY: the doctor's cardigan is GRAY, not green (match F59-F64). Keep the emerald + gold band on her LEFT ring finger.",
-  "F59": "Free Nano Banana repair (0 cr): keep the same faces, framing and composition; change ONLY: the curly-haired young man kneels at the boy's shoulder with one hand on the boy's shoulder; both hands OFF the chest (no compressions). Keep the mask grip, the gray cardigan and Brancato.",
-  "F64": "Free Nano Banana repair (0 cr): keep the same faces, framing and composition; change ONLY: put BOTH rings on the SAME LEFT ring finger, plain gold band below the emerald; the right hand bare. Keep the grand-jury room."
+  "F32": "Free repair (0 cr): keep the hands-only close-up; change ONLY: the woman's hand receiving the ring must be her LEFT hand. Palm down, fingers pointing to image-left, THUMB on the NEAR/LOWER side toward camera. The emerald slides onto that hand's ring finger; his white-cast right hand holds it."
  },
  "budget": {
   "ui_balance": 698,
@@ -101,5 +58,30 @@
   "Send the MP4s named F##.mp4. I run intake, then the 4 fps identity sheet and arm/ring/location QA, then approve with a range, then rebuild",
   "Repair the 13 holds as free stills (prompts above). I QA each one before animation",
   "Final render only when the gate shows final_export_allowed=true (bash tools/final_render.sh)"
- ]
+ ],
+ "video_approved_count": 52,
+ "batch_D_in_flight": [
+  "F03",
+  "F16",
+  "F24",
+  "F28",
+  "F32",
+  "F33",
+  "F35",
+  "F37",
+  "F54",
+  "F58",
+  "F59",
+  "F64"
+ ],
+ "after_D_animate": [
+  "F40",
+  "F56",
+  "F60",
+  "F62",
+  "F63",
+  "F66"
+ ],
+ "after_D_note": "F56/F60/F62/F63/F66 failed Flow UI policy in Batch C: recheck the Flow inventory after a reload before any retake (no blind duplicates). All 6 have approved stills.",
+ "final_render": "bash tools/final_render.sh  (refuses unless gate open; then renders Film20-Final, copies SRT/chapters, runs tools/verify_final.py -> output/final/VERIFY.json + QA_cut_sheet_*.png)"
 }
