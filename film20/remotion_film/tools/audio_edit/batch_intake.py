@@ -97,6 +97,7 @@ def add(paths):
         tag = bool(re.search(r"\b(american|accent|english)\b", head.lower()))
         first = w[0][1] if w else None
         r["asr"] = asr_check(bid, wav, r)
+        if r["asr"]["inserted_tag_words"]: tag = True
         r.update(bid=bid, file=str(f.name), sha256=hashlib.sha256(f.read_bytes()).hexdigest(), dur_s=round(d, 3), wpm=wpm,
                  head_decode=head, spoken_tag_suspected=tag or (first is not None and first > 2.5))
         (WORK / f"{bid}.json").write_text(json.dumps(r))
@@ -130,10 +131,18 @@ def asr_check(bid: str, wav: Path, r: dict) -> dict:
         per.append(round(sum(hit[k:k + n]) / max(1, n), 2)); k += n
     FUNC = {"a", "i", "the", "to", "of", "and", "an", "in", "it", "is", "at", "on", "he", "my", "me", "was", "for"}
     squeezed = [(w, a) for w, a, e in r["words"] if e - a < 0.04 and w not in FUNC]
+    TAGS = {"american", "accent", "tense", "hushed", "whispers", "softly", "warmly", "firmly", "quietly", "relieved", "shaken", "shaky",
+            "urgent", "guarded", "wry", "coldly", "breathless", "hesitant", "wistful", "defiant", "remorseful", "menacing", "intense",
+            "tearful", "weakly", "playful", "hopeful", "emotional", "anxious", "focused", "determined", "bitter", "controlled"}
+    refset = set(ref); inserted = []; pb = 0
+    for a_, b_, n in sm.get_matching_blocks():
+        gap = hyp[pb:b_]
+        inserted += [w for w in gap if w in TAGS and w not in refset]
+        pb = b_ + n
     stretched = [(w, a) for w, a, e in r["words"] if e - a > 1.5]
     return {"asr_word_match": round(sum(hit) / max(1, len(ref)), 3), "asr_hyp_words": len(hyp), "part_match": per,
             "low_parts": [i for i, m in enumerate(per) if m < 0.5 and r["counts"][i] >= 4],
-            "squeezed_words": squeezed[:20], "stretched_words": stretched[:20],
+            "inserted_tag_words": inserted, "squeezed_words": squeezed[:20], "stretched_words": stretched[:20],
             "first_words": ref[:6], "last_words": ref[-6:]}
 
 
@@ -169,6 +178,11 @@ def build():
             seg_parts.setdefault(p["segment_id"], []).append({**p, "batch": bid, "s0": s0, "s1": s1, "words": ws, "variant": r["variant"]})
     OUTDIR.mkdir(parents=True, exist_ok=True)
     segs, walign, qa = {}, {}, []
+    GAIN = {}   # per-batch gain so every voice sits at the same integrated loudness (-18 LUFS)
+    for bid in R:
+        e = subprocess.run(["ffmpeg", "-nostats", "-i", str(WORK / f"{bid}.wav"), "-af", "ebur128", "-f", "null", "-"], capture_output=True, text=True).stderr
+        m_ = re.findall(r"I:\s+(-?[\d.]+) LUFS", e)
+        GAIN[bid] = max(-12.0, min(12.0, -18.0 - float(m_[-1]))) if m_ else 0.0
     TEXT = {s["id"]: s["text"] for s in json.loads((ROOT / "src/film/data/film_timeline.json").read_text())["segments"]}
     for sid, parts in sorted(seg_parts.items()):
         parts.sort(key=lambda x: x["start_char"])
@@ -181,13 +195,13 @@ def build():
                 filt.append(f"aevalsrc=0:d={gap}:s={SR}[g{i}]"); t += gap
             inputs += ["-i", str(WORK / f"{p['batch']}.wav")]
             L = p["s1"] - p["s0"]
-            filt.append(f"[{i}:a]atrim={p['s0']}:{p['s1']},asetpts=PTS-STARTPTS,afade=t=in:d=0.01,afade=t=out:st={max(0, L - 0.02):.3f}:d=0.02[p{i}]")
+            filt.append(f"[{i}:a]atrim={p['s0']}:{p['s1']},asetpts=PTS-STARTPTS,volume={GAIN[p['batch']]:.2f}dB,afade=t=in:d=0.01,afade=t=out:st={max(0, L - 0.02):.3f}:d=0.02[p{i}]")
             words += [[w, round(a + t, 3), round(e + t, 3)] for w, a, e in p["words"]]
             sp_s = (p["words"][-1][2] - p["words"][0][1]) if p["words"] else 0
             if p["words"] and sp_s / len(p["words"]) < 0.11: qa.append(f"{sid} part {i} ({p['batch']}): {len(p['words'])} words in {sp_s:.2f} s (too fast?)")
             t += L
         order = "".join(f"[g{i}][p{i}]" if i else f"[p{i}]" for i in range(len(parts)))
-        filt.append(f"{order}concat=n={2 * len(parts) - 1}:v=0:a=1[out]")
+        filt.append(f"{order}concat=n={2 * len(parts) - 1}:v=0:a=1,alimiter=limit=0.89:level=disabled[out]")
         dst = OUTDIR / f"{sid}.wav"
         run("ffmpeg", "-v", "error", "-y", *inputs, "-filter_complex", ";".join(filt), "-map", "[out]", "-ac", "1", "-ar", str(SR), "-c:a", "pcm_s16le", str(dst))
         rel = str(dst.relative_to(ROOT))
@@ -206,7 +220,7 @@ def build():
     man = {"complete": not miss, "selected": False, "missing": miss, "word_alignment": "edition20/audio_v2/word_alignment.json",
            "batches": {b: {k: R[b][k] for k in ("file", "sha256", "dur_s", "wpm", "score", "variant", "head_decode")} for b in R},
            "speech_s_new": round(sum(v["dur_s"] for v in segs.values()), 2), "speech_s_old": round(sum(old.values()), 2),
-           "qa": qa, "segments": segs}
+           "qa": qa, "gain_db": GAIN, "segments": segs}
     (ROOT / "edition20/audio_v2/manifest.json").write_text(json.dumps(man, indent=1))
     print(f"{len(segs)}/{len(want)} segments; speech {man['speech_s_new']} s (old {man['speech_s_old']} s); qa notes {len(qa)}; missing {miss}")
 

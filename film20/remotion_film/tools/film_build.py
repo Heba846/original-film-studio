@@ -556,10 +556,28 @@ def retime() -> int:
         short = [c for c in FLAT_OUT if c.get("unresolved_f", 0) > 0]
         if not short: break
         moved = False
+        def donors_in(seg, skip):
+            return sorted([d for d in FLAT_OUT if d["seg"] == seg and d is not skip and d.get("asset") != skip.get("asset")
+                           and d.get("kind") in ("code", "footage", "flow_job")],
+                          key=lambda d: -(10**6 if d.get("kind") == "code" else d.get("spare_f", 0)))
         for c in short:
             need = c["unresolved_f"]
-            donors = sorted([d for d in FLAT_OUT if d["seg"] == c["seg"] and d is not c and d.get("kind") in ("code", "footage", "flow_job")],
-                            key=lambda d: -(10**6 if d.get("kind") == "code" else d.get("spare_f", 0)))
+            donors = donors_in(c["seg"], c)
+            if not any((10**6 if d.get("kind") == "code" else d.get("spare_f", 0)) > 0 for d in donors) and c.get("inn") is None:
+                # a continuation with no help in its own line: free source by shortening an EARLIER cut of the same take in
+                # this chapter (its line gives the frames to a code scene / other take with spare), so this cut starts earlier
+                idx = FLAT_OUT.index(c)
+                for e in reversed(FLAT_OUT[:idx]):
+                    if e.get("asset") != c.get("asset") or e["chapter"] != c["chapter"]: continue
+                    ed = [d for d in donors_in(e["seg"], e) if (10**6 if d.get("kind") == "code" else d.get("spare_f", 0)) > 0]
+                    if not ed: continue
+                    give = min(need, (10**6 if ed[0].get("kind") == "code" else ed[0]["spare_f"]), max(0, e["dur"] - 24))
+                    if give <= 0: continue
+                    ADJ[(e["seg"], e["k"])] = ADJ.get((e["seg"], e["k"]), 0) - give
+                    ADJ[(ed[0]["seg"], ed[0]["k"])] = ADJ.get((ed[0]["seg"], ed[0]["k"]), 0) + give
+                    need -= give; moved = True
+                    if need <= 0: break
+                continue
             for d in donors:
                 cap = 10**6 if d.get("kind") == "code" else d.get("spare_f", 0)
                 give = min(need, cap)

@@ -1,0 +1,80 @@
+[
+  {
+    "id": "B01_heba",
+    "duration_s": 260.2057142857143,
+    "bytes": 4180228,
+    "sha256": "89962af60f490885a5378510df928160cde5f3d0f7ab0f5ce1015703211c236f"
+  },
+  {
+    "id": "B02_heba",
+    "duration_s": 263.54938775510203,
+    "bytes": 4233727,
+    "sha256": "adeb15a7b97c3faa9510e1d10f90c5d1cdcb83e0d1ae5507205798bbe86bb5fe"
+  },
+  {
+    "id": "B03_heba",
+    "duration_s": 273.16244897959183,
+    "bytes": 4387536,
+    "sha256": "6d426cba54ed6a2cafa4866ba2c82ae31a95cf249fa68faa518eccc531066a7d"
+  },
+  {
+    "id": "B04_heba",
+    "duration_s": 99.70938775510204,
+    "bytes": 1612287,
+    "sha256": "825d8c3e18f3092561d15bb5d0e6cae4e7e9f20845580304d7ee45ed0216f5a3"
+  },
+  {
+    "id": "B05_nico",
+    "duration_s": 204.12081632653062,
+    "bytes": 3282870,
+    "sha256": "cd3763ed99c84e51febba47b3ae237fc8320acff963a569947c4b29aac79cfe4"
+  },
+  {
+    "id": "B06_sal",
+    "duration_s": 40.04571428571428,
+    "bytes": 962395,
+    "sha256": "feb470759f3b8893736befb011eaa54ffab04df0bd5717374640982c1489a61c"
+  },
+  {
+    "id": "B07_theo",
+    "duration_s": 5.799183673469388,
+    "bytes": 140478,
+    "sha256": "db865c69fce8c54c00f61a7b640924083432796b8633f23b46e6ca188ed98b7b"
+  },
+  {
+    "id": "B08_enzo",
+    "duration_s": 6.191020408163265,
+    "bytes": 149882,
+    "sha256": "e5e2c819851492646606ede631338d49ac286c115f18b6f1779ebd19b79db43d"
+  },
+  {
+    "id": "B09_rocco",
+    "duration_s": 2.507755102040816,
+    "bytes": 61484,
+    "sha256": "54abac4db04cdd9bc0d2a14b177025463561b9a8468eb159672f1f0fda878c8a"
+  },
+  {
+    "id": "B10_joey",
+    "duration_s": 1.7240816326530612,
+    "bytes": 42675,
+    "sha256": "5f0db703ce77cdb7a8ed22fb90540980df6935102688677dfaca976266121dd3"
+  },
+  {
+    "id": "B11_holloway",
+    "duration_s": 1.7240816326530612,
+    "bytes": 42675,
+    "sha256": "d3db2e494327b4376a0567fa724566f7ca2ccbe8d7d57d4ff6a78fd467cad923"
+  },
+  {
+    "id": "B12_brancato",
+    "duration_s": 3.239183673469388,
+    "bytes": 79038,
+    "sha256": "303a5472f89a38967e58e12dd555c32d4d8bd124974a571637de0b09c22197d3"
+  },
+  {
+    "id": "B13_lucia",
+    "duration_s": 5.642448979591837,
+    "bytes": 136716,
+    "sha256": "bd7e9839a7437445108acbd3c0c93ac33fd7e0be4d14067a43548c38a5e92733"
+  }
+]
