@@ -1,0 +1,9 @@
+build/
+models/*
+!models/.gitkeep
+*.pth
+*.index
+__pycache__/
+*.egg-info/
+.pytest_cache/
+.venv/

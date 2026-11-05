@@ -1,0 +1,21 @@
+[project]
+name = "original-film-studio"
+version = "0.1.0"
+description = "Turn novel chapters into a narrated, subtitled YouTube video (CPU-only TTS + ffmpeg)."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["Pillow>=10.1", "numpy>=1.26"]
+
+[project.optional-dependencies]
+edge = ["edge-tts>=6.1"]
+kokoro = ["kokoro-onnx>=0.4", "soundfile"]
+dev = ["pytest"]
+
+[project.scripts]
+film-studio = "film_studio.cli:main"
+
+[tool.setuptools]
+packages = ["film_studio"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
