@@ -106,6 +106,12 @@ def overlaps(a, b) -> bool:
     return a[0] < b[1] - 1e-6 and b[0] < a[1] - 1e-6
 
 
+ADJ: dict = {}   # (segment, cut index) -> frames moved by the retiming pass
+_ap = Path(__file__).resolve().parent.parent / "edition20/out/authored_spans.json"
+AUTH = json.loads(_ap.read_text())["spans"] if _ap.exists() else {}
+FLAT_OUT: list = []
+
+
 def main() -> int:
     edl = json.loads(EDL.read_text(encoding="utf-8"))
     man = json.loads(MANIFEST.read_text(encoding="utf-8"))
@@ -152,12 +158,25 @@ def main() -> int:
     # ---- 2. segment timing from measured audio; captions on forced-aligned word boundaries when available
     wa_path = OUT / "word_alignment.json"
     WORDS = json.loads(wa_path.read_text())["segments"] if wa_path.exists() else {}
+    # optional replacement audio set (tools/audio_edit/batch_intake.py): used only once complete, verified and selected
+    v2p = ROOT / "edition20/audio_v2/manifest.json"
+    V2 = json.loads(v2p.read_text()) if v2p.exists() else None
+    if V2 and not (V2.get("selected") and V2.get("complete")): V2 = None
+    if V2:
+        WORDS = {**WORDS, **json.loads((ROOT / V2["word_alignment"]).read_text())["segments"]}
     caption_fallback: list[str] = []
     t = LEAD_IN_S
     segs, cues = [], []
     for s in edl["segments"]:
         sid = s["id"]
-        if s["audio_status"] == "existing_unchanged":
+        audio_file = s["audio_to_use"]
+        if V2:
+            v = V2["segments"].get(sid)
+            if not v: problems.append(f"{sid}: missing from audio_v2"); continue
+            m = measure(ROOT / v["file"])
+            if m["sha256"] != v["sha256"]: problems.append(f"{sid}: audio_v2 file changed after intake"); continue
+            dur, audio, a_status, audio_file = m["duration_s"], v["file"].removeprefix("public/"), "tts_v2", v["file"]
+        elif s["audio_status"] == "existing_unchanged":
             m = measured.get(sid)
             if not m or m["file"] != s["audio_to_use"]:
                 problems.append(f"{sid}: expected {s['audio_to_use']} not found"); continue
@@ -184,7 +203,7 @@ def main() -> int:
         parts = split_caption(s["text"])
         wa = WORDS.get(sid)
         counts = [len(norm(spoken(p, wa["variant"] if wa else 0))) for p in parts]
-        if wa and wa["audio"] == (s["audio_to_use"]) and sum(counts) == len(wa["words"]) and a_status != "pickup_missing":
+        if wa and wa["audio"] == audio_file and sum(counts) == len(wa["words"]) and a_status != "pickup_missing":
             k = 0
             for i, p in enumerate(parts):
                 ws = wa["words"][k: k + counts[i]]; k += counts[i]
@@ -227,16 +246,27 @@ def main() -> int:
         spec = cuts_spec.get(s["id"])
         if not spec:
             problems.append(f"{s['id']}: no cut list"); spec = [{"shot": "UNPLANNED", "secs": "fill"}]
-        fixed = sum(fr(c["secs"]) for c in spec if c["secs"] != "fill")
+        base = [None if c["secs"] == "fill" else fr(c["secs"]) for c in spec]
+        old = AUTH.get(s["id"])
+        if old and old != s["cover_dur"]:                    # audio set changed: keep each cut's share of the line
+            k_ = s["cover_dur"] / old
+            base = [None if b is None else max(MIN_CUT_F, round(b * k_)) for b in base]
+            if None not in base:                             # no fill cut: last cut absorbs rounding
+                base[-1] += s["cover_dur"] - sum(base)
+        for k, b in enumerate(base):
+            if b is not None: base[k] = b + ADJ.get((s["id"], k), 0)
+        if None not in base and sum(base) != s["cover_dur"]:
+            base[-1] += s["cover_dur"] - sum(base)
+        fixed = sum(b for b in base if b is not None)
         fills = [c for c in spec if c["secs"] == "fill"]
         if len(fills) > 1: problems.append(f"{s['id']}: more than one fill cut")
         rem = s["cover_dur"] - fixed
         if not fills and rem != 0: problems.append(f"{s['id']}: cuts sum {fixed} f != span {s['cover_dur']} f and no fill")
         acc = s["cover_from"]
         for k, c in enumerate(spec):
-            n = rem if c["secs"] == "fill" else fr(c["secs"])
+            n = rem if c["secs"] == "fill" else base[k]
             if n < MIN_CUT_F: problems.append(f"{s['id']}: cut {k} {c['shot']} only {n} f (< {MIN_CUT_F})")
-            flat.append({**c, "seg": s["id"], "chapter": s["chapter"], "phase": s["phase"], "from": acc, "dur": n,
+            flat.append({**c, "k": k, "seg": s["id"], "chapter": s["chapter"], "phase": s["phase"], "from": acc, "dur": n,
                          "chapter_open": k == 0 and chapter_first[s["chapter"]] == s["id"]})
             acc += n
     # gap / overlap test on the timeline itself
@@ -301,6 +331,7 @@ def main() -> int:
             else:                                                # runs out on screen: the rest is UNRESOLVED
                 c["unresolved_f"] = math.ceil(c["dur"] - covered_f)
                 c["overlap"] = 0
+            c["spare_f"] = max(0, int(covered_f - c["dur"] - c["overlap"]))
             c["src_in"], c["rate"] = round(inn, 4), round(rate, 4)
             c["src_out"] = round(inn + (c["dur"] - c["unresolved_f"] + c["overlap"]) / FPS * rate, 4)
             cursor[(asset, c["chapter"])] = c["src_out"]
@@ -349,6 +380,7 @@ def main() -> int:
         if len(us) >= MAX_USES:
             flags.append(f"{a}: {len(us)} uses ({', '.join(u['seg'] for u in us)}) — review as a sequence")
 
+    FLAT_OUT[:] = flat
     # ---- 5. coverage accounting
     cov = {"approved_on_disk": 0, "code_authored": 0, "planned_primary": 0, "planned_reuse": 0,
            "delivered_unreviewed": 0, "unresolved": 0}
@@ -515,5 +547,32 @@ def main() -> int:
     return 0 if not problems else 2
 
 
+def retime() -> int:
+    """Run the build; if any footage cut runs out of real source (unresolved frames), move those frames to other cuts of the
+    same narration line that still have real source (or are code scenes), then rebuild. Never stretches below 0.85x, never
+    freezes. Gives up after 6 passes and leaves the remainder UNRESOLVED (gate stays closed)."""
+    rc = main()
+    for _ in range(6):
+        short = [c for c in FLAT_OUT if c.get("unresolved_f", 0) > 0]
+        if not short: break
+        moved = False
+        for c in short:
+            need = c["unresolved_f"]
+            donors = sorted([d for d in FLAT_OUT if d["seg"] == c["seg"] and d is not c and d.get("kind") in ("code", "footage", "flow_job")],
+                            key=lambda d: -(10**6 if d.get("kind") == "code" else d.get("spare_f", 0)))
+            for d in donors:
+                cap = 10**6 if d.get("kind") == "code" else d.get("spare_f", 0)
+                give = min(need, cap)
+                if give <= 0: continue
+                ADJ[(c["seg"], c["k"])] = ADJ.get((c["seg"], c["k"]), 0) - give
+                ADJ[(d["seg"], d["k"])] = ADJ.get((d["seg"], d["k"]), 0) + give
+                need -= give; moved = True
+                if need <= 0: break
+        if not moved: break
+        rc = main()
+    if ADJ: print("retime adjustments:", {f"{a}#{b}": v for (a, b), v in sorted(ADJ.items())})
+    return rc
+
+
 if __name__ == "__main__":
-    sys.exit(main())
+    sys.exit(retime())

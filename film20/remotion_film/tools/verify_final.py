@@ -13,7 +13,7 @@ a = sys.argv[1:]
 mp4 = Path(a[0]); opt = {a[i]: a[i + 1] for i in range(1, len(a) - 1, 2)}
 T = json.loads((R / "src/film/data/film_timeline.json").read_text())
 fps = T["fps"]; exp = int(opt.get("--expect-frames", T["total_frames"]))
-ref = Path(opt.get("--audio-ref", R / "output/full/Film20_NARRATION_MASTER_20m46s.flac"))
+ref = Path(opt.get("--audio-ref", R / "output/full/Film20_NARRATION_MASTER.flac"))
 srt = Path(opt.get("--srt", R / "edition20/out/Film20_captions.srt"))
 res, fail = {}, []
 def run(*c): return subprocess.run(c, capture_output=True, text=True).stdout
