@@ -1165,7 +1165,7 @@
    "slug": "emerald_on",
    "kind": "flow_job",
    "source": "flow/F32.mp4",
-   "status": "rejected",
+   "status": "approved",
    "narrative_event": "Rosa's emerald, far too big",
    "continuity_phase": "P1",
    "chapter": "CH07",
@@ -1177,8 +1177,23 @@
      "date": "2026-11-05",
      "status": "rejected",
      "note": "ring goes onto her RIGHT hand (palm down, thumb on the far side); story: LEFT ring finger"
+    },
+    {
+     "date": "2026-11-05",
+     "status": "approved",
+     "note": "F32_R1 Omni 1.1 Flash 720p, 12 cr; take1 (Batch D) excluded: right-hand ring | usable range 0.0-8.0 s | crop f32_ring"
     }
-   ]
+   ],
+   "identity_check": {
+    "date": "2026-11-05",
+    "method": "4 fps visual + swap-signature scan",
+    "result": "R1, 1 fps across 0-8 s: one female LEFT hand (wrist image-left, back to camera, thumb lower edge), lace wedding sleeve; emerald slides onto the ring finger and stays; one bare male hand withdraws; with crop f32_ring his wrist/sleeve stay out of frame; no faces; stable"
+   },
+   "approved_range": [
+    0.0,
+    8.0
+   ],
+   "default_crop": "f32_ring"
   },
   {
    "shot_id": "F33",

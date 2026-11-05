@@ -64,8 +64,8 @@ jobs = {j["job_id"] for j in json.loads((ROOT / "edition20/flow_jobs.json").read
 placed = {c["shot"] for c in T["cuts"] if c.get("kind") == "flow_job"}
 check("T6 every placed job budgeted, every budgeted job placed, ledger valid",
       vb.returncode == 0 and placed == jobs and len(jobs) == 70, vb.stdout.strip().splitlines()[-1])
-check("T7 Final gate CLOSED now (pictures pending), narration complete", not g["final_export_allowed"] and not g["audio_missing"]
-      and g["visual_shots_pending"], f"narration missing {g['audio_missing']}, {len(g['visual_shots_pending'])} shots pending")
+check("T7 Final gate state is consistent: open iff nothing pending/unresolved/problem, narration complete",
+      not g["audio_missing"] and g["final_export_allowed"] == (not g["visual_shots_pending"] and not g["unresolved_frames"] and not g["problems"]), f"narration missing {g['audio_missing']}, {len(g['visual_shots_pending'])} shots pending")
 prov = json.loads((ROOT / "edition20/pickups/pickup_edits.json").read_text())
 check("T7b four edited lines verified; originals untouched",
       sorted(prov["ready"]) == ["n005", "n145", "n148", "n154"] and not prov["blockers"]

@@ -1225,6 +1225,18 @@
     "F63.mp4"
    ],
    "verdict": "APPROVED 0-8 s (hands-only insert); audio muted"
+  },
+  {
+   "date": "2026-11-05",
+   "job_id": "F32",
+   "pool": "retake",
+   "model": "Omni 1.1 Flash 720p",
+   "outputs": 1,
+   "credits_charged": 12,
+   "result_files": [
+    "F32_R1 (F32_left_final.mp4)"
+   ],
+   "verdict": "R1 APPROVED 0-8 s with crop f32_ring; LEFT hand, ring finger; audio n/a"
   }
  ],
  "plan_version": 2,

@@ -2067,7 +2067,7 @@
    "shot": "F32",
    "slug": "emerald_on",
    "kind": "flow_job",
-   "status": "rejected",
+   "status": "approved",
    "asset": "flow/F32.mp4",
    "src_in": 0.2,
    "src_out": 2.9917,
@@ -2075,6 +2075,7 @@
    "overlap": 0,
    "unresolved_f": 0,
    "memory": true,
+   "crop": "f32_ring",
    "use_no": 1,
    "why": "flash-forward: 'Three days later, I married him' lands on the emerald going on",
    "chapter_open": false
@@ -3861,13 +3862,14 @@
    "shot": "F32",
    "slug": "emerald_on",
    "kind": "flow_job",
-   "status": "rejected",
+   "status": "approved",
    "asset": "flow/F32.mp4",
    "src_in": 0.0,
    "src_out": 7.875,
    "rate": 1.0,
    "overlap": 0,
    "unresolved_f": 0,
+   "crop": "f32_ring",
    "use_no": 2,
    "is_reuse": true,
    "why": "the wedding itself: the flash-forward's moment arrives in full",
@@ -4010,7 +4012,7 @@
    "shot": "F32",
    "slug": "emerald_on",
    "kind": "flow_job",
-   "status": "rejected",
+   "status": "approved",
    "asset": "flow/F32.mp4",
    "src_in": 4.4,
    "src_out": 7.4,
@@ -4018,6 +4020,7 @@
    "overlap": 0,
    "unresolved_f": 0,
    "memory": true,
+   "crop": "f32_ring",
    "use_no": 3,
    "is_reuse": true,
    "why": "'a wedding ring that lived against my breastbone': the same ring from its wedding morning",
@@ -10792,7 +10795,7 @@
   "F32": {
    "kind": "flow_job",
    "source": "flow/F32.mp4",
-   "status": "rejected",
+   "status": "approved",
    "component": null,
    "narrative_event": "Rosa's emerald, far too big",
    "window": [
@@ -11298,20 +11301,18 @@
   }
  },
  "coverage_frames": {
-  "approved_on_disk": 20095,
+  "approved_on_disk": 20423,
   "code_authored": 9482,
   "planned_primary": 0,
   "planned_reuse": 0,
   "delivered_unreviewed": 0,
-  "unresolved": 328
+  "unresolved": 0
  },
  "gate": {
-  "final_export_allowed": false,
+  "final_export_allowed": true,
   "audio_missing": [],
-  "visual_shots_pending": [
-   "F32"
-  ],
-  "unresolved_frames": 328,
+  "visual_shots_pending": [],
+  "unresolved_frames": 0,
   "problems": []
  }
 }

@@ -1,0 +1,38 @@
+{
+ "date": "2026-11-05",
+ "read_only": true,
+ "integration_found": {
+  "elevenlabs_api_key_in_env": false,
+  "config_or_voice_ids_in_project": false,
+  "elevenlabs_connector_in_session": false,
+  "npm_package": "@remotion/elevenlabs 4.0.540 is in node_modules only as a Remotion dependency; nothing imports it",
+  "current_wavs": "24 kHz mono, no provenance or voice tags (Lavf); labelled by speaker only: heba (Ivy), lion (Nico)"
+ },
+ "heba_clone_voice_id": "unknown: not recorded anywhere in the project or session",
+ "account_credits_and_key_limit": "unavailable: no API key or connector in this session",
+ "script_by_speaker": {
+  "heba": {
+   "segments": 81,
+   "chars": 15454,
+   "current_audio_s": 984.5
+  },
+  "lion": {
+   "segments": 30,
+   "chars": 3117,
+   "current_audio_s": 200.5
+  }
+ },
+ "total_chars": 18571,
+ "quoted_dialogue_inside_narration": {
+  "quotes": 58,
+  "chars": 2114,
+  "note": "other characters (Sal, Reyes, Holloway, Brancato, Bell, Enzo, Theo...) speak only inside quoted lines within Ivy/Nico segments. Voicing them separately means splitting these quotes into their own clips"
+ },
+ "cost_estimate_credits": "ElevenLabs bills per character. The rates below are from public pricing as I know it (to confirm in your account): Flash/Turbo v2.5 about 0.5 credit/char -> ~9.3k credits for the full script; Multilingual v2 / v3 about 1 credit/char -> ~18.6k. A short comparison sample (~300 chars per voice) costs a few hundred credits",
+ "picture_state": "70/70 approved; gate OPEN; final render NOT started (held for the new audio)",
+ "after_new_audio": [
+  "drop new WAVs into public/audio (same segment IDs)",
+  "film_build re-measures durations, re-times cuts and captions (word alignment rerun via tools/audio_edit/align_captions.py)",
+  "re-QA the cut sheet, then bash tools/final_render.sh"
+ ]
+}

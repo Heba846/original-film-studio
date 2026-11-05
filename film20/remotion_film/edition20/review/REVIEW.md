@@ -33,7 +33,7 @@
 | F29 | sal_arrives | approved | 8.00 | 0.01 | none / verdict: Omni 1.1 Flash 720p Batch A, 12 cr; generated audio muted (Flow audio never used) | usable range 0.0-8.0 s | F29_review.png |
 | F30 | nico_desk | approved | 8.00 | 0.0 | none / verdict: Omni 1.1 Flash 720p Batch B, 12 cr; generated audio muted | usable range 0.0-8.0 s | F30_review.png |
 | F31 | sal_exits | approved | 8.00 | 0.0 | none / verdict: Omni 1.1 Flash 720p Batch B, 12 cr; generated audio muted | usable range 0.0-8.0 s | F31_review.png |
-| F32 | emerald_on | rejected | 8.00 | 0.0 | none / verdict: ring goes onto her RIGHT hand (palm down, thumb on the far side); story: LEFT ring finger | F32_review.png |
+| F32 | emerald_on | approved | 8.00 | 0.0 | none / verdict: F32_R1 Omni 1.1 Flash 720p, 12 cr; take1 (Batch D) excluded: right-hand ring | usable range 0.0-8.0 s | crop f32_ring | F32_review.png |
 | F33 | steps | approved | 8.00 | 0.005 | none / verdict: Omni 1.1 Flash 720p, 12 cr; generated audio muted | usable range 0.0-8.0 s | F33_review.png |
 | F34 | kiss | approved | 8.00 | 0.0 | none / verdict: Omni 1.1 Flash 720p Batch B, 12 cr; generated audio muted | usable range 0.0-8.0 s | F34_review.png |
 | F35 | bolt | approved | 8.00 | 0.062 | none / verdict: Omni 1.1 Flash 720p, 12 cr; generated audio muted | usable range 0.0-8.0 s | F35_review.png |

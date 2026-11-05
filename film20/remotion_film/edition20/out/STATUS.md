@@ -2,25 +2,25 @@
 
 - Runtime: **20:46.03** (1246.03 s, 29905 frames @ 24 fps) — measured
 - Speech in measured WAVs: 1184.931 s; pickup estimates: 0.000 s; pauses 57.60 s; lead-in 0.5 s + tail 3.0 s
-- Final export allowed: **NO**
+- Final export allowed: **YES**
 
 ## Picture coverage (every frame counted once; crossfade overlaps counted as source use only)
 | | Seconds | Share |
 |---|---:|---:|
-| (a) approved footage on disk | 837.3 | 67.2% |
+| (a) approved footage on disk | 851.0 | 68.3% |
 | (a) authored code scenes (finished) | 395.1 | 31.7% |
 | (b) conditional: planned Flow job, first use | 0.0 | 0.0% |
 | (b) conditional: planned Flow job, motivated reuse | 0.0 | 0.0% |
 | delivered but not yet reviewed | 0.0 | 0.0% |
-| **(c) unresolved / unplanned** | **13.7** | **1.1%** |
+| **(c) unresolved / unplanned** | **0.0** | **0.0%** |
 
 (b) assumes every job is delivered as an ~7.9 s file, passes review and the 0.2-7.7 s window is usable. It is NOT delivered picture.
 
 ## Missing narration (pickups)
 - none
 
-## Shots still required before Final (1)
-F32
+## Shots still required before Final (0)
+
 
 ## Reuse ledger (91 reuse occurrences)
 | Asset | Use # | Where | Treatment | Narrative reason |
