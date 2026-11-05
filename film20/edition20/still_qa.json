@@ -2,7 +2,7 @@
  "date": "2026-11-04",
  "status": "ALL delivered stills reviewed (bulk 77 + ending delta + final delta)",
  "superseded": "Ending_F64_F67.zip numeric names (F64/F66 swapped); use Flow_New_Delta/verified/",
- "approved_count": 48,
+ "approved_count": 49,
  "approved": {
   "F02": {
    "file": "Woman_hiding_in_parking_garage_ab2c6c27.jpg",
@@ -140,6 +140,11 @@
    "note": "ER; Enzo, no brace, grabs her sleeve",
    "sha16": "8cdaba074a28b261"
   },
+  "F45": {
+   "file": "Final4/F45_final.png",
+   "note": "stairwell alone; gold-curled Enzo, 21, light gray jacket; pistol held low; no lettering, no brace; scarred man absent",
+   "sha16": "8c3d3aeab600f31b"
+  },
   "F46": {
    "file": "Repairs/media/F46.png",
    "note": "street at night; candy twist on the console",
@@ -250,13 +255,12 @@
   }
  },
  "near_pass_author_call": [],
- "repair_count": 13,
+ "repair_count": 12,
  "repair_groups": {
-  "author_final_four_blocked": [
+  "final4_round4": [
    "F03",
    "F16",
-   "F33",
-   "F45"
+   "F33"
   ],
   "qa_holds": [
    "F24",
@@ -272,14 +276,14 @@
  },
  "repair_prompts": {
   "F03": {
-   "file": "Scarred_man_holding_pistol_aaca4235.jpg",
-   "prompt": "Free Nano Banana repair (0 cr): keep the same characters, faces and framing; change ONLY: the scarred man's splint must be on his anatomical RIGHT forearm (image-LEFT when he faces camera; the arm FARTHER from camera when he faces image-left); no sling; gun held low in his LEFT hand (image-right); heavy man slumped, face turned away.",
-   "author_hold": "R3 held (F03/F16 cloth slings + wrong Ivy outfit; F33 full-arm cast; F45 letter labels); final-four fix REJECTED twice by Flow 'unusual activity', nothing created"
+   "file": "Final4/F03_qa4.png",
+   "prompt": "Free Nano Banana repair (0 cr): keep everything else exactly; change ONLY: the slumped man beside the silver sedan must be the SAME heavy man as F16: fifties, heavy, balding, in a good dark OVERCOAT, face turned away. Not a dark-haired man in a T-shirt. Nico's arms, gun and the garage are correct.",
+   "previous_candidates": "archived in edition20/review/candidates_archive/"
   },
   "F16": {
-   "file": "Doctor_and_men_in_garage_23c444f8.jpg",
-   "prompt": "Free Nano Banana repair (0 cr): keep the same characters, faces and framing; change ONLY: the scarred man's splint must be on his anatomical RIGHT forearm (image-LEFT when he faces camera; the arm FARTHER from camera when he faces image-left); gun low in his LEFT hand (image-right), left palm out toward the doctor; heavy man face away.",
-   "author_hold": "R3 held (F03/F16 cloth slings + wrong Ivy outfit; F33 full-arm cast; F45 letter labels); final-four fix REJECTED twice by Flow 'unusual activity', nothing created"
+   "file": "Final4/F16_qa4.png",
+   "prompt": "Free Nano Banana repair (0 cr): keep everything else exactly; change ONLY: blocking. The scarred man must stand BETWEEN the red-haired doctor and the slumped heavy man, one pace toward her, his LEFT palm out to stop her. The doctor is on the far side of him from the heavy man, hands out, rising from behind her dark car. Gun low in his left hand only if his palm is not needed; otherwise tuck it at his left side. Arms, scrubs and the heavy man are correct.",
+   "previous_candidates": "archived in edition20/review/candidates_archive/"
   },
   "F24": {
    "file": "Repairs/media/F24.png",
@@ -290,9 +294,9 @@
    "prompt": "the scarred man's splint goes on his anatomical RIGHT forearm (image-LEFT when he faces camera; the arm FARTHER from camera when he faces image-left); make the WHITE plaster splint clearly visible on his right forearm, which rests on the table. Keep the restaurant and the chairs."
   },
   "F33": {
-   "file": "Doctor_and_man_descending_courth…_4b21acc1.jpg",
-   "prompt": "Free Nano Banana repair (0 cr): keep the same characters, faces and framing; change ONLY: Oct 6 courthouse steps: Ivy in a simple wedding dress, emerald on LEFT ring finger, no scrubs.",
-   "author_hold": "R3 held (F03/F16 cloth slings + wrong Ivy outfit; F33 full-arm cast; F45 letter labels); final-four fix REJECTED twice by Flow 'unusual activity', nothing created"
+   "file": "Final4/F33_qa4.png",
+   "prompt": "Free Nano Banana repair (0 cr): keep everything else exactly; change ONLY: the emerald is on her LEFT ring finger. Her right hand, which links his arm, wears NO ring; or link his arm with her LEFT hand so the emerald shows. Suit sleeves, the forearm cast and the dress are correct.",
+   "previous_candidates": "archived in edition20/review/candidates_archive/"
   },
   "F35": {
    "file": "R3/F35_r3.png",
@@ -306,11 +310,6 @@
    "file": "Scarred_man_and_doctor_kissing_fd364c6e.jpg",
    "prompt": "Free Nano Banana repair (0 cr): keep the same characters, faces and framing; change ONLY: the scarred man's splint must be on his anatomical RIGHT forearm (image-LEFT when he faces camera; the arm FARTHER from camera when he faces image-left); black velcro splint, on the arm away from camera; his LEFT hand draws the pen from her bun. Ivy off duty: gray cardigan, emerald on LEFT ring finger.",
    "author_hold": "F40_v2: the far-arm brace is hidden"
-  },
-  "F45": {
-   "file": "Repairs/media/F45*.png",
-   "prompt": "",
-   "author_hold": "R3 held (F03/F16 cloth slings + wrong Ivy outfit; F33 full-arm cast; F45 letter labels); final-four fix REJECTED twice by Flow 'unusual activity', nothing created"
   },
   "F54": {
    "file": "R3/F54_r3.png",
@@ -418,5 +417,12 @@
    "F49",
    "F56"
   ]
+ },
+ "final4_round4": {
+  "date": "2026-11-05",
+  "F03": "HOLD: Frankie wrong (T-shirt, dark hair; must match the balding overcoat man in F16)",
+  "F16": "HOLD: blocking wrong (Ivy stands next to Frankie; Nico is not between them, no palm out)",
+  "F33": "HOLD: emerald on her RIGHT hand (the hand linking his arm)",
+  "F45": "APPROVED"
  }
 }
