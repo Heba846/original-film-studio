@@ -1,5 +1,5 @@
 {
- "checkpoint": "2026-11-05 after Batch C + END stills",
+ "checkpoint": "2026-11-05 all clips but F32 approved",
  "export_ready": false,
  "gate": {
   "final_export_allowed": false,
@@ -31,18 +31,8 @@
   "F39",
   "HOSP"
  ],
- "ready_to_animate_from_approved_still": [
-  "F40",
-  "F56",
-  "F60",
-  "F62",
-  "F63",
-  "F66"
- ],
- "ready_cost_estimate_cr": 72,
- "holds_need_still_fix": {
-  "F32": "Free repair (0 cr): keep the hands-only close-up; change ONLY: the woman's hand receiving the ring must be her LEFT hand. Palm down, fingers pointing to image-left, THUMB on the NEAR/LOWER side toward camera. The emerald slides onto that hand's ring finger; his white-cast right hand holds it."
- },
+ "ready_to_animate_from_approved_still": [],
+ "ready_cost_estimate_cr": 0,
  "budget": {
   "ui_balance": 698,
   "ui_spent_since_1010": 312,
@@ -54,34 +44,15 @@
  },
  "flow_state": "Flow working again (final four submitted manually); round-4 stills: F45 approved, F03/F16/F33 held",
  "next_actions": [
-  "Animate the ready list with Omni 1.1 Flash 720p, using stills_approved/STILL_Fxx.jpg as the literal first frame. F32: frame the hands only.",
-  "Send the MP4s named F##.mp4. I run intake, then the 4 fps identity sheet and arm/ring/location QA, then approve with a range, then rebuild",
-  "Repair the 13 holds as free stills (prompts above). I QA each one before animation",
-  "Final render only when the gate shows final_export_allowed=true (bash tools/final_render.sh)"
+  "Ingest F32_R1, check it on the 4 fps identity sheet with a LEFT-hand check, then approve",
+  "bash tools/final_render.sh (gate opens automatically)",
+  "tools/verify_final.py runs inside the render script: frames, 20:46 narration match, black/freeze, SRT"
  ],
- "video_approved_count": 52,
- "batch_D_in_flight": [
-  "F03",
-  "F16",
-  "F24",
-  "F28",
-  "F32",
-  "F33",
-  "F35",
-  "F37",
-  "F54",
-  "F58",
-  "F59",
-  "F64"
- ],
- "after_D_animate": [
-  "F40",
-  "F56",
-  "F60",
-  "F62",
-  "F63",
-  "F66"
- ],
- "after_D_note": "F56/F60/F62/F63/F66 failed Flow UI policy in Batch C: recheck the Flow inventory after a reload before any retake (no blind duplicates). All 6 have approved stills.",
- "final_render": "bash tools/final_render.sh  (refuses unless gate open; then renders Film20-Final, copies SRT/chapters, runs tools/verify_final.py -> output/final/VERIFY.json + QA_cut_sheet_*.png)"
+ "video_approved_count": 69,
+ "batch_D_in_flight": [],
+ "after_D_animate": [],
+ "final_render": "bash tools/final_render.sh  (refuses unless gate open; then renders Film20-Final, copies SRT/chapters, runs tools/verify_final.py -> output/final/VERIFY.json + QA_cut_sheet_*.png)",
+ "blocking": {
+  "F32": "delivered Batch D clip REJECTED: emerald goes onto her RIGHT hand (palm down, thumb on the far side). Author is supplying a left-hand clip; ingest it as F32_R1. The 3 cuts (n005 67f, n085 189f, n092 72f = 328 frames) stay on emerald_on."
+ }
 }

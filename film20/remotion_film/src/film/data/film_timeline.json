@@ -1958,10 +1958,10 @@
    "shot": "F03",
    "slug": "aftermath_wide",
    "kind": "flow_job",
-   "status": "missing",
+   "status": "approved",
    "asset": "flow/F03.mp4",
-   "src_in": 0.2,
-   "src_out": 6.6167,
+   "src_in": 0.0,
+   "src_out": 6.4167,
    "rate": 1.0,
    "overlap": 0,
    "unresolved_f": 0,
@@ -2067,7 +2067,7 @@
    "shot": "F32",
    "slug": "emerald_on",
    "kind": "flow_job",
-   "status": "missing",
+   "status": "rejected",
    "asset": "flow/F32.mp4",
    "src_in": 0.2,
    "src_out": 2.9917,
@@ -2479,10 +2479,10 @@
    "shot": "F16",
    "slug": "block_her",
    "kind": "flow_job",
-   "status": "missing",
+   "status": "approved",
    "asset": "flow/F16.mp4",
-   "src_in": 0.2,
-   "src_out": 3.4083,
+   "src_in": 0.0,
+   "src_out": 3.2083,
    "rate": 1.0,
    "overlap": 0,
    "unresolved_f": 0,
@@ -2497,10 +2497,10 @@
    "shot": "F16",
    "slug": "block_her",
    "kind": "flow_job",
-   "status": "missing",
+   "status": "approved",
    "asset": "flow/F16.mp4",
-   "src_in": 3.4083,
-   "src_out": 6.2416,
+   "src_in": 3.2083,
+   "src_out": 6.0416,
    "rate": 1.0,
    "overlap": 0,
    "unresolved_f": 0,
@@ -2742,7 +2742,7 @@
    "shot": "F03",
    "slug": "aftermath_wide",
    "kind": "flow_job",
-   "status": "missing",
+   "status": "approved",
    "asset": "flow/F03.mp4",
    "src_in": 0.4,
    "src_out": 4.9833,
@@ -3208,10 +3208,10 @@
    "shot": "F24",
    "slug": "rocco",
    "kind": "flow_job",
-   "status": "missing",
+   "status": "approved",
    "asset": "flow/F24.mp4",
-   "src_in": 0.2,
-   "src_out": 7.2833,
+   "src_in": 0.0,
+   "src_out": 7.0833,
    "rate": 1.0,
    "overlap": 0,
    "unresolved_f": 0,
@@ -3400,10 +3400,10 @@
    "shot": "F28",
    "slug": "ivy_terms",
    "kind": "flow_job",
-   "status": "missing",
+   "status": "approved",
    "asset": "flow/F28.mp4",
-   "src_in": 0.2,
-   "src_out": 1.8667,
+   "src_in": 0.0,
+   "src_out": 1.6667,
    "rate": 1.0,
    "overlap": 6,
    "unresolved_f": 0,
@@ -3516,10 +3516,10 @@
    "shot": "F28",
    "slug": "ivy_terms",
    "kind": "flow_job",
-   "status": "missing",
+   "status": "approved",
    "asset": "flow/F28.mp4",
-   "src_in": 1.8667,
-   "src_out": 3.5334,
+   "src_in": 1.6667,
+   "src_out": 3.3334,
    "rate": 1.0,
    "overlap": 6,
    "unresolved_f": 0,
@@ -3551,11 +3551,11 @@
    "shot": "F28",
    "slug": "ivy_terms",
    "kind": "flow_job",
-   "status": "missing",
+   "status": "approved",
    "asset": "flow/F28.mp4",
-   "src_in": 3.5334,
-   "src_out": 7.6996,
-   "rate": 0.9008,
+   "src_in": 3.3334,
+   "src_out": 7.9584,
+   "rate": 1.0,
    "overlap": 0,
    "unresolved_f": 0,
    "use_no": 1,
@@ -3698,7 +3698,7 @@
    "shot": "F28",
    "slug": "ivy_terms",
    "kind": "flow_job",
-   "status": "missing",
+   "status": "approved",
    "asset": "flow/F28.mp4",
    "src_in": 2.0,
    "src_out": 6.2917,
@@ -3861,11 +3861,11 @@
    "shot": "F32",
    "slug": "emerald_on",
    "kind": "flow_job",
-   "status": "missing",
+   "status": "rejected",
    "asset": "flow/F32.mp4",
-   "src_in": 0.2,
-   "src_out": 7.6994,
-   "rate": 0.9523,
+   "src_in": 0.0,
+   "src_out": 7.875,
+   "rate": 1.0,
    "overlap": 0,
    "unresolved_f": 0,
    "use_no": 2,
@@ -3881,11 +3881,11 @@
    "shot": "F33",
    "slug": "steps",
    "kind": "flow_job",
-   "status": "missing",
+   "status": "approved",
    "asset": "flow/F33.mp4",
-   "src_in": 0.2,
-   "src_out": 7.6993,
-   "rate": 0.891,
+   "src_in": 0.0,
+   "src_out": 7.9992,
+   "rate": 0.9504,
    "overlap": 0,
    "unresolved_f": 0,
    "use_no": 1,
@@ -3917,7 +3917,7 @@
    "shot": "F33",
    "slug": "steps",
    "kind": "flow_job",
-   "status": "missing",
+   "status": "approved",
    "asset": "flow/F33.mp4",
    "src_in": 0.2,
    "src_out": 4.1583,
@@ -3956,11 +3956,11 @@
    "shot": "F35",
    "slug": "bolt",
    "kind": "flow_job",
-   "status": "missing",
+   "status": "approved",
    "asset": "flow/F35.mp4",
-   "src_in": 0.2,
-   "src_out": 7.6996,
-   "rate": 0.8823,
+   "src_in": 0.0,
+   "src_out": 7.9994,
+   "rate": 0.9411,
    "overlap": 0,
    "unresolved_f": 0,
    "use_no": 1,
@@ -3992,11 +3992,11 @@
    "shot": "F37",
    "slug": "joey_bay",
    "kind": "flow_job",
-   "status": "missing",
+   "status": "approved",
    "asset": "flow/F37.mp4",
-   "src_in": 0.2,
-   "src_out": 7.6993,
-   "rate": 0.891,
+   "src_in": 0.0,
+   "src_out": 7.9992,
+   "rate": 0.9504,
    "overlap": 0,
    "unresolved_f": 0,
    "use_no": 1,
@@ -4010,7 +4010,7 @@
    "shot": "F32",
    "slug": "emerald_on",
    "kind": "flow_job",
-   "status": "missing",
+   "status": "rejected",
    "asset": "flow/F32.mp4",
    "src_in": 4.4,
    "src_out": 7.4,
@@ -4031,7 +4031,7 @@
    "shot": "F37",
    "slug": "joey_bay",
    "kind": "flow_job",
-   "status": "missing",
+   "status": "approved",
    "asset": "flow/F37.mp4",
    "src_in": 0.2,
    "src_out": 6.825,
@@ -4099,7 +4099,7 @@
    "shot": "F37",
    "slug": "joey_bay",
    "kind": "flow_job",
-   "status": "missing",
+   "status": "approved",
    "asset": "flow/F37.mp4",
    "src_in": 3.0,
    "src_out": 6.25,
@@ -4230,10 +4230,10 @@
    "shot": "F40",
    "slug": "pen_kiss",
    "kind": "flow_job",
-   "status": "missing",
+   "status": "approved",
    "asset": "flow/F40.mp4",
-   "src_in": 0.2,
-   "src_out": 7.425,
+   "src_in": 0.0,
+   "src_out": 7.225,
    "rate": 0.85,
    "overlap": 0,
    "unresolved_f": 0,
@@ -4372,7 +4372,7 @@
    "shot": "F24",
    "slug": "rocco",
    "kind": "flow_job",
-   "status": "missing",
+   "status": "approved",
    "asset": "flow/F24.mp4",
    "src_in": 2.0,
    "src_out": 5.0,
@@ -4873,7 +4873,7 @@
    "shot": "F35",
    "slug": "bolt",
    "kind": "flow_job",
-   "status": "missing",
+   "status": "approved",
    "asset": "flow/F35.mp4",
    "src_in": 0.2,
    "src_out": 3.1583,
@@ -5078,11 +5078,11 @@
    "shot": "F54",
    "slug": "danny_letter",
    "kind": "flow_job",
-   "status": "missing",
+   "status": "approved",
    "asset": "flow/F54.mp4",
-   "src_in": 0.2,
-   "src_out": 7.6993,
-   "rate": 0.8653,
+   "src_in": 0.0,
+   "src_out": 7.9993,
+   "rate": 0.923,
    "overlap": 6,
    "unresolved_f": 0,
    "use_no": 1,
@@ -5360,11 +5360,11 @@
    "shot": "F56",
    "slug": "sal_hands",
    "kind": "flow_job",
-   "status": "missing",
+   "status": "approved",
    "asset": "flow/F56.mp4",
-   "src_in": 0.2,
-   "src_out": 7.6995,
-   "rate": 0.9473,
+   "src_in": 0.0,
+   "src_out": 7.9167,
+   "rate": 1.0,
    "overlap": 6,
    "unresolved_f": 0,
    "use_no": 1,
@@ -5396,7 +5396,7 @@
    "shot": "F56",
    "slug": "sal_hands",
    "kind": "flow_job",
-   "status": "missing",
+   "status": "approved",
    "asset": "flow/F56.mp4",
    "src_in": 0.2,
    "src_out": 5.075,
@@ -5484,11 +5484,11 @@
    "shot": "F58",
    "slug": "theo_out",
    "kind": "flow_job",
-   "status": "missing",
+   "status": "approved",
    "asset": "flow/F58.mp4",
-   "src_in": 0.2,
-   "src_out": 7.6993,
-   "rate": 0.891,
+   "src_in": 0.0,
+   "src_out": 7.9992,
+   "rate": 0.9504,
    "overlap": 0,
    "unresolved_f": 0,
    "use_no": 1,
@@ -5563,11 +5563,11 @@
    "shot": "F59",
    "slug": "club_wide",
    "kind": "flow_job",
-   "status": "missing",
+   "status": "approved",
    "asset": "flow/F59.mp4",
-   "src_in": 0.2,
-   "src_out": 7.6993,
-   "rate": 0.891,
+   "src_in": 0.0,
+   "src_out": 7.9992,
+   "rate": 0.9504,
    "overlap": 0,
    "unresolved_f": 0,
    "use_no": 1,
@@ -5602,11 +5602,11 @@
    "shot": "F60",
    "slug": "ivy_bags",
    "kind": "flow_job",
-   "status": "missing",
+   "status": "approved",
    "asset": "flow/F60.mp4",
-   "src_in": 0.2,
-   "src_out": 7.6993,
-   "rate": 0.8653,
+   "src_in": 0.0,
+   "src_out": 7.9993,
+   "rate": 0.923,
    "overlap": 6,
    "unresolved_f": 0,
    "use_no": 1,
@@ -5636,7 +5636,7 @@
    "shot": "F59",
    "slug": "club_wide",
    "kind": "flow_job",
-   "status": "missing",
+   "status": "approved",
    "asset": "flow/F59.mp4",
    "src_in": 0.2,
    "src_out": 5.45,
@@ -5657,7 +5657,7 @@
    "shot": "F59",
    "slug": "club_wide",
    "kind": "flow_job",
-   "status": "missing",
+   "status": "approved",
    "asset": "flow/F59.mp4",
    "src_in": 3.0,
    "src_out": 6.6667,
@@ -5696,7 +5696,7 @@
    "shot": "F60",
    "slug": "ivy_bags",
    "kind": "flow_job",
-   "status": "missing",
+   "status": "approved",
    "asset": "flow/F60.mp4",
    "src_in": 2.0,
    "src_out": 5.4167,
@@ -5737,11 +5737,11 @@
    "shot": "F59",
    "slug": "club_wide",
    "kind": "flow_job",
-   "status": "missing",
+   "status": "approved",
    "asset": "flow/F59.mp4",
    "src_in": 3.4,
-   "src_out": 7.6997,
-   "rate": 0.882,
+   "src_out": 7.9996,
+   "rate": 0.9435,
    "overlap": 0,
    "unresolved_f": 0,
    "use_no": 4,
@@ -5758,10 +5758,10 @@
    "shot": "F62",
    "slug": "reyes_warrant",
    "kind": "flow_job",
-   "status": "missing",
+   "status": "approved",
    "asset": "flow/F62.mp4",
-   "src_in": 0.2,
-   "src_out": 7.45,
+   "src_in": 0.0,
+   "src_out": 7.25,
    "rate": 1.0,
    "overlap": 0,
    "unresolved_f": 0,
@@ -5776,11 +5776,11 @@
    "shot": "F60",
    "slug": "ivy_bags",
    "kind": "flow_job",
-   "status": "missing",
+   "status": "approved",
    "asset": "flow/F60.mp4",
    "src_in": 3.0,
-   "src_out": 7.6996,
-   "rate": 0.9096,
+   "src_out": 7.9998,
+   "rate": 0.9677,
    "overlap": 0,
    "unresolved_f": 0,
    "crop": "ivy",
@@ -5797,11 +5797,11 @@
    "shot": "F63",
    "slug": "visiting",
    "kind": "flow_job",
-   "status": "missing",
+   "status": "approved",
    "asset": "flow/F63.mp4",
-   "src_in": 0.2,
-   "src_out": 7.6993,
-   "rate": 0.891,
+   "src_in": 0.0,
+   "src_out": 7.9992,
+   "rate": 0.9504,
    "overlap": 0,
    "unresolved_f": 0,
    "use_no": 1,
@@ -5853,7 +5853,7 @@
    "shot": "F63",
    "slug": "visiting",
    "kind": "flow_job",
-   "status": "missing",
+   "status": "approved",
    "asset": "flow/F63.mp4",
    "src_in": 0.2,
    "src_out": 7.075,
@@ -5874,10 +5874,10 @@
    "shot": "F64",
    "slug": "grand_jury",
    "kind": "flow_job",
-   "status": "missing",
+   "status": "approved",
    "asset": "flow/F64.mp4",
-   "src_in": 0.2,
-   "src_out": 6.6167,
+   "src_in": 0.0,
+   "src_out": 6.4167,
    "rate": 1.0,
    "overlap": 0,
    "unresolved_f": 0,
@@ -5892,7 +5892,7 @@
    "shot": "F03",
    "slug": "aftermath_wide",
    "kind": "flow_job",
-   "status": "missing",
+   "status": "approved",
    "asset": "flow/F03.mp4",
    "src_in": 0.2,
    "src_out": 4.7833,
@@ -5955,7 +5955,7 @@
    "shot": "F64",
    "slug": "grand_jury",
    "kind": "flow_job",
-   "status": "missing",
+   "status": "approved",
    "asset": "flow/F64.mp4",
    "src_in": 0.2,
    "src_out": 2.075,
@@ -5976,7 +5976,7 @@
    "shot": "F64",
    "slug": "grand_jury",
    "kind": "flow_job",
-   "status": "missing",
+   "status": "approved",
    "asset": "flow/F64.mp4",
    "src_in": 2.075,
    "src_out": 7.6583,
@@ -6118,11 +6118,11 @@
    "shot": "F66",
    "slug": "pockets_bed",
    "kind": "flow_job",
-   "status": "missing",
+   "status": "approved",
    "asset": "flow/F66.mp4",
-   "src_in": 0.2,
-   "src_out": 7.6993,
-   "rate": 0.8653,
+   "src_in": 0.0,
+   "src_out": 7.9993,
+   "rate": 0.923,
    "overlap": 6,
    "unresolved_f": 0,
    "use_no": 1,
@@ -6229,7 +6229,7 @@
    "shot": "F66",
    "slug": "pockets_bed",
    "kind": "flow_job",
-   "status": "missing",
+   "status": "approved",
    "asset": "flow/F66.mp4",
    "src_in": 0.2,
    "src_out": 3.325,
@@ -6361,11 +6361,11 @@
    "shot": "F54",
    "slug": "danny_letter",
    "kind": "flow_job",
-   "status": "missing",
+   "status": "approved",
    "asset": "flow/F54.mp4",
    "src_in": 4.4,
-   "src_out": 7.7,
-   "rate": 0.9,
+   "src_out": 7.9999,
+   "rate": 0.9818,
    "overlap": 6,
    "unresolved_f": 0,
    "memory": true,
@@ -6455,7 +6455,7 @@
    "shot": "F03",
    "slug": "aftermath_wide",
    "kind": "flow_job",
-   "status": "missing",
+   "status": "approved",
    "asset": "flow/F03.mp4",
    "src_in": 4.4,
    "src_out": 7.4,
@@ -10415,15 +10415,15 @@
   "F03": {
    "kind": "flow_job",
    "source": "flow/F03.mp4",
-   "status": "missing",
+   "status": "approved",
    "component": null,
    "narrative_event": "Aftermath: Nico upright by the sedan, Frankie slumped (no firing)",
    "window": [
-    0.2,
-    7.7
+    0.0,
+    8.0
    ],
-   "window_is_estimate": true,
-   "on_disk": false
+   "window_is_estimate": false,
+   "on_disk": true
   },
   "F04": {
    "kind": "flow_job",
@@ -10584,15 +10584,15 @@
   "F16": {
    "kind": "flow_job",
    "source": "flow/F16.mp4",
-   "status": "missing",
+   "status": "approved",
    "component": null,
    "narrative_event": "'Let me get to him' - Nico puts himself between them",
    "window": [
-    0.2,
-    7.7
+    0.0,
+    8.0
    ],
-   "window_is_estimate": true,
-   "on_disk": false
+   "window_is_estimate": false,
+   "on_disk": true
   },
   "F17": {
    "kind": "flow_job",
@@ -10688,15 +10688,15 @@
   "F24": {
    "kind": "flow_job",
    "source": "flow/F24.mp4",
-   "status": "missing",
+   "status": "approved",
    "component": null,
    "narrative_event": "Rocco fills the doorway",
    "window": [
-    0.2,
-    7.7
+    0.0,
+    8.0
    ],
-   "window_is_estimate": true,
-   "on_disk": false
+   "window_is_estimate": false,
+   "on_disk": true
   },
   "F25": {
    "kind": "flow_job",
@@ -10740,15 +10740,15 @@
   "F28": {
    "kind": "flow_job",
    "source": "flow/F28.mp4",
-   "status": "missing",
+   "status": "approved",
    "component": null,
    "narrative_event": "Ivy setting her terms (no lip-sync)",
    "window": [
-    0.2,
-    7.7
+    0.0,
+    8.0
    ],
-   "window_is_estimate": true,
-   "on_disk": false
+   "window_is_estimate": false,
+   "on_disk": true
   },
   "F29": {
    "kind": "flow_job",
@@ -10792,28 +10792,28 @@
   "F32": {
    "kind": "flow_job",
    "source": "flow/F32.mp4",
-   "status": "missing",
+   "status": "rejected",
    "component": null,
    "narrative_event": "Rosa's emerald, far too big",
    "window": [
-    0.2,
-    7.7
+    0.0,
+    8.0
    ],
-   "window_is_estimate": true,
-   "on_disk": false
+   "window_is_estimate": false,
+   "on_disk": true
   },
   "F33": {
    "kind": "flow_job",
    "source": "flow/F33.mp4",
-   "status": "missing",
+   "status": "approved",
    "component": null,
    "narrative_event": "Courthouse steps: reporters, cameras, Holloway",
    "window": [
-    0.2,
-    7.7
+    0.0,
+    8.0
    ],
-   "window_is_estimate": true,
-   "on_disk": false
+   "window_is_estimate": false,
+   "on_disk": true
   },
   "F34": {
    "kind": "flow_job",
@@ -10831,15 +10831,15 @@
   "F35": {
    "kind": "flow_job",
    "source": "flow/F35.mp4",
-   "status": "missing",
+   "status": "approved",
    "component": null,
    "narrative_event": "Crooked bolt; the ring turns",
    "window": [
-    0.2,
-    7.7
+    0.0,
+    8.0
    ],
-   "window_is_estimate": true,
-   "on_disk": false
+   "window_is_estimate": false,
+   "on_disk": true
   },
   "F36": {
    "kind": "flow_job",
@@ -10857,15 +10857,15 @@
   "F37": {
    "kind": "flow_job",
    "source": "flow/F37.mp4",
-   "status": "missing",
+   "status": "approved",
    "component": null,
    "narrative_event": "Joey's chest; mobsters watch through the glass",
    "window": [
-    0.2,
-    7.7
+    0.0,
+    8.0
    ],
-   "window_is_estimate": true,
-   "on_disk": false
+   "window_is_estimate": false,
+   "on_disk": true
   },
   "F38": {
    "kind": "flow_job",
@@ -10896,15 +10896,15 @@
   "F40": {
    "kind": "flow_job",
    "source": "flow/F40.mp4",
-   "status": "missing",
+   "status": "approved",
    "component": null,
    "narrative_event": "The pen out of her hair",
    "window": [
-    0.2,
-    7.7
+    0.0,
+    8.0
    ],
-   "window_is_estimate": true,
-   "on_disk": false
+   "window_is_estimate": false,
+   "on_disk": true
   },
   "F41": {
    "kind": "flow_job",
@@ -11078,15 +11078,15 @@
   "F54": {
    "kind": "flow_job",
    "source": "flow/F54.mp4",
-   "status": "missing",
+   "status": "approved",
    "component": null,
    "narrative_event": "Danny Bell's letter",
    "window": [
-    0.2,
-    7.7
+    0.0,
+    8.0
    ],
-   "window_is_estimate": true,
-   "on_disk": false
+   "window_is_estimate": false,
+   "on_disk": true
   },
   "F55": {
    "kind": "flow_job",
@@ -11104,15 +11104,15 @@
   "F56": {
    "kind": "flow_job",
    "source": "flow/F56.mp4",
-   "status": "missing",
+   "status": "approved",
    "component": null,
    "narrative_event": "Sal looks at his hands, then at his nephew",
    "window": [
-    0.2,
-    7.7
+    0.0,
+    8.0
    ],
-   "window_is_estimate": true,
-   "on_disk": false
+   "window_is_estimate": false,
+   "on_disk": true
   },
   "F57": {
    "kind": "flow_job",
@@ -11130,41 +11130,41 @@
   "F58": {
    "kind": "flow_job",
    "source": "flow/F58.mp4",
-   "status": "missing",
+   "status": "approved",
    "component": null,
    "narrative_event": "Theo walks out at 12:52; the car",
    "window": [
-    0.2,
-    7.7
+    0.0,
+    8.0
    ],
-   "window_is_estimate": true,
-   "on_disk": false
+   "window_is_estimate": false,
+   "on_disk": true
   },
   "F59": {
    "kind": "flow_job",
    "source": "flow/F59.mp4",
-   "status": "missing",
+   "status": "approved",
    "component": null,
    "narrative_event": "Bath Avenue club: the boy on the floor",
    "window": [
-    0.2,
-    7.7
+    0.0,
+    8.0
    ],
-   "window_is_estimate": true,
-   "on_disk": false
+   "window_is_estimate": false,
+   "on_disk": true
   },
   "F60": {
    "kind": "flow_job",
    "source": "flow/F60.mp4",
-   "status": "missing",
+   "status": "approved",
    "component": null,
    "narrative_event": "Ivy bags the boy; Brancato's typed statement",
    "window": [
-    0.2,
-    7.7
+    0.0,
+    8.0
    ],
-   "window_is_estimate": true,
-   "on_disk": false
+   "window_is_estimate": false,
+   "on_disk": true
   },
   "F61": {
    "kind": "flow_job",
@@ -11182,41 +11182,41 @@
   "F62": {
    "kind": "flow_job",
    "source": "flow/F62.mp4",
-   "status": "missing",
+   "status": "approved",
    "component": null,
    "narrative_event": "Reyes with a warrant; Brancato arrested",
    "window": [
-    0.2,
-    7.7
+    0.0,
+    7.9
    ],
-   "window_is_estimate": true,
-   "on_disk": false
+   "window_is_estimate": false,
+   "on_disk": true
   },
   "F63": {
    "kind": "flow_job",
    "source": "flow/F63.mp4",
-   "status": "missing",
+   "status": "approved",
    "component": null,
    "narrative_event": "Visiting room",
    "window": [
-    0.2,
-    7.7
+    0.0,
+    8.0
    ],
-   "window_is_estimate": true,
-   "on_disk": false
+   "window_is_estimate": false,
+   "on_disk": true
   },
   "F64": {
    "kind": "flow_job",
    "source": "flow/F64.mp4",
-   "status": "missing",
+   "status": "approved",
    "component": null,
    "narrative_event": "Grand jury room",
    "window": [
-    0.2,
-    7.7
+    0.0,
+    8.0
    ],
-   "window_is_estimate": true,
-   "on_disk": false
+   "window_is_estimate": false,
+   "on_disk": true
   },
   "F65": {
    "kind": "flow_job",
@@ -11234,15 +11234,15 @@
   "F66": {
    "kind": "flow_job",
    "source": "flow/F66.mp4",
-   "status": "missing",
+   "status": "approved",
    "component": null,
    "narrative_event": "Pockets emptied onto his bed",
    "window": [
-    0.2,
-    7.7
+    0.0,
+    8.0
    ],
-   "window_is_estimate": true,
-   "on_disk": false
+   "window_is_estimate": false,
+   "on_disk": true
   },
   "F67": {
    "kind": "flow_job",
@@ -11298,37 +11298,20 @@
   }
  },
  "coverage_frames": {
-  "approved_on_disk": 14916,
+  "approved_on_disk": 20095,
   "code_authored": 9482,
-  "planned_primary": 3251,
-  "planned_reuse": 2256,
+  "planned_primary": 0,
+  "planned_reuse": 0,
   "delivered_unreviewed": 0,
-  "unresolved": 0
+  "unresolved": 328
  },
  "gate": {
   "final_export_allowed": false,
   "audio_missing": [],
   "visual_shots_pending": [
-   "F03",
-   "F16",
-   "F24",
-   "F28",
-   "F32",
-   "F33",
-   "F35",
-   "F37",
-   "F40",
-   "F54",
-   "F56",
-   "F58",
-   "F59",
-   "F60",
-   "F62",
-   "F63",
-   "F64",
-   "F66"
+   "F32"
   ],
-  "unresolved_frames": 0,
+  "unresolved_frames": 328,
   "problems": []
  }
 }

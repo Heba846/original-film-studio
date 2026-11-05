@@ -2,9 +2,9 @@
  "about": "Flow credit ledger for Film20 (plan v2: 70 jobs incl. respecified opening; U01 handled as a non-photoreal code scene, no 71st job). Validated by tools/validate_budget.py. Claude coding usage is separate and provides no Flow credits. No paid call has been made from the cloud session.",
  "cap_credits": 1000,
  "pools": {
-  "primary": 700,
-  "retakes": 200,
-  "reserve_unspent": 100
+  "primary": 940,
+  "retakes": 50,
+  "reserve_unspent": 10
  },
  "pricing": {
   "model_name_in_flow": "Veo 3.1 Lite",
@@ -32,10 +32,16 @@
     "confirmed_in_flow_ui": true,
     "confirmed_on": "2026-11-04",
     "basis": "author-reported: F19 first-frame test charged 12 cr for one 8.04 s 1280x720 24 fps output"
+   },
+   "Veo 3.1 Fast 720p": {
+    "credits_per_output": 20,
+    "confirmed_in_flow_ui": true,
+    "confirmed_on": "2026-11-05",
+    "basis": "author-reported: F62 charged 20 cr"
    }
   }
  },
- "reserve_released_by_owner": false,
+ "reserve_released_by_owner": true,
  "batches": [
   {
    "batch": 1,
@@ -1015,6 +1021,210 @@
     "F70.mp4"
    ],
    "verdict": "Batch C: APPROVED 0-8 s after sampled-frame + auto identity QA; audio muted"
+  },
+  {
+   "date": "2026-11-05",
+   "job_id": "F03",
+   "pool": "primary",
+   "model": "Omni 1.1 Flash 720p",
+   "outputs": 1,
+   "credits_charged": 12,
+   "result_files": [
+    "F03.mp4"
+   ],
+   "verdict": "Batch D: APPROVED 0-8 s; audio muted"
+  },
+  {
+   "date": "2026-11-05",
+   "job_id": "F16",
+   "pool": "primary",
+   "model": "Omni 1.1 Flash 720p",
+   "outputs": 1,
+   "credits_charged": 12,
+   "result_files": [
+    "F16.mp4"
+   ],
+   "verdict": "Batch D: APPROVED 0-8 s; audio muted"
+  },
+  {
+   "date": "2026-11-05",
+   "job_id": "F24",
+   "pool": "primary",
+   "model": "Omni 1.1 Flash 720p",
+   "outputs": 1,
+   "credits_charged": 12,
+   "result_files": [
+    "F24.mp4"
+   ],
+   "verdict": "Batch D: APPROVED 0-8 s; audio muted"
+  },
+  {
+   "date": "2026-11-05",
+   "job_id": "F28",
+   "pool": "primary",
+   "model": "Omni 1.1 Flash 720p",
+   "outputs": 1,
+   "credits_charged": 12,
+   "result_files": [
+    "F28.mp4"
+   ],
+   "verdict": "Batch D: APPROVED 0-8 s; audio muted"
+  },
+  {
+   "date": "2026-11-05",
+   "job_id": "F32",
+   "pool": "primary",
+   "model": "Omni 1.1 Flash 720p",
+   "outputs": 1,
+   "credits_charged": 12,
+   "result_files": [
+    "F32.mp4"
+   ],
+   "verdict": "Batch D: REJECTED (ring on right hand)"
+  },
+  {
+   "date": "2026-11-05",
+   "job_id": "F33",
+   "pool": "primary",
+   "model": "Omni 1.1 Flash 720p",
+   "outputs": 1,
+   "credits_charged": 12,
+   "result_files": [
+    "F33.mp4"
+   ],
+   "verdict": "Batch D: APPROVED 0-8 s; audio muted"
+  },
+  {
+   "date": "2026-11-05",
+   "job_id": "F35",
+   "pool": "primary",
+   "model": "Omni 1.1 Flash 720p",
+   "outputs": 1,
+   "credits_charged": 12,
+   "result_files": [
+    "F35.mp4"
+   ],
+   "verdict": "Batch D: APPROVED 0-8 s; audio muted"
+  },
+  {
+   "date": "2026-11-05",
+   "job_id": "F37",
+   "pool": "primary",
+   "model": "Omni 1.1 Flash 720p",
+   "outputs": 1,
+   "credits_charged": 12,
+   "result_files": [
+    "F37.mp4"
+   ],
+   "verdict": "Batch D: APPROVED 0-8 s; audio muted"
+  },
+  {
+   "date": "2026-11-05",
+   "job_id": "F54",
+   "pool": "primary",
+   "model": "Omni 1.1 Flash 720p",
+   "outputs": 1,
+   "credits_charged": 12,
+   "result_files": [
+    "F54.mp4"
+   ],
+   "verdict": "Batch D: APPROVED 0-8 s; audio muted"
+  },
+  {
+   "date": "2026-11-05",
+   "job_id": "F58",
+   "pool": "primary",
+   "model": "Omni 1.1 Flash 720p",
+   "outputs": 1,
+   "credits_charged": 12,
+   "result_files": [
+    "F58.mp4"
+   ],
+   "verdict": "Batch D: APPROVED 0-8 s; audio muted"
+  },
+  {
+   "date": "2026-11-05",
+   "job_id": "F59",
+   "pool": "primary",
+   "model": "Omni 1.1 Flash 720p",
+   "outputs": 1,
+   "credits_charged": 12,
+   "result_files": [
+    "F59.mp4"
+   ],
+   "verdict": "Batch D: APPROVED 0-8 s; audio muted"
+  },
+  {
+   "date": "2026-11-05",
+   "job_id": "F64",
+   "pool": "primary",
+   "model": "Omni 1.1 Flash 720p",
+   "outputs": 1,
+   "credits_charged": 12,
+   "result_files": [
+    "F64.mp4"
+   ],
+   "verdict": "Batch D: APPROVED 0-8 s; audio muted"
+  },
+  {
+   "date": "2026-11-05",
+   "job_id": "F40",
+   "pool": "primary",
+   "model": "Omni 1.1 Flash 720p",
+   "outputs": 1,
+   "credits_charged": 12,
+   "result_files": [
+    "F40.mp4"
+   ],
+   "verdict": "Batch E: APPROVED 0-8 s; audio muted"
+  },
+  {
+   "date": "2026-11-05",
+   "job_id": "F56",
+   "pool": "primary",
+   "model": "Omni 1.1 Flash 720p",
+   "outputs": 1,
+   "credits_charged": 12,
+   "result_files": [
+    "F56.mp4"
+   ],
+   "verdict": "Batch E: APPROVED 0-8 s; audio muted"
+  },
+  {
+   "date": "2026-11-05",
+   "job_id": "F66",
+   "pool": "primary",
+   "model": "Omni 1.1 Flash 720p",
+   "outputs": 1,
+   "credits_charged": 12,
+   "result_files": [
+    "F66.mp4"
+   ],
+   "verdict": "Batch E: APPROVED 0-8 s; audio muted"
+  },
+  {
+   "date": "2026-11-05",
+   "job_id": "F62",
+   "pool": "primary",
+   "model": "Veo 3.1 Fast 720p",
+   "outputs": 1,
+   "credits_charged": 20,
+   "result_files": [
+    "F62.mp4"
+   ],
+   "verdict": "APPROVED 0-7.9 s (hands-only insert); audio muted"
+  },
+  {
+   "date": "2026-11-05",
+   "job_id": "F63",
+   "pool": "primary",
+   "model": "Omni 1.1 Flash 720p",
+   "outputs": 1,
+   "credits_charged": 12,
+   "result_files": [
+    "F63.mp4"
+   ],
+   "verdict": "APPROVED 0-8 s (hands-only insert); audio muted"
   }
  ],
  "plan_version": 2,
@@ -1104,7 +1314,8 @@
    "F43"
   ],
   "earlier_free_stills": 34,
-  "credits": 0
+  "credits": 0,
+  "F60_derived": "2026-11-05: derived crop of approved F59 (960x540+280+160 -> 1280x720), 0 cr, not a generated shot. F60's two Omni attempts failed the policy filter (author): refunded, not counted"
  },
  "account_observations": [
   {
@@ -1285,8 +1496,44 @@
    "F64"
   ],
   "max_credits": 144,
-  "status": "processing (author)",
-  "counted": 0,
+  "status": "delivered 12; 11 approved, F32 rejected",
+  "counted": 144,
   "warning": "F32 still held (ring on her RIGHT hand); its clip will be rejected unless the hand reads as LEFT"
+ },
+ "pools_history": [
+  {
+   "until": "2026-11-05",
+   "pools": {
+    "primary": 700,
+    "retakes": 200,
+    "reserve_unspent": 100
+   }
+  },
+  {
+   "until": "2026-11-05 Batch E",
+   "pools": {
+    "primary": 790,
+    "retakes": 200,
+    "reserve_unspent": 10
+   }
+  }
+ ],
+ "reserve_release_note": "2026-11-05: author explicitly requested Batches D (144) and E (72) at Omni 12 cr/clip, taking the UI balance to an expected 98. The 100-credit reserve is released down to the 10-credit account floor, which stays untouched. Cap stays 1000. Pools re-split after Batch E (Omni 12 cr/clip): primary 940, retakes 50, floor 10; total cap 1000 unchanged. Per-job ledger (926) exceeds the UI drop (840) by 86: kept UNRECONCILED, no refunds invented.",
+ "batch_omni_E": {
+  "date": "2026-11-05",
+  "generated": [
+   "F40",
+   "F56",
+   "F66"
+  ],
+  "credits": 36,
+  "derived": [
+   "F60"
+  ],
+  "pending": [],
+  "final_two": {
+   "F62": 20,
+   "F63": 12
+  }
  }
 }
