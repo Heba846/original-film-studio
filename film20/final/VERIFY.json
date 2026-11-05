@@ -1,0 +1,186 @@
+{
+ "V1": {
+  "codec": "h264",
+  "size": "1280x720",
+  "fps": "24/1",
+  "audio": [
+   "aac"
+  ]
+ },
+ "V2": {
+  "frames": 29187,
+  "expected": 29187
+ },
+ "V3": {
+  "envelope_corr": 0.9996,
+  "offset_ms": 0,
+  "level_diff_db": -0.01,
+  "dur_s": [
+   1216.128,
+   1216.125
+  ]
+ },
+ "V4": {
+  "black_runs": [],
+  "unplanned": []
+ },
+ "V5": {
+  "frozen_runs_over_2_5s": [
+   [
+    "172.167",
+    "174.958"
+   ],
+   [
+    "174.958",
+    "177.792"
+   ],
+   [
+    "177.792",
+    "181.042"
+   ],
+   [
+    "181.042",
+    "187.625"
+   ],
+   [
+    "187.625",
+    "190.625"
+   ],
+   [
+    "560.042",
+    "564.583"
+   ],
+   [
+    "565.125",
+    "573.833"
+   ],
+   [
+    "574.917",
+    "579.583"
+   ],
+   [
+    "580.125",
+    "585.75"
+   ],
+   [
+    "661.542",
+    "664.125"
+   ],
+   [
+    "893.167",
+    "897.042"
+   ],
+   [
+    "910.458",
+    "914.25"
+   ],
+   [
+    "927.833",
+    "932.042"
+   ],
+   [
+    "1057.04",
+    "1063.62"
+   ],
+   [
+    "1153.08",
+    "1158.92"
+   ],
+   [
+    "1172.08",
+    "1182.08"
+   ]
+  ],
+  "classified": [
+   {
+    "start": 172.167,
+    "end": 174.958,
+    "footage_overlap_s": 0.0
+   },
+   {
+    "start": 174.958,
+    "end": 177.792,
+    "footage_overlap_s": 0.0
+   },
+   {
+    "start": 177.792,
+    "end": 181.042,
+    "footage_overlap_s": 0.0
+   },
+   {
+    "start": 181.042,
+    "end": 187.625,
+    "footage_overlap_s": 0.0
+   },
+   {
+    "start": 187.625,
+    "end": 190.625,
+    "footage_overlap_s": 0.042
+   },
+   {
+    "start": 560.042,
+    "end": 564.583,
+    "footage_overlap_s": 0.0
+   },
+   {
+    "start": 565.125,
+    "end": 573.833,
+    "footage_overlap_s": 0.0
+   },
+   {
+    "start": 574.917,
+    "end": 579.583,
+    "footage_overlap_s": 0.0
+   },
+   {
+    "start": 580.125,
+    "end": 585.75,
+    "footage_overlap_s": 0.042
+   },
+   {
+    "start": 661.542,
+    "end": 664.125,
+    "footage_overlap_s": 0.0
+   },
+   {
+    "start": 893.167,
+    "end": 897.042,
+    "footage_overlap_s": 0.042
+   },
+   {
+    "start": 910.458,
+    "end": 914.25,
+    "footage_overlap_s": 0.0
+   },
+   {
+    "start": 927.833,
+    "end": 932.042,
+    "footage_overlap_s": 0.042
+   },
+   {
+    "start": 1057.04,
+    "end": 1063.62,
+    "footage_overlap_s": 0.037
+   },
+   {
+    "start": 1153.08,
+    "end": 1158.92,
+    "footage_overlap_s": 0.045
+   },
+   {
+    "start": 1172.08,
+    "end": 1182.08,
+    "footage_overlap_s": 0.038
+   }
+  ],
+  "frozen_footage_runs": [],
+  "note": "freezedetect also fires on authored, intentionally near-static code graphics (CODE_WEB/PHONE/ARREST/RECAP/APRIL). V5 now fails only on frozen FOOTAGE (>0.25 s overlap with a footage/Flow cut)."
+ },
+ "V6": {
+  "cues": 441,
+  "last_end": 1211.707,
+  "ok": true
+ },
+ "V7": "249 cut frames -> output/final/QA_cut_sheet_*.png (human picture pass required)",
+ "verdict": "PASS (technical) - picture pass still required"
+}

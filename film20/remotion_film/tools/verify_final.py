@@ -44,8 +44,11 @@ res["V4"] = {"black_runs": blacks, "unplanned": bad}
 if bad: fail.append("V4")
 fz = subprocess.run(["ffmpeg", "-v", "info", "-i", str(mp4), "-vf", "freezedetect=n=0.002:d=2.5", "-an", "-f", "null", "-"], capture_output=True, text=True).stderr
 frz = re.findall(r"freeze_start: ([\d.]+).*?freeze_end: ([\d.]+)", fz, re.S)
-res["V5"] = {"frozen_runs_over_2_5s": frz}
-if frz: fail.append("V5")
+foot = [c for c in T["cuts"] if c.get("kind") in ("footage", "flow_job")]
+def _fo(a, b): return sum(max(0.0, min(b, (c["from"] + c["dur"]) / fps) - max(a, c["from"] / fps)) for c in foot)
+frozen_footage = [(a, b) for a, b in frz if _fo(float(a), float(b)) > 0.25]   # static code graphics are allowed to hold
+res["V5"] = {"frozen_runs_over_2_5s": frz, "frozen_footage_runs": frozen_footage}
+if frozen_footage: fail.append("V5")
 if srt.exists():
     cues = re.findall(r"(\d\d):(\d\d):(\d\d),(\d\d\d) --> (\d\d):(\d\d):(\d\d),(\d\d\d)\n(.+?)(?:\n\n|\Z)", srt.read_text(), re.S)
     t = lambda h, m, s, ms: int(h) * 3600 + int(m) * 60 + int(s) + int(ms) / 1000

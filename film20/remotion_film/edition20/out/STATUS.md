@@ -2,17 +2,17 @@
 
 - Runtime: **20:16.11** (1216.11 s, 29187 frames @ 24 fps) — measured
 - Speech in measured WAVs: 1155.006 s; pickup estimates: 0.000 s; pauses 57.60 s; lead-in 0.5 s + tail 3.0 s
-- Final export allowed: **NO**
+- Final export allowed: **YES**
 
 ## Picture coverage (every frame counted once; crossfade overlaps counted as source use only)
 | | Seconds | Share |
 |---|---:|---:|
-| (a) approved footage on disk | 829.2 | 68.2% |
-| (a) authored code scenes (finished) | 385.5 | 31.7% |
+| (a) approved footage on disk | 829.7 | 68.2% |
+| (a) authored code scenes (finished) | 386.5 | 31.8% |
 | (b) conditional: planned Flow job, first use | 0.0 | 0.0% |
 | (b) conditional: planned Flow job, motivated reuse | 0.0 | 0.0% |
 | delivered but not yet reviewed | 0.0 | 0.0% |
-| **(c) unresolved / unplanned** | **1.4** | **0.1%** |
+| **(c) unresolved / unplanned** | **0.0** | **0.0%** |
 
 (b) assumes every job is delivered as an ~7.9 s file, passes review and the 0.2-7.7 s window is usable. It is NOT delivered picture.
 
@@ -122,7 +122,7 @@
 - n024 flow/F01.mp4: returns 75 s after its last use — check it does not feel repetitive
 - n030 flow/F14.mp4: returns 18 s after its last use — check it does not feel repetitive
 - n034 flow/F18.mp4: returns 19 s after its last use — check it does not feel repetitive
-- n037 flow/F20.mp4: returns 12 s after its last use — check it does not feel repetitive
+- n037 flow/F20.mp4: returns 13 s after its last use — check it does not feel repetitive
 - n041 flow/F22.mp4: returns 4 s after its last use — check it does not feel repetitive
 - n045 flow/F21.mp4: returns 0 s after its last use — check it does not feel repetitive
 - n046 flow/F22.mp4: returns 14 s after its last use — check it does not feel repetitive
@@ -136,7 +136,7 @@
 - n092 flow/F32.mp4: returns 44 s after its last use — check it does not feel repetitive
 - n092 flow/F37.mp4: returns 3 s after its last use — check it does not feel repetitive
 - n094 flow/F37.mp4: returns 12 s after its last use — check it does not feel repetitive
-- n096 flow/F38.mp4: returns 10 s after its last use — check it does not feel repetitive
+- n096 flow/F38.mp4: returns 9 s after its last use — check it does not feel repetitive
 - n096 flow/F39.mp4: returns 8 s after its last use — check it does not feel repetitive
 - n097 flow/F34.mp4: returns 92 s after its last use — check it does not feel repetitive
 - n104 flow/F44.mp4: returns 19 s after its last use — check it does not feel repetitive
@@ -194,9 +194,7 @@
 - flow/F64.mp4: 3 uses (n148, n149, n150) — review as a sequence
 
 ## Unresolved cuts
-- n036 F20 apt_wide: 1.17 s
-- n042 F21 nico_armchair: 0.04 s
-- n096 F39 bell_cries: 0.17 s
+- none
 
 ## Dissolves shortened because the source ends inside them (cut stays fully covered)
 - none
@@ -208,4 +206,4 @@
 - n145: peak -0.35 dBFS
 
 ## Problems (each blocks Final)
-- n036 F20: source overrun 0.00+8.96 > 8.00 (measured file)
+- none

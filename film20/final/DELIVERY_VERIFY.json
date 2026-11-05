@@ -1,0 +1,19 @@
+{
+ "master": {
+  "bytes": 612099587,
+  "frames": 29187,
+  "dur_s": 1216.128
+ },
+ "delivery": {
+  "bytes": 390532345,
+  "MiB": 372.4,
+  "frames": 29187,
+  "dur_s": 1216.128,
+  "video": "h264 1280x720 24/1 yuv420p",
+  "audio": "aac 48000 Hz 2 ch",
+  "faststart": true,
+  "decode_errors": "none"
+ },
+ "audio_identical_to_master": true,
+ "pass": true
+}
