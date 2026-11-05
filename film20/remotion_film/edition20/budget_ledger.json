@@ -511,6 +511,126 @@
    ],
    "verdict": "APPROVED 0.2-7.7 s after identity sheet + location/costume QA",
    "first_frame": "STILL_F19 (approved repair still)"
+  },
+  {
+   "date": "2026-11-05",
+   "job_id": "F02",
+   "pool": "primary",
+   "model": "Omni 1.1 Flash 720p",
+   "outputs": 1,
+   "credits_charged": 12,
+   "result_files": [
+    "F02.mp4"
+   ],
+   "verdict": "Batch A: APPROVED 0-8 s after 4 fps identity sheet + location/arm/ring QA; generated audio muted"
+  },
+  {
+   "date": "2026-11-05",
+   "job_id": "F08",
+   "pool": "primary",
+   "model": "Omni 1.1 Flash 720p",
+   "outputs": 1,
+   "credits_charged": 12,
+   "result_files": [
+    "F08.mp4"
+   ],
+   "verdict": "Batch A: APPROVED 0-8 s after 4 fps identity sheet + location/arm/ring QA; generated audio muted"
+  },
+  {
+   "date": "2026-11-05",
+   "job_id": "F14",
+   "pool": "primary",
+   "model": "Omni 1.1 Flash 720p",
+   "outputs": 1,
+   "credits_charged": 12,
+   "result_files": [
+    "F14.mp4"
+   ],
+   "verdict": "Batch A: APPROVED 0-8 s after 4 fps identity sheet + location/arm/ring QA; generated audio muted"
+  },
+  {
+   "date": "2026-11-05",
+   "job_id": "F15",
+   "pool": "primary",
+   "model": "Omni 1.1 Flash 720p",
+   "outputs": 1,
+   "credits_charged": 12,
+   "result_files": [
+    "F15.mp4"
+   ],
+   "verdict": "Batch A: APPROVED 0-8 s after 4 fps identity sheet + location/arm/ring QA; generated audio muted"
+  },
+  {
+   "date": "2026-11-05",
+   "job_id": "F18",
+   "pool": "primary",
+   "model": "Omni 1.1 Flash 720p",
+   "outputs": 1,
+   "credits_charged": 12,
+   "result_files": [
+    "F18.mp4"
+   ],
+   "verdict": "Batch A: APPROVED 0-8 s after 4 fps identity sheet + location/arm/ring QA; generated audio muted"
+  },
+  {
+   "date": "2026-11-05",
+   "job_id": "F22",
+   "pool": "primary",
+   "model": "Omni 1.1 Flash 720p",
+   "outputs": 1,
+   "credits_charged": 12,
+   "result_files": [
+    "F22.mp4"
+   ],
+   "verdict": "Batch A: APPROVED 0-8 s after 4 fps identity sheet + location/arm/ring QA; generated audio muted"
+  },
+  {
+   "date": "2026-11-05",
+   "job_id": "F26",
+   "pool": "retake",
+   "model": "Omni 1.1 Flash 720p",
+   "outputs": 1,
+   "credits_charged": 12,
+   "result_files": [
+    "F26.mp4"
+   ],
+   "verdict": "Batch A: APPROVED 0-8 s after 4 fps identity sheet + location/arm/ring QA; generated audio muted"
+  },
+  {
+   "date": "2026-11-05",
+   "job_id": "F29",
+   "pool": "primary",
+   "model": "Omni 1.1 Flash 720p",
+   "outputs": 1,
+   "credits_charged": 12,
+   "result_files": [
+    "F29.mp4"
+   ],
+   "verdict": "Batch A: APPROVED 0-8 s after 4 fps identity sheet + location/arm/ring QA; generated audio muted"
+  },
+  {
+   "date": "2026-11-05",
+   "job_id": "F38",
+   "pool": "primary",
+   "model": "Omni 1.1 Flash 720p",
+   "outputs": 1,
+   "credits_charged": 12,
+   "result_files": [
+    "F38.mp4"
+   ],
+   "verdict": "Batch A: APPROVED 0-8 s after 4 fps identity sheet + location/arm/ring QA; generated audio muted"
+  },
+  {
+   "date": "2026-11-05",
+   "job_id": "F39",
+   "pool": "primary",
+   "model": "Omni 1.1 Flash 720p",
+   "outputs": 1,
+   "credits_charged": 12,
+   "result_files": [
+    "F39.mp4"
+   ],
+   "verdict": "Batch A: APPROVED 0-8 s after 4 fps identity sheet + location/arm/ring QA; generated audio muted"
   }
  ],
  "plan_version": 2,
@@ -544,22 +664,10 @@
  },
  "planned_retakes": [
   {
-   "job_id": "F02",
-   "pool": "retake",
-   "credits": 10,
-   "reason": "ER background copied from hospital.png; grille instead of her car"
-  },
-  {
    "job_id": "F21",
    "pool": "retake",
    "credits": 10,
    "reason": "take 1 identity/role swap + wrong location"
-  },
-  {
-   "job_id": "F26",
-   "pool": "retake",
-   "credits": 10,
-   "reason": "take 1 wrong location (hospital instead of restaurant)"
   }
  ],
  "batch2_report": {
@@ -633,6 +741,12 @@
    "source": "author, Flow account panel",
    "balance_credits": 840,
    "note": "latest observed balance (net reduction 170)"
+  },
+  {
+   "date": "2026-11-05",
+   "source": "author UI (actual, not estimated 758)",
+   "balance_credits": 698,
+   "note": "after F19 test 12 + Batch A 120 (Omni 1.1 Flash 720p)"
   }
  ],
  "reconciliation": {
@@ -714,14 +828,13 @@
   }
  ],
  "latest_author_observation": {
-  "date": "2026-11-04",
-  "account": "Flow PRO (author account)",
-  "balance_ui": 830,
-  "note": "author-reported; not reconciled by us; Omni 1.1 Flash 720p works (12 cr per clip)"
+  "date": "2026-11-05",
+  "balance_ui": 698,
+  "note": "actual UI balance after Omni Batch A; final-four corrections rejected twice by Flow 'unusual activity', nothing created, 0 cr"
  },
  "batch_omni_A": {
   "date": "2026-11-04",
-  "status": "queued by author, not yet delivered",
+  "status": "delivered + approved 10/10",
   "jobs": [
    "F02",
    "F08",
@@ -735,6 +848,6 @@
    "F39"
   ],
   "max_credits": 120,
-  "counted": 0
+  "counted": 120
  }
 }

@@ -282,13 +282,29 @@
    "slug": "ivy_crouch",
    "kind": "flow_job",
    "source": "flow/F02.mp4",
-   "status": "missing",
+   "status": "approved",
    "narrative_event": "Ivy crouched behind her own car, counting",
    "continuity_phase": "P0",
    "chapter": "CH00",
    "decisive": false,
    "mouth": "closed",
-   "flow_job": "F02"
+   "flow_job": "F02",
+   "identity_check": {
+    "date": "2026-11-05",
+    "method": "4 fps visual + swap-signature scan",
+    "result": "4fps 0-7.75: one woman, red bun+pen, navy scrubs, no ring/chain, charger cable, crouched by own car in garage L2; stable face"
+   },
+   "approved_range": [
+    0.0,
+    8.0
+   ],
+   "review_log": [
+    {
+     "date": "2026-11-05",
+     "status": "approved",
+     "note": "Omni 1.1 Flash 720p Batch A, 12 cr; generated audio muted (Flow audio never used) | usable range 0.0-8.0 s"
+    }
+   ]
   },
   {
    "shot_id": "F03",
@@ -427,13 +443,29 @@
    "slug": "er_entrance",
    "kind": "flow_job",
    "source": "flow/F08.mp4",
-   "status": "missing",
+   "status": "approved",
    "narrative_event": "3:05 - Nico walks into the ER holding his arm closed",
    "continuity_phase": "P0",
    "chapter": "CH01",
    "decisive": false,
    "mouth": "closed",
-   "flow_job": "F08"
+   "flow_job": "F08",
+   "identity_check": {
+    "date": "2026-11-05",
+    "method": "4 fps visual + swap-signature scan",
+    "result": "4fps + 4 full frames: scarred man walks in, LEFT hand clamps bloodied RIGHT forearm; triage nurse + guard fixed; no swap"
+   },
+   "approved_range": [
+    0.0,
+    8.0
+   ],
+   "review_log": [
+    {
+     "date": "2026-11-05",
+     "status": "approved",
+     "note": "Omni 1.1 Flash 720p Batch A, 12 cr; generated audio muted (Flow audio never used) | usable range 0.0-8.0 s"
+    }
+   ]
   },
   {
    "shot_id": "F09",
@@ -576,26 +608,58 @@
    "slug": "ivy_frozen",
    "kind": "flow_job",
    "source": "flow/F14.mp4",
-   "status": "missing",
+   "status": "approved",
    "narrative_event": "Ivy frozen, hands raised, counting; stairwell door behind her",
    "continuity_phase": "P0",
    "chapter": "CH02",
    "decisive": false,
    "mouth": "closed",
-   "flow_job": "F14"
+   "flow_job": "F14",
+   "identity_check": {
+    "date": "2026-11-05",
+    "method": "4 fps visual + swap-signature scan",
+    "result": "4fps: one woman, scrubs, counts on fingers 0-1.8 s then looks to stairwell door; silver sedan + door; stable"
+   },
+   "approved_range": [
+    0.0,
+    8.0
+   ],
+   "review_log": [
+    {
+     "date": "2026-11-05",
+     "status": "approved",
+     "note": "Omni 1.1 Flash 720p Batch A, 12 cr; generated audio muted (Flow audio never used) | usable range 0.0-8.0 s"
+    }
+   ]
   },
   {
    "shot_id": "F15",
    "slug": "stairs_sleeve",
    "kind": "flow_job",
    "source": "flow/F15.mp4",
-   "status": "missing",
+   "status": "approved",
    "narrative_event": "Someone listening on the stairs (anonymous)",
    "continuity_phase": "P0",
    "chapter": "CH02",
    "decisive": true,
    "mouth": "n/a",
-   "flow_job": "F15"
+   "flow_job": "F15",
+   "identity_check": {
+    "date": "2026-11-05",
+    "method": "4 fps visual + swap-signature scan",
+    "result": "4fps + crops: light jacket + sneakers on stairs, head stays in shadow (no face); garage stairwell; no one else"
+   },
+   "approved_range": [
+    0.0,
+    8.0
+   ],
+   "review_log": [
+    {
+     "date": "2026-11-05",
+     "status": "approved",
+     "note": "Omni 1.1 Flash 720p Batch A, 12 cr; generated audio muted (Flow audio never used) | usable range 0.0-8.0 s"
+    }
+   ]
   },
   {
    "shot_id": "F16",
@@ -628,13 +692,29 @@
    "slug": "fbi_couch",
    "kind": "flow_job",
    "source": "flow/F18.mp4",
-   "status": "missing",
+   "status": "approved",
    "narrative_event": "FBI on her couch",
    "continuity_phase": "P0",
    "chapter": "CH03",
    "decisive": false,
    "mouth": "closed",
-   "flow_job": "F18"
+   "flow_job": "F18",
+   "identity_check": {
+    "date": "2026-11-05",
+    "method": "4 fps visual + swap-signature scan",
+    "result": "4fps: Ivy (home cardigan) standing, woman agent + navy-suit agent on couch; roles/positions fixed; morning"
+   },
+   "approved_range": [
+    0.0,
+    8.0
+   ],
+   "review_log": [
+    {
+     "date": "2026-11-05",
+     "status": "approved",
+     "note": "Omni 1.1 Flash 720p Batch A, 12 cr; generated audio muted (Flow audio never used) | usable range 0.0-8.0 s"
+    }
+   ]
   },
   {
    "shot_id": "F19",
@@ -703,13 +783,29 @@
    "slug": "ivy_doorway",
    "kind": "flow_job",
    "source": "flow/F22.mp4",
-   "status": "missing",
+   "status": "approved",
    "narrative_event": "Ivy in the doorway (listener); lifts the subpoena",
    "continuity_phase": "P0",
    "chapter": "CH04",
    "decisive": false,
    "mouth": "closed",
-   "flow_job": "F22"
+   "flow_job": "F22",
+   "identity_check": {
+    "date": "2026-11-05",
+    "method": "4 fps visual + swap-signature scan",
+    "result": "4fps: Ivy with grocery bag + subpoena at doorway; dark figure back-to-camera foreground fixed; stable face"
+   },
+   "approved_range": [
+    0.0,
+    8.0
+   ],
+   "review_log": [
+    {
+     "date": "2026-11-05",
+     "status": "approved",
+     "note": "Omni 1.1 Flash 720p Batch A, 12 cr; generated audio muted (Flow audio never used) | usable range 0.0-8.0 s"
+    }
+   ]
   },
   {
    "shot_id": "F23",
@@ -755,13 +851,29 @@
    "slug": "restaurant",
    "kind": "flow_job",
    "source": "flow/F26.mp4",
-   "status": "missing",
+   "status": "approved",
    "narrative_event": "Closed restaurant: the bargaining table",
    "continuity_phase": "P0",
    "chapter": "CH05",
    "decisive": false,
    "mouth": "closed",
-   "flow_job": "F26"
+   "flow_job": "F26",
+   "identity_check": {
+    "date": "2026-11-05",
+    "method": "4 fps visual + swap-signature scan",
+    "result": "4fps: Ivy, lawyer, Tommy, Nico at closed-restaurant table; chairs up; white splint on Nico's far (right) arm stable; no swap (retake of excluded take1)"
+   },
+   "approved_range": [
+    0.0,
+    8.0
+   ],
+   "review_log": [
+    {
+     "date": "2026-11-05",
+     "status": "approved",
+     "note": "Omni 1.1 Flash 720p Batch A, 12 cr; generated audio muted (Flow audio never used) | usable range 0.0-8.0 s"
+    }
+   ]
   },
   {
    "shot_id": "F27",
@@ -794,13 +906,29 @@
    "slug": "sal_arrives",
    "kind": "flow_job",
    "source": "flow/F29.mp4",
-   "status": "missing",
+   "status": "approved",
    "narrative_event": "Sal arrives at 1:30 with cannoli",
    "continuity_phase": "P0",
    "chapter": "CH06",
    "decisive": false,
    "mouth": "closed",
-   "flow_job": "F29"
+   "flow_job": "F29",
+   "identity_check": {
+    "date": "2026-11-05",
+    "method": "4 fps visual + swap-signature scan",
+    "result": "4fps: Nico at study desk, white splint near (right) arm; Sal camel coat with pastry box; roles fixed"
+   },
+   "approved_range": [
+    0.0,
+    8.0
+   ],
+   "review_log": [
+    {
+     "date": "2026-11-05",
+     "status": "approved",
+     "note": "Omni 1.1 Flash 720p Batch A, 12 cr; generated audio muted (Flow audio never used) | usable range 0.0-8.0 s"
+    }
+   ]
   },
   {
    "shot_id": "F30",
@@ -911,26 +1039,58 @@
    "slug": "bell_asks",
    "kind": "flow_job",
    "source": "flow/F38.mp4",
-   "status": "missing",
+   "status": "approved",
    "narrative_event": "Dr. Bell asks about her shifts, almost casually",
    "continuity_phase": "P2",
    "chapter": "CH08",
    "decisive": false,
    "mouth": "closed",
-   "flow_job": "F38"
+   "flow_job": "F38",
+   "identity_check": {
+    "date": "2026-11-05",
+    "method": "4 fps visual + swap-signature scan",
+    "result": "4fps: Ivy navy scrubs at nurses' station, no visible ring; Dr Bell white coat over cardigan; stable"
+   },
+   "approved_range": [
+    0.0,
+    8.0
+   ],
+   "review_log": [
+    {
+     "date": "2026-11-05",
+     "status": "approved",
+     "note": "Omni 1.1 Flash 720p Batch A, 12 cr; generated audio muted (Flow audio never used) | usable range 0.0-8.0 s"
+    }
+   ]
   },
   {
    "shot_id": "F39",
    "slug": "bell_cries",
    "kind": "flow_job",
    "source": "flow/F39.mp4",
-   "status": "missing",
+   "status": "approved",
    "narrative_event": "Dr. Bell cries; she gives him until noon",
    "continuity_phase": "P2",
    "chapter": "CH08",
    "decisive": false,
    "mouth": "closed",
-   "flow_job": "F39"
+   "flow_job": "F39",
+   "identity_check": {
+    "date": "2026-11-05",
+    "method": "4 fps visual + swap-signature scan",
+    "result": "4fps: Dr Bell cries at desk, Ivy scrubs in doorway, no visible ring; evening office; stable"
+   },
+   "approved_range": [
+    0.0,
+    8.0
+   ],
+   "review_log": [
+    {
+     "date": "2026-11-05",
+     "status": "approved",
+     "note": "Omni 1.1 Flash 720p Batch A, 12 cr; generated audio muted (Flow audio never used) | usable range 0.0-8.0 s"
+    }
+   ]
   },
   {
    "shot_id": "F40",

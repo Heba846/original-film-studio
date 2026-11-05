@@ -2,7 +2,7 @@
  "date": "2026-11-04",
  "status": "ALL delivered stills reviewed (bulk 77 + ending delta + final delta)",
  "superseded": "Ending_F64_F67.zip numeric names (F64/F66 swapped); use Flow_New_Delta/verified/",
- "approved_count": 44,
+ "approved_count": 48,
  "approved": {
   "F02": {
    "file": "Woman_hiding_in_parking_garage_ab2c6c27.jpg",
@@ -99,6 +99,12 @@
    "note": "use as a HANDS INSERT only: emerald onto her LEFT ring finger; white splint on his right. Her black jacket is not the P1 dress, so frame on the hands",
    "sha16": "175177f4dcc5b59d"
   },
+  "F34": {
+   "file": "R3/F34_r3.png",
+   "note": "courthouse steps, cameras, wedding dress; Nico's bare near (left) hand on her back, splint on the far (right) arm; no ring on Nico",
+   "sha16": "382c47ad47664a30",
+   "supersedes": "earlier candidate"
+  },
   "F36": {
    "file": "Repairs/media/F36.png",
    "note": "staff locker room, alone, scrubs, chain",
@@ -144,6 +150,18 @@
    "note": "witness stand; emerald on LEFT hand",
    "sha16": "0386ea60e09ee62f"
   },
+  "F48": {
+   "file": "R3/F48_r3.png",
+   "note": "gallery bench; black splint on his right forearm (image-left); left hand on the rail",
+   "sha16": "371b3f702a381551",
+   "supersedes": "earlier candidate"
+  },
+  "F49": {
+   "file": "R3/F49_r3.png",
+   "note": "hands-only back seat: Ivy's LEFT hand with the emerald over Nico's bare left palm (up); front headrests in the foreground",
+   "sha16": "71958e3586101ce1",
+   "supersedes": "earlier candidate"
+  },
   "F50": {
    "file": "Repairs/media/F50.png",
    "note": "Ivy alone at the midnight drawer, gray cardigan",
@@ -168,6 +186,12 @@
    "file": "Repairs/media/F55.png",
    "note": "dining room, white tablecloth, evidence; black splint on his near (right) arm; Ivy in a gray cardigan",
    "sha16": "055431c4de15ef7a"
+  },
+  "F56": {
+   "file": "R3/F56_r3.png",
+   "note": "Sal alone at the dining table with a white tablecloth; nephew off-screen",
+   "sha16": "43c44a6b95fa2c1c",
+   "supersedes": "earlier candidate"
   },
   "F57": {
    "file": "Men_seated_at_dining_table_40770ca7.jpg",
@@ -226,65 +250,36 @@
   }
  },
  "near_pass_author_call": [],
- "repair_count": 17,
+ "repair_count": 13,
  "repair_groups": {
-  "mirrored_splint_or_gun": [
+  "author_final_four_blocked": [
    "F03",
    "F16",
-   "F40",
-   "F48",
-   "F49",
-   "F56"
+   "F33",
+   "F45"
   ],
-  "wrong_location_or_time": [
-   "F64"
-  ],
-  "hospital_set_bleed": [
+  "qa_holds": [
    "F24",
    "F28",
-   "F54"
-  ],
-  "costume_per_date": [
-   "F33",
-   "F34",
    "F35",
-   "F58"
-  ],
-  "wrong_or_extra_person": [
-   "F37"
-  ],
-  "ring_or_brace_bleed": [],
-  "medical_blocking": [
-   "F59"
-  ],
-  "text_or_minor": [
-   "F24",
-   "F54",
-   "F58"
-  ],
-  "author_holds": [
-   "F03",
-   "F16",
-   "F33",
-   "F34",
-   "F35",
+   "F37",
    "F40",
-   "F45",
-   "F48",
-   "F49",
-   "F56"
+   "F54",
+   "F58",
+   "F59",
+   "F64"
   ]
  },
  "repair_prompts": {
   "F03": {
    "file": "Scarred_man_holding_pistol_aaca4235.jpg",
    "prompt": "Free Nano Banana repair (0 cr): keep the same characters, faces and framing; change ONLY: the scarred man's splint must be on his anatomical RIGHT forearm (image-LEFT when he faces camera; the arm FARTHER from camera when he faces image-left); no sling; gun held low in his LEFT hand (image-right); heavy man slumped, face turned away.",
-   "author_hold": "sling + wrong arms (F03, F03_v2)"
+   "author_hold": "R3 held (F03/F16 cloth slings + wrong Ivy outfit; F33 full-arm cast; F45 letter labels); final-four fix REJECTED twice by Flow 'unusual activity', nothing created"
   },
   "F16": {
    "file": "Doctor_and_men_in_garage_23c444f8.jpg",
    "prompt": "Free Nano Banana repair (0 cr): keep the same characters, faces and framing; change ONLY: the scarred man's splint must be on his anatomical RIGHT forearm (image-LEFT when he faces camera; the arm FARTHER from camera when he faces image-left); gun low in his LEFT hand (image-right), left palm out toward the doctor; heavy man face away.",
-   "author_hold": "wrong arms (F16, F16_v2)"
+   "author_hold": "R3 held (F03/F16 cloth slings + wrong Ivy outfit; F33 full-arm cast; F45 letter labels); final-four fix REJECTED twice by Flow 'unusual activity', nothing created"
   },
   "F24": {
    "file": "Repairs/media/F24.png",
@@ -297,17 +292,11 @@
   "F33": {
    "file": "Doctor_and_man_descending_courth…_4b21acc1.jpg",
    "prompt": "Free Nano Banana repair (0 cr): keep the same characters, faces and framing; change ONLY: Oct 6 courthouse steps: Ivy in a simple wedding dress, emerald on LEFT ring finger, no scrubs.",
-   "author_hold": "wrong arm"
-  },
-  "F34": {
-   "file": "Scarred_man_kissing_doctor_15af7515.jpg",
-   "prompt": "Free Nano Banana repair (0 cr): keep the same characters, faces and framing; change ONLY: Ivy in a simple wedding dress (no scrubs), courthouse steps, cameras.",
-   "author_hold": "F34_v2 arm ok but the emerald is on Nico's hand"
+   "author_hold": "R3 held (F03/F16 cloth slings + wrong Ivy outfit; F33 full-arm cast; F45 letter labels); final-four fix REJECTED twice by Flow 'unusual activity', nothing created"
   },
   "F35": {
-   "file": "Doctor_tests_door_bolt_2fd090c1.jpg",
-   "prompt": "Free Nano Banana repair (0 cr): keep the same characters, faces and framing; change ONLY: Wedding day Oct 6: simple pale wedding dress (no scrubs); Vescari house bedroom with old wallpaper and a wooden connecting door, no hospital curtains. The loose square emerald is on her LEFT ring finger; her LEFT hand tests the crooked bolt.",
-   "author_hold": "ring likely on the wrong hand"
+   "file": "R3/F35_r3.png",
+   "prompt": "Free Nano Banana repair (0 cr): keep everything; change ONLY: make it her LEFT hand: thumb on the LOWER side of the hand as it reaches right toward the bolt (back of hand to camera). The loose square emerald is on the LEFT ring finger; lace wedding sleeve."
   },
   "F37": {
    "file": "Repairs/media/F37.png",
@@ -321,26 +310,11 @@
   "F45": {
    "file": "Repairs/media/F45*.png",
    "prompt": "",
-   "author_hold": "looks like Nico, not gold-curled Enzo"
-  },
-  "F48": {
-   "file": "Scarred_man_watching_in_courtroom_2cf645b9.jpg",
-   "prompt": "Free Nano Banana repair (0 cr): keep the same characters, faces and framing; change ONLY: the scarred man's splint must be on his anatomical RIGHT forearm (image-LEFT when he faces camera; the arm FARTHER from camera when he faces image-left); black velcro splint; his LEFT hand on the bench rail.",
-   "author_hold": "wrong arm"
-  },
-  "F49": {
-   "file": "Man_and_woman_holding_hands_f9082a84.jpg",
-   "prompt": "Free Nano Banana repair (0 cr): keep the same characters, faces and framing; change ONLY: Both in the BACK seat of a car at dusk, with the driver's headrest in the foreground. the scarred man's splint must be on his anatomical RIGHT forearm (image-LEFT when he faces camera; the arm FARTHER from camera when he faces image-left); black velcro splint; his LEFT palm up; Ivy in a gray cardigan, emerald on LEFT ring finger.",
-   "author_hold": "wrong brace, still the front seat; needs a tight hand insert"
+   "author_hold": "R3 held (F03/F16 cloth slings + wrong Ivy outfit; F33 full-arm cast; F45 letter labels); final-four fix REJECTED twice by Flow 'unusual activity', nothing created"
   },
   "F54": {
-   "file": "Repairs/media/F54.png",
-   "prompt": "Free Nano Banana repair (0 cr): keep the same faces, framing and composition; change ONLY: blur all readable text (the 'THE BELL FAMILY' magnet, cereal box, notes). The kitchen and the scrubs are fine."
-  },
-  "F56": {
-   "file": "Uncle_looking_at_his_nephew_2013aa2f.jpg",
-   "prompt": "Free Nano Banana repair (0 cr): keep the same characters, faces and framing; change ONLY: the scarred man's splint must be on his anatomical RIGHT forearm (image-LEFT when he faces camera; the arm FARTHER from camera when he faces image-left); black velcro splint; Vescari dining room with white tablecloth, not a kitchen.",
-   "author_hold": "wrong arm"
+   "file": "R3/F54_r3.png",
+   "prompt": "Free Nano Banana repair (0 cr): keep everything; change ONLY: blur or erase all lettering: the 'THE BELL FAMILY' magnet note and the cereal-box text. Keep the gray cardigan, Danny and the letter."
   },
   "F58": {
    "file": "Repairs/media/F58.png",
@@ -376,7 +350,17 @@
    "F28"
   ],
   "approved": [
-   "F19 (Omni 1.1 Flash 720p, 0.2-7.7 s)"
+   "F19",
+   "F02",
+   "F08",
+   "F14",
+   "F15",
+   "F18",
+   "F22",
+   "F26",
+   "F29",
+   "F38",
+   "F39"
   ]
  },
  "flow": {
