@@ -1,0 +1,1153 @@
+{
+ "about": "Browser TTS batches. Generate each batch as ONE audio file named <id>.mp3/.wav with the voice for its role. Parts are separated by a blank line in 'text'; offline alignment splits each file back into segment parts by these exact texts.",
+ "rules": [
+  "text is verbatim: never edit, add or drop words",
+  "one file per batch, named exactly by id",
+  "same voice and settings for every batch of a role",
+  "roles other than heba/nico are short; they may be merged by the author into one voice per role"
+ ],
+ "voice_roles": {
+  "heba": "Ivy narration and Ivy's own dialogue - the genuine cloned 'heba' voice (NOT the designed 'heba eng')",
+  "nico": "Nico (segments labelled lion + his quoted lines)",
+  "sal": "Sal, 70s uncle",
+  "theo": "Theo, early 20s",
+  "enzo": "Enzo, 21",
+  "rocco": "Rocco, huge, quiet",
+  "joey": "Joey, young soldier",
+  "holloway": "Holloway, prosecutor",
+  "brancato": "Brancato, 60s rival",
+  "lucia": "Lucia, 60s"
+ },
+ "quote_attribution": {
+  "n036#0": {
+   "role": "theo",
+   "evidence": "'Ivy,' Theo said"
+  },
+  "n036#1": {
+   "role": "theo",
+   "evidence": "continues Theo's line"
+  },
+  "n053#0": {
+   "role": "rocco",
+   "evidence": "reply to 'Go after him' by Rocco, the only man in the doorway"
+  },
+  "n079#0": {
+   "role": "sal",
+   "evidence": "'Sal said'"
+  },
+  "n079#1": {
+   "role": "sal",
+   "evidence": "continues Sal's line"
+  },
+  "n081#0": {
+   "role": "sal",
+   "evidence": "Sal holds up both hands, cannoli in one"
+  },
+  "n085#0": {
+   "role": "nico",
+   "evidence": "'he said' = Nico (his grandmother Rosa)"
+  },
+  "n085#1": {
+   "role": "nico",
+   "evidence": "continues Nico's line"
+  },
+  "n092#0": {
+   "role": "joey",
+   "evidence": "'he asked' = Joey, the patient"
+  },
+  "n097#1": {
+   "role": "nico",
+   "evidence": "'Sleep,' he said = Nico"
+  },
+  "n097#2": {
+   "role": "nico",
+   "evidence": "continues Nico's line"
+  },
+  "n102#0": {
+   "role": "enzo",
+   "evidence": "Enzo grabbed my sleeve and told me"
+  },
+  "n109#0": {
+   "role": "nico",
+   "evidence": "'Nico, in the car, never raised his voice'"
+  },
+  "n116#0": {
+   "role": "nico",
+   "evidence": "'At my door he said' = Nico"
+  },
+  "n119#0": {
+   "role": "holloway",
+   "evidence": "'Holloway had asked me'"
+  },
+  "n125#0": {
+   "role": "sal",
+   "evidence": "'Sal didn't blink ... he said'"
+  },
+  "n125#1": {
+   "role": "sal",
+   "evidence": "continues Sal's line"
+  },
+  "n126#0": {
+   "role": "sal",
+   "evidence": "Sal continues ('he said')"
+  },
+  "n126#1": {
+   "role": "sal",
+   "evidence": "continues Sal's line"
+  },
+  "n129#0": {
+   "role": "sal",
+   "evidence": "'Sal looked at his hands'"
+  },
+  "n130#0": {
+   "role": "sal",
+   "evidence": "'Sal almost smiled'"
+  },
+  "n136#0": {
+   "role": "theo",
+   "evidence": "'Theo walked out ... In the car he said'"
+  },
+  "n142#0": {
+   "role": "enzo",
+   "evidence": "'Enzo wouldn't sign it'"
+  },
+  "n144#1": {
+   "role": "brancato",
+   "evidence": "'I told Brancato ... He said'"
+  },
+  "n159#0": {
+   "role": "lucia",
+   "evidence": "'Lucia said'"
+  },
+  "n159#1": {
+   "role": "lucia",
+   "evidence": "continues Lucia's line"
+  },
+  "n159#2": {
+   "role": "nico",
+   "evidence": "'Nico said'"
+  }
+ },
+ "quotes_kept_with_narrator": {
+  "Ivy's own spoken lines": "n010 n013 n015 n020 n026 n035 n039 n041 n046 n052 n055 n059 n061 n063 n065 n092#1 n097#0 n115 n124 n127 n144#0 n150 n155",
+  "ambiguous / not voiced": "n098 (Bell's written phone note, read by Ivy) · n110 ('destroyed' is a scare quote) · n113 and n149 (the questioner is not named on the line)"
+ },
+ "ivy_sample_180": {
+  "segment_id": "n093",
+  "chars": 174,
+  "text": "In his jacket I found my whole October. Every shift in blue ballpoint, small neat slanted handwriting I didn't know. And at the bottom, underlined twice: Level 2. Space 2-14."
+ },
+ "totals": {
+  "heba": 14624,
+  "nico": 3175,
+  "sal": 615,
+  "theo": 72,
+  "enzo": 70,
+  "rocco": 24,
+  "joey": 10,
+  "holloway": 13,
+  "brancato": 47,
+  "lucia": 66
+ },
+ "batch_count": 13,
+ "batches": [
+  {
+   "id": "B01_heba",
+   "voice_role": "heba",
+   "chars": 4252,
+   "text": "Two shots. That's all it took.\n\nTen past four that Friday morning, crouched behind my own bumper in a hospital garage, I learned what a life ending sounds like in concrete.\n\nI looked over the hood. A man was sliding down the side of a silver sedan, a gun a foot from his open hand. The man standing over him held a different gun, in his left hand. His right arm was in the plaster splint I had built thirty minutes earlier, in bay fourteen, with my own two hands.\n\nI went back inside. Three days later I married him.\n\nIt started at 3:05 that morning, with a man walking into my ER holding his own arm closed. Half the waiting room went quiet for him. Denise at triage half stood up. The security guard found something interesting on his shoes. Everybody knew a rule about this man. Nobody had told me.\n\nBay fourteen. A clean cut across the inside of his right forearm. Gray eyes. A thin white scar through his left eyebrow.\n\nKnife?\" I asked.\n\nSomewhere you need to be?\n\nA couple hundred times. Usually on people who tell me their name.\n\nBy 3:40 I had built him a splint of plaster, fingertips to elbow. Six weeks, no gripping. If he grabbed anything hard, that tendon would snap like a rubber band. He set a fold of hundreds on my tray.\n\nThere's always a chart.\" I tucked the money back into his pocket and typed his name while he watched. I said it too hard. He couldn't know why.\n\nLevel two, spot 2-14. At 4:08 I found the charger in the cup holder. At 4:10, two shots went off, so close together they sounded like one word. I counted. One, two, three, four. Footsteps. Something heavy hitting a car door. At nine, I looked.\n\nLet me get to him,\" I said. \"I can—\n\nBehind him, in the stairwell, feet were going down fast. Then they stopped. Someone was standing on those stairs, listening, and those stairs were my only way out. I counted his breaths. Seven. Eight. Nine. Ten. The next one didn't come. The last time I stood that close to someone dying while other people decided I should stay out of the way, I was fourteen.\n\nAt 4:16 I called 911 and my voice came out steady. By 4:31 the silver sedan was gone, and so was the man. The floor smelled like bleach and fake pine. The camera had been down since Tuesday. A young officer told me a car backfiring sounds like a cannon in concrete.\n\nI had a name on my tongue. I didn't say it. I'm not proud of that.\n\nSaturday at eight, a woman in a rain jacket and a man in a navy suit sat on my couch. Special Agent Reyes. Prosecutor Holloway. A city crew had pulled a man out of the Gowanus Canal. Frankie Lombardi. Two gunshot wounds to the chest. Frankie worked for the Vescari family, and also, quietly, for the FBI. That made his murder a federal case, and me its witness.\n\nI told them in order, like presenting a patient. Two shots at 4:10. Nico standing over a man by a silver car, a gun in his left hand, my splint on his right. Notice what I didn't say: that I saw anyone fire. I heard two shots. I saw what came after.\n\nHolloway left a subpoena. Thursday, ten a.m. He offered a new name, a new city, witness protection. I laughed. I had nine months of residency left. I wasn't becoming a dental hygienist in Tucson because a man in a nice suit told me to go back inside.\n\nI'll tell them,\" I said. \"But I'm doing it as myself.\n\nAt seven that night I carried groceries up three flights and found my door unlocked and my lamp off. Nico Vescari sat in my mother's armchair in the dark, my splint resting on the arm. My little brother sat beside him, white as paper.\n\nTheo said.\n\nForty thousand dollars, a betting app, then interest. Theo was crying the way he did at fifteen, when he thought I couldn't hear through the wall.\n\nSo someone wants me dead, and it isn't you.\n\nDid you kill that man?\n\nI laughed. \"I met you on Friday. You bled on my shoes. Here's my answer.\" I held up the subpoena. \"I'd rather testify.\n\nSunday, a man in bay seventeen asked for the redheaded doctor. In the supply room the door clicked shut and IV tubing dropped over my head. You get about ten seconds before you pass out. I teach that to students. At five I drove my trauma shears into the back of his hand, and he ran.\n\nA huge man filled the doorway, the quiet one with the crossword. Rocco. \"Go after him,\" I croaked.",
+   "parts": [
+    {
+     "segment_id": "n001",
+     "start_char": 0,
+     "end_char": 30,
+     "text": "Two shots. That's all it took."
+    },
+    {
+     "segment_id": "n002",
+     "start_char": 0,
+     "end_char": 140,
+     "text": "Ten past four that Friday morning, crouched behind my own bumper in a hospital garage, I learned what a life ending sounds like in concrete."
+    },
+    {
+     "segment_id": "n003",
+     "start_char": 0,
+     "end_char": 289,
+     "text": "I looked over the hood. A man was sliding down the side of a silver sedan, a gun a foot from his open hand. The man standing over him held a different gun, in his left hand. His right arm was in the plaster splint I had built thirty minutes earlier, in bay fourteen, with my own two hands."
+    },
+    {
+     "segment_id": "n005",
+     "start_char": 0,
+     "end_char": 51,
+     "text": "I went back inside. Three days later I married him."
+    },
+    {
+     "segment_id": "n006",
+     "start_char": 0,
+     "end_char": 283,
+     "text": "It started at 3:05 that morning, with a man walking into my ER holding his own arm closed. Half the waiting room went quiet for him. Denise at triage half stood up. The security guard found something interesting on his shoes. Everybody knew a rule about this man. Nobody had told me."
+    },
+    {
+     "segment_id": "n009",
+     "start_char": 0,
+     "end_char": 120,
+     "text": "Bay fourteen. A clean cut across the inside of his right forearm. Gray eyes. A thin white scar through his left eyebrow."
+    },
+    {
+     "segment_id": "n010",
+     "start_char": 1,
+     "end_char": 17,
+     "text": "Knife?\" I asked."
+    },
+    {
+     "segment_id": "n013",
+     "start_char": 1,
+     "end_char": 26,
+     "text": "Somewhere you need to be?"
+    },
+    {
+     "segment_id": "n015",
+     "start_char": 1,
+     "end_char": 66,
+     "text": "A couple hundred times. Usually on people who tell me their name."
+    },
+    {
+     "segment_id": "n018",
+     "start_char": 0,
+     "end_char": 199,
+     "text": "By 3:40 I had built him a splint of plaster, fingertips to elbow. Six weeks, no gripping. If he grabbed anything hard, that tendon would snap like a rubber band. He set a fold of hundreds on my tray."
+    },
+    {
+     "segment_id": "n020",
+     "start_char": 1,
+     "end_char": 144,
+     "text": "There's always a chart.\" I tucked the money back into his pocket and typed his name while he watched. I said it too hard. He couldn't know why."
+    },
+    {
+     "segment_id": "n024",
+     "start_char": 0,
+     "end_char": 243,
+     "text": "Level two, spot 2-14. At 4:08 I found the charger in the cup holder. At 4:10, two shots went off, so close together they sounded like one word. I counted. One, two, three, four. Footsteps. Something heavy hitting a car door. At nine, I looked."
+    },
+    {
+     "segment_id": "n026",
+     "start_char": 1,
+     "end_char": 36,
+     "text": "Let me get to him,\" I said. \"I can—"
+    },
+    {
+     "segment_id": "n028",
+     "start_char": 0,
+     "end_char": 360,
+     "text": "Behind him, in the stairwell, feet were going down fast. Then they stopped. Someone was standing on those stairs, listening, and those stairs were my only way out. I counted his breaths. Seven. Eight. Nine. Ten. The next one didn't come. The last time I stood that close to someone dying while other people decided I should stay out of the way, I was fourteen."
+    },
+    {
+     "segment_id": "n029",
+     "start_char": 0,
+     "end_char": 265,
+     "text": "At 4:16 I called 911 and my voice came out steady. By 4:31 the silver sedan was gone, and so was the man. The floor smelled like bleach and fake pine. The camera had been down since Tuesday. A young officer told me a car backfiring sounds like a cannon in concrete."
+    },
+    {
+     "segment_id": "n030",
+     "start_char": 0,
+     "end_char": 66,
+     "text": "I had a name on my tongue. I didn't say it. I'm not proud of that."
+    },
+    {
+     "segment_id": "n031",
+     "start_char": 0,
+     "end_char": 361,
+     "text": "Saturday at eight, a woman in a rain jacket and a man in a navy suit sat on my couch. Special Agent Reyes. Prosecutor Holloway. A city crew had pulled a man out of the Gowanus Canal. Frankie Lombardi. Two gunshot wounds to the chest. Frankie worked for the Vescari family, and also, quietly, for the FBI. That made his murder a federal case, and me its witness."
+    },
+    {
+     "segment_id": "n032",
+     "start_char": 0,
+     "end_char": 249,
+     "text": "I told them in order, like presenting a patient. Two shots at 4:10. Nico standing over a man by a silver car, a gun in his left hand, my splint on his right. Notice what I didn't say: that I saw anyone fire. I heard two shots. I saw what came after."
+    },
+    {
+     "segment_id": "n034",
+     "start_char": 0,
+     "end_char": 250,
+     "text": "Holloway left a subpoena. Thursday, ten a.m. He offered a new name, a new city, witness protection. I laughed. I had nine months of residency left. I wasn't becoming a dental hygienist in Tucson because a man in a nice suit told me to go back inside."
+    },
+    {
+     "segment_id": "n035",
+     "start_char": 1,
+     "end_char": 54,
+     "text": "I'll tell them,\" I said. \"But I'm doing it as myself."
+    },
+    {
+     "segment_id": "n036",
+     "start_char": 0,
+     "end_char": 234,
+     "text": "At seven that night I carried groceries up three flights and found my door unlocked and my lamp off. Nico Vescari sat in my mother's armchair in the dark, my splint resting on the arm. My little brother sat beside him, white as paper."
+    },
+    {
+     "segment_id": "n036",
+     "start_char": 242,
+     "end_char": 252,
+     "text": "Theo said."
+    },
+    {
+     "segment_id": "n037",
+     "start_char": 0,
+     "end_char": 146,
+     "text": "Forty thousand dollars, a betting app, then interest. Theo was crying the way he did at fifteen, when he thought I couldn't hear through the wall."
+    },
+    {
+     "segment_id": "n039",
+     "start_char": 1,
+     "end_char": 44,
+     "text": "So someone wants me dead, and it isn't you."
+    },
+    {
+     "segment_id": "n041",
+     "start_char": 1,
+     "end_char": 23,
+     "text": "Did you kill that man?"
+    },
+    {
+     "segment_id": "n046",
+     "start_char": 0,
+     "end_char": 118,
+     "text": "I laughed. \"I met you on Friday. You bled on my shoes. Here's my answer.\" I held up the subpoena. \"I'd rather testify."
+    },
+    {
+     "segment_id": "n051",
+     "start_char": 0,
+     "end_char": 284,
+     "text": "Sunday, a man in bay seventeen asked for the redheaded doctor. In the supply room the door clicked shut and IV tubing dropped over my head. You get about ten seconds before you pass out. I teach that to students. At five I drove my trauma shears into the back of his hand, and he ran."
+    },
+    {
+     "segment_id": "n052",
+     "start_char": 0,
+     "end_char": 98,
+     "text": "A huge man filled the doorway, the quiet one with the crossword. Rocco. \"Go after him,\" I croaked."
+    }
+   ]
+  },
+  {
+   "id": "B02_heba",
+   "voice_role": "heba",
+   "chars": 4366,
+   "text": "That evening I stood by my car with a red line round my throat. I could become someone else in a city I'd never seen, or keep my work and my brother and trust a man I didn't. I was scared of him. I was more scared of a plastic tube. He answered on the first ring.\n\nI have conditions,\" I said.\n\nHis lawyer wrote it down in blue ink. One. I keep my residency, every shift. Two. My own bedroom, with a lock on my side. Three. Theo's debt, gone tonight. Four. No one in his family touches me, including his men. Five. When the case is dead, we divorce. Six. Not one cent of his money.\n\nAnd seven. You never lie to me.\n\nThat's a loophole.\n\nIs it the only reason you want this? If I can't testify, you're safe?\n\nWhat's the other one?\n\nHe held my eyes and said nothing at all. Beside him, Tommy looked at the table. Whatever it was, Tommy knew.\n\nEleven pages, typed overnight. At the bottom of Nico's section, someone had added a line by hand in big, shaky, left-handed capitals. She will look like she loves me. I initialed it. I read every page twice.\n\nThe ring was his grandmother's, a square emerald, far too big. It slid around my finger.\n\nhe said.\n\nOn the courthouse steps, eight reporters and three cameras. Holloway had been tipped. Nico kissed me, slow and warm, the plaster along my spine. It was for the cameras. For three seconds I forgot to count anything, and I was angry about that all day.\n\nHe had put a bolt on my side of the connecting door himself, at six that morning, left-handed. The screws were crooked. I tested it four times. The ring was so loose it kept turning to my palm.\n\nTuesday, the ER. At work I couldn't wear a ring under gloves, so I'd threaded his grandmother's emerald onto a thin gold chain and tucked it under my scrubs. A wedding ring that lived against my breastbone. Joey, one of Nico's soldiers, rolled in stabbed, lung collapsing. I decompressed him and put in the tube myself while mobsters watched me do it.\n\nhe asked. \"Not on my shift.\n\nIn his jacket I found my whole October. Every shift in blue ballpoint, small neat slanted handwriting I didn't know. And at the bottom, underlined twice: Level 2. Space 2-14.\n\nJoey said the man who sent him drove a car that smelled like anise. Only the hospital had my schedule. Dr. Bell had asked about my shifts that morning, almost casually. I told myself Bell asks everybody everything.\n\nI confronted Bell Thursday evening. He cried. His son Danny was seventeen and sick, and the treatment cost four hundred seventy thousand dollars. A man had asked about my schedule. Bell gave it. I gave him until noon to call the FBI. He asked for one more night. I said yes. I have thought about that yes every day since.\n\nThat night I was shaking, and he held me, and he pulled the pen out of my hair with his left hand. I kissed him. He kissed me back. I stopped. No cameras. \"That one wasn't for anyone,\" I said.\n\nhe said.\n\nAt 6:41 Friday morning, Priya called. Dr. Bell was dead in his Volvo, three spaces from my spot. A note on his phone. Suicide. \"Ivy, I'm sorry. I couldn't live with it. Tell Danny I tried.\n\nIn three years Bell called me Ivy maybe four times, always when someone had just died. In writing, always Marlowe, even in his last text. The note was a lie, and whoever wrote it didn't know him.\n\nOnly four people had known he'd talk to the FBI at noon. Nico. Tommy. Rocco. And Nico's uncle Sal. When I said that name aloud, Nico's eyes dropped to the top drawer of his desk, for as long as it takes to read a clock.\n\nSunday lunch under the fig. Enzo excused himself and didn't come back. I found him on his bathroom floor, blue, a foil card beside him. Oxycodone, thirty milligrams. I breathed for him. Two sprays of naloxone, three minutes apart. He gasped. I put the card in my cardigan pocket before the paramedics came. I only knew it mattered.\n\nIn the ER, Enzo grabbed my sleeve and told me, because he thought he was dying.\n\nHe had followed Frankie into the garage and stood half a flight up the stairs, holding his breath. A shoe scraped. Frankie turned, and his gun came up. Enzo fired twice and didn't even decide to. Nico took the gun out of his hand and told him to go.\n\nEnzo was the light jacket on the stairs. He had stopped when he heard me ask for a tube. Then he kept going. I told him what he said in that bay stays with me. I didn't know yet what it would cost.",
+   "parts": [
+    {
+     "segment_id": "n054",
+     "start_char": 0,
+     "end_char": 263,
+     "text": "That evening I stood by my car with a red line round my throat. I could become someone else in a city I'd never seen, or keep my work and my brother and trust a man I didn't. I was scared of him. I was more scared of a plastic tube. He answered on the first ring."
+    },
+    {
+     "segment_id": "n055",
+     "start_char": 1,
+     "end_char": 28,
+     "text": "I have conditions,\" I said."
+    },
+    {
+     "segment_id": "n056",
+     "start_char": 0,
+     "end_char": 286,
+     "text": "His lawyer wrote it down in blue ink. One. I keep my residency, every shift. Two. My own bedroom, with a lock on my side. Three. Theo's debt, gone tonight. Four. No one in his family touches me, including his men. Five. When the case is dead, we divorce. Six. Not one cent of his money."
+    },
+    {
+     "segment_id": "n059",
+     "start_char": 1,
+     "end_char": 32,
+     "text": "And seven. You never lie to me."
+    },
+    {
+     "segment_id": "n061",
+     "start_char": 1,
+     "end_char": 19,
+     "text": "That's a loophole."
+    },
+    {
+     "segment_id": "n063",
+     "start_char": 1,
+     "end_char": 70,
+     "text": "Is it the only reason you want this? If I can't testify, you're safe?"
+    },
+    {
+     "segment_id": "n065",
+     "start_char": 1,
+     "end_char": 22,
+     "text": "What's the other one?"
+    },
+    {
+     "segment_id": "n066",
+     "start_char": 0,
+     "end_char": 108,
+     "text": "He held my eyes and said nothing at all. Beside him, Tommy looked at the table. Whatever it was, Tommy knew."
+    },
+    {
+     "segment_id": "n084",
+     "start_char": 0,
+     "end_char": 207,
+     "text": "Eleven pages, typed overnight. At the bottom of Nico's section, someone had added a line by hand in big, shaky, left-handed capitals. She will look like she loves me. I initialed it. I read every page twice."
+    },
+    {
+     "segment_id": "n085",
+     "start_char": 0,
+     "end_char": 88,
+     "text": "The ring was his grandmother's, a square emerald, far too big. It slid around my finger."
+    },
+    {
+     "segment_id": "n085",
+     "start_char": 111,
+     "end_char": 119,
+     "text": "he said."
+    },
+    {
+     "segment_id": "n086",
+     "start_char": 0,
+     "end_char": 250,
+     "text": "On the courthouse steps, eight reporters and three cameras. Holloway had been tipped. Nico kissed me, slow and warm, the plaster along my spine. It was for the cameras. For three seconds I forgot to count anything, and I was angry about that all day."
+    },
+    {
+     "segment_id": "n088",
+     "start_char": 0,
+     "end_char": 193,
+     "text": "He had put a bolt on my side of the connecting door himself, at six that morning, left-handed. The screws were crooked. I tested it four times. The ring was so loose it kept turning to my palm."
+    },
+    {
+     "segment_id": "n092",
+     "start_char": 0,
+     "end_char": 351,
+     "text": "Tuesday, the ER. At work I couldn't wear a ring under gloves, so I'd threaded his grandmother's emerald onto a thin gold chain and tucked it under my scrubs. A wedding ring that lived against my breastbone. Joey, one of Nico's soldiers, rolled in stabbed, lung collapsing. I decompressed him and put in the tube myself while mobsters watched me do it."
+    },
+    {
+     "segment_id": "n092",
+     "start_char": 365,
+     "end_char": 392,
+     "text": "he asked. \"Not on my shift."
+    },
+    {
+     "segment_id": "n093",
+     "start_char": 0,
+     "end_char": 174,
+     "text": "In his jacket I found my whole October. Every shift in blue ballpoint, small neat slanted handwriting I didn't know. And at the bottom, underlined twice: Level 2. Space 2-14."
+    },
+    {
+     "segment_id": "n094",
+     "start_char": 0,
+     "end_char": 214,
+     "text": "Joey said the man who sent him drove a car that smelled like anise. Only the hospital had my schedule. Dr. Bell had asked about my shifts that morning, almost casually. I told myself Bell asks everybody everything."
+    },
+    {
+     "segment_id": "n096",
+     "start_char": 0,
+     "end_char": 321,
+     "text": "I confronted Bell Thursday evening. He cried. His son Danny was seventeen and sick, and the treatment cost four hundred seventy thousand dollars. A man had asked about my schedule. Bell gave it. I gave him until noon to call the FBI. He asked for one more night. I said yes. I have thought about that yes every day since."
+    },
+    {
+     "segment_id": "n097",
+     "start_char": 0,
+     "end_char": 192,
+     "text": "That night I was shaking, and he held me, and he pulled the pen out of my hair with his left hand. I kissed him. He kissed me back. I stopped. No cameras. \"That one wasn't for anyone,\" I said."
+    },
+    {
+     "segment_id": "n097",
+     "start_char": 202,
+     "end_char": 210,
+     "text": "he said."
+    },
+    {
+     "segment_id": "n098",
+     "start_char": 0,
+     "end_char": 188,
+     "text": "At 6:41 Friday morning, Priya called. Dr. Bell was dead in his Volvo, three spaces from my spot. A note on his phone. Suicide. \"Ivy, I'm sorry. I couldn't live with it. Tell Danny I tried."
+    },
+    {
+     "segment_id": "n099",
+     "start_char": 0,
+     "end_char": 195,
+     "text": "In three years Bell called me Ivy maybe four times, always when someone had just died. In writing, always Marlowe, even in his last text. The note was a lie, and whoever wrote it didn't know him."
+    },
+    {
+     "segment_id": "n100",
+     "start_char": 0,
+     "end_char": 219,
+     "text": "Only four people had known he'd talk to the FBI at noon. Nico. Tommy. Rocco. And Nico's uncle Sal. When I said that name aloud, Nico's eyes dropped to the top drawer of his desk, for as long as it takes to read a clock."
+    },
+    {
+     "segment_id": "n101",
+     "start_char": 0,
+     "end_char": 331,
+     "text": "Sunday lunch under the fig. Enzo excused himself and didn't come back. I found him on his bathroom floor, blue, a foil card beside him. Oxycodone, thirty milligrams. I breathed for him. Two sprays of naloxone, three minutes apart. He gasped. I put the card in my cardigan pocket before the paramedics came. I only knew it mattered."
+    },
+    {
+     "segment_id": "n102",
+     "start_char": 0,
+     "end_char": 79,
+     "text": "In the ER, Enzo grabbed my sleeve and told me, because he thought he was dying."
+    },
+    {
+     "segment_id": "n103",
+     "start_char": 0,
+     "end_char": 249,
+     "text": "He had followed Frankie into the garage and stood half a flight up the stairs, holding his breath. A shoe scraped. Frankie turned, and his gun came up. Enzo fired twice and didn't even decide to. Nico took the gun out of his hand and told him to go."
+    },
+    {
+     "segment_id": "n104",
+     "start_char": 0,
+     "end_char": 197,
+     "text": "Enzo was the light jacket on the stairs. He had stopped when he heard me ask for a tube. Then he kept going. I told him what he said in that bay stays with me. I didn't know yet what it would cost."
+    }
+   ]
+  },
+  {
+   "id": "B03_heba",
+   "voice_role": "heba",
+   "chars": 4432,
+   "text": "Then Theo was arrested. Four hundred tablets, taped under the driver's seat of his Civic. Holloway offered a trade: my testimony against Nico, and Theo walks. Nico, in the car, never raised his voice.\n\nI had my own evidence. The sticker on Enzo's card said Lot 4471-B. So did the pills in Theo's car. I cornered the hospital pharmacy director with an old committee letter. Forty-two cards of that lot had been \"destroyed\" on a form dated September twenty-ninth, co-signed by Dr. Marcus Bell. The tech said nobody counted. The signing doctor carried the bag out himself, past the garage.\n\nNico's people found the dealer. His supplier was an old man in a gray Lincoln that smelled of licorice.\n\nMonday, Courtroom 6B. Holloway wanted the judge to call it a sham marriage. He called me to the stand and asked about the first week. About the courthouse kiss. And I invited him to ask the real question.\n\nDo you love your husband?\n\nYes. I love him. And I'd like the record to show he's hearing it for the first time with everyone else.\n\nThe judge denied the motion from the bench. She'd seen a great many sham marriages, and none of them sounded like that. In the car, Nico's left hand lay open on the seat, palm up. I put mine in it. At my door he said,\n\nAt midnight I couldn't sleep. Holloway had asked me that morning,\n\nOnly I, Nico, Mr. Feld and one copy in Nico's top drawer knew how many pages the contract had. Someone inside the house was talking to the government's side. I opened the drawer. Under the paper, a white twist of candy wrapper. It smelled of anise.\n\nAt dawn, Danny Bell let me read his father's last letter. Marcus had signed the destruction form and carried the pills to a gray car for cash. Years ago he'd misdiagnosed a patient who turned out to be Brancato's cousin, and Brancato had held it over him ever since. The man in the gray car was old, soft-spoken, nice coat. The letter ended: Ivy, say it. Say all of it. Danny said I could give it to the FBI. I gave Reyes everything except one name. \"Somebody else gets to tell you first,\" I said.\n\nTuesday, seven p.m. Sal arrived exactly on time with a box of pastry. Nico laid out the notebook, the receipt, the jacket. Sal didn't blink.\n\nhe said,\n\nhe said.\n\nI broke my own rule and spoke. \"I breathed for your nephew for four minutes, Mr. Vescari. On your pills.\n\nSal looked at his hands, then at his nephew.\n\nI put my phone on the tablecloth and called Agent Reyes on speaker. Sal almost smiled.\n\nA day later I chained a deli receipt and a pack of gum to Paulie Ferraro. I called Reyes first, on purpose. Then Nico.\n\nPaulie confessed. Theo walked out at 12:52. In the car he said,\n\nI'd been so busy keeping him safe that I'd never asked. I asked.\n\nMonday night Lucia found Enzo's room empty. At 11:31 my phone rang. Carmine Brancato. His own son had overdosed on the floor of his club, and Enzo, who'd walked in to offer himself for a boy he'd hit on a bicycle four years ago, had asked for the doctor. I didn't ask permission. I told everyone before, not after. I texted Reyes. I went.\n\nEnzo was already breathing for him. I gave naloxone and bagged him. Four minutes twenty seconds. The boy coughed. Brancato took a typed statement out of his cardigan. I, Enzo Vescari, state that my brother ordered me to. Enzo wouldn't sign it.\n\nSix guns turned. I stepped in front of him. \"Be quiet. It's my turn.\" I told Brancato what I'd tell a jury. His son was breathing because of me. If anyone fired, I would stand in a courtroom and say who. He said,\n\nHe told them to put them down.\n\nReyes came through the front door two minutes later with a warrant signed at six. She arrested Carmine Brancato.\n\nThursday, third grand jury. I waived my privilege myself, that morning at six, for October third and nothing else. I told them what I saw. Two shots at 4:10. A man sliding down a silver car. A second gun near his open hand. Nico standing over him with a gun in his left hand, pointed at the floor, held wrong, and his right hand in my splint.\n\nDid you see who fired?\n\nNo. I heard two shots. I saw what was in his hands afterward.\n\nHolloway told us in the hallway there'd be no indictment for Frankie Lombardi: Enzo's statement, my testimony, Frankie's gun, the chart. Nico would plead to tampering with a gun. At two o'clock I took off the splint, six weeks less one day. His fist closed. All of it, even the ring finger I sewed. He looked at his own hand a long time.",
+   "parts": [
+    {
+     "segment_id": "n109",
+     "start_char": 0,
+     "end_char": 200,
+     "text": "Then Theo was arrested. Four hundred tablets, taped under the driver's seat of his Civic. Holloway offered a trade: my testimony against Nico, and Theo walks. Nico, in the car, never raised his voice."
+    },
+    {
+     "segment_id": "n110",
+     "start_char": 0,
+     "end_char": 384,
+     "text": "I had my own evidence. The sticker on Enzo's card said Lot 4471-B. So did the pills in Theo's car. I cornered the hospital pharmacy director with an old committee letter. Forty-two cards of that lot had been \"destroyed\" on a form dated September twenty-ninth, co-signed by Dr. Marcus Bell. The tech said nobody counted. The signing doctor carried the bag out himself, past the garage."
+    },
+    {
+     "segment_id": "n111",
+     "start_char": 0,
+     "end_char": 103,
+     "text": "Nico's people found the dealer. His supplier was an old man in a gray Lincoln that smelled of licorice."
+    },
+    {
+     "segment_id": "n112",
+     "start_char": 0,
+     "end_char": 204,
+     "text": "Monday, Courtroom 6B. Holloway wanted the judge to call it a sham marriage. He called me to the stand and asked about the first week. About the courthouse kiss. And I invited him to ask the real question."
+    },
+    {
+     "segment_id": "n113",
+     "start_char": 1,
+     "end_char": 26,
+     "text": "Do you love your husband?"
+    },
+    {
+     "segment_id": "n115",
+     "start_char": 1,
+     "end_char": 104,
+     "text": "Yes. I love him. And I'd like the record to show he's hearing it for the first time with everyone else."
+    },
+    {
+     "segment_id": "n116",
+     "start_char": 0,
+     "end_char": 217,
+     "text": "The judge denied the motion from the bench. She'd seen a great many sham marriages, and none of them sounded like that. In the car, Nico's left hand lay open on the seat, palm up. I put mine in it. At my door he said,"
+    },
+    {
+     "segment_id": "n119",
+     "start_char": 0,
+     "end_char": 65,
+     "text": "At midnight I couldn't sleep. Holloway had asked me that morning,"
+    },
+    {
+     "segment_id": "n119",
+     "start_char": 82,
+     "end_char": 330,
+     "text": "Only I, Nico, Mr. Feld and one copy in Nico's top drawer knew how many pages the contract had. Someone inside the house was talking to the government's side. I opened the drawer. Under the paper, a white twist of candy wrapper. It smelled of anise."
+    },
+    {
+     "segment_id": "n124",
+     "start_char": 0,
+     "end_char": 497,
+     "text": "At dawn, Danny Bell let me read his father's last letter. Marcus had signed the destruction form and carried the pills to a gray car for cash. Years ago he'd misdiagnosed a patient who turned out to be Brancato's cousin, and Brancato had held it over him ever since. The man in the gray car was old, soft-spoken, nice coat. The letter ended: Ivy, say it. Say all of it. Danny said I could give it to the FBI. I gave Reyes everything except one name. \"Somebody else gets to tell you first,\" I said."
+    },
+    {
+     "segment_id": "n125",
+     "start_char": 0,
+     "end_char": 140,
+     "text": "Tuesday, seven p.m. Sal arrived exactly on time with a box of pastry. Nico laid out the notebook, the receipt, the jacket. Sal didn't blink."
+    },
+    {
+     "segment_id": "n125",
+     "start_char": 168,
+     "end_char": 176,
+     "text": "he said,"
+    },
+    {
+     "segment_id": "n126",
+     "start_char": 18,
+     "end_char": 26,
+     "text": "he said."
+    },
+    {
+     "segment_id": "n127",
+     "start_char": 0,
+     "end_char": 104,
+     "text": "I broke my own rule and spoke. \"I breathed for your nephew for four minutes, Mr. Vescari. On your pills."
+    },
+    {
+     "segment_id": "n129",
+     "start_char": 0,
+     "end_char": 44,
+     "text": "Sal looked at his hands, then at his nephew."
+    },
+    {
+     "segment_id": "n130",
+     "start_char": 0,
+     "end_char": 86,
+     "text": "I put my phone on the tablecloth and called Agent Reyes on speaker. Sal almost smiled."
+    },
+    {
+     "segment_id": "n134",
+     "start_char": 0,
+     "end_char": 118,
+     "text": "A day later I chained a deli receipt and a pack of gum to Paulie Ferraro. I called Reyes first, on purpose. Then Nico."
+    },
+    {
+     "segment_id": "n136",
+     "start_char": 0,
+     "end_char": 63,
+     "text": "Paulie confessed. Theo walked out at 12:52. In the car he said,"
+    },
+    {
+     "segment_id": "n136",
+     "start_char": 118,
+     "end_char": 182,
+     "text": "I'd been so busy keeping him safe that I'd never asked. I asked."
+    },
+    {
+     "segment_id": "n141",
+     "start_char": 0,
+     "end_char": 338,
+     "text": "Monday night Lucia found Enzo's room empty. At 11:31 my phone rang. Carmine Brancato. His own son had overdosed on the floor of his club, and Enzo, who'd walked in to offer himself for a boy he'd hit on a bicycle four years ago, had asked for the doctor. I didn't ask permission. I told everyone before, not after. I texted Reyes. I went."
+    },
+    {
+     "segment_id": "n142",
+     "start_char": 0,
+     "end_char": 243,
+     "text": "Enzo was already breathing for him. I gave naloxone and bagged him. Four minutes twenty seconds. The boy coughed. Brancato took a typed statement out of his cardigan. I, Enzo Vescari, state that my brother ordered me to. Enzo wouldn't sign it."
+    },
+    {
+     "segment_id": "n144",
+     "start_char": 0,
+     "end_char": 212,
+     "text": "Six guns turned. I stepped in front of him. \"Be quiet. It's my turn.\" I told Brancato what I'd tell a jury. His son was breathing because of me. If anyone fired, I would stand in a courtroom and say who. He said,"
+    },
+    {
+     "segment_id": "n144",
+     "start_char": 263,
+     "end_char": 293,
+     "text": "He told them to put them down."
+    },
+    {
+     "segment_id": "n145",
+     "start_char": 0,
+     "end_char": 112,
+     "text": "Reyes came through the front door two minutes later with a warrant signed at six. She arrested Carmine Brancato."
+    },
+    {
+     "segment_id": "n148",
+     "start_char": 0,
+     "end_char": 342,
+     "text": "Thursday, third grand jury. I waived my privilege myself, that morning at six, for October third and nothing else. I told them what I saw. Two shots at 4:10. A man sliding down a silver car. A second gun near his open hand. Nico standing over him with a gun in his left hand, pointed at the floor, held wrong, and his right hand in my splint."
+    },
+    {
+     "segment_id": "n149",
+     "start_char": 1,
+     "end_char": 23,
+     "text": "Did you see who fired?"
+    },
+    {
+     "segment_id": "n150",
+     "start_char": 1,
+     "end_char": 62,
+     "text": "No. I heard two shots. I saw what was in his hands afterward."
+    },
+    {
+     "segment_id": "n151",
+     "start_char": 0,
+     "end_char": 337,
+     "text": "Holloway told us in the hallway there'd be no indictment for Frankie Lombardi: Enzo's statement, my testimony, Frankie's gun, the chart. Nico would plead to tampering with a gun. At two o'clock I took off the splint, six weeks less one day. His fist closed. All of it, even the ring finger I sewed. He looked at his own hand a long time."
+    }
+   ]
+  },
+  {
+   "id": "B04_heba",
+   "voice_role": "heba",
+   "chars": 1574,
+   "text": "That evening there was a cream envelope on the hall table. Term Five. Three stapled pages. He'd signed it with his right hand, slowly, like a man writing in a foreign language. I put the papers down and went upstairs.\n\nI didn't knock. \"Here's the thing about the divorce,\" I said. \"I haven't asked.\" I emptied my cardigan pockets onto his bed: Enzo's foil card, the pharmacy form, his note, Bell's envelope, a candy twist. Everything I'd carried through five weeks. I took the pen out of my hair. On page eleven, under his left-handed line, I wrote, She does. And under that: Term six. Nobody in this house is quiet anymore.\n\nApril. The lemon trees came out of their burlap.\n\nLucia said.\n\nTheo has an apartment over a laundromat and comes for Saturday lunch and calls me Iv. Enzo is in a program upstate, a hundred forty-one days clean, writing to his mother on Sundays and to a boy named Anthony who hasn't answered yet. Sal's letters from Cefalù, Lucia burns unread. Danny Bell is back at school; an anonymous donor paid his treatment. When I asked, Nico said,\n\nand smiled. I finish residency in June.\n\nReyes came to the gate on the first warm Saturday. A motion from Brancato's lawyers had surfaced old files. Nico's father had been an FBI informant for years. Nico would read it in the Post by Friday.\n\nI did not wait. We don't do silence in this house anymore. It's in the contract. I climbed fourteen stairs, counting every one, to tell my husband the truth about his father. Two shots. That's all it took to start all of this. One yes, said out loud, is how it ended.",
+   "parts": [
+    {
+     "segment_id": "n154",
+     "start_char": 0,
+     "end_char": 217,
+     "text": "That evening there was a cream envelope on the hall table. Term Five. Three stapled pages. He'd signed it with his right hand, slowly, like a man writing in a foreign language. I put the papers down and went upstairs."
+    },
+    {
+     "segment_id": "n155",
+     "start_char": 0,
+     "end_char": 405,
+     "text": "I didn't knock. \"Here's the thing about the divorce,\" I said. \"I haven't asked.\" I emptied my cardigan pockets onto his bed: Enzo's foil card, the pharmacy form, his note, Bell's envelope, a candy twist. Everything I'd carried through five weeks. I took the pen out of my hair. On page eleven, under his left-handed line, I wrote, She does. And under that: Term six. Nobody in this house is quiet anymore."
+    },
+    {
+     "segment_id": "n159",
+     "start_char": 0,
+     "end_char": 48,
+     "text": "April. The lemon trees came out of their burlap."
+    },
+    {
+     "segment_id": "n159",
+     "start_char": 70,
+     "end_char": 81,
+     "text": "Lucia said."
+    },
+    {
+     "segment_id": "n159",
+     "start_char": 131,
+     "end_char": 504,
+     "text": "Theo has an apartment over a laundromat and comes for Saturday lunch and calls me Iv. Enzo is in a program upstate, a hundred forty-one days clean, writing to his mother on Sundays and to a boy named Anthony who hasn't answered yet. Sal's letters from Cefalù, Lucia burns unread. Danny Bell is back at school; an anonymous donor paid his treatment. When I asked, Nico said,"
+    },
+    {
+     "segment_id": "n159",
+     "start_char": 537,
+     "end_char": 576,
+     "text": "and smiled. I finish residency in June."
+    },
+    {
+     "segment_id": "n160",
+     "start_char": 0,
+     "end_char": 200,
+     "text": "Reyes came to the gate on the first warm Saturday. A motion from Brancato's lawyers had surfaced old files. Nico's father had been an FBI informant for years. Nico would read it in the Post by Friday."
+    },
+    {
+     "segment_id": "n161",
+     "start_char": 0,
+     "end_char": 267,
+     "text": "I did not wait. We don't do silence in this house anymore. It's in the contract. I climbed fourteen stairs, counting every one, to tell my husband the truth about his father. Two shots. That's all it took to start all of this. One yes, said out loud, is how it ended."
+    }
+   ]
+  },
+  {
+   "id": "B05_nico",
+   "voice_role": "nico",
+   "chars": 3175,
+   "text": "Go back inside, Dr. Marlowe. You were never here.\n\nI'd rather not say what cut it.\n\nYou've done this before.\n\nNico.\n\nVescari.\n\nFor the chart. There doesn't need to be one.\n\nHe's gone, Dottoressa. Go.\n\nHis bookie works for Carmine Brancato, who wants my port. If you die before Thursday, with my name in your statement, nobody needs a trial.\n\nIt isn't me.\n\nI'm not going to answer that.\n\nMarry me. A wife can't be forced to testify against her husband. The privilege belongs to the wife. Not to me. Not to Holloway.\n\nI'll never lie to you. I won't always answer.\n\nThat's the truth. You asked for the truth.\n\nNo.\n\nMy uncle Sal came at one-thirty with a box of cannoli and sugar on his tie. My father's brother, his consigliere for twenty-five years, and now mine.\n\nSal said.\n\nWe don't touch civilians. That's the only thing that makes us different from Brancato. Take that away and we're just men with guns who like the port.\n\nHe held up both hands, cannoli in one.\n\nThen he went out to the garden for air and left the door open behind him.\n\nRosa had big hands,\n\nShe made bread.\n\nStarting tonight, Dottoressa, we're in love.\n\nSleep,\n\nI'll wake you at eleven.\n\nDo what you have to do. I won't hate you.\n\nOne day, when you're ready, and not before, I'd like to hear it once without them.\n\nOne-ten in the morning, in my uncle's garage. I had found this car once before and told myself Brancato might be framing him. Half of Brooklyn sucks anise candy. This time I opened the glove box. A black ledger, its band off with my teeth because I only had one hand. C.B., every month for four years, starting the week of my father's funeral. And on the first of October: F.L. Twenty. Paid.\n\nIn the trunk, a deli receipt for a prepaid phone, and a boy's tan jacket from a discount rack. When I was eleven, my father broke my nose, and Sal carried me out of that house.\n\nShe was sitting in my study with the candy twist in her hand. I said it before she could. It's my uncle.\n\nMy father would have put you in the water, Zio. That's the answer I'm not giving anymore. You'll go to Cefalù. Everything you own goes to Frankie's kids, Michael and Gina.\n\nThree weeks ago, I'd have sent Tommy. I trust what you'd do.\n\nI'm not armed, Carmine. My wife doesn't like it.\n\nI came in with nothing because you were in that room. That's the truth, Ivy.\n\nEnzo turned himself in at two-fourteen Tuesday morning. In the visiting room I said, I'm sorry I made you carry it, and I cried in front of a guard. Then I went to Holloway about the gun, buried in the planter on Van Brunt Street under the geraniums. I told Feld to draw an uncontested divorce and leave it on the hall table. She gets to choose once with nothing on the table. That means I don't ask.\n\nThank you, Dr. Marlowe.\n\nLast March a woman buried her son from my house on Carroll Street. Rosaria Amato. She told me about a red-haired doctor at St. Brigid's who sat with her and told her the truth. She said your name twice. I read Marlowe on your badge, and I chose that emergency room. That was the other reason.\n\nI love you, Ivy. I've loved you since you put my money back in my pocket and typed my name anyway.\n\nI'm not going to answer that,",
+   "parts": [
+    {
+     "segment_id": "n004",
+     "start_char": 0,
+     "end_char": 49,
+     "text": "Go back inside, Dr. Marlowe. You were never here."
+    },
+    {
+     "segment_id": "n011",
+     "start_char": 0,
+     "end_char": 31,
+     "text": "I'd rather not say what cut it."
+    },
+    {
+     "segment_id": "n014",
+     "start_char": 0,
+     "end_char": 24,
+     "text": "You've done this before."
+    },
+    {
+     "segment_id": "n016",
+     "start_char": 0,
+     "end_char": 5,
+     "text": "Nico."
+    },
+    {
+     "segment_id": "n017",
+     "start_char": 0,
+     "end_char": 8,
+     "text": "Vescari."
+    },
+    {
+     "segment_id": "n019",
+     "start_char": 0,
+     "end_char": 44,
+     "text": "For the chart. There doesn't need to be one."
+    },
+    {
+     "segment_id": "n027",
+     "start_char": 0,
+     "end_char": 26,
+     "text": "He's gone, Dottoressa. Go."
+    },
+    {
+     "segment_id": "n038",
+     "start_char": 0,
+     "end_char": 139,
+     "text": "His bookie works for Carmine Brancato, who wants my port. If you die before Thursday, with my name in your statement, nobody needs a trial."
+    },
+    {
+     "segment_id": "n040",
+     "start_char": 0,
+     "end_char": 12,
+     "text": "It isn't me."
+    },
+    {
+     "segment_id": "n042",
+     "start_char": 0,
+     "end_char": 29,
+     "text": "I'm not going to answer that."
+    },
+    {
+     "segment_id": "n045",
+     "start_char": 0,
+     "end_char": 127,
+     "text": "Marry me. A wife can't be forced to testify against her husband. The privilege belongs to the wife. Not to me. Not to Holloway."
+    },
+    {
+     "segment_id": "n060",
+     "start_char": 0,
+     "end_char": 45,
+     "text": "I'll never lie to you. I won't always answer."
+    },
+    {
+     "segment_id": "n062",
+     "start_char": 0,
+     "end_char": 42,
+     "text": "That's the truth. You asked for the truth."
+    },
+    {
+     "segment_id": "n064",
+     "start_char": 0,
+     "end_char": 3,
+     "text": "No."
+    },
+    {
+     "segment_id": "n078",
+     "start_char": 0,
+     "end_char": 149,
+     "text": "My uncle Sal came at one-thirty with a box of cannoli and sugar on his tie. My father's brother, his consigliere for twenty-five years, and now mine."
+    },
+    {
+     "segment_id": "n079",
+     "start_char": 44,
+     "end_char": 53,
+     "text": "Sal said."
+    },
+    {
+     "segment_id": "n080",
+     "start_char": 0,
+     "end_char": 149,
+     "text": "We don't touch civilians. That's the only thing that makes us different from Brancato. Take that away and we're just men with guns who like the port."
+    },
+    {
+     "segment_id": "n081",
+     "start_char": 0,
+     "end_char": 38,
+     "text": "He held up both hands, cannoli in one."
+    },
+    {
+     "segment_id": "n081",
+     "start_char": 93,
+     "end_char": 166,
+     "text": "Then he went out to the garden for air and left the door open behind him."
+    },
+    {
+     "segment_id": "n085",
+     "start_char": 90,
+     "end_char": 109,
+     "text": "Rosa had big hands,"
+    },
+    {
+     "segment_id": "n085",
+     "start_char": 121,
+     "end_char": 136,
+     "text": "She made bread."
+    },
+    {
+     "segment_id": "n087",
+     "start_char": 0,
+     "end_char": 44,
+     "text": "Starting tonight, Dottoressa, we're in love."
+    },
+    {
+     "segment_id": "n097",
+     "start_char": 194,
+     "end_char": 200,
+     "text": "Sleep,"
+    },
+    {
+     "segment_id": "n097",
+     "start_char": 212,
+     "end_char": 236,
+     "text": "I'll wake you at eleven."
+    },
+    {
+     "segment_id": "n109",
+     "start_char": 202,
+     "end_char": 243,
+     "text": "Do what you have to do. I won't hate you."
+    },
+    {
+     "segment_id": "n116",
+     "start_char": 219,
+     "end_char": 301,
+     "text": "One day, when you're ready, and not before, I'd like to hear it once without them."
+    },
+    {
+     "segment_id": "n120",
+     "start_char": 0,
+     "end_char": 391,
+     "text": "One-ten in the morning, in my uncle's garage. I had found this car once before and told myself Brancato might be framing him. Half of Brooklyn sucks anise candy. This time I opened the glove box. A black ledger, its band off with my teeth because I only had one hand. C.B., every month for four years, starting the week of my father's funeral. And on the first of October: F.L. Twenty. Paid."
+    },
+    {
+     "segment_id": "n121",
+     "start_char": 0,
+     "end_char": 176,
+     "text": "In the trunk, a deli receipt for a prepaid phone, and a boy's tan jacket from a discount rack. When I was eleven, my father broke my nose, and Sal carried me out of that house."
+    },
+    {
+     "segment_id": "n123",
+     "start_char": 0,
+     "end_char": 104,
+     "text": "She was sitting in my study with the candy twist in her hand. I said it before she could. It's my uncle."
+    },
+    {
+     "segment_id": "n128",
+     "start_char": 0,
+     "end_char": 171,
+     "text": "My father would have put you in the water, Zio. That's the answer I'm not giving anymore. You'll go to Cefalù. Everything you own goes to Frankie's kids, Michael and Gina."
+    },
+    {
+     "segment_id": "n135",
+     "start_char": 0,
+     "end_char": 60,
+     "text": "Three weeks ago, I'd have sent Tommy. I trust what you'd do."
+    },
+    {
+     "segment_id": "n143",
+     "start_char": 0,
+     "end_char": 48,
+     "text": "I'm not armed, Carmine. My wife doesn't like it."
+    },
+    {
+     "segment_id": "n146",
+     "start_char": 0,
+     "end_char": 76,
+     "text": "I came in with nothing because you were in that room. That's the truth, Ivy."
+    },
+    {
+     "segment_id": "n147",
+     "start_char": 0,
+     "end_char": 400,
+     "text": "Enzo turned himself in at two-fourteen Tuesday morning. In the visiting room I said, I'm sorry I made you carry it, and I cried in front of a guard. Then I went to Holloway about the gun, buried in the planter on Van Brunt Street under the geraniums. I told Feld to draw an uncontested divorce and leave it on the hall table. She gets to choose once with nothing on the table. That means I don't ask."
+    },
+    {
+     "segment_id": "n152",
+     "start_char": 0,
+     "end_char": 23,
+     "text": "Thank you, Dr. Marlowe."
+    },
+    {
+     "segment_id": "n156",
+     "start_char": 0,
+     "end_char": 292,
+     "text": "Last March a woman buried her son from my house on Carroll Street. Rosaria Amato. She told me about a red-haired doctor at St. Brigid's who sat with her and told her the truth. She said your name twice. I read Marlowe on your badge, and I chose that emergency room. That was the other reason."
+    },
+    {
+     "segment_id": "n157",
+     "start_char": 0,
+     "end_char": 98,
+     "text": "I love you, Ivy. I've loved you since you put my money back in my pocket and typed my name anyway."
+    },
+    {
+     "segment_id": "n159",
+     "start_char": 506,
+     "end_char": 535,
+     "text": "I'm not going to answer that,"
+    }
+   ]
+  },
+  {
+   "id": "B06_sal",
+   "voice_role": "sal",
+   "chars": 615,
+   "text": "You're a better man than your father was,\n\nBut a better man makes trouble for himself. A girl in the house with a federal subpoena. It would be cleaner, Nico, the other way.\n\nI had to say it so you could say no. That's my job.\n\nCarmine wanted the port,\n\nand the port was you. Frankie lost his nerve. I didn't know about the stairs. I didn't know Carmine's boy would send Enzo down them.\n\nKids buy pills,\n\nBetter ours, from a hospital, clean, than poison pressed in a bathtub in Jersey.\n\nSomebody in this family had to be his father. You were busy being a saint.\n\nOf course you called her, sweetheart. You always do.",
+   "parts": [
+    {
+     "segment_id": "n079",
+     "start_char": 1,
+     "end_char": 42,
+     "text": "You're a better man than your father was,"
+    },
+    {
+     "segment_id": "n079",
+     "start_char": 55,
+     "end_char": 185,
+     "text": "But a better man makes trouble for himself. A girl in the house with a federal subpoena. It would be cleaner, Nico, the other way."
+    },
+    {
+     "segment_id": "n081",
+     "start_char": 40,
+     "end_char": 91,
+     "text": "I had to say it so you could say no. That's my job."
+    },
+    {
+     "segment_id": "n125",
+     "start_char": 142,
+     "end_char": 166,
+     "text": "Carmine wanted the port,"
+    },
+    {
+     "segment_id": "n125",
+     "start_char": 178,
+     "end_char": 310,
+     "text": "and the port was you. Frankie lost his nerve. I didn't know about the stairs. I didn't know Carmine's boy would send Enzo down them."
+    },
+    {
+     "segment_id": "n126",
+     "start_char": 1,
+     "end_char": 16,
+     "text": "Kids buy pills,"
+    },
+    {
+     "segment_id": "n126",
+     "start_char": 28,
+     "end_char": 108,
+     "text": "Better ours, from a hospital, clean, than poison pressed in a bathtub in Jersey."
+    },
+    {
+     "segment_id": "n129",
+     "start_char": 46,
+     "end_char": 120,
+     "text": "Somebody in this family had to be his father. You were busy being a saint."
+    },
+    {
+     "segment_id": "n130",
+     "start_char": 88,
+     "end_char": 140,
+     "text": "Of course you called her, sweetheart. You always do."
+    }
+   ]
+  },
+  {
+   "id": "B07_theo",
+   "voice_role": "theo",
+   "chars": 72,
+   "text": "Ivy,\n\nI'm so sorry.\n\nYou never once asked me if I wanted to be your kid.",
+   "parts": [
+    {
+     "segment_id": "n036",
+     "start_char": 236,
+     "end_char": 240,
+     "text": "Ivy,"
+    },
+    {
+     "segment_id": "n036",
+     "start_char": 254,
+     "end_char": 267,
+     "text": "I'm so sorry."
+    },
+    {
+     "segment_id": "n136",
+     "start_char": 65,
+     "end_char": 116,
+     "text": "You never once asked me if I wanted to be your kid."
+    }
+   ]
+  },
+  {
+   "id": "B08_enzo",
+   "voice_role": "enzo",
+   "chars": 70,
+   "text": "I shot him. I shot Frankie.\n\nI'll sign what's true. I won't sign that.",
+   "parts": [
+    {
+     "segment_id": "n102",
+     "start_char": 81,
+     "end_char": 108,
+     "text": "I shot him. I shot Frankie."
+    },
+    {
+     "segment_id": "n142",
+     "start_char": 245,
+     "end_char": 286,
+     "text": "I'll sign what's true. I won't sign that."
+    }
+   ]
+  },
+  {
+   "id": "B09_rocco",
+   "voice_role": "rocco",
+   "chars": 24,
+   "text": "No, ma'am. My job's you.",
+   "parts": [
+    {
+     "segment_id": "n053",
+     "start_char": 1,
+     "end_char": 25,
+     "text": "No, ma'am. My job's you."
+    }
+   ]
+  },
+  {
+   "id": "B10_joey",
+   "voice_role": "joey",
+   "chars": 10,
+   "text": "Am I dead?",
+   "parts": [
+    {
+     "segment_id": "n092",
+     "start_char": 353,
+     "end_char": 363,
+     "text": "Am I dead?"
+    }
+   ]
+  },
+  {
+   "id": "B11_holloway",
+   "voice_role": "holloway",
+   "chars": 13,
+   "text": "Eleven pages?",
+   "parts": [
+    {
+     "segment_id": "n119",
+     "start_char": 67,
+     "end_char": 80,
+     "text": "Eleven pages?"
+    }
+   ]
+  },
+  {
+   "id": "B12_brancato",
+   "voice_role": "brancato",
+   "chars": 47,
+   "text": "In my house, we don't point guns at the doctor.",
+   "parts": [
+    {
+     "segment_id": "n144",
+     "start_char": 214,
+     "end_char": 261,
+     "text": "In my house, we don't point guns at the doctor."
+    }
+   ]
+  },
+  {
+   "id": "B13_lucia",
+   "voice_role": "lucia",
+   "chars": 66,
+   "text": "It's a lemon tree,\n\nIt's Sicilian. It lives out of spite. Like me.",
+   "parts": [
+    {
+     "segment_id": "n159",
+     "start_char": 50,
+     "end_char": 68,
+     "text": "It's a lemon tree,"
+    },
+    {
+     "segment_id": "n159",
+     "start_char": 83,
+     "end_char": 129,
+     "text": "It's Sicilian. It lives out of spite. Like me."
+    }
+   ]
+  }
+ ]
+}
