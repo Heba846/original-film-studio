@@ -23,7 +23,8 @@ export const RECTS: Record<string, [number, number, number]> = {
   f07_eyes: [416, 164, 448],   // eyes only: no wiper/dashboard, geography-neutral listener shot
   f09_face: [464, 156, 512],   // between the two white figures
   f10_hands: [130, 360, 640],  // wound + gloved hands insert
-  f12_ivy: [20, 40, 640],      // Ivy only; excludes the white wrap at his wrist
+  f12_ivy: [20, 40, 640],
+  f32_ring: [0, 86, 1024],    // her LEFT hand + ring + his fingers; excludes his bare wrist/sleeve (his right forearm is splinted)      // Ivy only; excludes the white wrap at his wrist
 };
 const rectToCrop = ([x0, y0, w]: [number, number, number]) => {
   const s = 1280 / w, cx = x0 + w / 2, cy = y0 + (w * 9) / 32;

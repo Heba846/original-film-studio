@@ -115,9 +115,9 @@
    "sha16": "78926497bb97b3ee"
   },
   "F32": {
-   "file": "Repairs/media/F32.png",
-   "note": "use as a HANDS INSERT only: emerald onto her LEFT ring finger; white splint on his right. Her black jacket is not the P1 dress, so frame on the hands",
-   "sha16": "175177f4dcc5b59d"
+   "file": "author F32 left-hand still (chat upload)",
+   "sha16": "090aa3d665a81339",
+   "note": "her LEFT hand: wrist image-left, back of hand to camera, thumb lower edge; emerald on the ring finger; lace sleeve. CONDITION: his hand reads as his RIGHT hand (thumb under) with a bare wrist and sleeve at image-right, but his right forearm is in white plaster on Oct 6. Use with crop f32_ring [0,86,1024], which removes his wrist and keeps only his fingers"
   },
   "F33": {
    "file": "End10/F33_end.png",
@@ -315,18 +315,9 @@
   }
  },
  "near_pass_author_call": [],
- "repair_count": 1,
- "repair_groups": {
-  "hold": [
-   "F32"
-  ]
- },
- "repair_prompts": {
-  "F32": {
-   "file": "End10/F32_end.png",
-   "prompt": "Free repair (0 cr): keep the hands-only close-up; change ONLY: the woman's hand receiving the ring must be her LEFT hand. Palm down, fingers pointing to image-left, THUMB on the NEAR/LOWER side toward camera. The emerald slides onto that hand's ring finger; his white-cast right hand holds it."
-  }
- },
+ "repair_count": 0,
+ "repair_groups": {},
+ "repair_prompts": {},
  "hold": {
   "I26": "Nico crouched by the stairwell with Enzo on the stairs. Arm OK, but it matches no single job (F45 Enzo alone, F05 hands insert)."
  },
