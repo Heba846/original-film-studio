@@ -2,6 +2,7 @@ import React from 'react';
 import {AbsoluteFill, Composition, Sequence} from 'remotion';
 import {FilmTimeline, TL, TLType} from './FilmTimeline';
 import approvedOpening from './data/film_timeline_approved_opening.json';
+import cinematicV2 from './data/film_timeline_cinematic_v2.json';
 import {CODE_COMPONENTS} from './components/registry';
 import {Finish} from './components/Atmosphere';
 import {F} from './theme';
@@ -16,6 +17,12 @@ const AO = approvedOpening as unknown as TLType;
 const SceneApprovedOpening: React.FC = () => {
   if (!AO.variant?.approved_only) throw new Error('approved_opening variant is not approved-only: ' + AO.variant?.not_real_picture.join(', '));
   return <FilmTimeline start={AO.variant.start} end={AO.variant.end} mode="scene" label="" tl={AO} />;
+};
+const CV2 = cinematicV2 as unknown as TLType;
+/** Opening cinematic revision SAMPLE (n001-n017): re-cut picture, same narration; strict (approved footage/code only), no captions. */
+const OpeningCinematicV2: React.FC = () => {
+  if (!CV2.variant?.approved_only) throw new Error('cinematic_v2 variant is not approved-only');
+  return <FilmTimeline start={CV2.variant.start} end={CV2.variant.end} mode="final" label="" tl={CV2} />;
 };
 const Workbench: React.FC = () => <FilmTimeline start={0} end={TL.total_frames} mode="workbench" label="WORKBENCH" />;
 const EditorCH00: React.FC = () => <FilmTimeline start={CH00.start} end={CH00.end} mode="workbench" label="EDITOR PREVIEW · CH00 · NOT A FINISHED SCENE" />;
@@ -64,6 +71,8 @@ export const FilmCompositions: React.FC = () => (
     <Composition id="Evidence-Gallery" component={Gallery} durationInFrames={SAMPLE_TOTAL} fps={TL.fps} width={1280} height={720} />
     <Composition id="Scene-ApprovedOnly-Opening" component={SceneApprovedOpening}
       durationInFrames={(AO.variant?.end ?? 1) - (AO.variant?.start ?? 0)} fps={TL.fps} width={1280} height={720} />
+    <Composition id="Film20-Opening-Cinematic-v2" component={OpeningCinematicV2}
+      durationInFrames={(CV2.variant?.end ?? 1) - (CV2.variant?.start ?? 0)} fps={TL.fps} width={1280} height={720} />
     <Composition id="Film20-Final" component={Final} durationInFrames={TL.total_frames} fps={TL.fps} width={1280} height={720} />
   </>
 );

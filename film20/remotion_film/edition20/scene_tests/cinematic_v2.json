@@ -1,0 +1,130 @@
+{
+ "tag": "cinematic_v2",
+ "segments": [
+  "n001",
+  "n017"
+ ],
+ "segment_cuts": {
+  "n001": [
+   {
+    "shot": "F01",
+    "slug": "garage_env",
+    "secs": "fill",
+    "inn": null,
+    "rate": null
+   }
+  ],
+  "n002": [
+   {
+    "shot": "F01",
+    "slug": "garage_env",
+    "secs": 1.9,
+    "inn": null,
+    "rate": null
+   },
+   {
+    "shot": "F02",
+    "slug": "ivy_crouch",
+    "secs": "fill",
+    "inn": 0.0,
+    "rate": null
+   }
+  ],
+  "n003": [
+   {
+    "shot": "F02",
+    "slug": "ivy_crouch",
+    "secs": 1.4,
+    "inn": null,
+    "rate": null
+   },
+   {
+    "shot": "F03",
+    "slug": "aftermath_wide",
+    "secs": 2.8,
+    "inn": 0.0,
+    "rate": null
+   },
+   {
+    "shot": "F04",
+    "slug": "frankie_hand",
+    "secs": 2.2,
+    "inn": 0.2,
+    "rate": null
+   },
+   {
+    "shot": "F05",
+    "slug": "nico_hands",
+    "secs": 7.0,
+    "inn": 0.0,
+    "rate": null
+   },
+   {
+    "shot": "HOSP",
+    "secs": "fill",
+    "inn": 0.0,
+    "rate": 0.85,
+    "memory": true,
+    "why": "'in bay fourteen, with my own two hands': the splint she built at 3:40, triggered by the splint she sees"
+   }
+  ],
+  "n005": [
+   {
+    "shot": "F14",
+    "slug": "ivy_frozen",
+    "secs": 1.6,
+    "inn": 4.0,
+    "rate": null,
+    "why": "'I went back inside': Ivy turns toward the stairwell door (replaces a second establishing shot)"
+   },
+   {
+    "shot": "F32",
+    "slug": "emerald_on",
+    "secs": "fill",
+    "inn": 0.2,
+    "rate": null,
+    "memory": true,
+    "why": "flash-forward: 'Three days later I married him'"
+   }
+  ],
+  "n006": [
+   {
+    "shot": "F08",
+    "slug": "er_entrance",
+    "secs": 9.4,
+    "inn": 0.0,
+    "rate": 0.85
+   },
+   {
+    "shot": "F09",
+    "slug": "ivy_walks",
+    "secs": 3.3,
+    "inn": 0.3,
+    "rate": null
+   },
+   {
+    "shot": "CODE_EHR",
+    "secs": "fill",
+    "inn": null,
+    "rate": null,
+    "beat": "arrival"
+   }
+  ],
+  "n009": [
+   {
+    "shot": "F10",
+    "slug": "bay_hands",
+    "secs": 2.6,
+    "inn": null,
+    "rate": null
+   },
+   {
+    "shot": "F11",
+    "slug": "nico_bay_cu",
+    "secs": "fill",
+    "inn": null,
+    "rate": null
+   }
+  ]
+ }
+}
